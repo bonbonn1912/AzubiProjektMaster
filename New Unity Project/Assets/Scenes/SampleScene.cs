@@ -29,6 +29,6 @@ public class SampleScene : MonoBehaviour {
 
     public void GoToGame()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }
