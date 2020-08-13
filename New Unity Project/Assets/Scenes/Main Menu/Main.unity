@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 282642673}
   - component: {fileID: 282642672}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RegisterButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -704,9 +704,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc7b53b84edd60478c1aba831a32f57, type: 3}
+  m_Script: {fileID: 11500000, guid: e394db1fb31191c4eaa6fddc2c141925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDisplay: {fileID: 1480770007}
 --- !u!1 &1480770005
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +720,7 @@ GameObject:
   - component: {fileID: 1480770008}
   - component: {fileID: 1480770007}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PlayGameButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -991,7 +992,7 @@ GameObject:
   - component: {fileID: 1829406591}
   - component: {fileID: 1829406590}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LoginButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
