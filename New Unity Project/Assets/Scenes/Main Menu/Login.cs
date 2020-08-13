@@ -24,8 +24,7 @@ public class Login : MonoBehaviour
         yield return www;
         if (www.text[0] == '0')
         {
-            DBManager.username = NameInputField.text;
-            DBManager.score = int.Parse(www.text.Split('\t')[1]);
+            GlobalVariables.username = NameInputField.text;
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
         else
@@ -38,6 +37,5 @@ public class Login : MonoBehaviour
     public void VerifyInputs()
     {
         submitButton.interactable = (NameInputField.text.Length >= 1 && PWInputField.text.Length >= 1);
-        Debug.Log(DBManager.score);
     }
 }

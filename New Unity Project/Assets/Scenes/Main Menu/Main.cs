@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class SampleScene : MonoBehaviour {
+public class Main : MonoBehaviour {
 
     public Text playerDisplay;
 
     private void Start()
      {
-        if (DBManager.LoggedIn)
+        if (GlobalVariables.LoggedIn)
         {
-            playerDisplay.text = "Player:" + DBManager.username;
+            playerDisplay.text = "Player:" + GlobalVariables.username;
         }
      }
 
@@ -29,6 +29,6 @@ public class SampleScene : MonoBehaviour {
 
     public void GoToGame()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 }
