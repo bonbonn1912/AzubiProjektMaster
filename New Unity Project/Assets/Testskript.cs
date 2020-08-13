@@ -8,6 +8,7 @@ public class Testskript : MonoBehaviour
     void Start()
     {
         //Dominik suckt
+        //Frederick auch
     }
 
     // Update is called once per frame
