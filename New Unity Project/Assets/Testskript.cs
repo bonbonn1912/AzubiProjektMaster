@@ -9,6 +9,7 @@ public class Testskript : MonoBehaviour
     {
         //Dominik suckt
         //Frederick auch
+		//lol
     }
 
     // Update is called once per frame
