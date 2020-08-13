@@ -7,7 +7,7 @@ public class Testskript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Dominik suckt
     }
 
     // Update is called once per frame
