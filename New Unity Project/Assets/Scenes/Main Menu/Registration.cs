@@ -21,8 +21,9 @@ public class Registration : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("name", NameInputField.text);
         form.AddField("password", PWInputField.text);
-           
-        WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/register.php", form);
+
+        // WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/register.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/register.php", form);
         yield return www;
         if (www.text == "0")
         {

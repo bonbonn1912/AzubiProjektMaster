@@ -20,12 +20,13 @@ public class Login : MonoBehaviour
         form.AddField("name", NameInputField.text);
         form.AddField("password", PWInputField.text);
 
-        WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/login.php", form);
+        // WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/login.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/login.php");
         yield return www;
         if (www.text[0] == '0')
         {
             GlobalVariables.username = NameInputField.text;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
         else
         {

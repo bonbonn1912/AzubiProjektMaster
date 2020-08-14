@@ -1,5 +1,5 @@
 <?php
-      $con = mysqli_connect('h2881784.stratoserver.net', 'root', 'root','unityaccess','3306');
+       $con = mysqli_connect('178.254.41.75', 'dominik', 'Xeng72*5','dominik','3306');
 	   
 	   //check that connection happened
 	   if (mysqli_connect_errno())
@@ -13,7 +13,7 @@
 		
 		// check if name exists 
 		
-		$namecheckquery = "SELECT username, salt ,hash, score FROM players WHERE username ='" . $username . "';";
+		$namecheckquery = "SELECT username, salt ,hash FROM Players WHERE username ='" . $username . "';";
 		$namecheck = mysqli_query($con, $namecheckquery) or die("Name check query failed"); // Name is double
 		if (mysqli_num_rows($namecheck) != 1)
 		{
@@ -35,7 +35,7 @@
 			exit;
 		}
 		
-		echo "0\t" . $logininfo["score"];
+		 echo "0\t" 
 		
 		
 
