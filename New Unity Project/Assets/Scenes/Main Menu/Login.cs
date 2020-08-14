@@ -7,7 +7,7 @@ public class Login : MonoBehaviour
     public InputField NameInputField;
     public InputField PWInputField;
 
-    public Button submitButton;
+    public Button LoginButton;
 
     public void CallLogin()
     {
@@ -37,6 +37,6 @@ public class Login : MonoBehaviour
 
     public void VerifyInputs()
     {
-        submitButton.interactable = (NameInputField.text.Length >= 1 && PWInputField.text.Length >= 1);
+        LoginButton.interactable = (NameInputField.text.Length >= 1 && PWInputField.text.Length >= 1);
     }
 }
