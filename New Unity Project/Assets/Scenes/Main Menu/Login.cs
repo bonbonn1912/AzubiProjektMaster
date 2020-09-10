@@ -8,12 +8,11 @@ public class Login : MonoBehaviour
     public InputField PWInputField;
 
     public Button LoginButton;
-
+    public Button backToMenu;
     public void CallLogin()
     {
         StartCoroutine(StartLogin());
     }
-
     IEnumerator StartLogin()
     {
         WWWForm form = new WWWForm();
@@ -36,12 +35,12 @@ public class Login : MonoBehaviour
         }
        
     }
-
-
-    
-
     public void VerifyInputs()
     {
         LoginButton.interactable = (NameInputField.text.Length >= 1 && PWInputField.text.Length >= 1);
+    }
+    public void BackToMenu() 
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
