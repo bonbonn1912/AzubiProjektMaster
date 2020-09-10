@@ -13,20 +13,15 @@ public class GameTime : MonoBehaviour
     private float timePassed = 0;
     private float timeCounter;
 
-    private void Update() {
-        /* timeCounter = Time.time - timePassed;
-
+    private void Update() 
+    {
+        timeCounter = Time.time - timePassed;
          if (timeCounter > 5) 
          {
              timePassed += timeCounter;
              day++;
-
              GlobalVariables.day = day;
              Debug.Log(day);
-
-         } */
-        Debug.Log("Momentan eingeloggter User: " + GlobalVariables.username);
+         } 
     }
-
-    
 }

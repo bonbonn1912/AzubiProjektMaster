@@ -10,6 +10,7 @@ public class Registration : MonoBehaviour
     public InputField PWInputField;
 
     public Button submitButton;
+    public Text dbReply;
 
     public void CallRegister()
     {
@@ -33,6 +34,7 @@ public class Registration : MonoBehaviour
         }
         else
         {
+            dbReply.text = "Error:" + www.text;
             Debug.Log("User creation failed. Error#:" + www.text);
         }
     }
@@ -50,6 +52,11 @@ public class Registration : MonoBehaviour
     public void VerifyInputs()
     {
         submitButton.interactable = (NameInputField.text.Length >= 8 && PWInputField.text.Length >= 8);
+        if (!submitButton.interactable)
+        {
+            dbReply.text = "Username and password must be min. 8 characters long";
+            Debug.Log("Changed Text");
+        }
     }
     public void BackToMenu()
     {
