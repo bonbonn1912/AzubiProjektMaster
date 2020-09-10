@@ -29,11 +29,23 @@ public class Registration : MonoBehaviour
         {
             Debug.Log("User created successfully");
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            StartCoroutine(AccountAnlegen());
         }
         else
         {
             Debug.Log("User creation failed. Error#:" + www.text);
         }
+    }
+    IEnumerator AccountAnlegen()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", NameInputField.text);
+        form.AddField("balance", GlobalVariables.startkapital);
+        form.AddField("employees", GlobalVariables.mitarbeiterStart);
+        form.AddField("buildings", GlobalVariables.buildingsStart);
+
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/anlegen.php", form);
+        yield return www;
     }
     public void VerifyInputs()
     {

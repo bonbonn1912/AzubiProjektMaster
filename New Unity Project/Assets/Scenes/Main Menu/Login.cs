@@ -18,6 +18,7 @@ public class Login : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("name", NameInputField.text);
+        Debug.Log("Übergebener Name: " + NameInputField.text);
         form.AddField("password", PWInputField.text);
 
         // WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/login.php", form);
@@ -27,6 +28,7 @@ public class Login : MonoBehaviour
         {
             GlobalVariables.username = NameInputField.text;
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+            
         }
         else
         {
@@ -34,6 +36,9 @@ public class Login : MonoBehaviour
         }
        
     }
+
+
+    
 
     public void VerifyInputs()
     {
