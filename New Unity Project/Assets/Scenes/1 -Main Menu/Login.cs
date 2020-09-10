@@ -7,8 +7,18 @@ public class Login : MonoBehaviour
     public InputField NameInputField;
     public InputField PWInputField;
 
+    public Text dbReply;
     public Button LoginButton;
     public Button backToMenu;
+
+    public void Start()
+    {
+        if(GlobalVariables.registrationResult != null)
+        {
+            dbReply.text = GlobalVariables.registrationResult;
+        }
+    }
+
     public void CallLogin()
     {
         StartCoroutine(StartLogin());

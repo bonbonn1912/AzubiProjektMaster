@@ -6,6 +6,7 @@ public static class GlobalVariables
 {
     public static string username;
     public static int day;
+    public static string registrationResult;
 
 
     public static bool LoggedIn { get { return username != null; } }

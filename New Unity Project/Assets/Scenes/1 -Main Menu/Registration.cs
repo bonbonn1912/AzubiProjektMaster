@@ -29,12 +29,12 @@ public class Registration : MonoBehaviour
         if (www.text == "0")
         {
             Debug.Log("User created successfully");
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
             StartCoroutine(AccountAnlegen());
         }
         else
         {
-            dbReply.text = "Error:" + www.text;
+            dbReply.text = "Error: " + www.text;
             Debug.Log("User creation failed. Error#:" + www.text);
         }
     }
@@ -48,6 +48,11 @@ public class Registration : MonoBehaviour
 
         WWW www = new WWW("https://dominikw.de/AzubiProjekt/anlegen.php", form);
         yield return www;
+        Debug.Log("Nach anlegen: " + www.text);
+        if (www.text == "0")
+        {
+            GlobalVariables.registrationResult = "Registration Successfull";
+        }
     }
     public void VerifyInputs()
     {
@@ -55,7 +60,10 @@ public class Registration : MonoBehaviour
         if (!submitButton.interactable)
         {
             dbReply.text = "Username and password must be min. 8 characters long";
-            Debug.Log("Changed Text");
+        }
+        else
+        {
+            dbReply.text = "";
         }
     }
     public void BackToMenu()
