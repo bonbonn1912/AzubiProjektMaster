@@ -51,5 +51,8 @@ public class Registration : MonoBehaviour
     {
         submitButton.interactable = (NameInputField.text.Length >= 8 && PWInputField.text.Length >= 8);
     }
-  
+    public void BackToMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }
