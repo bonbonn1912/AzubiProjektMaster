@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public static class GlobalVariables
 {
@@ -19,8 +20,12 @@ public static class GlobalVariables
     public static int startkapital = 50000;
     public static int mitarbeiterStart = 20;
     public static int buildingsStart = 0;
-    public static int mitarbeiter = 0;
-    public static int balance = 0;
-    
+
+    public static int mitarbeiter;
+    public static int balance;
+
+
+
+
 }
 
