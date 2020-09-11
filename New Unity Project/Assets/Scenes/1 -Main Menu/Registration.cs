@@ -24,7 +24,8 @@ public class Registration : MonoBehaviour
         form.AddField("password", PWInputField.text);
 
         // WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/register.php", form);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/register.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/register.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/register.php", form);
         yield return www;
         if (www.text == "0")
         {
@@ -46,7 +47,8 @@ public class Registration : MonoBehaviour
         form.AddField("employees", GlobalVariables.mitarbeiterStart);
         form.AddField("buildings", GlobalVariables.buildingsStart);
 
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/anlegen.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/anlegen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/anlegen.php", form);
         yield return www;
         Debug.Log("Nach anlegen: " + www.text);
         if (www.text == "0")
