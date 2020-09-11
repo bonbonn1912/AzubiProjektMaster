@@ -13,11 +13,12 @@
 		
 		// check if name exists 
 		
-		$namecheckquery = "SELECT username, salt ,hash FROM Players WHERE username ='" . $username . "';";
+		$namecheckquery = "SELECT username, salt ,hash, ID FROM Players WHERE username ='" . $username . "';";
 		$namecheck = mysqli_query($con, $namecheckquery) or die("Name check query failed"); // Name is double
 		if (mysqli_num_rows($namecheck) != 1)
 		{
-			echo "1Login Failed"; // Mehr/weniger user als 1 vorhanden
+			$row_cnt = mysqli_num_rows($namecheck);
+			echo "1Login Failed" . $row_cnt; // Mehr/weniger user als 1 vorhanden
 			exit();
 		}
 		
@@ -35,7 +36,7 @@
 			exit;
 		}
 		
-		 echo "0\t" 
+		echo "0\t" . $logininfo["score"];
 		
 		
 
