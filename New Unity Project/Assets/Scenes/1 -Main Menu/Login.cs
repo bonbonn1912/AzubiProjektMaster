@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Login : MonoBehaviour
 {
+  
     public InputField NameInputField;
     public InputField PWInputField;
 
@@ -21,10 +22,12 @@ public class Login : MonoBehaviour
 
     public void CallLogin()
     {
+      
         StartCoroutine(StartLogin());
     }
     IEnumerator StartLogin()
     {
+       
         WWWForm form = new WWWForm();
         form.AddField("name", NameInputField.text);
         Debug.Log("Übergebener Name: " + NameInputField.text);
