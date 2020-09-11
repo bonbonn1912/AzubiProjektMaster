@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,10 +41,17 @@ public class GameTime : MonoBehaviour
             WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdate.php", form);
             yield return www;
             string[] results = www.text.Split('-');
-            Debug.Log("ID: " + results[0]);
-            Debug.Log("Balance: " + results[1]);
-            Debug.Log("Spieltage: " + results[2]);
-            Debug.Log("Mitarbeiter: " + results[3]);
+
+            
+
+            GlobalVariables.balance = Convert.ToInt32(results[1]);
+            GlobalVariables.day = Convert.ToInt32(results[2]);
+            GlobalVariables.mitarbeiter = Convert.ToInt32(results[3]);
+
+          
+            Debug.Log("Balance: " + GlobalVariables.balance);
+            Debug.Log("Spieltage: " + GlobalVariables.day);
+            Debug.Log("Mitarbeiter: " + GlobalVariables.mitarbeiter);
 
 
         }

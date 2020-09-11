@@ -19,5 +19,8 @@ public static class GlobalVariables
     public static int startkapital = 50000;
     public static int mitarbeiterStart = 20;
     public static int buildingsStart = 0;
+    public static int mitarbeiter;
+    public static int balance;
+    
 }
 
