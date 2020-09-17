@@ -40,6 +40,7 @@ public class GameTime : MonoBehaviour
             form.AddField("username", GlobalVariables.username);
             WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdate.php", form);
             yield return www;
+           // Debug.Log(www.text);
             string[] results = www.text.Split('-');
 
             

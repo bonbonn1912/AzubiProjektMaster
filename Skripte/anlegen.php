@@ -12,7 +12,7 @@
 		$employees = $_POST["employees"];
 		$buildings = $_POST["buildings"];
 	   
-	    $insertuserquery = "INSERT INTO stats (username, balance, employees, buildings, spielzeit) VALUES ('". $username ."','" . $balance . "','" . $employees . "','" . $buildings . "',1);";
+	    $insertuserquery = "INSERT INTO stats (Username, Balance, Employees, Buildings, gametime) VALUES ('". $username ."','" . $balance . "','" . $employees . "','" . $buildings . "',1);";
 	    mysqli_query($con, $insertuserquery) or die ("Insert Data failed"); // Player insert failed
 	   
 	    echo ("0"); // User created succesfully

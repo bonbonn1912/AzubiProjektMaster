@@ -41,6 +41,7 @@ public class Registration : MonoBehaviour
     }
     IEnumerator AccountAnlegen()
     {
+        Debug.Log("Anlegen gestartet");
         WWWForm form = new WWWForm();
         form.AddField("username", NameInputField.text);
         form.AddField("balance", GlobalVariables.startkapital);
@@ -49,10 +50,12 @@ public class Registration : MonoBehaviour
 
         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/anlegen.php", form);
         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/anlegen.php", form);
+        Debug.Log("Form übermittelt");
         yield return www;
         Debug.Log("Nach anlegen: " + www.text);
         if (www.text == "0")
         {
+            Debug.Log("in der iff schleife"); 
             GlobalVariables.registrationResult = "Registration Successfull";
         }
     }

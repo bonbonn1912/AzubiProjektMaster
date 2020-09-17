@@ -13,7 +13,7 @@
 		
 		// check if name exists 
 		
-		$namecheckquery = "SELECT username FROM Players WHERE username ='" . $username . "';";
+		$namecheckquery = "SELECT Username FROM Players WHERE Username ='" . $username . "';";
 		$namecheck = mysqli_query($con, $namecheckquery) or die("Name check query failed"); // Name is double
 		
 		if(mysqli_num_rows($namecheck) > 0)
@@ -25,7 +25,7 @@
 		// add user to the table 
 		 $salt = "\$5\$rounds=5000\$" . "steamedhams" . $username . "\$";
 		 $hash = crypt($password, $salt);
-		 $insertuserquery = "INSERT INTO Players (username, hash, salt) VALUES ('". $username ."','" . $hash . "','" . $salt . "');";
+		 $insertuserquery = "INSERT INTO Players (Username, hash, salt) VALUES ('". $username ."','" . $hash . "','" . $salt . "');";
 		// $insertuserquery = "INSERT INTO Players (username, hash, salt) VALUES ('test123','213321','23232323');";
 		mysqli_query($con, $insertuserquery) or die ("Insert playerquery failed"); // Player insert failed
 		
