@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 public class Login : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Login : MonoBehaviour
 
     public void Start()
     {
+        LoginButton.interactable = false;
         if(GlobalVariables.registrationResult != null)
         {
             dbReply.text = GlobalVariables.registrationResult;
@@ -37,15 +39,14 @@ public class Login : MonoBehaviour
         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/login.php", form);
         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/login.php", form);
         yield return www;
-        if (www.text[0] == '0')
+        if (www.text == "0")
         {
             GlobalVariables.username = NameInputField.text;
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
-            
         }
         else
         {
-            Debug.Log("User login failed"+ www.text);
+            dbReply.text = www.text;   
         }
        
     }

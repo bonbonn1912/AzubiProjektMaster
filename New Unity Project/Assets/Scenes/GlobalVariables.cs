@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public static class GlobalVariables
 {
-    public static string username = "No Player";
+    public static string username;
     public static int day;
     public static string registrationResult;
 
