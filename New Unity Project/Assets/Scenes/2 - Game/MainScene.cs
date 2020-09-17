@@ -25,4 +25,9 @@ public class MainScene : MonoBehaviour
         GlobalVariables.username = null;
         SceneManager.LoadScene(0);
     }
+    public void LoadMitarbeiter()
+    {
+        SceneManager.LoadScene(4);
+    }
+   
 }
