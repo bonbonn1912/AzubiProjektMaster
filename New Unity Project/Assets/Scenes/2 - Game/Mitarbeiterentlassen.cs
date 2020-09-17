@@ -5,11 +5,11 @@ using System.Globalization;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UI;
-
-
+using UnityEngine.UIElements;
 
 public class Mitarbeiterentlassen : MonoBehaviour
 {
+    public Text textfeld;
     int Mitarbeiter = 0;
     int Kosten = 0;
     int Kapital = 0;
@@ -57,7 +57,8 @@ public class Mitarbeiterentlassen : MonoBehaviour
         {
             Mitarbeiter--;
             Kapital = Kapital - 500;
-            if(Kosten >= 2000)
+            textfeld.text = Mitarbeiter.ToString();
+            if (Kosten >= 2000)
             {
                 Kosten = Kosten - 1000;
                 Debug.Log("\nAngestellte: " + Mitarbeiter);
