@@ -7,12 +7,12 @@ using UnityEngine.UI;
 public class MainScene : MonoBehaviour
 {
     public Button logOut;
-    public Text LoggedInText;
+    public Text usernameText;
     
     // Start is called before the first frame update
     void Start()
     {
-            LoggedInText.text = GlobalVariables.username;
+        usernameText.text = "Username: " + GlobalVariables.username;
     }
 
     // Update is called once per frame
