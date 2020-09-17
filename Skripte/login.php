@@ -13,7 +13,7 @@
 		
 		// check if name exists 
 		
-		$namecheckquery = "SELECT username, salt ,hash, ID FROM Players WHERE username ='" . $username . "';";
+		$namecheckquery = "SELECT Username, salt ,hash, PID FROM Players WHERE Username ='" . $username . "';";
 		$namecheck = mysqli_query($con, $namecheckquery) or die("Name check query failed"); // Name is double
 		if (mysqli_num_rows($namecheck) != 1)
 		{
@@ -27,7 +27,7 @@
 		$logininfo = mysqli_fetch_array($namecheck);
 		$salt = $logininfo["salt"];
 		$hash = $logininfo["hash"];
-		$username = $logininfo["username"];
+		$username = $logininfo["Username"];
 		
 		$loginhash = crypt($password, $salt);
 		if($hash != $loginhash)

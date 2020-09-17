@@ -17,17 +17,18 @@ public class GameTime : MonoBehaviour
 
     private void Update() 
     {
-        /* timeCounter = Time.time - timePassed;
+        timeCounter = Time.time - timePassed;
+
+        //die Zahl in if-Bedingung ist Tageslänge in Sekunden
           if (timeCounter > 5) 
           {
               timePassed += timeCounter;
               day++;
               GlobalVariables.day = day;
               Debug.Log(day);
-          } */
-         // Debug.Log("test");
+          }
         
-        if (x == 80)
+        /*if (x == 80)
         {
             StartCoroutine(StatusBarUpdate());
             x = 0;
@@ -40,6 +41,7 @@ public class GameTime : MonoBehaviour
             form.AddField("username", GlobalVariables.username);
             WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdate.php", form);
             yield return www;
+           // Debug.Log(www.text);
             string[] results = www.text.Split('-');
 
             
@@ -54,6 +56,6 @@ public class GameTime : MonoBehaviour
             Debug.Log("Mitarbeiter: " + GlobalVariables.mitarbeiter);
 
 
-        }
+        }*/
     }
 }
