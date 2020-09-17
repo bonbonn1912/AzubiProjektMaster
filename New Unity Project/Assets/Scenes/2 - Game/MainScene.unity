@@ -1349,6 +1349,8 @@ GameObject:
   - component: {fileID: 1350019459}
   - component: {fileID: 1350019458}
   - component: {fileID: 1350019456}
+  - component: {fileID: 1350019457}
+  - component: {fileID: 1350019460}
   m_Layer: 0
   m_Name: HR
   m_TagString: Untagged
@@ -1382,6 +1384,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.772035, y: 3.515044}
   m_EdgeRadius: 0
+--- !u!114 &1350019457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350019455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3b828f5ade52646b3d21cc7e9a0a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenetochange: MitarbeiterFenster
 --- !u!212 &1350019458
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1445,6 +1460,19 @@ Transform:
   m_Father: {fileID: 2056937151}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1350019460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350019455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b3782fee71f47428749641e0364abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenetochange: MitarbeiterFenster
 --- !u!1 &1404164229
 GameObject:
   m_ObjectHideFlags: 0
