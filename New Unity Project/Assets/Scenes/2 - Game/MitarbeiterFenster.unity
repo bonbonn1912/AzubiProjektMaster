@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c399a1ec3e34d941b708e8745001094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textfeld: {fileID: 2082941167}
 --- !u!114 &434580775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,6 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0ad4b4965faf743836fddc2f39d324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textfeld: {fileID: 2082941167}
   Mitarbeiter: 0
   Kosten: 1000
 --- !u!1 &579915279
@@ -876,7 +878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00079345703, y: 0.000579834}
+  m_AnchoredPosition: {x: 0.00079345703, y: 0.0005493164}
   m_SizeDelta: {x: -250.44, y: -110.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &853175191

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class Mitarbeitereinstellen : MonoBehaviour
 {
-    
+    public Text textfeld;
     public int Mitarbeiter = 0;
     public int Kosten = 1000;
     int Kapital = 50000;
@@ -57,6 +57,7 @@ public class Mitarbeitereinstellen : MonoBehaviour
             Mitarbeiter++;
             Kapital = Kapital - Kosten;
             Kosten = Kosten + 1000;
+            textfeld.text = Mitarbeiter.ToString();
             Debug.Log("\nMitarbeiteranzahl: " + Mitarbeiter +"\n"+ "Kapital: " + Kapital);
         }
         else
