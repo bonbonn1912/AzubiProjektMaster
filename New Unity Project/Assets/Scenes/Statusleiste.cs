@@ -7,11 +7,11 @@ public class Statusleiste : MonoBehaviour
 {
     //Statusleiste
     public Text textFieldBalance;
-    public Text textFieldDate;
+    public Text textFieldDay;
 
     void Update()
     {
         textFieldBalance.text = GlobalVariables.balance.ToString();
-        textFieldDate.text = GlobalVariables.day.ToString();
+        textFieldDay.text = GlobalVariables.day.ToString();
     }
 }
