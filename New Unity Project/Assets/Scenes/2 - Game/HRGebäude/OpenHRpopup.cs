@@ -17,7 +17,7 @@ public class OpenHRpopup : MonoBehaviour
             FAPopUp.SetActive(!isActive);
         }
     }
-
+    //force push
     public void OpenPersonal()
     {
         if(PersonalPanel != null)
