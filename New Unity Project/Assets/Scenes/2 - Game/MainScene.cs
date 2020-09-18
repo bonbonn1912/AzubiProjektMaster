@@ -12,7 +12,7 @@ public class MainScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        usernameText.text = "Username: " + GlobalVariables.username;
+        usernameText.text = GlobalVariables.username;
     }
 
     // Update is called once per frame
