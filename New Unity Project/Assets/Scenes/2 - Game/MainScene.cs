@@ -8,6 +8,8 @@ public class MainScene : MonoBehaviour
 {
     public Button logOut;
     public Text usernameText;
+    public Button GebaeudeKaufen;
+    public Button Werbung;
     
     // Start is called before the first frame update
     void Start()
@@ -30,4 +32,12 @@ public class MainScene : MonoBehaviour
         SceneManager.LoadScene(4);
     }
    
+    public void clickInGebaeudeKaufen()
+    {
+        SceneManager.LoadScene(5);
+    }
+    public void clickWerbung()
+    {
+        SceneManager.LoadScene(6);
+    }
 }
