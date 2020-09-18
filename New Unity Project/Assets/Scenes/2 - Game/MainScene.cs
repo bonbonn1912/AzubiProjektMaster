@@ -15,7 +15,7 @@ public class MainScene : MonoBehaviour
     {
         usernameText.text = GlobalVariables.username;
     }
-
+    //commit test
     // Update is called once per frame
     void Update()
     {
