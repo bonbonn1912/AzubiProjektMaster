@@ -7,7 +7,7 @@ public static class GlobalVariables
 {
     public static string username;
     public static int day;
-    public static string registrationResult;
+    public static string registrationResult = null;
 
 
     public static bool LoggedIn { get { return username != null; } }
@@ -23,9 +23,5 @@ public static class GlobalVariables
 
     public static int mitarbeiter;
     public static int balance;
-
-
-
-
 }
 
