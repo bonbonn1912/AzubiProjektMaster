@@ -12,32 +12,40 @@ public class Mitarbeiterentlassen : MonoBehaviour
 {
     public Text AnzahlMA;
     public Text Zaehler;
+    int Mitarbeiter = 0;
     int Kosten = 1000;
     int EKosten = 500;
+    int Kapital = 0;
     int zaehler = 0;
     int employeestemp = GlobalVariables.mitarbeiter;
 
-     
 
+
+    public void BacktoGame()
+    {
+        SceneManager.LoadScene(3);
+    }
 
     public void Entlassen()
     {
+        Debug.Log("Employestemp vor -- " + employeestemp);
         employeestemp--;
+        Debug.Log("Employestemp nach -- " + employeestemp);
         zaehler--;
-        AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " +GlobalVariables.mitarbeiter;
-        if(zaehler > 0)
+        AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
+        if (zaehler > 0)
         {
-            Zaehler.text = "Anzahl neuer Mitarbeiter: " + zaehler ;
+            Zaehler.text = "Anzahl neuer Mitarbeiter: " + zaehler;
         }
         else
         {
             Zaehler.text = "Anzahl Entlassener Mitarbeiter: " + zaehler * (-1);
         }
-       
+
         Debug.Log(employeestemp);
         Debug.Log(zaehler);
         // GlobalVariables.mitarbeiter = employeestemp;
-        
+
 
 
 
@@ -49,17 +57,17 @@ public class Mitarbeiterentlassen : MonoBehaviour
         zaehler++;
         if (zaehler < 0)
         {
-            Zaehler.text = "Anzahl Entlassener Mitarbeiter: " + zaehler*(-1);
+            Zaehler.text = "Anzahl Entlassener Mitarbeiter:" + zaehler * (-1);
         }
         else
         {
-            Zaehler.text = "Anzahl neuer Mitarbeiter: " + zaehler;
+            Zaehler.text = "Anzahl neuer Mitarbeiter:" + zaehler;
         }
         AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
 
 
-        
-        
+
+
         // Debug.Log(employeestemp);
 
 
@@ -80,16 +88,17 @@ public class Mitarbeiterentlassen : MonoBehaviour
                 int Gesamtkosten = zaehler * Kosten;
                 GlobalVariables.balance = GlobalVariables.balance - Gesamtkosten;
                 GlobalVariables.mitarbeiter = employeestemp;
-                
+
                 StartCoroutine(UpdateKapital());
                 zaehler = 0;
-                Zaehler.text = "Anzahl neuer Mitarbeiter: " + zaehler;
+                Zaehler.text = "Anzahl neuer Mitarbeiter:" + zaehler;
                 AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
+                // SceneManager.LoadScene(3);
             }
         }
         else
         {
-            if(GlobalVariables.mitarbeiter + zaehler < 0)
+            if (GlobalVariables.mitarbeiter + zaehler < 0)
             {
                 Debug.Log("Sie dürfen nicht so viele Mitarbeiter entlassen ");
             }
@@ -100,12 +109,13 @@ public class Mitarbeiterentlassen : MonoBehaviour
                 GlobalVariables.mitarbeiter = employeestemp;
                 StartCoroutine(UpdateKapital());
                 zaehler = 0;
-                Zaehler.text = "Anzahl neuer Mitarbeiter: " + zaehler;
+                Zaehler.text = "Anzahl neuer Mitarbeiter:" + zaehler;
                 AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
+                // SceneManager.LoadScene(3);
             }
         }
-        
-        
+
+
     }
     IEnumerator UpdateKapital()
     {
@@ -118,8 +128,7 @@ public class Mitarbeiterentlassen : MonoBehaviour
         Debug.Log("Neues Kapital:" + GlobalVariables.balance);
         yield return www;
     }
-
-    
-
-
 }
+
+
+

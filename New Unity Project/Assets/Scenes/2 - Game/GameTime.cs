@@ -21,12 +21,12 @@ public class GameTime : MonoBehaviour
         timeCounter = Time.time - timePassed;
 
         //die Zahl in if-Bedingung ist Tageslänge in Sekunden
-          if (timeCounter > 5) 
+          if (timeCounter > 10) 
           {
               timePassed += timeCounter;
               day++;
               GlobalVariables.day = day;
-              Debug.Log(day);
+             // Debug.Log(day);
             ausfuhren.execute();
             erhoehen.TagErhoehen();
           }
