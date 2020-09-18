@@ -32,7 +32,7 @@ public class Login : MonoBehaviour
        
         WWWForm form = new WWWForm();
         form.AddField("name", NameInputField.text);
-       // Debug.Log("Übergebener Name: " + NameInputField.text);
+        Debug.Log("Übergebener Name: " + NameInputField.text);
         form.AddField("password", PWInputField.text);
 
         // WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/login.php", form);
