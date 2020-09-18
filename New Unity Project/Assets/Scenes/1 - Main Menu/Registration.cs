@@ -28,9 +28,9 @@ public class Registration : MonoBehaviour
         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/register.php", form);
         yield return www;
         if (www.text == "0")
-        {
+        {   
+            yield return StartCoroutine(AccountAnlegen());
             UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-            StartCoroutine(AccountAnlegen());
         }
         else
         {
@@ -50,7 +50,7 @@ public class Registration : MonoBehaviour
         yield return www;
         if (www.text == "0")
         {
-            GlobalVariables.registrationResult = "Registration Successfull!";
+            GlobalVariables.registrationResult = "Registration erfolgreich!\nBitte einloggen.";
         }
         else
         {
