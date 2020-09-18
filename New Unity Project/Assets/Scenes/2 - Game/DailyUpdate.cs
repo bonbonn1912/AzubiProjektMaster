@@ -19,12 +19,12 @@ public class DailyUpdate : MonoBehaviour
     //test
     public void execute()
     {
-     //   Debug.Log("Coroutine wird gestartet");
+        Debug.Log("Coroutine wird gestartet");
         StartCoroutine(StatusBarUpdate());
     }
     IEnumerator StatusBarUpdate()
     {
-      //  Debug.Log("Routine getriggert");
+        Debug.Log("Routine getriggert");
         WWWForm form = new WWWForm();
         form.AddField("username", GlobalVariables.username);
         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdate.php", form);
@@ -39,9 +39,9 @@ public class DailyUpdate : MonoBehaviour
         GlobalVariables.mitarbeiter = Convert.ToInt32(results[3]);
 
 
-      //  Debug.Log("Balance: " + GlobalVariables.balance);
-      //  Debug.Log("Spieltage: " + GlobalVariables.day);
-        Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
+        Debug.Log("Balance: " + GlobalVariables.balance);
+        Debug.Log("Spieltage: " + GlobalVariables.day);
+        Debug.Log("Mitarbeiter: " + GlobalVariables.mitarbeiter);
 
 
     }
