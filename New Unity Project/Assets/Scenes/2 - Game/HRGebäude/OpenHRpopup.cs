@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenHRpopup : MonoBehaviour
 {
     public GameObject FAPopUp;
+    public GameObject PersonalPanel;
     public void OpenPanel()
     {
         if (FAPopUp != null)
