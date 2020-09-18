@@ -1,13 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class OpenHRpopup : MonoBehaviour
 {
-    public GameObject PersonalPanel;
-
-
     public GameObject FAPopUp;
     public void OpenPanel()
     {
@@ -17,7 +13,7 @@ public class OpenHRpopup : MonoBehaviour
             FAPopUp.SetActive(!isActive);
         }
     }
-    //force push
+
     public void OpenPersonal()
     {
         if(PersonalPanel != null)
@@ -30,4 +26,5 @@ public class OpenHRpopup : MonoBehaviour
     {
         PersonalPanel.SetActive(false);
     }
+
 }
