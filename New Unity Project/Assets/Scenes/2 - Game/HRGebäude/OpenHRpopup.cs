@@ -13,4 +13,18 @@ public class OpenHRpopup : MonoBehaviour
             FAPopUp.SetActive(!isActive);
         }
     }
+
+    public void OpenPersonal()
+    {
+        if(PersonalPanel != null)
+        {
+            FAPopUp.SetActive(false);
+            PersonalPanel.SetActive(true);
+        }
+    }
+    public void ClosePersonal()
+    {
+        PersonalPanel.SetActive(false);
+    }
+
 }
