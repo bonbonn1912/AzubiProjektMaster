@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2 - Game/MitarbeiterFenster/MitarbeiterFenster.unity
     guid: ebdd7c701d1f385469b6ed891a5c64df
+  - enabled: 1
+    path: "Assets/Scenes/2 - Game/Geb\xE4udeKaufen/Geb\xE4udeKaufen.unity"
+    guid: 1a389c167725a114d80a5bfae6042eb6
+  - enabled: 1
+    path: Assets/Scenes/2 - Game/Werbung/Werbung.unity
+    guid: c3f9b8c1cc7b7d141abdaaef92737a88
   m_configObjects: {}
