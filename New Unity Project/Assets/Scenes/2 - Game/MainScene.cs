@@ -8,13 +8,14 @@ public class MainScene : MonoBehaviour
 {
     public Button logOut;
     public Text usernameText;
+   
     
     // Start is called before the first frame update
     void Start()
     {
-        usernameText.text = "Username: " + GlobalVariables.username;
+        usernameText.text = GlobalVariables.username;
     }
-
+    //commit test
     // Update is called once per frame
     void Update()
     {
