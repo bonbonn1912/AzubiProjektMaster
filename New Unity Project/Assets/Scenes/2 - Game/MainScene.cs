@@ -8,6 +8,7 @@ public class MainScene : MonoBehaviour
 {
     public Button logOut;
     public Text usernameText;
+   
     
     // Start is called before the first frame update
     void Start()
