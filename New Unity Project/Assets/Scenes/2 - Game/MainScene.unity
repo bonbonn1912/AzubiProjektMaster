@@ -4383,7 +4383,7 @@ RectTransform:
   m_AnchoredPosition: {x: 239.1, y: 16.49}
   m_SizeDelta: {x: -197.81, y: 23.33}
   m_Pivot: {x: 0.5, y: 0.5}
-r
+
 --- !u!1 &1477631523
 GameObject:
   m_ObjectHideFlags: 0
