@@ -17,15 +17,15 @@ public class KreditGenerieren : MonoBehaviour
     
     public void GenerateKredit()
     {
-        Debug.Log("Kreditwert:" +GenerateCreditValue());
-        Debug.Log("Laufzeit:" +GenerateDuration());
-        Debug.Log("Kunde:" + GenerateName());
+        GenerateCreditValue();
+        GenerateDuration();
+        GenerateName();
         
     }
 
     public void AcceptKredit()
     {
-        Debug.Log("Kredit wird in Datenbank geschrieben:");
+        // Debug.Log("Kredit wird in Datenbank geschrieben:");
         StartCoroutine(PushintoDB());
     }
 
@@ -42,7 +42,7 @@ public class KreditGenerieren : MonoBehaviour
         form.AddField("Name", Kunde.text);
         form.AddField("Laufzeit", Laufzeit.text);
         form.AddField("Volume", Volumen.text);
-        Debug.Log("Folgende Werte werden inserted Name: " + name + " Runtime: " + laufzeit + " Volume: " + volume);
+        // Debug.Log("Folgende Werte werden inserted Name: " + name + " Runtime: " + laufzeit + " Volume: " + volume);
         WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/InsertCredits.php", form);
         
         yield return www;
