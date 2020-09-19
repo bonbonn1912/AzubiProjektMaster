@@ -22,7 +22,7 @@ public class GameTime : MonoBehaviour
         timeCounter = Time.time - timePassed;
 
         //die Zahl in if-Bedingung ist Tageslänge in Sekunden
-          if (timeCounter > 10) 
+          if (timeCounter > 5) 
           {
               timePassed += timeCounter;
               day++;

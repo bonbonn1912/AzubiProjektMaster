@@ -9,6 +9,13 @@ public class KreditGenerieren : MonoBehaviour
     public Text Kunde;
     public Text Laufzeit;
     public Text Volumen;
+    public GameObject App;
+    public GameObject Success;
+    public GameObject Management;
+    public GameObject Abgelehnt;
+    public Button Accept;
+    public Button Deny;
+    public Button Back;
    
     public int ValueMin;
     public int ValueMax;
@@ -25,6 +32,13 @@ public class KreditGenerieren : MonoBehaviour
 
     public void AcceptKredit()
     {
+        if(Success != null)
+        {
+            Success.SetActive(true);
+            Accept.interactable = false;
+            Deny.interactable = false;
+            Back.interactable = false;
+        }
         // Debug.Log("Kredit wird in Datenbank geschrieben:");
         StartCoroutine(PushintoDB());
     }
@@ -76,6 +90,30 @@ public class KreditGenerieren : MonoBehaviour
         Laufzeit.text = Convert.ToString(Duration);
         return Duration;
     }
+     public void BackToManagement()
+    {
+        Success.SetActive(false);
+        App.SetActive(false);
+        Management.SetActive(true);
+        Accept.interactable = true;
+        Deny.interactable = true;
+        Back.interactable = true;
+
+    }
 
 
+    public void Ablehnen()
+    {
+        if (Abgelehnt != null)
+        {
+            Abgelehnt.SetActive(true);
+            Accept.interactable = false;
+            Deny.interactable = false;
+            Back.interactable = false;
+        }
+    }
+    public void AblehnenUnsichtbar()
+    {
+        Abgelehnt.SetActive(false);
+    }
 }
