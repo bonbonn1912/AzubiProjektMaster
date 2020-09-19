@@ -4923,6 +4923,7 @@ GameObject:
   - component: {fileID: 1412322027}
   - component: {fileID: 1412322028}
   - component: {fileID: 1412322029}
+  - component: {fileID: 1412322030}
   m_Layer: 5
   m_Name: GameHandler
   m_TagString: Untagged
@@ -5053,6 +5054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ausfuhren: {fileID: 1412322021}
   erhoehen: {fileID: 1412322018}
+  pruefen: {fileID: 1412322030}
 --- !u!114 &1412322020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5187,6 +5189,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KreditVergabeApp: {fileID: 877052226}
+--- !u!114 &1412322030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412322012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c986ffec703d58449840174902bcb999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1416105843
 GameObject:
   m_ObjectHideFlags: 0

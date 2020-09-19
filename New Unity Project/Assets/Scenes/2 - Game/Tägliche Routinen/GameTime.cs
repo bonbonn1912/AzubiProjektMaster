@@ -9,6 +9,7 @@ public class GameTime : MonoBehaviour
     // public Text ausgabeZeit;
     public DailyUpdate ausfuhren;
     public TagUpdaten erhoehen;
+    public Kreditlaufzeit pruefen;
     private int day = GlobalVariables.day;
     private int month = 1;
     private int year = 1;
@@ -29,6 +30,7 @@ public class GameTime : MonoBehaviour
              // Debug.Log(day);
             ausfuhren.execute();
             erhoehen.TagErhoehen();
+            pruefen.LautZeitVeringern();
           }
         
        
