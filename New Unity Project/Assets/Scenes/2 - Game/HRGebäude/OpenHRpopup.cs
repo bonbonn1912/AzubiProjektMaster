@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class OpenHRpopup : MonoBehaviour
 {
     public GameObject PersonalPanel;
-
 
     public GameObject FAPopUp;
     public void OpenPanel()

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public static class GlobalVariables
+public class GlobalVariables : MonoBehaviour
 {
+    
     public static string username;
     public static int day;
     public static string registrationResult = null;
@@ -24,4 +25,3 @@ public static class GlobalVariables
     public static int mitarbeiter;
     public static int balance;
 }
-
