@@ -8,6 +8,7 @@ public class GlobalVariables : MonoBehaviour
     
     public static string username;
     public static int day;
+    public static int PID;
     public static string registrationResult = null;
 
 

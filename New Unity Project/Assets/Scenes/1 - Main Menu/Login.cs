@@ -8,7 +8,7 @@ public class Login : MonoBehaviour
   
     public InputField NameInputField;
     public InputField PWInputField;
-
+    public DailyUpdate init;
     public Text dbReply;
     public Button LoginButton;
     public Button backToMenu;
@@ -42,6 +42,7 @@ public class Login : MonoBehaviour
         if (www.text == "0")
         {
             GlobalVariables.username = NameInputField.text;
+            init.Init();
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
         else

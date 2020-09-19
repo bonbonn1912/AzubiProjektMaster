@@ -111,7 +111,7 @@ public class Mitarbeiterentlassen : MonoBehaviour
         form.AddField("Balance", GlobalVariables.balance);
         form.AddField("Employees", GlobalVariables.mitarbeiter);
         WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/BalanceUpdateMA.php", form);
-        Debug.Log("Neues Kapital:" + GlobalVariables.balance);
+       // Debug.Log("Neues Kapital:" + GlobalVariables.balance);
         yield return www;
     }
 }

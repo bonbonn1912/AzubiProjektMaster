@@ -7,6 +7,8 @@ public class ToogleTablet : MonoBehaviour
     public GameObject Tablet;
     public GameObject StatsButton1;
     public GameObject App;
+    public GameObject Success;
+    public GameObject Abgelehnt;
 
     public void OpenTablet()
     {
@@ -18,6 +20,9 @@ public class ToogleTablet : MonoBehaviour
             bool isActive = Tablet.activeSelf;
             Tablet.SetActive(!isActive);
             App.SetActive(false);
+            Success.SetActive(false);
+            Abgelehnt.SetActive(false);
+
 
         }
     }

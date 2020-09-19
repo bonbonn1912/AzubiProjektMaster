@@ -30,6 +30,14 @@ public class Kreditlaufzeit : MonoBehaviour
          string[] IDs = www.text.Split('-');
               for(int i = 0; i<IDs.Length-1; i++)
         {
+
+            WWWForm ausgelaufen = new WWWForm();
+            ausgelaufen.AddField("LID", IDs[i]);
+            ausgelaufen.AddField("PID", GlobalVariables.PID);
+            WWW auslaufen = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KreditHistory.php", ausgelaufen);
+            yield return auslaufen;
+            Debug.Log(auslaufen.text);
+
            
             WWWForm form1 = new WWWForm();
             form1.AddField("LID", IDs[i]);
