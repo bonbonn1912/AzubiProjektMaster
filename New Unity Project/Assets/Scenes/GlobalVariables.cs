@@ -21,6 +21,7 @@ public class GlobalVariables : MonoBehaviour
 
     public static int startkapital = 50000;
     public static int mitarbeiterStart = 20;
+    public static int PersonalCost = 2500;
     public static int buildingsStart = 0;
    
     public static int mitarbeiter;

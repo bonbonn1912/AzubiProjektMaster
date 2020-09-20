@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using System;
 
 public class OpenHRpopup : MonoBehaviour
 {
     public GameObject PersonalPanel;
-
+  //  public Text Mitarbeitercount;
     public GameObject FAPopUp;
     public void OpenPanel()
     {
@@ -22,8 +23,10 @@ public class OpenHRpopup : MonoBehaviour
     {
         if(PersonalPanel != null)
         {
-            FAPopUp.SetActive(false);
-            PersonalPanel.SetActive(true);
+            bool isActive = PersonalPanel.activeSelf;
+            FAPopUp.SetActive(true);
+            PersonalPanel.SetActive(!isActive);
+         //   Mitarbeitercount.text = Convert.ToString(GlobalVariables.mitarbeiter);
         }
     }
     public void ClosePersonal()
