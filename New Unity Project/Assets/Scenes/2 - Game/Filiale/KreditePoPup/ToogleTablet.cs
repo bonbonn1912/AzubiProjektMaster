@@ -9,9 +9,11 @@ public class ToogleTablet : MonoBehaviour
     public GameObject App;
     public GameObject Success;
     public GameObject Abgelehnt;
+    public GameObject KreditList;
 
     public void OpenTablet()
     {
+
         if(Tablet != null)
         {
             bool isActiveStats = StatsButton1.activeSelf;
@@ -19,11 +21,22 @@ public class ToogleTablet : MonoBehaviour
             StatsButton1.SetActive(!isActiveStats);
             bool isActive = Tablet.activeSelf;
             Tablet.SetActive(!isActive);
+            
             App.SetActive(false);
             Success.SetActive(false);
             Abgelehnt.SetActive(false);
 
 
         }
+    }
+
+    public void CloseList()
+    {
+        KreditList.SetActive(false);
+
+    }
+    public void CloseAppToOpenNew()
+    {
+        App.SetActive(false);
     }
 }

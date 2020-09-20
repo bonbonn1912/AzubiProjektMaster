@@ -9,6 +9,7 @@ public class KreditStatistiken : MonoBehaviour
 {
     public Text KreditAnzahl;
     public Text GesamtVolumen;
+    public Text KrediteAnTagX;
     int Gesamtvolumen;
     public void statistike()
     {
@@ -26,7 +27,8 @@ public class KreditStatistiken : MonoBehaviour
         WWW creditabfrage = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AnzahlKredite.php", creditcount);
         yield return creditabfrage;
         KreditAnzahl.text = creditabfrage.text;
-    }
+        KrediteAnTagX.text = Convert.ToString(GlobalVariables.day);
+}
 
     IEnumerator CreditVolume()
     {
