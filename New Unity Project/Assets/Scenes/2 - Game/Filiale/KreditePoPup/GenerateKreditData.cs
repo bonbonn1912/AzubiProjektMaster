@@ -7,16 +7,31 @@ public class GenerateKreditData : MonoBehaviour
 {
     public Color TextColor;
     public Text Scrolltext;
-    public Button Aufsteigend;
-    public Button Absteigend;
+    public Button Time;
+    public Button Value;
+    public Button Name;
 
-    string aufsteigen = "";
-    string absteigend = "";
+    string DurationAufsteigen = "";
+    string DurationAbsteigen = "";
+
+    string VolumeAufsteigen = "";
+    string VolumeAbsteigen = "";
+
+    string NameAufsteigen = "";
+    string NameAbsteigen = "";
+
+    bool StateButtonNumber = true;
+    bool StateButtonValue = true;
+    bool StateButtonName = true;
+
+
+
     public void ButtonFetch()
     {
         StartCoroutine(FetchData());
-        Aufsteigend.interactable = true;
-        Absteigend.interactable = true;
+        Time.interactable = true;
+        Value.interactable = true;
+        Name.interactable = true;
 
     }
 
@@ -26,6 +41,7 @@ public class GenerateKreditData : MonoBehaviour
     {
         WWWForm fetchform = new WWWForm();
         fetchform.AddField("user", GlobalVariables.username);
+
         WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchData.php", fetchform);
         yield return fetch;
         string[] s = fetch.text.Split('/');
@@ -37,6 +53,10 @@ public class GenerateKreditData : MonoBehaviour
 
         yield return StartCoroutine(FetchDataAbsteigend());
         yield return StartCoroutine(FetchDataAufsteigend());
+        yield return StartCoroutine(FetchDataValueAufsteigend());
+        yield return StartCoroutine(FetchDataValueAbsteigend());
+        yield return StartCoroutine(FetchDataDurationAufsteigend());
+        yield return StartCoroutine(FetchDataDurationAbsteigend());
 
 
 
@@ -52,11 +72,13 @@ public class GenerateKreditData : MonoBehaviour
     {
         WWWForm fetchform = new WWWForm();
         fetchform.AddField("user", GlobalVariables.username);
+        fetchform.AddField("Runtime", "Runtime");
+        fetchform.AddField("Order", "DESC");
         WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
         yield return fetch;
         string line = fetch.text;
         line = line.Replace("@", "" + System.Environment.NewLine);
-        absteigend = line;
+        DurationAbsteigen = line;
         Debug.Log(fetch.text);
 
     }
@@ -65,25 +87,116 @@ public class GenerateKreditData : MonoBehaviour
     {
         WWWForm fetchform = new WWWForm();
         fetchform.AddField("user", GlobalVariables.username);
-        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAuf.php", fetchform);
+        fetchform.AddField("Runtime", "Runtime");
+        fetchform.AddField("Order", "ASC");
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
         yield return fetch;
         string line = fetch.text;
         line = line.Replace("@", "" + System.Environment.NewLine);
-        aufsteigen = line;
+        DurationAufsteigen = line;
         
        
     }
 
-
-    public void AufSteigend()
+    IEnumerator FetchDataValueAufsteigend()
     {
-        Scrolltext.text = aufsteigen;
-        Scrolltext.color = TextColor;
+        WWWForm fetchform = new WWWForm();
+        fetchform.AddField("user", GlobalVariables.username);
+        fetchform.AddField("Runtime", "Volume");
+        fetchform.AddField("Order", "ASC");
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
+        yield return fetch;
+        string line = fetch.text;
+        line = line.Replace("@", "" + System.Environment.NewLine);
+        VolumeAufsteigen = line;
+    }
+    IEnumerator FetchDataValueAbsteigend()
+    {
+        WWWForm fetchform = new WWWForm();
+        fetchform.AddField("user", GlobalVariables.username);
+        fetchform.AddField("Runtime", "Volume");
+        fetchform.AddField("Order", "DESC");
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
+        yield return fetch;
+        string line = fetch.text;
+        line = line.Replace("@", "" + System.Environment.NewLine);
+        VolumeAbsteigen = line;
+    }
+
+    IEnumerator FetchDataDurationAufsteigend()
+    {
+        WWWForm fetchform = new WWWForm();
+        fetchform.AddField("user", GlobalVariables.username);
+        fetchform.AddField("Runtime", "Name");
+        fetchform.AddField("Order", "ASC");
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
+        yield return fetch;
+        string line = fetch.text;
+        line = line.Replace("@", "" + System.Environment.NewLine);
+        NameAufsteigen = line;
+    }
+
+    IEnumerator FetchDataDurationAbsteigend()
+    {
+        WWWForm fetchform = new WWWForm();
+        fetchform.AddField("user", GlobalVariables.username);
+        fetchform.AddField("Runtime", "Name");
+        fetchform.AddField("Order", "DESC");
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
+        yield return fetch;
+        string line = fetch.text;
+        line = line.Replace("@", "" + System.Environment.NewLine);
+        NameAbsteigen = line;
+    }
+
+
+    public void NumberSort()
+    {
+        if(StateButtonNumber == true)
+        {
+            Scrolltext.text = DurationAufsteigen;
+            Scrolltext.color = TextColor;
+            StateButtonNumber = false;
+
+        }
+        else
+        {
+            Scrolltext.text = DurationAbsteigen;
+            Scrolltext.color = TextColor;
+            StateButtonNumber = true;
+        }
     }
     
-    public void AbSteigend()
+    public void ValueSort()
     {
-        Scrolltext.text = absteigend;
-        Scrolltext.color = TextColor;
+        if(StateButtonValue == true)
+        {
+            Scrolltext.text = VolumeAufsteigen;
+            Scrolltext.color = TextColor;
+            StateButtonValue = false;
+        }
+        else
+        {
+            Scrolltext.text = VolumeAbsteigen;
+            Scrolltext.color = TextColor;
+            StateButtonValue = true;
+        }
     }
+
+    public void NameSort()
+    {
+        if(StateButtonName == true)
+        {
+            Scrolltext.text = NameAufsteigen;
+            Scrolltext.color = TextColor;
+            StateButtonName = false;
+        }
+        else
+        {
+            Scrolltext.text = NameAbsteigen;
+            Scrolltext.color = TextColor;
+            StateButtonName = true;
+        }
+    }
+
 }
