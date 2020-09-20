@@ -12,6 +12,8 @@ public class Mitarbeiterentlassen : MonoBehaviour
 {
     public Text AnzahlMA;
     public Text Zaehler;
+    public Text KostenAE;
+    public Text PersonalCost;
     int Kosten = 1000;
     int EKosten = 500;
     int zaehler = 0;
@@ -22,14 +24,16 @@ public class Mitarbeiterentlassen : MonoBehaviour
     public void Entlassen()
     {
         zaehler--;
-        AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
+       // AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
         if (zaehler > 0)
         {
             Zaehler.text = "Anzahl neuer Mitarbeiter: " + zaehler;
+            KostenAE.text = "Kosten: " + zaehler * Kosten+" €";
         }
         else
         {
             Zaehler.text = "Anzahl Entlassener Mitarbeiter: " + zaehler * (-1);
+            KostenAE.text = "Kosten: " + zaehler*(-1) * EKosten +" €";
         }
 
         Debug.Log("Globale Mitarbeiter: " + GlobalVariables.mitarbeiter);
@@ -47,12 +51,14 @@ public class Mitarbeiterentlassen : MonoBehaviour
         if (zaehler < 0)
         {
             Zaehler.text = "Anzahl Entlassener Mitarbeiter:" + zaehler * (-1);
+            KostenAE.text = "Kosten: " + zaehler * (-1) * EKosten + " €";
         }
         else
         {
             Zaehler.text = "Anzahl neuer Mitarbeiter:" + zaehler;
+            KostenAE.text = "Kosten: " + zaehler * Kosten + " €";
         }
-        AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
+     //   AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
         
         Debug.Log("Globale Mitarbeiter: " + GlobalVariables.mitarbeiter);
         Debug.Log("Zaehler: " + zaehler);
@@ -76,8 +82,10 @@ public class Mitarbeiterentlassen : MonoBehaviour
 
                 StartCoroutine(UpdateKapital());
                 zaehler = 0;
-                Zaehler.text = "Anzahl neuer Mitarbeiter:" + zaehler;
-                AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
+                Zaehler.text = "";
+                KostenAE.text = "";
+                PersonalCost.text = GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost + " €";
+                AnzahlMA.text = Convert.ToString(GlobalVariables.mitarbeiter);
                 // SceneManager.LoadScene(3);
             }
         }
@@ -95,8 +103,10 @@ public class Mitarbeiterentlassen : MonoBehaviour
                 GlobalVariables.mitarbeiter = GlobalVariables.mitarbeiter - zaehler*-1;
                 StartCoroutine(UpdateKapital());
                 zaehler = 0;
-                Zaehler.text = "Anzahl neuer Mitarbeiter:" + zaehler;
-                AnzahlMA.text = "Aktuelle Mitarbeiter Anzahl: " + GlobalVariables.mitarbeiter;
+                Zaehler.text = "";
+                KostenAE.text = "";
+                AnzahlMA.text = Convert.ToString(GlobalVariables.mitarbeiter);
+                PersonalCost.text = GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost + " €";
                 // SceneManager.LoadScene(3);
             }
         }
