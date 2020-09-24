@@ -28,10 +28,12 @@ public class GenerateKreditData : MonoBehaviour
 
     public void ButtonFetch()
     {
+        
         StartCoroutine(FetchData());
         Time.interactable = true;
         Value.interactable = true;
         Name.interactable = true;
+       
 
     }
 
@@ -39,6 +41,7 @@ public class GenerateKreditData : MonoBehaviour
 
     IEnumerator FetchData()
     {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
         WWWForm fetchform = new WWWForm();
         fetchform.AddField("user", GlobalVariables.username);
 
@@ -57,7 +60,9 @@ public class GenerateKreditData : MonoBehaviour
         yield return StartCoroutine(FetchDataValueAbsteigend());
         yield return StartCoroutine(FetchDataDurationAufsteigend());
         yield return StartCoroutine(FetchDataDurationAbsteigend());
-
+        watch.Stop();
+        float ms = watch.ElapsedMilliseconds;
+        Debug.Log("Ladezeit aller Kredit: " + ms + " ms");
 
 
         /* for(int i = 0; i < s.Length - 1; i++)
