@@ -22,9 +22,23 @@ public class Login : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (NameInputField.GetComponent<InputField>().isFocused)
+            {
+                PWInputField.GetComponent<InputField>().Select();
+            }
+            if (PWInputField.GetComponent<InputField>().isFocused)
+            {
+                NameInputField.GetComponent<Button>().Select();
+            }
+        }
+    }
+
     public void CallLogin()
     {
-      
         StartCoroutine(StartLogin());
     }
     IEnumerator StartLogin()

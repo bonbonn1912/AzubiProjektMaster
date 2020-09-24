@@ -12,6 +12,21 @@ public class Registration : MonoBehaviour
     public Button submitButton;
     public Text dbReply;
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (NameInputField.GetComponent<InputField>().isFocused)
+            {
+                PWInputField.GetComponent<InputField>().Select();
+            }
+            if (PWInputField.GetComponent<InputField>().isFocused)
+            {
+                NameInputField.GetComponent<Button>().Select();
+            }
+        }
+    }
+
     public void CallRegister()
     {
         StartCoroutine(Register());

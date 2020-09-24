@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour {
 
     public Text playerDisplay;
-  
 
     private void Start()
      {
