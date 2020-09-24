@@ -11,7 +11,7 @@ public class OpenAktienHandelTablet : MonoBehaviour
 
     public void OpenTablet()
     {
-        Debug.Log("OPen Tablet");
+      //  Debug.Log("OPen Tablet");
         if(AktienHandelTablet != null)
         {
             bool isActive = AktienHandelTablet.activeSelf;
