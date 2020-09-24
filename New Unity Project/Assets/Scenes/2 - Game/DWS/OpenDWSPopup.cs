@@ -9,6 +9,7 @@ public class OpenDWSPopup : MonoBehaviour
 
     public void OpenPanel()
     {
+        Debug.Log("Open Panel");
         if(DWSPanel != null)
         {
             bool isActive = DWSPanel.activeSelf;
