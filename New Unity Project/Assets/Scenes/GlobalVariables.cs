@@ -28,4 +28,10 @@ public class GlobalVariables : MonoBehaviour
     public static int balance;
     public static int minDuration = 20;
     public static int maxDuration = 100;
+
+    public static int Aktie1KursGlob;
+    public static int Aktie2KursGlob;
+    public static int Aktie3KursGlob;
+    public static int Aktie4KursGlob;
+    public static int Aktie5KursGlob;
 }
