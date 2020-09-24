@@ -16,13 +16,14 @@ public class GameTime : MonoBehaviour
     private float timePassed = 0;
     private float timeCounter;
     private int x = 0;
+    public int DayInSeconds = 60;
     
     private void Update() 
     {
         timeCounter = Time.time - timePassed;
 
         //die Zahl in if-Bedingung ist Tageslänge in Sekunden
-          if (timeCounter > 5) 
+          if (timeCounter > DayInSeconds) 
           {
               timePassed += timeCounter;
               day++;
@@ -32,6 +33,10 @@ public class GameTime : MonoBehaviour
             erhoehen.TagErhoehen();
             pruefen.LautZeitVeringern();
           }
+
+        /*  if(timeCounter = DayInSeconds/4 ){
+         *  toggle.Kursgenerieren();
+          }*/
         
        
     }
