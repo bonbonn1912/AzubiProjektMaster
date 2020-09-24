@@ -29,7 +29,7 @@ public class Login : MonoBehaviour
     }
     IEnumerator StartLogin()
     {
-       
+        var watch = System.Diagnostics.Stopwatch.StartNew();
         WWWForm form = new WWWForm();
         form.AddField("name", NameInputField.text);
        // Debug.Log("Übergebener Name: " + NameInputField.text);
@@ -44,6 +44,9 @@ public class Login : MonoBehaviour
             GlobalVariables.username = NameInputField.text;
             init.Init();
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+            watch.Stop();
+                float ms = watch.ElapsedMilliseconds;
+            Debug.Log("Login Dauer: " +ms+ " ms");
         }
         else
         {
