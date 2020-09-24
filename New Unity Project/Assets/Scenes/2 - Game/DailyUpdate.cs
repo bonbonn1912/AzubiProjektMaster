@@ -46,7 +46,7 @@ public class DailyUpdate : MonoBehaviour
 
       //  Debug.Log("Balance: " + GlobalVariables.balance);
       //  Debug.Log("Spieltage: " + GlobalVariables.day);
-        Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
+     //   Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
 
 
     }
@@ -70,6 +70,6 @@ public class DailyUpdate : MonoBehaviour
 
         //  Debug.Log("Balance: " + GlobalVariables.balance);
         //  Debug.Log("Spieltage: " + GlobalVariables.day);
-        Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
+       // Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
     }
 }
