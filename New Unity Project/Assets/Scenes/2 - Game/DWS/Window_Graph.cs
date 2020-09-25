@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class Window_Graph : MonoBehaviour {
     private RectTransform dashTemplateX;
     private RectTransform dashTemplateY;
     private List<GameObject> gameObjectList;
+    public static List<int> valueList = new List<int>() { };
 
     private void Awake() {
         graphContainer = transform.Find("graphContainer").GetComponent<RectTransform>();
@@ -22,8 +24,7 @@ public class Window_Graph : MonoBehaviour {
 
         gameObjectList = new List<GameObject>();
 
-        List<int> valueList = new List<int>() { 5, 30, 40,50,60,100,80,90,100,110,70,90,120,150,160,170,180,190,200, 500, 800, 800};
-        ShowGraph(valueList, -1, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        StartCoroutine(ExecSQL());
     }
 
     private void ShowGraph(List<int> valueList, int maxVisibleValueAmount = -1, Func<int, string> getAxisLabelX = null, Func<float, string> getAxisLabelY = null) {
@@ -167,5 +168,32 @@ public class Window_Graph : MonoBehaviour {
         if (n < 0) n += 360;
 
         return n;
+    }
+
+    IEnumerator ExecSQL()
+    {
+        WWWForm form = new WWWForm();
+        string name = "Dominik";
+        int amount = 50;
+        form.AddField("username", name);
+        form.AddField("amount", amount);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AktienKurseLesen.php", form);
+        yield return www;
+        Debug.Log("WWW: " + www.text);
+        string[] results = www.text.Split('/');
+
+        int[] intarray = new int[results.Length];
+
+        for (int i = 0; i < results.Length - 1; i++)
+        {
+            intarray[i] = Convert.ToInt32(results[i]);
+        }
+
+        for (int i = 0; i < intarray.Length; i++)
+        {
+            valueList.Add(intarray[i]);
+        }
+        Debug.Log(String.Join(",", valueList));
+        ShowGraph(valueList, -1, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
     }
 }
