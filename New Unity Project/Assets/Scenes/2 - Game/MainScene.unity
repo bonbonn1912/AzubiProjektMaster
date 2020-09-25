@@ -745,7 +745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.025032043, y: -0.52495956}
+  m_AnchoredPosition: {x: 0.025032043, y: 0.0000019073486}
   m_SizeDelta: {x: -20.05, y: -13.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68032885
@@ -761,17 +761,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 45
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 1
 --- !u!222 &68032886
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -868,7 +868,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 91316477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319549}
+        m_MethodName: buyAktie5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &91316477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,8 +1354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 277, y: -8.73}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: 308, y: -0.000015974}
+  m_SizeDelta: {x: 114.8, y: 57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109112635
 MonoBehaviour:
@@ -1370,7 +1381,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1388,13 +1399,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 109112636}
   m_TextComponent: {fileID: 9695253}
   m_Placeholder: {fileID: 68032885}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -1552,8 +1563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.025032043, y: -0.52495956}
-  m_SizeDelta: {x: -20.05, y: -13.05}
+  m_AnchoredPosition: {x: 33.4, y: 7.5}
+  m_SizeDelta: {x: -10.05, y: -7.0499}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159072784
 MonoBehaviour:
@@ -1568,17 +1579,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 45
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1586,7 +1597,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 1
 --- !u!222 &159072785
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2021,6 +2032,12 @@ GameObject:
   - component: {fileID: 192319544}
   - component: {fileID: 192319546}
   - component: {fileID: 192319545}
+  - component: {fileID: 192319547}
+  - component: {fileID: 192319548}
+  - component: {fileID: 192319549}
+  - component: {fileID: 192319550}
+  - component: {fileID: 192319552}
+  - component: {fileID: 192319551}
   m_Layer: 5
   m_Name: AktienHandelTablet
   m_TagString: Untagged
@@ -2085,6 +2102,120 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192319543}
   m_CullTransparentMesh: 0
+--- !u!114 &192319547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192319543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cb9c58744760841b1c5972e240cdab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputFieldAktie1: {fileID: 514226579}
+  InputFieldAktie2: {fileID: 109112633}
+  InputFieldAktie3: {fileID: 1757960597}
+  InputFieldAktie4: {fileID: 957232137}
+  InputFieldAktie5: {fileID: 568594083}
+--- !u!114 &192319548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192319543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f595a67a3fa7a14990d45c40d0213e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KaufenAktie1: {fileID: 1723443668}
+  KaufenAktie2: {fileID: 1570814809}
+  KaufenAktie3: {fileID: 1675421967}
+  KaufenAktie4: {fileID: 577968044}
+  KaufenAktie5: {fileID: 91316476}
+  VerkaufenAktie1: {fileID: 1992990527}
+  VerkaufenAktie2: {fileID: 1606925633}
+  VerkaufenAktie3: {fileID: 869096817}
+  VerkaufenAktie4: {fileID: 1974264343}
+  VerkaufenAktie5: {fileID: 1453128481}
+--- !u!114 &192319549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192319543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0162a2e2810d96d4c9c374f706c4efac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputFieldPlaceHolder: {fileID: 514226579}
+  InputFieldPlaceHolder1: {fileID: 109112633}
+  InputFieldPlaceHolder2: {fileID: 1757960597}
+  InputFieldPlaceHolder3: {fileID: 957232137}
+  InputFieldPlaceHolder4: {fileID: 568594083}
+  akutalisieren: {fileID: 192319550}
+--- !u!114 &192319550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192319543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9693c2d8e3ba384bba1bb9f7f8d936f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountAktie1: {fileID: 1739877492}
+  AmountAktie2: {fileID: 409960449}
+  AmountAktie3: {fileID: 1853190098}
+  AmountAktie4: {fileID: 200630022}
+  AmountAktie5: {fileID: 1392839594}
+--- !u!114 &192319551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192319543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e81881e25fe094e8467e06438d6fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputFieldPlaceHolder: {fileID: 514226579}
+  InputFieldPlaceHolder1: {fileID: 109112633}
+  InputFieldPlaceHolder2: {fileID: 1757960597}
+  InputFieldPlaceHolder3: {fileID: 957232137}
+  InputFieldPlaceHolder4: {fileID: 568594083}
+  aktualisieren: {fileID: 192319550}
+--- !u!114 &192319552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192319543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47678914db643c4da34fab0d6a9f19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnzahlAktie1imDepot: {fileID: 1739877492}
+  InputFieldAktie1: {fileID: 514226579}
+  AnzahlAktie2imDepot: {fileID: 409960449}
+  InputFieldAktie2: {fileID: 109112633}
+  AnzahlAktie3imDepot: {fileID: 1853190098}
+  InputFieldAktie3: {fileID: 1757960597}
+  AnzahlAktie4imDepot: {fileID: 200630022}
+  InputFieldAktie4: {fileID: 957232137}
+  AnzahlAktie5imDepot: {fileID: 1392839594}
+  InputFieldAktie5: {fileID: 568594083}
 --- !u!1 &198766394
 GameObject:
   m_ObjectHideFlags: 0
@@ -4631,7 +4762,7 @@ GameObject:
   - component: {fileID: 514226582}
   - component: {fileID: 514226581}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: AnzahlAktie1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4655,7 +4786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 314, y: 2.9475}
+  m_AnchoredPosition: {x: 351.35, y: -6.8725}
   m_SizeDelta: {x: 159.3, y: 55.895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514226581
@@ -4682,7 +4813,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4700,13 +4831,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 514226582}
   m_TextComponent: {fileID: 2011919345}
   m_Placeholder: {fileID: 1922324268}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -5077,13 +5208,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 568594086}
   m_TextComponent: {fileID: 30906331}
   m_Placeholder: {fileID: 864327081}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -5580,7 +5711,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 577968045}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319549}
+        m_MethodName: buyAktie4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &577968045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7556,6 +7698,7 @@ GameObject:
   - component: {fileID: 833039094}
   - component: {fileID: 833039093}
   - component: {fileID: 833039096}
+  - component: {fileID: 833039097}
   m_Layer: 5
   m_Name: DWS
   m_TagString: Untagged
@@ -7645,6 +7788,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AktienHandelText: {fileID: 730175340}
+--- !u!114 &833039097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833039091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9693c2d8e3ba384bba1bb9f7f8d936f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountAktie1: {fileID: 1739877492}
+  AmountAktie2: {fileID: 409960449}
+  AmountAktie3: {fileID: 1853190098}
+  AmountAktie4: {fileID: 200630022}
+  AmountAktie5: {fileID: 1392839594}
 --- !u!1 &834275513
 GameObject:
   m_ObjectHideFlags: 0
@@ -7959,8 +8119,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.025032043, y: -0.52495956}
-  m_SizeDelta: {x: -20.05, y: -13.05}
+  m_AnchoredPosition: {x: -7.76, y: 11.7}
+  m_SizeDelta: {x: -15.52, y: 2.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864327081
 MonoBehaviour:
@@ -7975,17 +8135,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 45
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -7993,7 +8153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 1
 --- !u!222 &864327082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8082,7 +8242,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 869096818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319551}
+        m_MethodName: SellAktie3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &869096818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8437,13 +8608,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 957232140}
   m_TextComponent: {fileID: 1101908371}
   m_Placeholder: {fileID: 159072784}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -9532,7 +9703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 724.9, y: -527.6}
+  m_AnchoredPosition: {x: 724.89844, y: -527.6}
   m_SizeDelta: {x: 1148.9, y: 624.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124393449
@@ -9682,8 +9853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.025032043, y: -0.52495956}
-  m_SizeDelta: {x: -20.05, y: -13.05}
+  m_AnchoredPosition: {x: 33.3, y: -0.000009536743}
+  m_SizeDelta: {x: -10.05, y: -7.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1151221552
 MonoBehaviour:
@@ -9698,17 +9869,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.7411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 45
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -9716,7 +9887,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 1
 --- !u!222 &1151221553
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11092,6 +11263,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 833039097}
+        m_MethodName: getAktienAnzahl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1394707653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12109,7 +12291,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1453128482}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319551}
+        m_MethodName: SellAktie5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1453128482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13153,7 +13346,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1570814810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319549}
+        m_MethodName: buyAktie2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1570814810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13631,7 +13835,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1606925634}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319551}
+        m_MethodName: SellAktie2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1606925634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13903,7 +14118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.06726074, y: 9.899902}
+  m_AnchoredPosition: {x: 0.06640625, y: 9.899902}
   m_SizeDelta: {x: -513.77, y: -414.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1641701365
@@ -14173,7 +14388,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1675421968}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319549}
+        m_MethodName: buyAktie3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1675421968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14461,7 +14687,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1723443669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319549}
+        m_MethodName: buyAktie1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1723443669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15178,13 +15415,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1757960600}
   m_TextComponent: {fileID: 1522410584}
   m_Placeholder: {fileID: 1151221552}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -15925,7 +16162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 95.05, y: -37.443}
+  m_AnchoredPosition: {x: 109, y: -37.443}
   m_SizeDelta: {x: 170.1, y: 74.885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922324268
@@ -15941,25 +16178,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 45
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 1
 --- !u!222 &1922324269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16346,7 +16583,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1974264344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319551}
+        m_MethodName: SellAktie4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1974264344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16537,7 +16785,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992990528}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192319551}
+        m_MethodName: SellAktie1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1992990528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16701,7 +16960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
