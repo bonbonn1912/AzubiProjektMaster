@@ -22,7 +22,7 @@ public class Window_Graph : MonoBehaviour {
 
         gameObjectList = new List<GameObject>();
 
-        List<int> valueList = new List<int>() { 5, 30, 40,50,60,100,80,90,100,110,70,90,120,150,160,170,180,190,200};
+        List<int> valueList = new List<int>() { 5, 30, 40,50,60,100,80,90,100,110,70,90,120,150,160,170,180,190,200, 500, 800, 800};
         ShowGraph(valueList, -1, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
     }
 
@@ -59,12 +59,28 @@ public class Window_Graph : MonoBehaviour {
             }
         }
 
-        float yDifference = yMaximum - yMinimum;
+        float yDifference = yMaximum - yMinimum; //-yMinimum for % top buffer according to highest value
         if (yDifference <= 0) {
             yDifference = 5f;
         }
-        yMaximum = yMaximum + (yDifference * 0.2f);
-        //yMinimum = yMinimum - (yDifference * 0.2f); // ariable yAchse
+        float bufferPercent = 0.2f;
+        /*for(int i = 0; i <= Convert.ToInt32(yMaximum / 100f); i++)
+        {
+            if (i > 2)
+            {
+                bufferPercent -= 0.05f;
+            }
+            else if(i > 5)
+            {
+                bufferPercent -= 0.01f;
+            }
+            else if(i >= 9)
+            {
+                bufferPercent = 0.01f;
+            }
+        }*/
+        yMaximum = yMaximum + (yDifference * bufferPercent);
+        //yMinimum = yMinimum - (yDifference * 0.2f); // variable yAchse
 
         yMinimum = 0f; // Start the graph at zero
 
