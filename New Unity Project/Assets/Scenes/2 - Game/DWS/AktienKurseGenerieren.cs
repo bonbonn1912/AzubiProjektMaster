@@ -72,8 +72,9 @@ public class AktienKurseGenerieren : MonoBehaviour
             float newa = a * 0.75f;
             a = Mathf.RoundToInt(newa);
         }
-        Debug.Log("Vorheriger Aktienkurs: " + baseValueAktie1);
-         Debug.Log("AktuellerAktienkurs: " + a);
+        GlobalVariables.Aktie1KursGlob = a;
+      //  Debug.Log("Vorheriger Aktienkurs: " + baseValueAktie1);
+        // Debug.Log("AktuellerAktienkurs: " + a);
         if(a > baseValueAktie1)
         {
             double c = a;
@@ -130,7 +131,9 @@ public class AktienKurseGenerieren : MonoBehaviour
         {
             float newa = a * 0.75f;
             a = Mathf.RoundToInt(newa);
+            
         }
+        GlobalVariables.Aktie2KursGlob = a;
         if (a > baseValueAktie2)
         {
             double c = a;
@@ -186,6 +189,7 @@ public class AktienKurseGenerieren : MonoBehaviour
             float newa = a * 0.75f;
             a = Mathf.RoundToInt(newa);
         }
+        GlobalVariables.Aktie3KursGlob = a;
         if (a > baseValueAktie3)
         {
             double c = a;
@@ -241,6 +245,7 @@ public class AktienKurseGenerieren : MonoBehaviour
             float newa = a * 0.75f;
             a = Mathf.RoundToInt(newa);
         }
+        GlobalVariables.Aktie4KursGlob = a;
         if (a > baseValueAktie4)
         {
             double c = a;
@@ -297,6 +302,7 @@ public class AktienKurseGenerieren : MonoBehaviour
             float newa = a * 0.75f;
             a = Mathf.RoundToInt(newa);
         }
+        GlobalVariables.Aktie5KursGlob = a;
         if (a > baseValueAktie5)
         {
             double c = a;
