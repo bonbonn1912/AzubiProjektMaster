@@ -5091,7 +5091,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1124393451}
-        m_MethodName: setColorOnLeave
+        m_MethodName: ResetInputField1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10190,6 +10190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inputfield1: {fileID: 514226579}
+  Inputfield2: {fileID: 109112633}
+  Inputfield4: {fileID: 957232137}
+  Inputfield5: {fileID: 568594083}
+  Inputfield3: {fileID: 1757960597}
   ImFeld: {r: 0, g: 0, b: 0, a: 1}
   AusFeld: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1148900659
