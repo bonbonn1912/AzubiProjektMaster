@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +12,13 @@ public class AktienVerkaufen : MonoBehaviour
     public GameObject InputFieldPlaceHolder2;
     public GameObject InputFieldPlaceHolder3;
     public GameObject InputFieldPlaceHolder4;
+
+    public GameObject KaufErfolgreichAktie1;
+    public GameObject KaufErfolgreichAktie2;
+    public GameObject KaufErfolgreichAktie3;
+    public GameObject KaufErfolgreichAktie4;
+    public GameObject KaufErfolgreichAktie5;
+
     public AktienAnzahlAbfragen aktualisieren;
     string ShareName = "test";
     int Amount;
@@ -26,6 +32,7 @@ public class AktienVerkaufen : MonoBehaviour
         string Aktie = "Aktie1";
         int number = 1;
         sellAktie(Aktie,AktienVerkaufbarPruefung.AmountimDepotAktie1, number );
+        KaufErfolgreichAktie1.GetComponent<Text>().text = "Aktie 1 wurde erfolgreich verkauft";
 
     }
 
@@ -37,6 +44,7 @@ public class AktienVerkaufen : MonoBehaviour
         string Aktie = "Aktie2";
         int number = 2;
         sellAktie(Aktie, AktienVerkaufbarPruefung.AmountimDepotAktie2, number);
+        KaufErfolgreichAktie2.GetComponent<Text>().text = "Aktie 2 wurde erfolgreich verkauft";
     }
 
     public void SellAktie3()
@@ -47,6 +55,7 @@ public class AktienVerkaufen : MonoBehaviour
         string Aktie = "Aktie3";
         int number = 3;
         sellAktie(Aktie, AktienVerkaufbarPruefung.AmountimDepotAktie3, number);
+        KaufErfolgreichAktie3.GetComponent<Text>().text = "Aktie 3 wurde erfolgreich verkauft";
     }
 
     public void SellAktie4()
@@ -57,6 +66,7 @@ public class AktienVerkaufen : MonoBehaviour
         string Aktie = "Aktie4";
         int number = 4;
         sellAktie(Aktie, AktienVerkaufbarPruefung.AmountimDepotAktie4, number);
+        KaufErfolgreichAktie4.GetComponent<Text>().text = "Aktie 4 wurde erfolgreich verkauft";
     }
 
     public void SellAktie5()
@@ -67,6 +77,7 @@ public class AktienVerkaufen : MonoBehaviour
         string Aktie = "Aktie5";
         int number = 5;
         sellAktie(Aktie, AktienVerkaufbarPruefung.AmountimDepotAktie5, number);
+        KaufErfolgreichAktie5.GetComponent<Text>().text = "Aktie 5 wurde erfolgreich verkauft";
     }
 
     public void sellAktie(string Aktie, int Amount, int number)
