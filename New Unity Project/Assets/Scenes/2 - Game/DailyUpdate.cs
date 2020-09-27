@@ -42,7 +42,7 @@ public class DailyUpdate : MonoBehaviour
         GlobalVariables.balance = Convert.ToInt32(results[1]);
         GlobalVariables.day = Convert.ToInt32(results[2]);
         GlobalVariables.mitarbeiter = Convert.ToInt32(results[3]);
-        Debug.Log(GlobalVariables.PID);
+       // Debug.Log(GlobalVariables.PID);
 
       //  Debug.Log("Balance: " + GlobalVariables.balance);
       //  Debug.Log("Spieltage: " + GlobalVariables.day);

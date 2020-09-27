@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,22 +14,58 @@ public class Window_Graph : MonoBehaviour {
     private RectTransform dashTemplateX;
     private RectTransform dashTemplateY;
     private List<GameObject> gameObjectList;
-    public static List<int> valueList = new List<int>() { 5,4,3,2,20,52};
-
+    public static List<int> valueList1 = new List<int>() {10,100};
+    public static List<int> valueList2 = new List<int>() {10,100};
+    public static List<int> valueList3 = new List<int>() {10,100};
+    public static List<int> valueList4 = new List<int>() {10,100};
+    public static List<int> valueList5 = new List<int>() {10,100};
+    public static List<int> valueList6 = new List<int>() {10,100};
+    public int daybefore = GlobalVariables.day;
+    public int switcher = 1;
     private void Awake() {
         graphContainer = transform.Find("graphContainer").GetComponent<RectTransform>();
         labelTemplateX = graphContainer.Find("labelTemplateX").GetComponent<RectTransform>();
         labelTemplateY = graphContainer.Find("labelTemplateY").GetComponent<RectTransform>();
         dashTemplateX = graphContainer.Find("dashTemplateX").GetComponent<RectTransform>();
         dashTemplateY = graphContainer.Find("dashTemplateY").GetComponent<RectTransform>();
-        
-        ShowGraph(valueList, -1, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
         gameObjectList = new List<GameObject>();
-
+       
+        
+        
        // StartCoroutine(ExecSQL());
     }
+    public void SwitchtoAktie1()
+    {
+        switcher = 1;
+    }
+    public void SwitchtoAktie2()
+    {
+        switcher = 2;
+    }
 
-   public void ShowGraph(List<int> valueList, int maxVisibleValueAmount = -1, Func<int, string> getAxisLabelX = null, Func<float, string> getAxisLabelY = null) {
+    private void Update()
+    {
+       if(GlobalVariables.day > daybefore)
+        {
+            
+            daybefore = GlobalVariables.day;
+            if(switcher == 1)
+            {
+                valueList1.Reverse();
+
+                ShowGraph(valueList1, -1, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+            }
+            if(switcher == 2)
+            {
+                valueList2.Reverse();
+
+                ShowGraph(valueList2, -1, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+            }
+           
+        }
+    }
+
+    public void ShowGraph(List<int> valueList, int maxVisibleValueAmount = -1, Func<int, string> getAxisLabelX = null, Func<float, string> getAxisLabelY = null) {
         if (getAxisLabelX == null) {
             getAxisLabelX = delegate (int _i) { return _i.ToString(); };
         }
@@ -171,7 +208,7 @@ public class Window_Graph : MonoBehaviour {
         return n;
     }
 
-    IEnumerator ExecSQL()
+  /*  IEnumerator ExecSQL()
     {
         WWWForm FetchShareData = new WWWForm();
         FetchShareData.AddField("sharename", "Aktie");
@@ -195,5 +232,5 @@ public class Window_Graph : MonoBehaviour {
         }
         Debug.Log(String.Join(",", valueList));
         ShowGraph(valueList, -1, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
-    }
+    }*/
 }

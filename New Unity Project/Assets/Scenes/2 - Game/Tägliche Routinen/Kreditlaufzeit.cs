@@ -7,7 +7,7 @@ public class Kreditlaufzeit : MonoBehaviour
 {
    public void LautZeitVeringern()
     {
-        Debug.Log("1. triggered");
+       // Debug.Log("1. triggered");
         StartCoroutine(execute());
     }
 
