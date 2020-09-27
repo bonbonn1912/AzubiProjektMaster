@@ -6219,7 +6219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &583249878
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8428,8 +8428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 97, y: 8.4}
+  m_SizeDelta: {x: 194, y: -16.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854460032
 MonoBehaviour:
@@ -12066,6 +12066,8 @@ GameObject:
   - component: {fileID: 1412322030}
   - component: {fileID: 1412322031}
   - component: {fileID: 1412322032}
+  - component: {fileID: 1412322033}
+  - component: {fileID: 1412322034}
   m_Layer: 5
   m_Name: GameHandler
   m_TagString: Untagged
@@ -12201,6 +12203,8 @@ MonoBehaviour:
   Aktie3: {fileID: 1412322032}
   Aktie4: {fileID: 1412322032}
   Aktie5: {fileID: 1412322032}
+  AktienKurs1: {fileID: 1412322033}
+  AktienKurs2: {fileID: 1412322033}
   DayInSeconds: 60
 --- !u!114 &1412322020
 MonoBehaviour:
@@ -12404,6 +12408,33 @@ MonoBehaviour:
   Aktie5Vorzeichen: {fileID: 101463284}
   PossDif: {r: 0, g: 0.3018868, b: 0, a: 1}
   NegDiv: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &1412322033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412322012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d904f8d5bc67f66498176e6a51258b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueList: 
+  Aktie1: {fileID: 1412322034}
+--- !u!114 &1412322034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412322012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d0de66fe3e73f48b82a8b624f4635f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circleSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1416105843
 GameObject:
   m_ObjectHideFlags: 0

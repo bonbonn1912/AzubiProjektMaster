@@ -13,7 +13,7 @@ public class Window_Graph : MonoBehaviour {
     private RectTransform dashTemplateX;
     private RectTransform dashTemplateY;
     private List<GameObject> gameObjectList;
-    public static List<int> valueList = new List<int>() { };
+    public static List<int> valueList = new List<int>() { 5,4,3,2,20,52};
 
     private void Awake() {
         graphContainer = transform.Find("graphContainer").GetComponent<RectTransform>();
@@ -21,13 +21,14 @@ public class Window_Graph : MonoBehaviour {
         labelTemplateY = graphContainer.Find("labelTemplateY").GetComponent<RectTransform>();
         dashTemplateX = graphContainer.Find("dashTemplateX").GetComponent<RectTransform>();
         dashTemplateY = graphContainer.Find("dashTemplateY").GetComponent<RectTransform>();
-
+        
+        ShowGraph(valueList, -1, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
         gameObjectList = new List<GameObject>();
 
-        StartCoroutine(ExecSQL());
+       // StartCoroutine(ExecSQL());
     }
 
-    private void ShowGraph(List<int> valueList, int maxVisibleValueAmount = -1, Func<int, string> getAxisLabelX = null, Func<float, string> getAxisLabelY = null) {
+   public void ShowGraph(List<int> valueList, int maxVisibleValueAmount = -1, Func<int, string> getAxisLabelX = null, Func<float, string> getAxisLabelY = null) {
         if (getAxisLabelX == null) {
             getAxisLabelX = delegate (int _i) { return _i.ToString(); };
         }
@@ -172,15 +173,14 @@ public class Window_Graph : MonoBehaviour {
 
     IEnumerator ExecSQL()
     {
-        WWWForm form = new WWWForm();
-        string name = "Dominik";
-        int amount = 50;
-        form.AddField("username", name);
-        form.AddField("amount", amount);
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AktienKurseLesen.php", form);
-        yield return www;
-        Debug.Log("WWW: " + www.text);
-        string[] results = www.text.Split('/');
+        WWWForm FetchShareData = new WWWForm();
+        FetchShareData.AddField("sharename", "Aktie");
+        FetchShareData.AddField("amount", 30);
+
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AktienKurseLesen.php", FetchShareData);
+        yield return fetch;
+        string [] results = fetch.text.Split('/');
+        //string[] results = www.text.Split('/');
 
         int[] intarray = new int[results.Length];
 

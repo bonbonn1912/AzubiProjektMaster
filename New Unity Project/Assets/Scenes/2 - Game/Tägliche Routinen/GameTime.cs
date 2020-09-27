@@ -16,6 +16,9 @@ public class GameTime : MonoBehaviour
     public AktienKurseGenerieren Aktie4;
     public AktienKurseGenerieren Aktie5;
 
+    public AktienKurseLesen AktienKurs1;
+    public AktienKurseLesen AktienKurs2;
+
 
     private int day = GlobalVariables.day;
     private int month = 1;
@@ -43,6 +46,7 @@ public class GameTime : MonoBehaviour
             Aktie3.KursAktie3();
             Aktie4.KursAktie4();
             Aktie5.KursAktie5();
+            AktienKurs1.LesenAktie1();
             pruefen.LautZeitVeringern();
           }
 

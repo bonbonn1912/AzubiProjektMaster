@@ -111,7 +111,7 @@ public class AktienKurseGenerieren : MonoBehaviour
         }
 
         baseValueAktie1 = a;
-
+        StartCoroutine(InsertShareValues("Aktie1", a));
         Aktie1Kurs.text = Convert.ToString(a);
       
 
@@ -168,7 +168,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie2 = a;
-
+        StartCoroutine(InsertShareValues("Aktie2", a));
         Aktie2Kurs.text = Convert.ToString(a);
 
 
@@ -224,7 +224,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie3 = a;
-
+        StartCoroutine(InsertShareValues("Aktie3", a));
         Aktie3Kurs.text = Convert.ToString(a);
 
 
@@ -281,7 +281,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie4 = a;
-
+        StartCoroutine(InsertShareValues("Aktie4", a));
         Aktie4Kurs.text = Convert.ToString(a);
 
 
@@ -337,7 +337,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie5 = a;
-
+        StartCoroutine(InsertShareValues("Aktie5", a));
         Aktie5Kurs.text = Convert.ToString(a);
 
 
@@ -359,9 +359,20 @@ public class AktienKurseGenerieren : MonoBehaviour
             a = Mathf.RoundToInt(newa);
         }
         baseValueAktie1 = a;
-
+        StartCoroutine(InsertShareValues("Aktie6", a));
         Aktie1Kurs.text = Convert.ToString(a);
 
 
     }
+
+   IEnumerator InsertShareValues(string Aktienname, int Aktienkurs)
+    {
+        WWWForm InsertValue = new WWWForm();
+        InsertValue.AddField("sharename", Aktienname);
+        InsertValue.AddField("sharevalue", Aktienkurs);
+
+        WWW Insert = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AktienKurseSetzen.php", InsertValue);
+        return Insert;
+    }
+        
 }
