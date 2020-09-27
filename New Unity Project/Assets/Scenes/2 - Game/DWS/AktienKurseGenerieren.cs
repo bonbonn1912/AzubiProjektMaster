@@ -56,6 +56,8 @@ public class AktienKurseGenerieren : MonoBehaviour
     int baseValueAktie5 = 200;
     int MasterValueAktie5 = 200;
 
+    public AktienKurseLesen Aktie1Lesen;
+    public AktienKurseLesen Aktie2Lesen;
 
     public void KursAktie1()
     {
@@ -111,7 +113,7 @@ public class AktienKurseGenerieren : MonoBehaviour
         }
 
         baseValueAktie1 = a;
-
+        StartCoroutine(InsertShareValues("Aktie1", a,1));
         Aktie1Kurs.text = Convert.ToString(a);
       
 
@@ -168,7 +170,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie2 = a;
-
+        StartCoroutine(InsertShareValues("Aktie2", a,2));
         Aktie2Kurs.text = Convert.ToString(a);
 
 
@@ -224,7 +226,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie3 = a;
-
+        StartCoroutine(InsertShareValues("Aktie3", a,1));
         Aktie3Kurs.text = Convert.ToString(a);
 
 
@@ -281,7 +283,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie4 = a;
-
+        StartCoroutine(InsertShareValues("Aktie4", a,1));
         Aktie4Kurs.text = Convert.ToString(a);
 
 
@@ -337,7 +339,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie5 = a;
-
+        StartCoroutine(InsertShareValues("Aktie5", a,1));
         Aktie5Kurs.text = Convert.ToString(a);
 
 
@@ -359,9 +361,31 @@ public class AktienKurseGenerieren : MonoBehaviour
             a = Mathf.RoundToInt(newa);
         }
         baseValueAktie1 = a;
-
+        StartCoroutine(InsertShareValues("Aktie6", a,1));
         Aktie1Kurs.text = Convert.ToString(a);
 
 
     }
+
+   IEnumerator InsertShareValues(string Aktienname, int Aktienkurs, int AktienLesenNummer)
+    {
+        WWWForm InsertValue = new WWWForm();
+        InsertValue.AddField("sharename", Aktienname);
+        InsertValue.AddField("sharevalue", Aktienkurs);
+
+        WWW Insert = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AktienKurseSetzen.php", InsertValue);
+        yield return Insert;
+        yield return new  WaitForSeconds(0.5f);
+        if(AktienLesenNummer == 1)
+        {
+            Aktie1Lesen.LesenAktie1();
+        }
+        if (AktienLesenNummer == 2)
+        {
+            Aktie2Lesen.LesenAktie2();
+        }
+
+
+    }
+        
 }

@@ -9,11 +9,20 @@ public class AktienKaufen : MonoBehaviour
 
  
 {
+    
+
+
     public GameObject InputFieldPlaceHolder;
     public GameObject InputFieldPlaceHolder1;
     public GameObject InputFieldPlaceHolder2;
     public GameObject InputFieldPlaceHolder3;
     public GameObject InputFieldPlaceHolder4;
+
+    public GameObject KaufErfolgreichAktie1;
+    public GameObject KaufErfolgreichAktie2;
+    public GameObject KaufErfolgreichAktie3;
+    public GameObject KaufErfolgreichAktie4;
+    public GameObject KaufErfolgreichAktie5;
 
     public AktienAnzahlAbfragen akutalisieren;
     string ShareName = "test";
@@ -26,6 +35,7 @@ public class AktienKaufen : MonoBehaviour
         string Aktie = "Aktie1";
         int numberAktie1 = 1;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie1, numberAktie1);
+        KaufErfolgreichAktie1.GetComponent<Text>().text = "Der Kauf von Aktie1 war erfolgreich";
     }
 
     public void buyAktie2()
@@ -35,6 +45,7 @@ public class AktienKaufen : MonoBehaviour
         string Aktie = "Aktie2";
         int numberAktie2 = 2;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie2, numberAktie2);
+        KaufErfolgreichAktie2.GetComponent<Text>().text = "Der Kauf von Aktie2 war erfolgreich";
     }
 
     public void buyAktie3()
@@ -44,6 +55,7 @@ public class AktienKaufen : MonoBehaviour
         string Aktie = "Aktie3";
         int numberAktie3 = 3;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie3, numberAktie3);
+        KaufErfolgreichAktie3.GetComponent<Text>().text = "Der Kauf von Aktie3 war erfolgreich";
     }
 
     public void buyAktie4()
@@ -53,6 +65,7 @@ public class AktienKaufen : MonoBehaviour
         string Aktie = "Aktie4";
         int numberAktie4 = 4;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie4, numberAktie4);
+        KaufErfolgreichAktie4.GetComponent<Text>().text = "Der Kauf von Aktie4 war erfolgreich";
     }
 
     public void buyAktie5()
@@ -62,6 +75,7 @@ public class AktienKaufen : MonoBehaviour
         string Aktie = "Aktie5";
         int numberAktie5 = 5;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie5, numberAktie5);
+        KaufErfolgreichAktie5.GetComponent<Text>().text = "Der Kauf von Aktie5 war erfolgreich";
     }
 
 

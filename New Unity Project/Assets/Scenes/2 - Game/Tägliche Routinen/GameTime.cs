@@ -16,6 +16,9 @@ public class GameTime : MonoBehaviour
     public AktienKurseGenerieren Aktie4;
     public AktienKurseGenerieren Aktie5;
 
+    public AktienKurseLesen AktienKurs1;
+    public AktienKurseLesen AktienKurs2;
+
 
     private int day = GlobalVariables.day;
     private int month = 1;
@@ -35,15 +38,8 @@ public class GameTime : MonoBehaviour
               timePassed += timeCounter;
               day++;
               GlobalVariables.day = day;
-             // Debug.Log(day);
-            ausfuhren.execute();
-            erhoehen.TagErhoehen();
-            Aktie1.KursAktie1();
-            Aktie2.KursAktie2();
-            Aktie3.KursAktie3();
-            Aktie4.KursAktie4();
-            Aktie5.KursAktie5();
-            pruefen.LautZeitVeringern();
+            // Debug.Log(day);
+            DailyMethoden();
           }
 
 
@@ -53,5 +49,18 @@ public class GameTime : MonoBehaviour
           }*/
         
        
+    }
+    public void DailyMethoden()
+    {
+        ausfuhren.execute();
+        erhoehen.TagErhoehen();
+        Aktie1.KursAktie1();
+        Aktie2.KursAktie2();
+        Aktie3.KursAktie3();
+        Aktie4.KursAktie4();
+        Aktie5.KursAktie5();
+
+      //  AktienKurs1.LesenAktie1();
+        pruefen.LautZeitVeringern();
     }
 }
