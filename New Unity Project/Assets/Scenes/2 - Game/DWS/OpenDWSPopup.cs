@@ -22,11 +22,13 @@ public class OpenDWSPopup : MonoBehaviour
 
     public void OpenPanel()
     {
+        Debug.Log("triggered");
       //  Debug.Log("Open Panel");
         if(DWSPanel != null)
         {
-            bool isActive = DWSPanel.activeSelf;
-            DWSPanel.SetActive(!isActive);
+           
+             bool isActive = DWSPanel.activeSelf;
+                DWSPanel.SetActive(!isActive);
         }
         InputFieldAktie1.GetComponent<InputField>().text = "";
         InputFieldAktie2.GetComponent<InputField>().text = "";
