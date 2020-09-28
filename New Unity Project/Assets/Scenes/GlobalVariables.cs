@@ -34,4 +34,6 @@ public class GlobalVariables : MonoBehaviour
     public static int Aktie3KursGlob;
     public static int Aktie4KursGlob;
     public static int Aktie5KursGlob;
+
+    public static int AktienIndex = 250;
 }
