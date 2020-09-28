@@ -58,6 +58,9 @@ public class AktienKurseGenerieren : MonoBehaviour
 
     public AktienKurseLesen Aktie1Lesen;
     public AktienKurseLesen Aktie2Lesen;
+    public AktienKurseLesen Aktie3Lesen;
+    public AktienKurseLesen Aktie4Lesen;
+    public AktienKurseLesen Aktie5Lesen;
 
     public void KursAktie1()
     {
@@ -226,7 +229,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie3 = a;
-        StartCoroutine(InsertShareValues("Aktie3", a,1));
+        StartCoroutine(InsertShareValues("Aktie3", a,3));
         Aktie3Kurs.text = Convert.ToString(a);
 
 
@@ -283,7 +286,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie4 = a;
-        StartCoroutine(InsertShareValues("Aktie4", a,1));
+        StartCoroutine(InsertShareValues("Aktie4", a,4));
         Aktie4Kurs.text = Convert.ToString(a);
 
 
@@ -339,7 +342,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie5 = a;
-        StartCoroutine(InsertShareValues("Aktie5", a,1));
+        StartCoroutine(InsertShareValues("Aktie5", a,5));
         Aktie5Kurs.text = Convert.ToString(a);
 
 
@@ -383,6 +386,18 @@ public class AktienKurseGenerieren : MonoBehaviour
         if (AktienLesenNummer == 2)
         {
             Aktie2Lesen.LesenAktie2();
+        }
+        if (AktienLesenNummer == 3)
+        {
+            Aktie3Lesen.LesenAktie3();
+        }
+        if (AktienLesenNummer == 4)
+        {
+            Aktie4Lesen.LesenAktie4();
+        }
+        if (AktienLesenNummer == 5)
+        {
+            Aktie5Lesen.LesenAktie5();
         }
 
 

@@ -33,14 +33,15 @@ public class GameTime : MonoBehaviour
         timeCounter = Time.time - timePassed;
 
         //die Zahl in if-Bedingung ist Tageslänge in Sekunden
-          if (timeCounter > 2) 
+          if (timeCounter > 1) 
           {
               timePassed += timeCounter;
               day++;
               GlobalVariables.day = day;
             // Debug.Log(day);
             DailyMethoden();
-          }
+           
+        }
 
 
 
