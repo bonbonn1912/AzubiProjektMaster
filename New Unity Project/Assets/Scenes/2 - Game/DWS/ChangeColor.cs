@@ -16,51 +16,51 @@ public class ChangeColor : MonoBehaviour
      
         if(Inputfield1.GetComponent<InputField>().isFocused == true)
         {
-             Inputfield1.transform.FindChild("Text").GetComponent<Text>().color = ImFeld;
+             Inputfield1.transform.Find("Text").GetComponent<Text>().color = ImFeld;
            
         }
         if(Inputfield1.GetComponent<InputField>().isFocused == false){
-            Inputfield1.transform.FindChild("Text").GetComponent<Text>().color = AusFeld;
+            Inputfield1.transform.Find("Text").GetComponent<Text>().color = AusFeld;
         }
         //__________________________________________________________________________________________
         if (Inputfield2.GetComponent<InputField>().isFocused == true)
         {
-            Inputfield2.transform.FindChild("Text").GetComponent<Text>().color = ImFeld;
+            Inputfield2.transform.Find("Text").GetComponent<Text>().color = ImFeld;
 
         }
         if (Inputfield2.GetComponent<InputField>().isFocused == false)
         {
-            Inputfield2.transform.FindChild("Text").GetComponent<Text>().color = AusFeld;
+            Inputfield2.transform.Find("Text").GetComponent<Text>().color = AusFeld;
         }
         //______________________________________________________________________________________________
         if (Inputfield3.GetComponent<InputField>().isFocused == true)
         {
-            Inputfield3.transform.FindChild("Text").GetComponent<Text>().color = ImFeld;
+            Inputfield3.transform.Find("Text").GetComponent<Text>().color = ImFeld;
 
         }
         if (Inputfield3.GetComponent<InputField>().isFocused == false)
         {
-            Inputfield3.transform.FindChild("Text").GetComponent<Text>().color = AusFeld;
+            Inputfield3.transform.Find("Text").GetComponent<Text>().color = AusFeld;
         }
         //____________________________________________________________________________________________
         if (Inputfield4.GetComponent<InputField>().isFocused == true)
         {
-            Inputfield4.transform.FindChild("Text").GetComponent<Text>().color = ImFeld;
+            Inputfield4.transform.Find("Text").GetComponent<Text>().color = ImFeld;
 
         }
         if (Inputfield4.GetComponent<InputField>().isFocused == false)
         {
-            Inputfield4.transform.FindChild("Text").GetComponent<Text>().color = AusFeld;
+            Inputfield4.transform.Find("Text").GetComponent<Text>().color = AusFeld;
         }
         //_____________________________________________________________________________________________
         if (Inputfield5.GetComponent<InputField>().isFocused == true)
         {
-            Inputfield5.transform.FindChild("Text").GetComponent<Text>().color = ImFeld;
+            Inputfield5.transform.Find("Text").GetComponent<Text>().color = ImFeld;
 
         }
         if (Inputfield5.GetComponent<InputField>().isFocused == false)
         {
-            Inputfield5.transform.FindChild("Text").GetComponent<Text>().color = AusFeld;
+            Inputfield5.transform.Find("Text").GetComponent<Text>().color = AusFeld;
         }
         //_____________________________________________________________________________________________
     }
