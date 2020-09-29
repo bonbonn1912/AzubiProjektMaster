@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro.Examples;
 using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
@@ -10,6 +11,7 @@ public class CameraZoom : MonoBehaviour
 
     public Camera Cam;
     public float Speed;
+    public float Zoom;
 
     
     // Start is called before the first frame update
@@ -22,12 +24,14 @@ public class CameraZoom : MonoBehaviour
     {
         if(ZoomActive)
         {
-            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, 3, Speed);
+            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, Zoom, Speed);
+            Cam.transform.position = Vector3.Lerp(Cam.transform.position, Target[1], Speed);
 
         }
         else
         {
-            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, 5 , Speed);
+            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, 190, Speed);
+            Cam.transform.position = Vector3.Lerp(Cam.transform.position, Target[0], Speed);
         }
     }
 }
