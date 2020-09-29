@@ -19,6 +19,7 @@ public class GlobalVariables : MonoBehaviour
         username = null;
     }
 
+    public static bool Tutorialcheck = false;
     public static int startkapital = 50000;
     public static int mitarbeiterStart = 20;
     public static int PersonalCost = 2500;
