@@ -3131,7 +3131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &216248277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3791,7 +3791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &286231647
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7061,6 +7061,7 @@ MonoBehaviour:
   KursHochAktie1: {fileID: 0}
   TageTiefAktie1: {fileID: 0}
   KursTiefAKtie1: {fileID: 0}
+  liste1gedreht: 0
   Anzeige: {fileID: 1150747979}
 --- !u!1 &589279915
 GameObject:
