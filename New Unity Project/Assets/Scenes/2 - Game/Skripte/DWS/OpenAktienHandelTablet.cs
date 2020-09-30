@@ -8,6 +8,7 @@ public class OpenAktienHandelTablet : MonoBehaviour
     public GameObject AktienHandelTablet;
     public Text DepotInhaberTextbox;
     public Color InhaberTextbox;
+    public GameObject Bloomberg;
 
     public void OpenTablet()
     {
@@ -18,6 +19,7 @@ public class OpenAktienHandelTablet : MonoBehaviour
             AktienHandelTablet.SetActive(!isActive);
            // DepotInhaberTextbox.color = InhaberTextbox;
             DepotInhaberTextbox.text = GlobalVariables.username;
+            Bloomberg.SetActive(false);
         }
     }
 }

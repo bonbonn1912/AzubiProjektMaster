@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class OpenDWSPopup : MonoBehaviour
 {
     public GameObject DWSPanel;
+    public GameObject Bloomberg;
+
+
     public GameObject InputFieldAktie1;
     public GameObject TextAktie1;
     public GameObject InputFieldAktie2;
@@ -24,9 +27,10 @@ public class OpenDWSPopup : MonoBehaviour
     {
         Debug.Log("triggered");
       //  Debug.Log("Open Panel");
-        if(DWSPanel != null)
+        if(DWSPanel != null && Bloomberg !=null)
         {
-           
+            bool bloomActive = Bloomberg.activeSelf;
+            Bloomberg.SetActive(!bloomActive);
              bool isActive = DWSPanel.activeSelf;
                 DWSPanel.SetActive(!isActive);
         }
