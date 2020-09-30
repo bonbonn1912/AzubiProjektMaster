@@ -33,8 +33,8 @@ public class Window_Graph : MonoBehaviour {
     public List<int> locallist5;
     public GameObject KursHoch;
     public GameObject KursTief;
- 
-    
+
+    public Slider mSlider;
 
     public bool liste1gedreht;
 
@@ -57,7 +57,8 @@ public class Window_Graph : MonoBehaviour {
 
     public void Slider(float slider)
     {
-        anzahlWerte = (int)slider;
+        anzahlWerte =250 - (int)slider;
+        
         if (switcher == 1)
         {
             locallist = AktienKurseLesen.valueList1;
@@ -143,6 +144,7 @@ public class Window_Graph : MonoBehaviour {
     public void switchwerte30()
     {
         anzahlWerte = 30;
+        mSlider.value =250- 30;
         if(switcher == 1)
         {
             locallist = AktienKurseLesen.valueList1;
@@ -187,6 +189,8 @@ public class Window_Graph : MonoBehaviour {
     public void switchwerte60()
     {
         anzahlWerte = 60;
+        mSlider.value =250- 60;
+     
         if (switcher == 1)
         {
             locallist = AktienKurseLesen.valueList1;
@@ -230,6 +234,7 @@ public class Window_Graph : MonoBehaviour {
     public void switchwerte250()
     {
         anzahlWerte = -1;
+        mSlider.value = 0;
         if (switcher == 1)
         {
             locallist = AktienKurseLesen.valueList1;
