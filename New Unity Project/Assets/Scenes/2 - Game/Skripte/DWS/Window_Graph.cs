@@ -31,11 +31,10 @@ public class Window_Graph : MonoBehaviour {
     public List<int> locallist3;
     public List<int> locallist4;
     public List<int> locallist5;
-
-    public GameObject TageHochAktie1;
-    public GameObject KursHochAktie1;
-    public GameObject TageTiefAktie1;
-    public GameObject KursTiefAKtie1;
+    public GameObject KursHoch;
+    public GameObject KursTief;
+ 
+    
 
     public bool liste1gedreht;
 
@@ -53,7 +52,52 @@ public class Window_Graph : MonoBehaviour {
         
         
        // StartCoroutine(ExecSQL());
+    
     }
+
+    public void Slider(float slider)
+    {
+        anzahlWerte = (int)slider;
+        if (switcher == 1)
+        {
+            locallist = AktienKurseLesen.valueList1;
+            switcher = 1;
+            //   locallist.Reverse();
+            ShowGraph(locallist, anzahlWerte, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        }
+        if (switcher == 2)
+        {
+
+            locallist2 = AktienKurseLesen.valueList2;
+            switcher = 2;
+            //  locallist2.Reverse();
+            ShowGraph(locallist2, anzahlWerte, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        }
+        if (switcher == 3)
+        {
+
+            locallist3 = AktienKurseLesen.valueList3;
+            switcher = 3;
+            //   locallist3.Reverse();
+            ShowGraph(locallist3, anzahlWerte, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        }
+        if (switcher == 4)
+        {
+
+            locallist4 = AktienKurseLesen.valueList4;
+            switcher = 4;
+            //    locallist4.Reverse();
+            ShowGraph(locallist4, anzahlWerte, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        }
+        if (switcher == 5)
+        {
+            locallist5 = AktienKurseLesen.valueList5;
+            switcher = 5;
+            //  locallist5.Reverse();
+            ShowGraph(locallist5, anzahlWerte, (int _i) => "" + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        }
+    }
+
     public void SwitchtoAktie1()
     {
         locallist = AktienKurseLesen.valueList1;
@@ -320,11 +364,21 @@ public class Window_Graph : MonoBehaviour {
             int value = valueList[i];
             if (value > yMaximum) {
                 yMaximum = value;
+               
             }
             if (value < yMinimum) {
                 yMinimum = value;
             }
         }
+
+        //
+        KursHoch.GetComponent<Text>().text = Convert.ToString(maxVisibleValueAmount)+" Tage-Hoch: " + Convert.ToString( yMaximum)+ "€";
+        KursTief.GetComponent<Text>().text = Convert.ToString(maxVisibleValueAmount) + " Tage-Tief: " + Convert.ToString(yMinimum)+"€";
+
+
+
+
+        //
 
         float yDifference = yMaximum - yMinimum; //-yMinimum for % top buffer according to highest value
         if (yDifference <= 0) {
