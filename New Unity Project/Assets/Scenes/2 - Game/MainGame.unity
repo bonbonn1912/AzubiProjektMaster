@@ -462,7 +462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &26520647
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26511,6 +26511,7 @@ MonoBehaviour:
   Aktie5: {fileID: 651806774}
   AktienKurs1: {fileID: 651806773}
   AktienKurs2: {fileID: 651806773}
+  day: 1007
   DayInSeconds: 60
 --- !u!1 &2029247530
 GameObject:
