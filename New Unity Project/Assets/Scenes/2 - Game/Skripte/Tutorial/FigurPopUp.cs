@@ -17,6 +17,8 @@ public class FigurPopUp : MonoBehaviour
     public GameObject FigurIT;
     public GameObject FigurDWS;
     public GameObject FigurSpielstart;
+    public GameObject SprechblaseHürden;
+    public GameObject SprechblaseZiele;
     public Text Speechbubble1;
     public float timeLapse = 0.03f;
     public string Bubble1 = "Hallo " + GlobalVariables.username + " einfügen,dich sehe ja zum ersten mal hier.Ich glaube es ist besser wenn ich dir die wichtisten Gebäude in der Stadt und ihre funktionen zeige. Klick auf mich um fortzufahren";
@@ -183,6 +185,21 @@ public class FigurPopUp : MonoBehaviour
             
         }
         
+    }
+
+    public void SprechBlaseHürdenAnzeigen()
+    {
+        if (SprechblaseZiele != null)
+        {
+            bool isActive = SprechblaseZiele.activeSelf;
+            SprechblaseZiele.SetActive(!isActive);
+        }
+
+        if (SprechblaseHürden != null)
+        {
+            bool isActive = SprechblaseHürden.activeSelf;
+            SprechblaseHürden.SetActive(!isActive);
+        }
     }
 
 
