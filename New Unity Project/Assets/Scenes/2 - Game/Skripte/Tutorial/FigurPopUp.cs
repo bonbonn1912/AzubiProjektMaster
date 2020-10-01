@@ -8,13 +8,20 @@ using UnityEngine.UI;
 
 public class FigurPopUp : MonoBehaviour
 {
+    
     public GameObject FigurUL;
     public GameObject FigurMid;
     public GameObject FigurUR;
     public GameObject FigurHR;
+    public GameObject FigurFiliale;
+    public GameObject FigurIT;
+    public GameObject FigurDWS;
+    public GameObject FigurSpielstart;
     public Text Speechbubble1;
     public float timeLapse = 0.03f;
-    public string Bubble1 = "Hallo /global username/ einfügen,dich sehe ja zum ersten mal hier.Ich glaube es ist besser wenn ich dir die wichtisten Gebäude in der Stadt und ihre funktionen zeige. Klick auf mich um fortzufahren";
+    public string Bubble1 = "Hallo " + GlobalVariables.username + " einfügen,dich sehe ja zum ersten mal hier.Ich glaube es ist besser wenn ich dir die wichtisten Gebäude in der Stadt und ihre funktionen zeige. Klick auf mich um fortzufahren";
+    
+    //Lässt den ersten Charakter erscheinne, wenn Tutorial noch nicht absolviert wurde
     void Start()
     {
         
@@ -39,6 +46,7 @@ public class FigurPopUp : MonoBehaviour
         }
     }
 
+   //aktiviert Figur Unten Rechts
     public void FigurUntenRechtserscheinen()
     {
          if (FigurUL != null)
@@ -55,6 +63,7 @@ public class FigurPopUp : MonoBehaviour
         }
     }
 
+    //aktiviert Figur Mitte
     public void FigurMitteErscheinen()
     {
         if (FigurUR != null)
@@ -71,7 +80,8 @@ public class FigurPopUp : MonoBehaviour
         }
     }
 
-    public void FigurHRErscheinen()
+    //aktiviert Figur am Filiale Gebäude
+    public void FigurFilialeErscheinen()
     {
 
         if (FigurMid != null)
@@ -80,12 +90,105 @@ public class FigurPopUp : MonoBehaviour
             FigurMid.SetActive(!isActive);
         }
 
+        if (FigurFiliale != null)
+        {
+            bool isActive = FigurFiliale.activeSelf;
+            FigurFiliale.SetActive(!isActive);
+            CameraZoom.ZoomActiveT1 = true;
+        }
+    }
+
+    //aktiviert Figur am IT Gebäude
+    public void FigurITErscheinen()
+    {
+        if (FigurFiliale != null)
+        {
+            CameraZoom.ZoomActiveT1 = false;
+            bool isActive = FigurFiliale.activeSelf;
+            FigurFiliale.SetActive(!isActive);
+        }
+
+        if (FigurIT != null)
+        {
+            bool isActive = FigurIT.activeSelf;
+            FigurIT.SetActive(!isActive);
+            CameraZoom.ZoomActiveT2 = true;
+        }
+    }
+
+    public void FigurHRErscheinen()
+    {
+        if (FigurIT != null)
+        {
+            CameraZoom.ZoomActiveT1 = false;
+            bool isActive = FigurIT.activeSelf;
+            FigurIT.SetActive(!isActive);
+            
+        }
+
         if (FigurHR != null)
         {
             bool isActive = FigurHR.activeSelf;
             FigurHR.SetActive(!isActive);
+            CameraZoom.ZoomActiveT3 = true;
         }
     }
+
+    public void FigurDWSErscheinen()
+    {
+        if (FigurHR != null)
+        {
+            CameraZoom.ZoomActiveT3 = false;
+            bool isActive = FigurHR.activeSelf;
+            FigurHR.SetActive(!isActive);
+
+        }
+
+        if (FigurDWS != null)
+        {
+            bool isActive = FigurDWS.activeSelf;
+            FigurDWS.SetActive(!isActive);
+            CameraZoom.ZoomActiveT4 = true;
+        }
+    }
+
+    public void FigurSpielstartErscheinen()
+    {
+        if (FigurDWS != null)
+        {
+            CameraZoom.ZoomActiveT4 = false;
+            CameraZoom.ZoomActiveT0 = true;
+            CameraZoom.Zoom = 190;
+            bool isActive = FigurDWS.activeSelf;
+            FigurDWS.SetActive(!isActive);
+
+        }
+
+        if (FigurSpielstart != null)
+        {
+            bool isActive = FigurSpielstart.activeSelf;
+            FigurSpielstart.SetActive(!isActive);            
+        }
+    }
+
+    public void TutorialCheckTrueSetzen()
+    {
+       
+        if (FigurSpielstart != null)
+        {
+            bool isActive = FigurSpielstart.activeSelf;
+            FigurSpielstart.SetActive(!isActive);
+            GlobalVariables.Tutorialcheck = true;
+            CameraZoom.ZoomActiveT4 = false;
+            
+        }
+        
+    }
+
+
 }
+
+
+
 
 
