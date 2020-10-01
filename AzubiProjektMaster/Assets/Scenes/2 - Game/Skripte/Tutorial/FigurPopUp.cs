@@ -26,18 +26,35 @@ public class FigurPopUp : MonoBehaviour
     //Lässt den ersten Charakter erscheinne, wenn Tutorial noch nicht absolviert wurde
     void Start()
     {
-        
-        if(GlobalVariables.Tutorialcheck != true)
+        StartAblauf();
+       
+    }
+
+    public void StartAblauf()
+    {
+        StartCoroutine(Verzoegern());
+    }
+
+    IEnumerator Verzoegern()
+    {
+        yield return new WaitForSeconds(0.5f);
+        openPanel();
+    }
+    public void openPanel()
+    {
+        Debug.Log(DailyUpdate.check);
+        if (GlobalVariables.Tutorialcheck != true)
         {
             if (FigurUL != null)
             {
+
                 bool isActive = FigurUL.activeSelf;
                 FigurUL.SetActive(!isActive);
                 StartCoroutine(SpeechbubblGenerate());
             }
         }
     }
-    
+
     IEnumerator SpeechbubblGenerate()
     {
         for (int i = 0; i < Bubble1.Length; i++)

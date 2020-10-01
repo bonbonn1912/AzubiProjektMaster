@@ -280,8 +280,7 @@ public class Window_Graph : MonoBehaviour {
 
     private void Update()
     {
-        Debug.Log("Daybefore " + daybefore);
-        Debug.Log("Globalday " + GlobalVariables.day);
+        
        if(GlobalVariables.day > daybefore)
         {
             Debug.Log("tag in update funktion geändert");

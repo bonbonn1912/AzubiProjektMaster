@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DailyUpdate : MonoBehaviour
 {
+    public static int check = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +60,7 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("username", GlobalVariables.username);
         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdate.php", form);
         yield return www;
-        // Debug.Log("Init datenbank "+www.text);
+        Debug.Log("Init datenbank "+www.text);
         string[] results = www.text.Split('-');
 
 
@@ -67,11 +68,21 @@ public class DailyUpdate : MonoBehaviour
         GlobalVariables.balance = Convert.ToInt32(results[1]);
         GlobalVariables.day = Convert.ToInt32(results[2]);
         GlobalVariables.mitarbeiter = Convert.ToInt32(results[3]);
-      //  Debug.Log("global variabal init" + GlobalVariables.day);
-      //  Debug.Log(GlobalVariables.PID);
+         check = Convert.ToInt32(results[4]);
+        if (check == 1)
+        {
+            GlobalVariables.Tutorialcheck = true;
+        } 
+        else if(check == 0)
+        {
+            GlobalVariables.Tutorialcheck = false;
+        }
+
+      // Debug.Log(GlobalVariables.Tutorialcheck);
 
         //  Debug.Log("Balance: " + GlobalVariables.balance);
         //  Debug.Log("Spieltage: " + GlobalVariables.day);
        // Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
     }
+
 }

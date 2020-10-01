@@ -69,11 +69,13 @@ public class AktienKurseLesen : MonoBehaviour
     IEnumerator FetchShareData(string Aktienname, int lastamount, List<int> AktienListe, string[] Result,int[] intResult, List<int> valueList)
     {
         WWWForm FetchShareData = new WWWForm();
+        FetchShareData.AddField("username", GlobalVariables.username);
         FetchShareData.AddField("sharename", Aktienname);
         FetchShareData.AddField("amount", lastamount);
 
         WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AktienKurseLesen.php", FetchShareData);
         yield return fetch;
+        
         string[] temp = fetch.text.Split('/');
         Result = new string[temp.Length-1];
         intResult = new int[Result.Length];
@@ -92,8 +94,10 @@ public class AktienKurseLesen : MonoBehaviour
            
             valueList.Add(intResult[i]);
         }
+       // Debug.Log(String.Join(",", valueList));
         valueList.Reverse();
-        Debug.Log("Liste generiert");
+        
+     //   Debug.Log("Liste generiert");
       //   Window_Graph.valueList1 = AktienListe;
       
     }
