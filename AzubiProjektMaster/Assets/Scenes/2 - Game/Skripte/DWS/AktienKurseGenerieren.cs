@@ -44,14 +44,14 @@ public class AktienKurseGenerieren : MonoBehaviour
     int baseValueAktie1 = 100;
     int MasterValueAktie1 = 100;
 
-    int baseValueAktie2 = 120;
-    int MasterValueAktie2 = 120;
+    int baseValueAktie2 = 100;
+    int MasterValueAktie2 = 100;
 
-    int baseValueAktie3 = 150;
-    int MasterValueAktie3 = 150;
+    int baseValueAktie3 = 200;
+    int MasterValueAktie3 = 200;
 
-    int baseValueAktie4 = 120;
-    int MasterValueAktie4 = 120;
+    int baseValueAktie4 = 150;
+    int MasterValueAktie4 = 150;
 
     int baseValueAktie5 = 200;
     int MasterValueAktie5 = 200;
@@ -116,7 +116,7 @@ public class AktienKurseGenerieren : MonoBehaviour
         }
 
         baseValueAktie1 = a;
-        StartCoroutine(InsertShareValues("Aktie1", a,1));
+        StartCoroutine(InsertShareValues("Aktie1", a,1, GlobalVariables.username));
         Aktie1Kurs.text = Convert.ToString(a);
       
 
@@ -173,7 +173,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie2 = a;
-        StartCoroutine(InsertShareValues("Aktie2", a,2));
+        StartCoroutine(InsertShareValues("Aktie2", a,2, GlobalVariables.username));
         Aktie2Kurs.text = Convert.ToString(a);
 
 
@@ -229,7 +229,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie3 = a;
-        StartCoroutine(InsertShareValues("Aktie3", a,3));
+        StartCoroutine(InsertShareValues("Aktie3", a,3, GlobalVariables.username));
         Aktie3Kurs.text = Convert.ToString(a);
 
 
@@ -286,7 +286,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie4 = a;
-        StartCoroutine(InsertShareValues("Aktie4", a,4));
+        StartCoroutine(InsertShareValues("Aktie4", a,4, GlobalVariables.username));
         Aktie4Kurs.text = Convert.ToString(a);
 
 
@@ -342,7 +342,7 @@ public class AktienKurseGenerieren : MonoBehaviour
 
         }
         baseValueAktie5 = a;
-        StartCoroutine(InsertShareValues("Aktie5", a,5));
+        StartCoroutine(InsertShareValues("Aktie5", a,5, GlobalVariables.username));
         Aktie5Kurs.text = Convert.ToString(a);
 
 
@@ -353,6 +353,7 @@ public class AktienKurseGenerieren : MonoBehaviour
       //  Debug.Log("AktienHandelgetriggert");
         int minValue = MasterValueAktie1 / 2;
         int maxValue = MasterValueAktie1 * 2;
+        
 
 
         float kurs = Random.Range(baseValueAktie1 * 0.95f, baseValueAktie1 * 1.05f);
@@ -364,15 +365,16 @@ public class AktienKurseGenerieren : MonoBehaviour
             a = Mathf.RoundToInt(newa);
         }
         baseValueAktie1 = a;
-        StartCoroutine(InsertShareValues("Aktie6", a,1));
+        StartCoroutine(InsertShareValues("Aktie6", a,1, GlobalVariables.username));
         Aktie1Kurs.text = Convert.ToString(a);
 
 
     }
 
-   IEnumerator InsertShareValues(string Aktienname, int Aktienkurs, int AktienLesenNummer)
+   IEnumerator InsertShareValues(string Aktienname, int Aktienkurs, int AktienLesenNummer, string username)
     {
         WWWForm InsertValue = new WWWForm();
+        InsertValue.AddField("username", username);
         InsertValue.AddField("sharename", Aktienname);
         InsertValue.AddField("sharevalue", Aktienkurs);
 

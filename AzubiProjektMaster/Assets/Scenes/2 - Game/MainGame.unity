@@ -1242,7 +1242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 250
+  m_Text: 
 --- !u!222 &95891979
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9798,7 +9798,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 489
+  m_Text: 
 --- !u!222 &447965728
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11736,7 +11736,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 333
+  m_Text: 
 --- !u!222 &587910522
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25371,7 +25371,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 963
+  m_Text: 
 --- !u!222 &1886062628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26591,6 +26591,7 @@ GameObject:
   - component: {fileID: 2024011886}
   - component: {fileID: 2024011883}
   - component: {fileID: 2024011884}
+  - component: {fileID: 2024011885}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -26655,6 +26656,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textFieldBalance: {fileID: 221698187}
   textFieldDay: {fileID: 196959306}
+--- !u!114 &2024011885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024011880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9693c2d8e3ba384bba1bb9f7f8d936f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountAktie1: {fileID: 95891978}
+  AmountAktie2: {fileID: 587910521}
+  AmountAktie3: {fileID: 447965727}
+  AmountAktie4: {fileID: 2064076815}
+  AmountAktie5: {fileID: 1886062627}
 --- !u!114 &2024011886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26701,6 +26719,7 @@ MonoBehaviour:
   Aktie5: {fileID: 651806774}
   AktienKurs1: {fileID: 651806773}
   AktienKurs2: {fileID: 651806773}
+  Abfragen: {fileID: 2024011885}
   day: 1007
   DayInSeconds: 60
 --- !u!1 &2029247530
@@ -27799,7 +27818,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 275
+  m_Text: 
 --- !u!222 &2064076816
 CanvasRenderer:
   m_ObjectHideFlags: 0
