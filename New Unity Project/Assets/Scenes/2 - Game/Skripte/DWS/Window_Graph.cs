@@ -23,7 +23,7 @@ public class Window_Graph : MonoBehaviour {
     public static List<int> valueList4 = new List<int>() {10,100};
     public static List<int> valueList5 = new List<int>() {10,100};
     public static List<int> valueList6 = new List<int>() {10,100};
-    public int daybefore = GlobalVariables.day;
+    public int daybefore;
     public int switcher = 1;
 
     public List<int> locallist;
@@ -48,12 +48,12 @@ public class Window_Graph : MonoBehaviour {
         dashTemplateX = graphContainer.Find("dashTemplateX").GetComponent<RectTransform>();
         dashTemplateY = graphContainer.Find("dashTemplateY").GetComponent<RectTransform>();
         gameObjectList = new List<GameObject>();
-       
-        
-        
-       // StartCoroutine(ExecSQL());
-    
-    }
+        Debug.Log("globalertag in awake: " + GlobalVariables.day);
+           daybefore = GlobalVariables.day;
+
+    // StartCoroutine(ExecSQL());
+
+}
 
     public void Slider(float slider)
     {
@@ -280,9 +280,11 @@ public class Window_Graph : MonoBehaviour {
 
     private void Update()
     {
+        Debug.Log("Daybefore " + daybefore);
+        Debug.Log("Globalday " + GlobalVariables.day);
        if(GlobalVariables.day > daybefore)
         {
-            
+            Debug.Log("tag in update funktion geändert");
             daybefore = GlobalVariables.day;
             if(switcher == 1)
             {

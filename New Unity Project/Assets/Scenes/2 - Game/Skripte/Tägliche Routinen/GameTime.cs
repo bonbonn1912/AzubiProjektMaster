@@ -20,25 +20,28 @@ public class GameTime : MonoBehaviour
     public AktienKurseLesen AktienKurs2;
 
 
-    private int day = GlobalVariables.day;
+    public int day = GlobalVariables.day;
     private int month = 1;
     private int year = 1;
     private float timePassed = 0;
     private float timeCounter;
     private int x = 0;
     public int DayInSeconds = 5;
-    
+    public void Awake()
+    {
+        ausfuhren.Init();
+
+    }
     private void Update() 
     {
         timeCounter = Time.time - timePassed;
 
         //die Zahl in if-Bedingung ist Tageslänge in Sekunden
-          if (timeCounter > 1) 
+          if (timeCounter > 30) 
           {
               timePassed += timeCounter;
-              day++;
-              GlobalVariables.day = day;
-            // Debug.Log(day);
+            GlobalVariables.day = GlobalVariables.day + 1;
+            // Debug.Log(GlobalVariables.day);
             DailyMethoden();
            
         }
@@ -53,6 +56,7 @@ public class GameTime : MonoBehaviour
     }
     public void DailyMethoden()
     {
+       // Debug.Log("Global day" + GlobalVariables.day);
         ausfuhren.execute();
         erhoehen.TagErhoehen();
         Aktie1.KursAktie1();
