@@ -56,11 +56,11 @@ public class Login : MonoBehaviour
         if (www.text == "0")
         {
             GlobalVariables.username = NameInputField.text;
-            init.Init();
+           // init.Init();
             UnityEngine.SceneManagement.SceneManager.LoadScene(3);
             watch.Stop();
                 float ms = watch.ElapsedMilliseconds;
-            Debug.Log("Login Dauer: " +ms+ " ms");
+           // Debug.Log("Login Dauer: " +ms+ " ms");
       
 
         }
