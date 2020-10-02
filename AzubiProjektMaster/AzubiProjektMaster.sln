@@ -2,6 +2,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+#Moin
 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5A32BBF2-0DE6-4A44-5252-6B4602E4CD24}"
 EndProject
