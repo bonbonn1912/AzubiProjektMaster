@@ -11653,6 +11653,7 @@ MonoBehaviour:
   ValueMax: 0
   Value: 0
   Duration: 0
+  volumen: 0
 --- !u!114 &580688727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11926,6 +11927,7 @@ MonoBehaviour:
   ValueMax: 0
   Value: 0
   Duration: 0
+  volumen: 0
 --- !u!114 &596922598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17595,43 +17597,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106845610}
   m_CullTransparentMesh: 0
-
---- !u!1 &1108238290
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1108238291}
-  m_Layer: 0
-  m_Name: Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1108238291
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108238290}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 571830275}
-  m_Father: {fileID: 543850476}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1115257590
 GameObject:
   m_ObjectHideFlags: 0
@@ -17668,7 +17633,6 @@ RectTransform:
   m_AnchoredPosition: {x: 651.5999, y: -16.399994}
   m_SizeDelta: {x: 1007, y: 686.3}
   m_Pivot: {x: 0.5, y: 0.5}
-
 --- !u!1 &1125984593
 GameObject:
   m_ObjectHideFlags: 0
@@ -32259,25 +32223,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024011880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-
   m_Script: {fileID: 11500000, guid: ac1c763518aa327468c455239ffc3b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Newspaper: {fileID: 1493429564}
-
-  m_Script: {fileID: 11500000, guid: 7e7ea63ad80600c4f833042ffd2cbc7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itGebaeude: {fileID: 740622392}
-  hrGebaeude: {fileID: 514410078}
-  dwsGebaeude: {fileID: 651806766}
-  inFilGebaeude: {fileID: 580688719}
-  baustelle: {fileID: 21300000, guid: 258105c451c65984ba53f6d76e670911, type: 3}
-  itSprite: {fileID: 21300000, guid: e7c4b28e4d3a0a84c82bffc24cc6f453, type: 3}
-  hrSprite: {fileID: 21300000, guid: 14ff871e0f542004ca7c5eacf87e4b30, type: 3}
-  dwsSprite: {fileID: 21300000, guid: 9dd2d6ea90dc40945a04bd0eef5e0456, type: 3}
-  inSprite: {fileID: 21300000, guid: ccce4176e5a33c846af934a69a12c51d, type: 3}
-
 --- !u!1 &2029247530
 GameObject:
   m_ObjectHideFlags: 0
