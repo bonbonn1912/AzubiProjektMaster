@@ -37,4 +37,11 @@ public class GlobalVariables : MonoBehaviour
     public static int Aktie5KursGlob;
 
     public static int AktienIndex = 250;
+
+    public static int itStatus;
+    public static int hrStatus;
+    public static int dwsStatus;
+    public static int inStatus;
+    public static int ausStatus;
+
 }
