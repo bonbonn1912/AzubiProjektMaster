@@ -58,11 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-
+*.dwlt
+*.bin
+AzubiProjektMaster/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
 AzubiProjektMaster/Library/EditorInstance.json
 AzubiProjektMaster/Temp/UnityLockfile
 AzubiProjektMaster/Library/assetDatabase3
 AzubiProjektMaster/Library/assetDatabase3
-
-*.dwlt
-
