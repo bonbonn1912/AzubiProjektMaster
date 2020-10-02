@@ -21,6 +21,8 @@ public class FigurPopUp : MonoBehaviour
     public GameObject SprechblaseZiele;
     public Text Speechbubble1;
     public float timeLapse = 0.03f;
+    public static int GameTimeGlob = 15;
+
     public string Bubble1 = "Hallo " + GlobalVariables.username + " einfügen,dich sehe ja zum ersten mal hier.Ich glaube es ist besser wenn ich dir die wichtisten Gebäude in der Stadt und ihre funktionen zeige. Klick auf mich um fortzufahren";
     
     //Lässt den ersten Charakter erscheinne, wenn Tutorial noch nicht absolviert wurde
@@ -199,7 +201,7 @@ public class FigurPopUp : MonoBehaviour
             FigurSpielstart.SetActive(!isActive);
             GlobalVariables.Tutorialcheck = true;
             CameraZoom.ZoomActiveT4 = false;
-            
+            GameTimeGlob = 15;
         }
         
     }
