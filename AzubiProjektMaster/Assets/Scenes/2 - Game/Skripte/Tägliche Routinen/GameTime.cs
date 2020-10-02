@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -24,7 +25,7 @@ public class GameTime : MonoBehaviour
     public AktienKurseLesen AktienKurs2;
 
     public AktienAnzahlAbfragen Abfragen;
-    
+    public GameObject EventPaper;
 
     public int day = GlobalVariables.day;
     private int month = 1;
@@ -93,10 +94,21 @@ public class GameTime : MonoBehaviour
             DailyMethoden();
             if (GlobalVariables.day % 30 == 0)
             {
-                Debug.Log("Monate zu Ende");
+                EventPaper.SetActive(true);
+                StartCoroutine(EventAblauf());
             }
            
         }
+
+          IEnumerator EventAblauf()
+          {
+            Debug.Log("in coroutine");
+           // EventPaper.SetActive(true);
+            yield return new WaitForSeconds(10);
+            EventPaper.SetActive(false);
+          }
+
+      
 
 
 
