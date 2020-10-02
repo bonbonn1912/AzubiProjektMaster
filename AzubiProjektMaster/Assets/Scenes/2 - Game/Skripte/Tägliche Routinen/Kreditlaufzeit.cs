@@ -28,7 +28,8 @@ public class Kreditlaufzeit : MonoBehaviour
         // Debug.Log("Neues Kapital:" + GlobalVariables.balance);
         yield return www;
          string[] IDs = www.text.Split('-');
-              for(int i = 0; i<IDs.Length-1; i++)
+        
+        for (int i = 0; i<IDs.Length-1; i++)
         {
 
             WWWForm ausgelaufen = new WWWForm();
@@ -36,20 +37,20 @@ public class Kreditlaufzeit : MonoBehaviour
             ausgelaufen.AddField("PID", GlobalVariables.PID);
             WWW auslaufen = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KreditHistory.php", ausgelaufen);
             yield return auslaufen;
-            Debug.Log(auslaufen.text);
+            
 
            
             WWWForm form1 = new WWWForm();
             form1.AddField("LID", IDs[i]);
             WWW www1 = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KreditWert.php", form1);
             yield return www1;
-
+            
             int creditvalue = Convert.ToInt32(www1.text);
             WWWForm formdelete = new WWWForm();
             formdelete.AddField("LID", IDs[i]);
             WWW wwwdelete = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/DeleteKredit.php", formdelete);
             yield return wwwdelete;
-            
+           
             WWWForm updateKapital = new WWWForm();
             updateKapital.AddField("Username", GlobalVariables.username);
             GlobalVariables.balance = GlobalVariables.balance + creditvalue;
@@ -57,7 +58,7 @@ public class Kreditlaufzeit : MonoBehaviour
             updateKapital.AddField("Balance", GlobalVariables.balance);
             WWW payout = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", updateKapital);
             yield return payout;
-            Debug.Log(payout.text);
+            
         }
              
     }
