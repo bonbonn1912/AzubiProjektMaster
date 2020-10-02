@@ -111,7 +111,7 @@ public class GameTime : MonoBehaviour
     {
        // Debug.Log("Global day" + GlobalVariables.day);
         ausfuhren.execute();
-        ausfuhren.BuildingStats();
+        ausfuhren.GetBuildingStats();
         erhoehen.TagErhoehen();
         Aktie1.KursAktie1();
         Aktie2.KursAktie2();

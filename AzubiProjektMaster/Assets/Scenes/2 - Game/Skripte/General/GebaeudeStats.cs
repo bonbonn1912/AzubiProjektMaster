@@ -24,7 +24,7 @@ public class GebaeudeStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        StartCoroutine(setBuildings());
     }
     IEnumerator setBuildings()
     {
