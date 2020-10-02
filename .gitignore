@@ -7,6 +7,12 @@
 [Ll]ibrary/
 sysinfo.txt
 *.stackdump
+AzubiProjektMaster/AzubiProjektMaster.sln 
+AzubiProjektMaster/Assembly-CSharp.csproj
+/Assembly-CSharp.csproj
+/AzubiProjektMaster.sln 
+AzubiProjektMaster.sln 
+Assembly-CSharp.csproj
 
 # ============================================= #
 # Visual Studio / MonoDevelop / Rider generated #
