@@ -11653,6 +11653,7 @@ MonoBehaviour:
   ValueMax: 0
   Value: 0
   Duration: 0
+  volumen: 0
 --- !u!114 &580688727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11926,6 +11927,7 @@ MonoBehaviour:
   ValueMax: 0
   Value: 0
   Duration: 0
+  volumen: 0
 --- !u!114 &596922598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17445,6 +17447,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106845610}
   m_CullTransparentMesh: 0
+
+--- !u!1 &1115257590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115257591}
+  m_Layer: 0
+  m_Name: Zeitung
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1115257591
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115257590}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 823618663}
+  m_Father: {fileID: 2110880043}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 651.5999, y: -16.399994}
+  m_SizeDelta: {x: 1007, y: 686.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+
 --- !u!1 &1125984593
 GameObject:
   m_ObjectHideFlags: 0
@@ -31753,9 +31793,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024011880}
   m_Enabled: 1
   m_EditorHideFlags: 0
+
+  
+
   m_Script: {fileID: 11500000, guid: 7e7ea63ad80600c4f833042ffd2cbc7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Newspaper: {fileID: 1493429564}
   itGebaeude: {fileID: 740622392}
   hrGebaeude: {fileID: 514410078}
   dwsGebaeude: {fileID: 651806766}
@@ -31765,7 +31809,7 @@ MonoBehaviour:
   hrSprite: {fileID: 21300000, guid: 14ff871e0f542004ca7c5eacf87e4b30, type: 3}
   dwsSprite: {fileID: 21300000, guid: 9dd2d6ea90dc40945a04bd0eef5e0456, type: 3}
   inSprite: {fileID: 21300000, guid: ccce4176e5a33c846af934a69a12c51d, type: 3}
---- !u!1 &2029247530
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
