@@ -58,3 +58,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+<<<<<<< Updated upstream
+=======
+*.dwlt
+*.bin
+AzubiProjektMaster/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+>>>>>>> Stashed changes
