@@ -77,7 +77,7 @@ public class DailyUpdate : MonoBehaviour
         if (check == 1)
         {
             GlobalVariables.Tutorialcheck = true;
-            FigurPopUp.GameTimeGlob = 15;
+            FigurPopUp.GameTimeGlob = 3;
         } 
         else if(check == 0)
         {

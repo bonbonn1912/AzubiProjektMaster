@@ -21,6 +21,7 @@ public class KreditGenerieren : MonoBehaviour
     public int ValueMax;
     public int Value;
     public int Duration;
+    public int volumen;
     
     public void GenerateKredit()
     {
@@ -48,6 +49,7 @@ public class KreditGenerieren : MonoBehaviour
     IEnumerator PushintoDB()
     {
 
+        
         WWWForm form = new WWWForm();
         string name = Kunde.text;
         string laufzeit = Laufzeit.text;
@@ -60,7 +62,15 @@ public class KreditGenerieren : MonoBehaviour
         WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/InsertCredits.php", form);
         
         yield return www;
-        Debug.Log(www.text);
+
+        GlobalVariables.balance = GlobalVariables.balance - Convert.ToInt32(Volumen.text);
+        WWWForm form1 = new WWWForm();
+        form1.AddField("Username", GlobalVariables.username);
+        form1.AddField("Balance", GlobalVariables.balance);
+        WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", form1);
+
+        yield return www1;
+        //Debug.Log(www.text);
     }
 
     string GenerateName()
