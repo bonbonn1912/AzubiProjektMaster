@@ -137,6 +137,7 @@ public class FigurPopUp : MonoBehaviour
         }
     }
 
+    //aktiviert Figur am HR Gebäude
     public void FigurHRErscheinen()
     {
         if (FigurIT != null)
@@ -155,6 +156,7 @@ public class FigurPopUp : MonoBehaviour
         }
     }
 
+    //aktiviert Figur am DWS Gebäude
     public void FigurDWSErscheinen()
     {
         if (FigurHR != null)
@@ -173,6 +175,7 @@ public class FigurPopUp : MonoBehaviour
         }
     }
 
+    //aktiviert Figur in der Mitte(Spielstart)
     public void FigurSpielstartErscheinen()
     {
         if (FigurDWS != null)
@@ -192,6 +195,7 @@ public class FigurPopUp : MonoBehaviour
         }
     }
 
+    
     public void TutorialCheckTrueSetzen()
     {
        

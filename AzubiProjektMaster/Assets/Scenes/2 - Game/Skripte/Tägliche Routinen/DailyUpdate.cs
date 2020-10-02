@@ -27,6 +27,11 @@ public class DailyUpdate : MonoBehaviour
     public void Init()
     {
         StartCoroutine(Initco());
+        StartCoroutine(BuildingsCo());
+    }
+    public void BuildingStats()
+    {
+        StartCoroutine(BuildingsCo());
     }
     IEnumerator StatusBarUpdate()
     {
@@ -87,5 +92,19 @@ public class DailyUpdate : MonoBehaviour
         //  Debug.Log("Spieltage: " + GlobalVariables.day);
         // Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
     }
+    IEnumerator BuildingsCo()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", GlobalVariables.username);
 
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusLesen.php", form);
+        yield return www;
+        string[] results = www.text.Split('-'); //0=BID,1=IT,2=HR,3=DWS,4=InlandFil,5=AuslandFil
+        Debug.Log("Buildings result: " + www.text);
+        GlobalVariables.itStatus = Convert.ToInt32(results[1]);
+        GlobalVariables.hrStatus = Convert.ToInt32(results[2]);
+        GlobalVariables.dwsStatus = Convert.ToInt32(results[3]);
+        GlobalVariables.inStatus = Convert.ToInt32(results[4]);
+        GlobalVariables.ausStatus = Convert.ToInt32(results[5]);
+    }
 }
