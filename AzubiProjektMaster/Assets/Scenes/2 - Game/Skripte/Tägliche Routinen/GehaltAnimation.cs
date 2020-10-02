@@ -5,21 +5,28 @@ using UnityEngine;
 
 public class GehaltAnimation : MonoBehaviour
 {
+    private int oldBalance;
+    public ParticleSystem balancePlusAnimation;
+    public AudioSource moneySound;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingLayerName = "particles";
+        oldBalance = GlobalVariables.balance;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GlobalVariables.day%2 == 0)
+        if (oldBalance > GlobalVariables.balance)
         {
-            Debug.Log("30 days");
+            balancePlusAnimation.Play();
+            moneySound.Play();
+            oldBalance = GlobalVariables.balance;
         }
-        {
-
+        else if (oldBalance < GlobalVariables.balance) {
+            balancePlusAnimation.Play();
+            moneySound.Play();
+            oldBalance = GlobalVariables.balance;
         }
     }
 }
