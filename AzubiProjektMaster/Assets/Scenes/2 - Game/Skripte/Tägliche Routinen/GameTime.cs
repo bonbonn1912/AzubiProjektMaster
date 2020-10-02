@@ -93,6 +93,7 @@ public class GameTime : MonoBehaviour
             DailyMethoden();
             if (GlobalVariables.day % 30 == 0)
             {
+
                 Debug.Log("Monate zu Ende");
             }
            
@@ -121,4 +122,7 @@ public class GameTime : MonoBehaviour
       //  AktienKurs1.LesenAktie1();
         pruefen.LautZeitVeringern();
     }
+
+     
+    
 }
