@@ -27,11 +27,15 @@ public class DailyUpdate : MonoBehaviour
     public void Init()
     {
         StartCoroutine(Initco());
-        StartCoroutine(BuildingsCo());
+        StartCoroutine(GetBuildingsCo());
     }
-    public void BuildingStats()
+    public void GetBuildingStats()
     {
-        StartCoroutine(BuildingsCo());
+        StartCoroutine(GetBuildingsCo());
+    }
+    public void SetBuildingStats()
+    {
+        StartCoroutine(SetBuildingsCo());
     }
     IEnumerator StatusBarUpdate()
     {
@@ -106,7 +110,7 @@ public class DailyUpdate : MonoBehaviour
         //  Debug.Log("Spieltage: " + GlobalVariables.day);
         // Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
     }
-    IEnumerator BuildingsCo()
+    IEnumerator GetBuildingsCo()
     {
         WWWForm form = new WWWForm();
         form.AddField("username", GlobalVariables.username);
@@ -120,5 +124,27 @@ public class DailyUpdate : MonoBehaviour
         GlobalVariables.dwsStatus = Convert.ToInt32(results[3]);
         GlobalVariables.inStatus = Convert.ToInt32(results[4]);
         GlobalVariables.ausStatus = Convert.ToInt32(results[5]);
+    }
+    IEnumerator SetBuildingsCo()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", GlobalVariables.username);
+        form.AddField("it", GlobalVariables.itStatus);
+        form.AddField("hr", GlobalVariables.hrStatus);
+        form.AddField("dws", GlobalVariables.dwsStatus);
+        form.AddField("inland", GlobalVariables.inStatus);
+        form.AddField("ausland", GlobalVariables.ausStatus);
+        form.AddField("balance", GlobalVariables.balance);
+
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusSchreiben.php", form);
+        yield return www;
+        if (www.text == "0")
+        {
+            Debug.Log("Successfull building Update");
+        }
+        else
+        {
+            Debug.Log("building Update: " + www.text);
+        }
     }
 }
