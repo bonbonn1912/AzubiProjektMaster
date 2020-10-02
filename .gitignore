@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-AzubiProjektMaster/[Ll]ibrary/
-AzubiProjektMaster/[Tt]emp/
-AzubiProjektMaster/[Oo]bj/
-AzubiProjektMaster/[Bb]uild/
-AzubiProjektMaster/[Bb]uilds/
-AzubiProjektMaster/[Ll]ogs/
-AzubiProjektMaster/[Mm]emoryCaptures/
+AzubiProjektMaster[\/][Ll]ibrary[[\/]
+AzubiProjektMaster[\/][Tt]emp[\/]
+AzubiProjektMaster[\/][Oo]bj[\/]
+AzubiProjektMaster[\/][Bb]uild[\/]
+AzubiProjektMaster[\/][Bb]uilds[\/]
+AzubiProjektMaster[\/][Ll]ogs[\/]
+AzubiProjektMaster[\/][Mm]emoryCaptures[\/]
 
 # Never ignore Asset meta data
 !AzubiProjektMaster/[Aa]ssets/**/*.meta
@@ -58,9 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-<<<<<<< Updated upstream
-=======
 *.dwlt
 *.bin
 AzubiProjektMaster/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
->>>>>>> Stashed changes
+AzubiProjektMaster/Library/EditorInstance.json
+AzubiProjektMaster/Temp/UnityLockfile
+AzubiProjektMaster/Library/assetDatabase3
+AzubiProjektMaster/Library/assetDatabase3
