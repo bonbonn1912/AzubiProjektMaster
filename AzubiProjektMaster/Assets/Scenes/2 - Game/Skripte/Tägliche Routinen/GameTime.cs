@@ -11,6 +11,9 @@ public class GameTime : MonoBehaviour
     public DailyUpdate ausfuhren;
     public TagUpdaten erhoehen;
     public Kreditlaufzeit pruefen;
+    
+
+
     public AktienKurseGenerieren Aktie1;
     public AktienKurseGenerieren Aktie2;
     public AktienKurseGenerieren Aktie3;
@@ -34,15 +37,12 @@ public class GameTime : MonoBehaviour
     public void Start()
     {
         ausfuhren.Init();
-
     }
     public void Awake()
     {
-
-
         Abfragen.getAktienAnzahl();
-       
         GenerateValues();
+
     }
 
     public void GenerateValues()
@@ -111,6 +111,7 @@ public class GameTime : MonoBehaviour
     {
        // Debug.Log("Global day" + GlobalVariables.day);
         ausfuhren.execute();
+        ausfuhren.BuildingStats();
         erhoehen.TagErhoehen();
         Aktie1.KursAktie1();
         Aktie2.KursAktie2();
