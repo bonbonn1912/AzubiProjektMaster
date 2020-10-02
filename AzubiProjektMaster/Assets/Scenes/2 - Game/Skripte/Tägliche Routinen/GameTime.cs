@@ -30,7 +30,7 @@ public class GameTime : MonoBehaviour
     private float timeCounter;
     private int x = 0;
     public int DayInSeconds = 5;
-
+    int gametimelocal;
     public void Start()
     {
         ausfuhren.Init();
@@ -55,7 +55,7 @@ public class GameTime : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if(DailyUpdate.check == 0)
         {
-            for (int i = 0; i < 250; i++)
+            for (int i = 0; i < 100; i++)
             {
                 Aktie1.KursAktie1();
                 Aktie2.KursAktie2();
@@ -80,17 +80,24 @@ public class GameTime : MonoBehaviour
     }
     private void Update() 
     {
+
+        gametimelocal = FigurPopUp.GameTimeGlob;
         timeCounter = Time.time - timePassed;
 
         //die Zahl in if-Bedingung ist Tageslänge in Sekunden
-          if (timeCounter > 1) 
+          if (timeCounter > gametimelocal) 
           {
               timePassed += timeCounter;
             GlobalVariables.day = GlobalVariables.day + 1;
             // Debug.Log(GlobalVariables.day);
             DailyMethoden();
+            if (GlobalVariables.day % 30 == 0)
+            {
+                Debug.Log("Monate zu Ende");
+            }
            
         }
+
 
 
 

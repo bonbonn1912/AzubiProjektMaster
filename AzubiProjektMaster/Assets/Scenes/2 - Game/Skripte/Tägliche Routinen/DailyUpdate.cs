@@ -72,17 +72,20 @@ public class DailyUpdate : MonoBehaviour
         if (check == 1)
         {
             GlobalVariables.Tutorialcheck = true;
+            FigurPopUp.GameTimeGlob = 15;
         } 
         else if(check == 0)
         {
-            GlobalVariables.Tutorialcheck = false;
+           GlobalVariables.Tutorialcheck = false;
+            FigurPopUp.GameTimeGlob = 1000;
+
         }
 
-      // Debug.Log(GlobalVariables.Tutorialcheck);
+        // Debug.Log(GlobalVariables.Tutorialcheck);
 
         //  Debug.Log("Balance: " + GlobalVariables.balance);
         //  Debug.Log("Spieltage: " + GlobalVariables.day);
-       // Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
+        // Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
     }
 
 }
