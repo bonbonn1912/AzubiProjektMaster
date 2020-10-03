@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerEvents : MonoBehaviour
 {
-
+    public GenerateEvent Generate;
     public GameObject Newspaper;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,7 @@ public class TriggerEvents : MonoBehaviour
   
     public void TriggerCo()
     {
+        Generate.TriggerDecision();
         StartCoroutine(EventTimer());
     }
 

@@ -26,7 +26,7 @@ public class GameTime : MonoBehaviour
     public AktienAnzahlAbfragen Abfragen;
 
     public TriggerEvents Event;
-
+    
     public int day = GlobalVariables.day;
     private int month = 1;
     private int year = 1;
