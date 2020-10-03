@@ -19,12 +19,13 @@ public class GameTime : MonoBehaviour
     public AktienKurseGenerieren Aktie3;
     public AktienKurseGenerieren Aktie4;
     public AktienKurseGenerieren Aktie5;
-
+   
     public AktienKurseLesen AktienKurs1;
     public AktienKurseLesen AktienKurs2;
 
     public AktienAnzahlAbfragen Abfragen;
-    
+
+    public TriggerEvents Event;
 
     public int day = GlobalVariables.day;
     private int month = 1;
@@ -91,9 +92,9 @@ public class GameTime : MonoBehaviour
             GlobalVariables.day = GlobalVariables.day + 1;
             // Debug.Log(GlobalVariables.day);
             DailyMethoden();
-            if (GlobalVariables.day % 30 == 0)
+            if (GlobalVariables.day % 10 == 0)
             {
-
+              //  Event.TriggerCo();
                 Debug.Log("Monate zu Ende");
             }
            
