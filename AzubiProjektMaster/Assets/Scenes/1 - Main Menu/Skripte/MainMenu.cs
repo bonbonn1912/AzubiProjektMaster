@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour {
     public void GoToGame()
     {
         
-        GlobalVariables.username = "AdminMuHaHaHa";
+        GlobalVariables.username = "SebastianTest1";
         SceneManager.LoadScene(3);
     }
 
