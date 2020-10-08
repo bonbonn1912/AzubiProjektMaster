@@ -8,27 +8,50 @@ public class MainScene : MonoBehaviour
 {
     public Button logOut;
     public Text usernameText;
-   
     
-    // Start is called before the first frame update
-    void Start()
+    //Callable transparent button covering the entire background to close tablets
+    public static void TabletHandlerActivate()
     {
-        usernameText.text = GlobalVariables.username;
+        GameObject.Find("GameHandler/UI/TabletHandlerBtn").SetActive(true);
     }
-    //commit test
-    // Update is called once per frame
-    void Update()
+    //Tablet Handler On Click() Game/GameHandler/UI/CloseAllTablets
+    public void TabletHandler()
     {
-        
+        if (GameObject.Find("HRTablet") != null)
+        {
+            GameObject.Find("HRTablet").SetActive(false);
+        }
+        if (GameObject.Find("Panel für Window Graph") != null)
+        {
+            GameObject.Find("Panel für Window Graph").SetActive(false);
+        }
+        if (GameObject.Find("AktienHandelTablet") != null)
+        {
+            GameObject.Find("AktienHandelTablet").SetActive(false);
+        }
+        if (GameObject.Find("KreditTablet") != null)
+        {
+            GameObject.Find("KreditTablet").SetActive(false);
+        }
+        if (GameObject.Find("AlleKrediteAPP") != null)
+        {
+            GameObject.Find("AlleKrediteAPP").SetActive(false);
+        }
+        if (GameObject.Find("GebäudeKaufenAPP") != null)
+        {
+            GameObject.Find("GebäudeKaufenAPP").SetActive(false);
+        }
+        GameObject.Find("TabletHandlerBtn").SetActive(false);
     }
+    //On Click() Game/GameHandler/UI/Statusleiste/logOut
     public void LogOut()
     {
         GlobalVariables.username = null;
         SceneManager.LoadScene(0);
     }
-    public void LoadMitarbeiter()
+    // Start is called before the first frame update
+    void Start()
     {
-        SceneManager.LoadScene(4);
+        usernameText.text = GlobalVariables.username;
     }
-   
 }

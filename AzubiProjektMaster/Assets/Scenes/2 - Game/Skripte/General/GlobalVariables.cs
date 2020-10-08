@@ -7,6 +7,7 @@ public class GlobalVariables : MonoBehaviour
 {
     
     public static string username;
+    
     public static int day;
     public static int PID;
     public static string registrationResult = null;
@@ -44,5 +45,4 @@ public class GlobalVariables : MonoBehaviour
     public static int dwsStatus;
     public static int inStatus;
     public static int ausStatus;
-
 }

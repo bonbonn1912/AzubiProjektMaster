@@ -7,30 +7,53 @@ using System;
 
 public class OpenHRpopup : MonoBehaviour
 {
-    public GameObject PersonalPanel;
-  //  public Text Mitarbeitercount;
-    public GameObject FAPopUp;
-    public void OpenPanel()
+    public GameObject kaufenApp;
+    public GameObject personalPopUpPanel;
+    public GameObject personalPopUp;
+    public GameObject hoverText;
+    public GameObject hrTablet;
+    
+
+    public Text MitarbeiterCount;
+    public Text PersonalCost;
+
+    public void OnBuildingClick()
     {
-        if (FAPopUp != null)
+        if (GlobalVariables.hrStatus == 0)
         {
-            bool isActive = FAPopUp.activeSelf;
-            FAPopUp.SetActive(!isActive);
+            kaufenApp.SetActive(!kaufenApp.activeSelf);
+            MainScene.TabletHandlerActivate();
+        }
+        else if (GlobalVariables.hrStatus == 1)
+        {
+            OpenPopUp();
         }
     }
 
-    public void OpenPersonal()
+    private void OpenPopUp()
     {
-        if(PersonalPanel != null)
+        if(personalPopUpPanel != null && personalPopUp != null )
         {
-            bool isActive = PersonalPanel.activeSelf;
-            FAPopUp.SetActive(true);
-            PersonalPanel.SetActive(!isActive);
-         //   Mitarbeitercount.text = Convert.ToString(GlobalVariables.mitarbeiter);
+            personalPopUpPanel.SetActive(!personalPopUpPanel.activeSelf);
+            personalPopUp.SetActive(!personalPopUp.activeSelf);
         }
     }
-    public void ClosePersonal()
+
+    public void OpenHRTablet()
     {
-        PersonalPanel.SetActive(false);
+        if (hrTablet != null)
+        {
+            hrTablet.SetActive(!hrTablet.activeSelf);
+            MitarbeiterCount.text = Convert.ToString(GlobalVariables.mitarbeiter);
+            PersonalCost.text = GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost + " €";
+            MainScene.TabletHandlerActivate();
+        }
+    }
+    public void PopUpHoverText()
+    {
+        if (hoverText != null)
+        {
+            hoverText.SetActive(!hoverText.activeSelf);
+        }
     }
 }

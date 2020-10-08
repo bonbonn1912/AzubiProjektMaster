@@ -12,5 +12,6 @@ public class OpenBloomberg : MonoBehaviour
         bool isActive = Bloomberg.activeSelf;
         Bloomberg.SetActive(!isActive);
         AktienhandelTablet.SetActive(false);
+        MainScene.TabletHandlerActivate();
     }
 }
