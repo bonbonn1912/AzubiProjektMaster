@@ -42,7 +42,9 @@ public class DailyUpdate : MonoBehaviour
         if(GlobalVariables.day % 30 == 0)
         {
             GlobalVariables.balance = GlobalVariables.balance - GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost;
-            Debug.Log("Personalkosten: " + GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost);
+            GlobalVariables.balance = GlobalVariables.balance + GlobalVariables.mitarbeiter * GlobalVariables.Mitarbeitergewinn;
+            Debug.Log("PersonalKosten: " + GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost);
+            Debug.Log("PersonalGewinn: " + GlobalVariables.mitarbeiter * GlobalVariables.Mitarbeitergewinn);
             WWWForm form1 = new WWWForm();
             form1.AddField("Username", GlobalVariables.username);
             form1.AddField("Balance", GlobalVariables.balance);
