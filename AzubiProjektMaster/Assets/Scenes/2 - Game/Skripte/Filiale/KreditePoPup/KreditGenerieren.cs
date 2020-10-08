@@ -9,6 +9,8 @@ public class KreditGenerieren : MonoBehaviour
     public Text Kunde;
     public Text Laufzeit;
     public Text Volumen;
+    public Text ZinsenTxt;
+    public Text GewinnTxt;
     public GameObject App;
     public GameObject Success;
     public GameObject Management;
@@ -16,12 +18,15 @@ public class KreditGenerieren : MonoBehaviour
     public Button Accept;
     public Button Deny;
     public Button Back;
+    
    
     public int ValueMin;
     public int ValueMax;
-    public int Value;
+    public float Value;
     public int Duration;
     public int volumen;
+    public float Zinsen;
+    public float Gewinn;
     
     public void GenerateKredit()
     {
@@ -85,12 +90,21 @@ public class KreditGenerieren : MonoBehaviour
 
     }
 
-    int GenerateCreditValue()
+    float GenerateCreditValue()
     {
         ValueMin = GlobalVariables.balance / 100;
         ValueMax = GlobalVariables.balance / 10;
         Value = Random.Range(ValueMin, ValueMax);
         Volumen.text = Convert.ToString(Value);
+        Zinsen = Random.Range(0.001f, 0.05f);
+        Gewinn = Value * Zinsen;
+        //Debug.Log("Gewinn vor Rundung: " + Gewinn);
+        Gewinn = Mathf.Round(Gewinn);
+        //Debug.Log("Value vor dem neu Berechnen: " + Value);
+        Value = Value + Gewinn;
+        ZinsenTxt.text = Convert.ToString(Zinsen * 100);
+        GewinnTxt.text = Convert.ToString(Gewinn);
+        //Debug.Log("Zinsen: " + Zinsen + "Gewinn: " + Gewinn + "Value: " + Value);
         return Value;
     }
 
@@ -126,4 +140,5 @@ public class KreditGenerieren : MonoBehaviour
     {
         Abgelehnt.SetActive(false);
     }
+
 }
