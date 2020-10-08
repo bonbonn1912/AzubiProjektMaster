@@ -39,12 +39,26 @@ public class DailyUpdate : MonoBehaviour
     }
     IEnumerator StatusBarUpdate()
     {
+        if(GlobalVariables.day % 30 == 0)
+        {
+            GlobalVariables.balance = GlobalVariables.balance - GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost;
+            Debug.Log("Personalkosten: " + GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost);
+            WWWForm form1 = new WWWForm();
+            form1.AddField("Username", GlobalVariables.username);
+            form1.AddField("Balance", GlobalVariables.balance);
+            WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", form1);
+            Debug.Log("Kosten abgezogen");
+            yield return www1;
+            yield return new WaitForSeconds(0.2f);
+            Debug.Log("Kapital nach Gehalt" + GlobalVariables.balance);
+        }
+
       //  Debug.Log("Routine getriggert");
         WWWForm form = new WWWForm();
         form.AddField("username", GlobalVariables.username);
         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdate.php", form);
         yield return www;
-      //   Debug.Log("Daily statusbarupdate "+www.text);
+        Debug.Log("Daily statusbarupdate "+www.text);
         string[] results = www.text.Split('-');
 
 
@@ -81,7 +95,7 @@ public class DailyUpdate : MonoBehaviour
         if (check == 1)
         {
             GlobalVariables.Tutorialcheck = true;
-            FigurPopUp.GameTimeGlob = 15;
+            FigurPopUp.GameTimeGlob = 3;
         } 
         else if(check == 0)
         {
