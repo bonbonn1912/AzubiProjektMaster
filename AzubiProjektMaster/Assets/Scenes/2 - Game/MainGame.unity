@@ -27576,7 +27576,7 @@ GameObject:
   - component: {fileID: 1937756052}
   - component: {fileID: 1937756051}
   m_Layer: 5
-  m_Name: Alle
+  m_Name: Alle Werte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27705,7 +27705,7 @@ GameObject:
   - component: {fileID: 1950792823}
   - component: {fileID: 1950792822}
   m_Layer: 5
-  m_Name: 30 Werte (1)
+  m_Name: 60 Werte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
