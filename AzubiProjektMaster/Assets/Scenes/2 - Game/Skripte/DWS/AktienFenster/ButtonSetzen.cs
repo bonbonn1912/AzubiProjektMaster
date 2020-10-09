@@ -18,6 +18,12 @@ public class ButtonSetzen : MonoBehaviour
     public Button VerkaufenAktie4;
     public Button VerkaufenAktie5;
 
+    public GameObject closeTablet;
+
+    public void CloseTablet()
+    {
+        closeTablet.SetActive(!closeTablet.activeSelf);
+    }
     // Update is called once per frame
     void Update()
     {
