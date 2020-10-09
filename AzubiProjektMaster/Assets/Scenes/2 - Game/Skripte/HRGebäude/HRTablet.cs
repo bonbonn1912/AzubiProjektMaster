@@ -8,8 +8,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class Mitarbeiterentlassen : MonoBehaviour
+public class HRTablet : MonoBehaviour
 {
+    public GameObject hrTablet;
+    
     public Text AnzahlMA;
     public Text Zaehler;
     public Text KostenAE;
@@ -112,6 +114,10 @@ public class Mitarbeiterentlassen : MonoBehaviour
         }
 
 
+    }
+    public void CloseTablet()
+    {
+        hrTablet.SetActive(false);
     }
     IEnumerator UpdateKapital()
     {

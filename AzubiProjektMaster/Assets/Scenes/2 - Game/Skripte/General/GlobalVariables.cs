@@ -7,6 +7,7 @@ public class GlobalVariables : MonoBehaviour
 {
     
     public static string username;
+    
     public static int day;
     public static int PID;
     public static string registrationResult = null;
@@ -27,7 +28,7 @@ public class GlobalVariables : MonoBehaviour
     public static int buildingsStart = 0;
    
     public static int mitarbeiter;
-    public static int balance;
+    public static int balance = 10000000;
     public static int minDuration = 20;
     public static int maxDuration = 100;
     public static int Mitarbeitergewinn = 5000;
@@ -45,6 +46,5 @@ public class GlobalVariables : MonoBehaviour
     public static int dwsStatus;
     public static int inStatus;
     public static int ausStatus;
-
 
 }

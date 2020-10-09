@@ -26,7 +26,6 @@ public class DailyUpdate : MonoBehaviour
 
     public void Init()
     {
-
         StartCoroutine(Initco());
         StartCoroutine(GetBuildingsCo());
     }

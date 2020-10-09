@@ -37,22 +37,16 @@ public class GameTime : MonoBehaviour
     int gametimelocal;
     public void Start()
     {
-        
-        /*if (GlobalVariables.username == null)                 //Ausklammern wenn man ungestört testen will ohne sich immer wieder neu anmelden zu müssen
+        /*if (GlobalVariables.username == null)
         {
             GlobalVariables.username = "SebastianTest1";
         }*/
-        if (GlobalVariables.username == null)
-        {
-            GlobalVariables.username = "SebastianTest1";
-        }
-        ausfuhren.Init();
 
+        ausfuhren.Init();
     }
     public void Awake()
     {
-
-        /*if (GlobalVariables.username == null)                 //Ausklammern wenn man ungestört testen will ohne sich immer wieder neu anmelden zu müssen
+        /*if (GlobalVariables.username == null)
         {
             GlobalVariables.username = "SebastianTest1";
         }*/
