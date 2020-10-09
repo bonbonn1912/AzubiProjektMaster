@@ -1923,8 +1923,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 617190094}
   m_HandleRect: {fileID: 617190093}
   m_Direction: 2
-  m_Value: 1.0000026
-  m_Size: 0.9437981
+  m_Value: 1.0000033
+  m_Size: 0.94379824
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11189,7 +11189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kaufenApp: {fileID: 206608903}
-  personalPopUpPanel: {fileID: 0}
+  personalPopUpPanel: {fileID: 666802971}
   personalPopUp: {fileID: 896897728}
   hoverText: {fileID: 1528572786}
   hrTablet: {fileID: 2046312578}
@@ -12109,6 +12109,7 @@ MonoBehaviour:
   Accept: {fileID: 2108269932}
   Deny: {fileID: 397369368}
   Back: {fileID: 1827924247}
+  UpdateKredit: {fileID: 0}
   ValueMin: 0
   ValueMax: 0
   Value: 0
@@ -12329,6 +12330,7 @@ GameObject:
   - component: {fileID: 596922599}
   - component: {fileID: 596922598}
   - component: {fileID: 596922597}
+  - component: {fileID: 596922600}
   m_Layer: 5
   m_Name: KreditTablet
   m_TagString: Untagged
@@ -12383,6 +12385,7 @@ MonoBehaviour:
   Accept: {fileID: 2108269932}
   Deny: {fileID: 397369368}
   Back: {fileID: 1827924247}
+  UpdateKredit: {fileID: 596922600}
   ValueMin: 0
   ValueMax: 0
   Value: 0
@@ -12424,6 +12427,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596922595}
   m_CullTransparentMesh: 0
+--- !u!114 &596922600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596922595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2ad40c9048c4429d7f88611a94e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KreditAnzahl: {fileID: 1809349141}
+  GesamtVolumen: {fileID: 1580209618}
+  KrediteAnTagX: {fileID: 1565123930}
 --- !u!1 &605044957
 GameObject:
   m_ObjectHideFlags: 0
@@ -12704,7 +12722,7 @@ RectTransform:
   m_Father: {fileID: 1707752580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.056201875}
+  m_AnchorMin: {x: 0, y: 0.056201756}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}

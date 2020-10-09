@@ -16,7 +16,9 @@ public class KreditGenerieren : MonoBehaviour
     public Button Accept;
     public Button Deny;
     public Button Back;
-   
+
+    public KreditStatistiken UpdateKredit;
+
     public int ValueMin;
     public int ValueMax;
     public int Value;
@@ -58,18 +60,22 @@ public class KreditGenerieren : MonoBehaviour
         form.AddField("Name", Kunde.text);
         form.AddField("Laufzeit", Laufzeit.text);
         form.AddField("Volume", Volumen.text);
-        // Debug.Log("Folgende Werte werden inserted Name: " + name + " Runtime: " + laufzeit + " Volume: " + volume);
-        WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/InsertCredits.php", form);
-        
-        yield return www;
+         Debug.Log("Folgende Werte werden inserted Name: " + name + " Runtime: " + laufzeit + " Volume: " + volume);
+        // WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/InsertCredits.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/InsertCredits.php", form);
 
+        yield return www;
+        Debug.Log(www.text);
         GlobalVariables.balance = GlobalVariables.balance - Convert.ToInt32(Volumen.text);
         WWWForm form1 = new WWWForm();
         form1.AddField("Username", GlobalVariables.username);
         form1.AddField("Balance", GlobalVariables.balance);
-        WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", form1);
+        // WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", form1);
+        WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", form1);
 
         yield return www1;
+
+        UpdateKredit.statistike();
         //Debug.Log(www.text);
     }
 
