@@ -3868,7 +3868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ziel
+  m_Text: 
 --- !u!222 &333353672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5262,7 +5262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &439555641
 Transform:
   m_ObjectHideFlags: 0
@@ -11245,7 +11245,7 @@ SpriteRenderer:
   m_SortingLayerID: 343956773
   m_SortingLayer: -1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 14ff871e0f542004ca7c5eacf87e4b30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11253,7 +11253,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &514410081
@@ -12316,7 +12316,7 @@ SpriteRenderer:
   m_SortingLayerID: 343956773
   m_SortingLayer: -1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ccce4176e5a33c846af934a69a12c51d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12324,7 +12324,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &580688722
@@ -13427,7 +13427,7 @@ SpriteRenderer:
   m_SortingLayerID: 343956773
   m_SortingLayer: -1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9dd2d6ea90dc40945a04bd0eef5e0456, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13435,7 +13435,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &651806769
@@ -14550,7 +14550,7 @@ SpriteRenderer:
   m_SortingLayerID: 343956773
   m_SortingLayer: -1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 94f969e4f15ee674fba61e5d35f4af0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14558,7 +14558,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &741200446
@@ -16164,7 +16164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.25610512, y: 0.29820585}
+  m_AnchoredPosition: {x: 0.03, y: 0.24}
   m_SizeDelta: {x: 352.2, y: 270.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &868690133
@@ -18248,7 +18248,7 @@ GameObject:
   - component: {fileID: 1078164283}
   - component: {fileID: 1078164282}
   m_Layer: 0
-  m_Name: HRText
+  m_Name: FilialeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25970,11 +25970,16 @@ MonoBehaviour:
   FigurSpielstart: {fileID: 1055137167}
   "SprechblaseH\xFCrden": {fileID: 1296712902}
   SprechblaseZiele: {fileID: 4565350}
-  Speechbubble1: {fileID: 231234840}
+  Willkommenstext: {fileID: 231234840}
+  "Einf\xFChrungstext": {fileID: 868690133}
+  Zieletext: {fileID: 333353671}
+  Huerdentext: {fileID: 1872188017}
+  Filialetext: {fileID: 1078164282}
+  ITtext: {fileID: 1688587908}
+  HRtext: {fileID: 1735323846}
+  DWStext: {fileID: 1857225412}
+  Starttext: {fileID: 165865117}
   timeLapse: 0.03
-  Bubble1: "Hallo /global username/ einf\xFCgen,dich sehe ja zum ersten mal hier.Ich
-    glaube es ist besser wenn ich dir die wichtisten Geb\xE4ude in der Stadt und ihre
-    funktionen zeige."
 --- !u!1 &1799958046
 GameObject:
   m_ObjectHideFlags: 0
@@ -27080,7 +27085,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "H\xFCrden"
+  m_Text: 
 --- !u!222 &1872188018
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class GlobalVariables : MonoBehaviour
     public static int day;
     public static int PID;
     public static string registrationResult = null;
+    public static string Bankname = "DB Abfrage";
 
 
     public static bool LoggedIn { get { return username != null; } }
@@ -44,5 +45,6 @@ public class GlobalVariables : MonoBehaviour
     public static int dwsStatus;
     public static int inStatus;
     public static int ausStatus;
+
 
 }
