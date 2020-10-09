@@ -41,18 +41,17 @@ public class GameTime : MonoBehaviour
         {
             GlobalVariables.username = "SebastianTest1";
         }
-        ausfuhren.Init();
 
+        ausfuhren.Init();
     }
     public void Awake()
     {
-        //Ausklammern wenn man ungestört testen will ohne sich immer wieder neu anmelden zu müssen
         if (GlobalVariables.username == null)
         {
             GlobalVariables.username = "SebastianTest1";
+        }
         Abfragen.getAktienAnzahl();
         GenerateValues();
-        }
 
     }
 
@@ -109,9 +108,15 @@ public class GameTime : MonoBehaviour
             }
            
         }
+
+
+
+
         /*  if(timeCounter = DayInSeconds/4 ){
          *  toggle.Kursgenerieren();
-          }*/   
+          }*/
+        
+       
     }
     public void DailyMethoden()
     {
@@ -127,5 +132,8 @@ public class GameTime : MonoBehaviour
 
       //  AktienKurs1.LesenAktie1();
         pruefen.LautZeitVeringern();
-    }   
+    }
+
+     
+    
 }

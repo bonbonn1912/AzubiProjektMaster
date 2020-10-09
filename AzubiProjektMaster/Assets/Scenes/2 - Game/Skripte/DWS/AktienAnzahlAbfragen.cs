@@ -20,7 +20,6 @@ public class AktienAnzahlAbfragen : MonoBehaviour
 
     IEnumerator FetchAktienAnzahl()
     {
-        
         Debug.Log("Aktienanzahl wird abgefragt");
         WWWForm FetchShares = new WWWForm();
         
