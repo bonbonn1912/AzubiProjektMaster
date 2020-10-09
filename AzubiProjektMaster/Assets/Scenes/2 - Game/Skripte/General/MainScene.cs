@@ -12,7 +12,7 @@ public class MainScene : MonoBehaviour
     //Callable transparent button covering the entire background to close tablets
     public static void TabletHandlerActivate()
     {
-        GameObject.Find("GameHandler/UI/TabletHandlerBtn").SetActive(true);
+        GameObject.Find("Game/GameHandler/UI/TabletHandlerBtn").SetActive(true);
     }
     //Tablet Handler On Click() Game/GameHandler/UI/CloseAllTablets
     public void TabletHandler()
@@ -21,9 +21,9 @@ public class MainScene : MonoBehaviour
         {
             GameObject.Find("HRTablet").SetActive(false);
         }
-        if (GameObject.Find("Panel für Window Graph") != null)
+        if (GameObject.Find("GraphTablet") != null)
         {
-            GameObject.Find("Panel für Window Graph").SetActive(false);
+            GameObject.Find("GraphTablet").SetActive(false);
         }
         if (GameObject.Find("AktienHandelTablet") != null)
         {

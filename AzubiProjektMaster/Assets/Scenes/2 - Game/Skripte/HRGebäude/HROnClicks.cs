@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 using UnityEngine.UI;
 using System;
 
-public class OpenHRpopup : MonoBehaviour
+public class HROnClicks : MonoBehaviour
 {
     public GameObject kaufenApp;
     public GameObject personalPopUpPanel;
