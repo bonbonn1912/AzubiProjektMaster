@@ -23,10 +23,12 @@ public class Kreditlaufzeit : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-       
-        WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KrediteAbfragen.php", form);
+
+        // WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KrediteAbfragen.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/KrediteAbfragen.php", form);
         // Debug.Log("Neues Kapital:" + GlobalVariables.balance);
         yield return www;
+        Debug.Log(www.text);
          string[] IDs = www.text.Split('-');
         
         for (int i = 0; i<IDs.Length-1; i++)
@@ -42,13 +44,16 @@ public class Kreditlaufzeit : MonoBehaviour
            
             WWWForm form1 = new WWWForm();
             form1.AddField("LID", IDs[i]);
-            WWW www1 = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KreditWert.php", form1);
+            Debug.Log("LID: "+IDs[i]);
+            // WWW www1 = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KreditWert.php", form1);
+            WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/KreditWert.php", form1);
             yield return www1;
-            
+            Debug.Log("Kreditwert" + www1.text);
             int creditvalue = Convert.ToInt32(www1.text);
             WWWForm formdelete = new WWWForm();
             formdelete.AddField("LID", IDs[i]);
-            WWW wwwdelete = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/DeleteKredit.php", formdelete);
+          //  WWW wwwdelete = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/DeleteKredit.php", formdelete);
+            WWW wwwdelete = new WWW("https://dominikw.de/AzubiProjekt/DeleteKredit.php", formdelete);
             yield return wwwdelete;
            
             WWWForm updateKapital = new WWWForm();
@@ -56,7 +61,8 @@ public class Kreditlaufzeit : MonoBehaviour
             GlobalVariables.balance = GlobalVariables.balance + creditvalue;
            
             updateKapital.AddField("Balance", GlobalVariables.balance);
-            WWW payout = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", updateKapital);
+            //  WWW payout = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", updateKapital);
+            WWW payout = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", updateKapital);
             yield return payout;
             
         }
@@ -65,9 +71,11 @@ public class Kreditlaufzeit : MonoBehaviour
 
     IEnumerator UpdateRuntime()
     {
+        Debug.Log("tag -1");
         WWWForm form = new WWWForm();
         form.AddField("User", GlobalVariables.username);
-        WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateRuntime.php", form);
+       // WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateRuntime.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateRuntime.php", form);
         yield return www;
     }
 
