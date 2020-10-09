@@ -13,7 +13,6 @@ public class GenerateKreditData : MonoBehaviour
 
     string DurationAufsteigen = "";
     string DurationAbsteigen = "";
-
     string VolumeAufsteigen = "";
     string VolumeAbsteigen = "";
 
