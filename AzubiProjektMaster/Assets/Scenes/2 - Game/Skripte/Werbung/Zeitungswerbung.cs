@@ -4,23 +4,25 @@ using UnityEngine;
 using System;
 using TMPro;
 
-public class Abwarten : MonoBehaviour
+public class Zeitungswerbung : MonoBehaviour
 {
     int kundenAnzahl;
-    public GameObject AbwartenButton;
+    double Geld;
+    public GameObject ZeitungswerbungButton;
     public TextMeshProUGUI AusgabeText;
-    
-    public void AbwartenAusgabe()
+
+    public void ZeitungAusgabe()
     {
         StartCoroutine(Execute());
-        AbwartenButton.SetActive(false);
-        AusgabeText.text = "abgewartet";
+        ZeitungswerbungButton.SetActive(false);
+        AusgabeText.text = "zeitungswerbung geschaltet";
     }
 
     IEnumerator Execute()
     {
         yield return StartCoroutine(DatenLesen());
-        Warten();
+        ZeitungsWerbung();
+        ZeitungsWerbungKosten();
         StartCoroutine(DatenSchreiben());
     }
 
@@ -28,28 +30,39 @@ public class Abwarten : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        
+
         //kundenlesen php skript
         WWW www = new WWW("", form);
         yield return www;
+        string resultGeld = www.text.Split('-')[1];
         string resultKunden = www.text.Split('-')[0];
         kundenAnzahl = Convert.ToInt32(resultKunden);
+        Geld = Convert.ToDouble(resultGeld);
+
+
     }
 
     IEnumerator DatenSchreiben()
     {
         string x = Convert.ToString(kundenAnzahl);
+        string y = Convert.ToString(Geld);
         WWWForm form = new WWWForm();
         form.AddField("kunden", x);
+        form.AddField("Geldwert", y);
         form.AddField("user", GlobalVariables.username);
 
         //kundenschreiben php skript
         WWW www = new WWW("", form);
         yield return www;
+
+    }
+    public void ZeitungsWerbung()
+    {
+        kundenAnzahl = kundenAnzahl + 15;
     }
 
-    public void Warten()
+    public void ZeitungsWerbungKosten()
     {
-        kundenAnzahl = kundenAnzahl + 10;
+        Geld = Geld - 25000;
     }
 }

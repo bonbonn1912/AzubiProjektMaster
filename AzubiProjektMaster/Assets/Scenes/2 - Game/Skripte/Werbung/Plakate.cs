@@ -4,52 +4,60 @@ using UnityEngine;
 using System;
 using TMPro;
 
-public class Abwarten : MonoBehaviour
+public class Plakate : MonoBehaviour
 {
     int kundenAnzahl;
-    public GameObject AbwartenButton;
+    double Geld;
+    public GameObject PlakateButton;
     public TextMeshProUGUI AusgabeText;
-    
-    public void AbwartenAusgabe()
+
+
+    public void PlakateAusgabe()
     {
         StartCoroutine(Execute());
-        AbwartenButton.SetActive(false);
-        AusgabeText.text = "abgewartet";
+        PlakateButton.SetActive(false);
+        AusgabeText.text = "Plakate ausgehängt";
     }
 
     IEnumerator Execute()
     {
         yield return StartCoroutine(DatenLesen());
-        Warten();
+        Plakatierung();
+        PlakateKosten();
         StartCoroutine(DatenSchreiben());
     }
-
     IEnumerator DatenLesen()
     {
-        WWWForm form = new WWWForm();
-        form.AddField("user", GlobalVariables.username);
-        
         //kundenlesen php skript
-        WWW www = new WWW("", form);
+        WWW www = new WWW("");
         yield return www;
+        string resultGeld = www.text.Split('-')[1];
         string resultKunden = www.text.Split('-')[0];
         kundenAnzahl = Convert.ToInt32(resultKunden);
-    }
+        Geld = Convert.ToDouble(resultGeld);
 
+
+    }
     IEnumerator DatenSchreiben()
     {
         string x = Convert.ToString(kundenAnzahl);
+        string y = Convert.ToString(Geld);
         WWWForm form = new WWWForm();
         form.AddField("kunden", x);
-        form.AddField("user", GlobalVariables.username);
+        form.AddField("Geldwert", y);
 
         //kundenschreiben php skript
         WWW www = new WWW("", form);
         yield return www;
+
+    }
+    public void Plakatierung()
+    {
+        kundenAnzahl = kundenAnzahl + 5;
     }
 
-    public void Warten()
+    public void PlakateKosten()
     {
-        kundenAnzahl = kundenAnzahl + 10;
+        Geld = Geld - 500;
     }
 }

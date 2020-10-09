@@ -4,23 +4,25 @@ using UnityEngine;
 using System;
 using TMPro;
 
-public class Abwarten : MonoBehaviour
+public class Onlinewerbung : MonoBehaviour
 {
     int kundenAnzahl;
-    public GameObject AbwartenButton;
+    double Geld;
+    public GameObject OnlinewerbungButton;
     public TextMeshProUGUI AusgabeText;
     
-    public void AbwartenAusgabe()
+    public void OnlineAusgabe()
     {
         StartCoroutine(Execute());
-        AbwartenButton.SetActive(false);
-        AusgabeText.text = "abgewartet";
+        OnlinewerbungButton.SetActive(false);
+        AusgabeText.text = "onlinewerbung geschaltet";
     }
 
     IEnumerator Execute()
     {
         yield return StartCoroutine(DatenLesen());
-        Warten();
+        WerbungOnline();
+        OnlineWerbungKosten();
         StartCoroutine(DatenSchreiben());
     }
 
@@ -28,19 +30,23 @@ public class Abwarten : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        
+
         //kundenlesen php skript
         WWW www = new WWW("", form);
         yield return www;
+        string resultGeld = www.text.Split('-')[1];
         string resultKunden = www.text.Split('-')[0];
         kundenAnzahl = Convert.ToInt32(resultKunden);
+        Geld = Convert.ToDouble(resultGeld);
     }
 
     IEnumerator DatenSchreiben()
     {
         string x = Convert.ToString(kundenAnzahl);
+        string y = Convert.ToString(Geld);
         WWWForm form = new WWWForm();
         form.AddField("kunden", x);
+        form.AddField("Geldwert", y);
         form.AddField("user", GlobalVariables.username);
 
         //kundenschreiben php skript
@@ -48,8 +54,15 @@ public class Abwarten : MonoBehaviour
         yield return www;
     }
 
-    public void Warten()
+    public void WerbungOnline()
     {
-        kundenAnzahl = kundenAnzahl + 10;
+        //Einlesen und Wertübergabe
+        kundenAnzahl = kundenAnzahl + 180;
+        //Thread.Sleep(120000);   //Dauer bis Rückgabe an Datenbank 
+    }
+
+    public void OnlineWerbungKosten()
+    {
+        Geld = Geld - 45000;
     }
 }
