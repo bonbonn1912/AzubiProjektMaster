@@ -20,7 +20,7 @@ public class GlobalVariables : MonoBehaviour
         username = null;
     }
 
-    public static bool Tutorialcheck= true;
+    public static bool Tutorialcheck;
     public static int startkapital = 50000;
     public static int mitarbeiterStart = 20;
     public static int PersonalCost = 4000;
@@ -40,9 +40,9 @@ public class GlobalVariables : MonoBehaviour
 
     public static int AktienIndex = 250;
 
-    public static int itStatus=1;
-    public static int hrStatus=1;
-    public static int dwsStatus=1;
-    public static int inStatus=1;
-    public static int ausStatus=1;
+    public static int itStatus;
+    public static int hrStatus;
+    public static int dwsStatus;
+    public static int inStatus;
+    public static int ausStatus;
 }
