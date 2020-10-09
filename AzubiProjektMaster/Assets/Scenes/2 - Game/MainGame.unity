@@ -20805,7 +20805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1169816381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20851,6 +20851,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WerbungInfo: {fileID: 196194026}
+  AbwartenButton: {fileID: 0}
+  BuswerbungButton: {fileID: 0}
+  PlakateButton: {fileID: 0}
+  TVWerbungButton: {fileID: 0}
+  WerbeautoButton: {fileID: 0}
+  OnlinewerbungButton: {fileID: 0}
+  ZusatzkonditionenButton: {fileID: 0}
+  ZeitungswerbungButton: {fileID: 0}
+  "Er\xF6ffnungsfeierButton": {fileID: 0}
+  BoniButton: {fileID: 0}
 --- !u!114 &1169816383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20864,6 +20874,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AusgabeText: {fileID: 171818270}
+  AbwartenButton: {fileID: 0}
+  BuswerbungButton: {fileID: 0}
+  PlakateButton: {fileID: 0}
+  TVWerbungButton: {fileID: 0}
+  WerbeautoButton: {fileID: 0}
+  OnlinewerbungButton: {fileID: 0}
+  ZusatzkonditionenButton: {fileID: 0}
+  ZeitungswerbungButton: {fileID: 0}
+  "Er\xF6ffnungsfeierButton": {fileID: 0}
+  BoniButton: {fileID: 0}
 --- !u!114 &1169816384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20876,6 +20896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca0167008a1d0543b2f620e72fce9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AbwartenButton: {fileID: 0}
+  AusgabeText: {fileID: 0}
 --- !u!1 &1172511086
 GameObject:
   m_ObjectHideFlags: 0
