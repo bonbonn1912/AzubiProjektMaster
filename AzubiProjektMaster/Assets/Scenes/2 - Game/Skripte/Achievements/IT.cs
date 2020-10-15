@@ -53,11 +53,21 @@ public class IT : MonoBehaviour
     {
         //Konvertieren und an PHP-Skript übergeben
         string x = Convert.ToString(achievement);
+        string aDb = Convert.ToString(a);
+        string bDb = Convert.ToString(b);
+        string cDb = Convert.ToString(c);
+        string dDb = Convert.ToString(d);
+        string eDb = Convert.ToString(e);
 
 
         WWWForm form = new WWWForm();
         form.AddField("AchievementHR", x);
         form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
 
         WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
         yield return www;
