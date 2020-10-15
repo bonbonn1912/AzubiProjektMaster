@@ -8,8 +8,36 @@ public class Zusatzkonditionen : MonoBehaviour
 {
     int kundenAnzahl;
     double Geld;
+    public GameObject WerbungInfo;
+    public GameObject AbwartenButton;
+    public GameObject BuswerbungButton;
+    public GameObject PlakateButton;
+    public GameObject TVWerbungButton;
+    public GameObject WerbeautoButton;
+    public GameObject OnlinewerbungButton;
     public GameObject ZusatzkonditionenButton;
+    public GameObject ZeitungswerbungButton;
+    public GameObject EröffnungsfeierButton;
+    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
+
+    public void ClickZusatzIcon()
+    {
+        WerbungInfo.SetActive(true);
+        AusgabeText.text = "zusatzkonditionen freigeben";
+
+        AbwartenButton.SetActive(false);
+        BuswerbungButton.SetActive(false);
+        PlakateButton.SetActive(false);
+        TVWerbungButton.SetActive(false);
+        WerbeautoButton.SetActive(false);
+        OnlinewerbungButton.SetActive(false);
+        ZeitungswerbungButton.SetActive(false);
+        EröffnungsfeierButton.SetActive(false);
+        BoniButton.SetActive(false);
+
+        ZusatzkonditionenButton.SetActive(true);
+    }
 
     public void ZusatzAusgabe()
     {

@@ -8,9 +8,36 @@ public class Buswerbung : MonoBehaviour
 {
     int kundenAnzahl;
     double Geld;
+    public GameObject WerbungInfo;
+    public GameObject AbwartenButton;
     public GameObject BuswerbungButton;
+    public GameObject PlakateButton;
+    public GameObject TVWerbungButton;
+    public GameObject WerbeautoButton;
+    public GameObject OnlinewerbungButton;
+    public GameObject ZusatzkonditionenButton;
+    public GameObject ZeitungswerbungButton;
+    public GameObject EröffnungsfeierButton;
+    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
 
+    public void ClickBuswerbungIcon()
+    {
+        WerbungInfo.SetActive(true);
+        AusgabeText.text = "buswerbung schalten";
+
+        AbwartenButton.SetActive(false);
+        PlakateButton.SetActive(false);
+        TVWerbungButton.SetActive(false);
+        WerbeautoButton.SetActive(false);
+        OnlinewerbungButton.SetActive(false);
+        ZusatzkonditionenButton.SetActive(false);
+        ZeitungswerbungButton.SetActive(false);
+        EröffnungsfeierButton.SetActive(false);
+        BoniButton.SetActive(false);
+
+        BuswerbungButton.SetActive(true);
+    }
     public void BusAusgabe()
     {
         StartCoroutine(Execute());

@@ -8,13 +8,41 @@ public class Tvwerbung : MonoBehaviour
 {
     int kundenAnzahl;
     double Geld;
-    public GameObject TvwerbungButton;
+    public GameObject WerbungInfo;
+    public GameObject AbwartenButton;
+    public GameObject BuswerbungButton;
+    public GameObject PlakateButton;
+    public GameObject TVWerbungButton;
+    public GameObject WerbeautoButton;
+    public GameObject OnlinewerbungButton;
+    public GameObject ZusatzkonditionenButton;
+    public GameObject ZeitungswerbungButton;
+    public GameObject EröffnungsfeierButton;
+    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
 
+    public void ClickTvIcon()
+    {
+        WerbungInfo.SetActive(true);
+        AusgabeText.text = "fernsehwerbung schalten";
+
+        AbwartenButton.SetActive(false);
+        BuswerbungButton.SetActive(false);
+        PlakateButton.SetActive(false);
+        WerbeautoButton.SetActive(false);
+        OnlinewerbungButton.SetActive(false);
+        ZusatzkonditionenButton.SetActive(false);
+        ZeitungswerbungButton.SetActive(false);
+        EröffnungsfeierButton.SetActive(false);
+        BoniButton.SetActive(false);
+
+        TVWerbungButton.SetActive(true);
+    }
+    
     public void TvAusgabe()
     {
         StartCoroutine(Execute());
-        TvwerbungButton.SetActive(false);
+        TVWerbungButton.SetActive(false);
         AusgabeText.text = "fernsehwerbung geschaltet";
     }
 

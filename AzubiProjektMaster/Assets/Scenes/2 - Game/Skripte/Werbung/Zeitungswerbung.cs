@@ -8,8 +8,36 @@ public class Zeitungswerbung : MonoBehaviour
 {
     int kundenAnzahl;
     double Geld;
+    public GameObject WerbungInfo;
+    public GameObject AbwartenButton;
+    public GameObject BuswerbungButton;
+    public GameObject PlakateButton;
+    public GameObject TVWerbungButton;
+    public GameObject WerbeautoButton;
+    public GameObject OnlinewerbungButton;
+    public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
+    public GameObject EröffnungsfeierButton;
+    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
+
+    public void ClickZeitungIcon()
+    {
+        WerbungInfo.SetActive(true);
+        AusgabeText.text = "zeitungswerbung schalten";
+
+        AbwartenButton.SetActive(false);
+        BuswerbungButton.SetActive(false);
+        PlakateButton.SetActive(false);
+        TVWerbungButton.SetActive(false);
+        WerbeautoButton.SetActive(false);
+        OnlinewerbungButton.SetActive(false);
+        ZusatzkonditionenButton.SetActive(false);
+        EröffnungsfeierButton.SetActive(false);
+        BoniButton.SetActive(false);
+
+        ZeitungswerbungButton.SetActive(true);
+    }
 
     public void ZeitungAusgabe()
     {
@@ -38,8 +66,6 @@ public class Zeitungswerbung : MonoBehaviour
         string resultKunden = www.text.Split('-')[0];
         kundenAnzahl = Convert.ToInt32(resultKunden);
         Geld = Convert.ToDouble(resultGeld);
-
-
     }
 
     IEnumerator DatenSchreiben()
@@ -54,8 +80,8 @@ public class Zeitungswerbung : MonoBehaviour
         //kundenschreiben php skript
         WWW www = new WWW("", form);
         yield return www;
-
     }
+    
     public void ZeitungsWerbung()
     {
         kundenAnzahl = kundenAnzahl + 15;

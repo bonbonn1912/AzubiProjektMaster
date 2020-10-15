@@ -7,9 +7,37 @@ using TMPro;
 public class Abwarten : MonoBehaviour
 {
     int kundenAnzahl;
+    public GameObject WerbungInfo;
     public GameObject AbwartenButton;
+    public GameObject BuswerbungButton;
+    public GameObject PlakateButton;
+    public GameObject TVWerbungButton;
+    public GameObject WerbeautoButton;
+    public GameObject OnlinewerbungButton;
+    public GameObject ZusatzkonditionenButton;
+    public GameObject ZeitungswerbungButton;
+    public GameObject EröffnungsfeierButton;
+    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
     
+    public void ClickAbwartenIcon()
+    {
+        WerbungInfo.SetActive(true);
+        AusgabeText.text = "abwarten";
+
+        BuswerbungButton.SetActive(false);
+        PlakateButton.SetActive(false);
+        TVWerbungButton.SetActive(false);
+        WerbeautoButton.SetActive(false);
+        OnlinewerbungButton.SetActive(false);
+        ZusatzkonditionenButton.SetActive(false);
+        ZeitungswerbungButton.SetActive(false);
+        EröffnungsfeierButton.SetActive(false);
+        BoniButton.SetActive(false);
+        
+        AbwartenButton.SetActive(true);
+    }
+
     public void AbwartenAusgabe()
     {
         StartCoroutine(Execute());

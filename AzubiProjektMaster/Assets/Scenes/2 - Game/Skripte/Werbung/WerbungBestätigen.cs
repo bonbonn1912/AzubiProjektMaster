@@ -32,9 +32,9 @@ public class WerbungBestätigen : MonoBehaviour
         BoniButton.SetActive(false);
     }
 
-    public void WerbungCanvasSetActive()
-    {
-        if (WerbungInfo.activeSelf == false)
-        WerbungInfo.SetActive(true);
-    }
+    // public void WerbungCanvasSetActive()
+    // {
+    //     if (WerbungInfo.activeSelf == false)
+    //     WerbungInfo.SetActive(true);
+    // }
 }
