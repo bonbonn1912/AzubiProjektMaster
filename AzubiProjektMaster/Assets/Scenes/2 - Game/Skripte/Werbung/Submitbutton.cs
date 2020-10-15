@@ -20,7 +20,7 @@ public class Submitbutton : MonoBehaviour
         
         while (i < 10000000)
         {
-            Debug.Log(DayTemp);
+            Debug.Log(DayTemp + " <<<<>>>> " + GlobalVariables.day + "<<<<>>>>" + "If Anweisung: " + (DayTemp + 10) + " >= " + GlobalVariables.day);
             i++;
             yield return new WaitForSeconds(3);
         }
@@ -32,7 +32,7 @@ public class Submitbutton : MonoBehaviour
     public void WerbungSubmit()
     {
         
-        if(DayTemp + 10 >= GlobalVariables.day)
+        if(DayTemp + 10 <= GlobalVariables.day)
         {
 
             DayTemp = GlobalVariables.day;
@@ -43,7 +43,7 @@ public class Submitbutton : MonoBehaviour
                 //abwarten
                 case 1:
                     //GlobalVariables.kundenanzahl += 10;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 1 geschaltet";
                     Debug.Log("case 1");
                     break;
@@ -52,7 +52,7 @@ public class Submitbutton : MonoBehaviour
                 case 2:
                     //GlobalVariables.kundenanzahl += 10;
                     //GlobalVariables.balance -= 20000;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 2 geschaltet";
                     Debug.Log("case 2");
                     break;
@@ -61,7 +61,7 @@ public class Submitbutton : MonoBehaviour
                 case 3:
                     //GlobalVariables.kundenanzahl += 30;
                     //GlobalVariables.balance -= 2000;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 3 geschaltet";
                     Debug.Log("case 3");
                     break;
@@ -70,7 +70,7 @@ public class Submitbutton : MonoBehaviour
                 case 4:
                     //GlobalVariables.kundenanzahl += 180;
                     //GlobalVariables.balance -= 45000;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 4 geschaltet";
                     Debug.Log("case 4");
                     break;
@@ -78,17 +78,16 @@ public class Submitbutton : MonoBehaviour
                 //plakate
                 case 5:
                     //GlobalVariables.balance -= 500;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 5 geschaltet";
                     Debug.Log("case 5");
-
                     break;
 
                 //tvwerbung
                 case 6:
                     //GlobalVariables.kundenanzahl += 120;
                     //GlobalVariables.balance -= 30000;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 6 geschaltet";
                     Debug.Log("case 6");
                     break;
@@ -97,7 +96,7 @@ public class Submitbutton : MonoBehaviour
                 case 7:
                     //GlobalVariables.kundenanzahl += 5;
                     //GlobalVariables.balance -= 500;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 7 geschaltet";
                     Debug.Log("case 7");
                     break;
@@ -106,7 +105,7 @@ public class Submitbutton : MonoBehaviour
                 case 8:
                     //GlobalVariables.kundenanzahl += 5;
                     //GlobalVariables.balance -= 500;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 8 geschaltet";
                     Debug.Log("case 8");
                     break;
@@ -115,11 +114,15 @@ public class Submitbutton : MonoBehaviour
                 case 9:
                     //GlobalVariables.kundenanzahl += 5;
                     //GlobalVariables.balance -= 500;
-                    //GlobalVariables.werbungsswitch = 0;
+                    GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 9 geschaltet";
                     Debug.Log("case 9");
                     break;
             }
+        }
+        else
+        {
+            Debug.Log("Else Statement");
         }
     }
         
