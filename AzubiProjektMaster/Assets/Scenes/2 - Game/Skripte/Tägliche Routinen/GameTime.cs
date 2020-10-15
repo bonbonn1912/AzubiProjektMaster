@@ -51,13 +51,19 @@ public class GameTime : MonoBehaviour
             GlobalVariables.username = "SebastianTest1";
         }*/
         Abfragen.getAktienAnzahl();
-      //  GenerateValues();
+        //  GenerateValues();
+        SetTutorialTrigger();
 
     }
 
     public void GenerateValues()
     {
         StartCoroutine(GenerateAktienKurse());
+    }
+
+    public void SetTutorialTrigger()
+    {
+        StartCoroutine(SetTutorialIETrue());
     }
 
     IEnumerator GenerateAktienKurse()
@@ -77,17 +83,21 @@ public class GameTime : MonoBehaviour
         }
         
         yield return new WaitForSeconds(0.5f);
-      StartCoroutine(SetTutorialTrue());
+     // StartCoroutine(SetTutorialTrue());
     }
 
 
 
-    IEnumerator SetTutorialTrue()
+    IEnumerator SetTutorialIETrue()
     {
+        Debug.Log("wait 3 seconds");
+        yield return new WaitForSeconds(3);
+        Debug.Log("3 seconds over");
         WWWForm Tutorial = new WWWForm();
-        Tutorial.AddField("Username", GlobalVariables.username);
+        Tutorial.AddField("username", GlobalVariables.username);
         WWW update = new WWW("https://dominikw.de/AzubiProjekt/UpdateTutorial.php", Tutorial);
-        return update;
+        yield return update;
+        Debug.Log("tutorial true");
     }
     private void Update() 
     {

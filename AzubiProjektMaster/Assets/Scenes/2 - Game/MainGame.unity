@@ -992,12 +992,12 @@ RectTransform:
   m_Children:
   - {fileID: 501274468}
   m_Father: {fileID: 2110880043}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 547, y: -88}
-  m_SizeDelta: {x: 512.7, y: 857.5}
+  m_AnchoredPosition: {x: 594, y: -59}
+  m_SizeDelta: {x: 560.5, y: 868.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70139858
 MonoBehaviour:
@@ -1476,7 +1476,7 @@ RectTransform:
   m_AnchoredPosition: {x: -207, y: -5.89}
   m_SizeDelta: {x: 110.4, y: 53.93}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &98816057
+--- !u!1 &108808554
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1484,70 +1484,288 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 98816058}
-  - component: {fileID: 98816060}
-  - component: {fileID: 98816059}
-  m_Layer: 5
-  m_Name: Megafon
+  - component: {fileID: 108808555}
+  - component: {fileID: 108808557}
+  - component: {fileID: 108808556}
+  m_Layer: 0
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &98816058
+--- !u!224 &108808555
+
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98816057}
+  m_GameObject: {fileID: 108808554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1169816381}
+  m_Father: {fileID: 1163318922}
+
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -290, y: 7}
-  m_SizeDelta: {x: 149.99998, y: 150}
+  m_AnchoredPosition: {x: -0.0000091210995, y: -421.42505}
+  m_SizeDelta: {x: 1115.6, y: 1467.1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &98816059
+--- !u!114 &108808556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98816057}
+  m_GameObject: {fileID: 108808554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1fcf603750d88ad429cd2e75041e9605, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &98816060
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+    ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+    sit amet.   \r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate
+    velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+    vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+    delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+    dolore magna aliquam erat volutpat.   \r\n\r\nUt wisi enim ad minim veniam, quis
+    nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+    consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+    accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+    duis dolore te feugait nulla facilisi.   \r\n\r\nNam liber tempor cum soluta nobis
+    eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim
+    assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+    nisl ut aliquip ex ea commodo consequat.   \r\n\r\nDuis autem vel eum iriure dolor
+    in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+    nulla facilisis.   \r\n\r\nAt vero eos et accusam et justo duo dolores et ea rebum.
+    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+    amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores
+    duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita
+    ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua.
+    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur\nLorem
+    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+    et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+    dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   \r\n\r\nDuis
+    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+    odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
+    feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    \  \r\n\r\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+    suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+    iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+    dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+    qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+    facilisi.   \r\n\r\nNam liber tempor cum soluta nobis eleifend option congue nihil
+    imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+    ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+    nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+    consequat.   \r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate
+    velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   \r\n\r\nAt
+    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+    elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy
+    sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna
+    no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit
+    amet. Lorem ipsum dolor sit amet, consetetur\nLorem ipsum dolor sit amet, consetetur
+    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+    dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+    et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+    takimata sanctus est Lorem ipsum dolor sit amet.   \r\n\r\nDuis autem vel eum
+    iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+    dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+    qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+    facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   \r\n\r\nUt
+    wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+    in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+    luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   \r\n\r\nNam
+    liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
+    quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   \r\n\r\nDuis
+    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+    vel illum dolore eu feugiat nulla facilisis.   \r\n\r\nAt vero eos et accusam
+    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam
+    diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo
+    labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata
+    ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+    consetetur\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+    et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+    dolor sit amet.   \r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate
+    velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+    vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+    delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+    dolore magna aliquam erat volutpat.   \r\n\r\nUt wisi enim ad minim veniam, quis
+    nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+    consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+    accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+    duis dolore te feugait nulla facilisi.   \r\n\r\nNam liber tempor cum soluta nobis
+    eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim
+    assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+    enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+    nisl ut aliquip ex ea commodo consequat.   \r\n\r\nDuis autem vel eum iriure dolor
+    in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+    nulla facilisis.   \r\n\r\nAt vero eos et accusam et justo duo dolores et ea rebum.
+    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+    amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores
+    duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita
+    ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua.
+    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur\nLorem
+    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+    et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+    dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   \r\n\r\nDuis
+    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+    odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
+    feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    \  \r\n\r\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+    suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+    iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+    dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+    qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+    facilisi.   \r\n\r\nNam liber tempor cum soluta nobis eleifend option congue nihil
+    imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+    ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+    nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+    consequat.   \r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate
+    velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.   \r\n\r\nAt
+    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+    elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy
+    sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna
+    no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit
+    amet. Lorem ipsum dolor sit amet, consetetur\nLorem ipsum dolor sit amet, consetetur
+    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+    dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+    et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+    takimata sanctus est Lorem ipsum dolor sit amet.   \r\n \r\n\r\nUt wisi enim ad
+    minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+    in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+    luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   \r\n\r\nNam
+    liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
+    quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   \r\n\r\nDuis
+    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+    vel illum dolore eu feugiat nulla facilisis.   \r\n\r\nAt vero eos et accusam
+    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam
+    diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo
+    labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata
+    ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+    consetetur\n"
+--- !u!222 &108808557
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98816057}
+  m_GameObject: {fileID: 108808554}
   m_CullTransparentMesh: 0
 --- !u!1 &125294348
 GameObject:
@@ -1754,6 +1972,145 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127030507}
+  m_CullTransparentMesh: 0
+--- !u!1 &129878147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129878148}
+  - component: {fileID: 129878151}
+  - component: {fileID: 129878150}
+  - component: {fileID: 129878149}
+  m_Layer: 0
+  m_Name: Achievements Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &129878148
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129878147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1919902257}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1486, y: 432}
+  m_SizeDelta: {x: 92.2, y: 120.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &129878149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129878147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 129878150}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1919902258}
+        m_MethodName: OpenAchievements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1919902258}
+        m_MethodName: CloseAchievements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &129878150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129878147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bbbf20cb639952b4e93e966bd328b34f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &129878151
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129878147}
   m_CullTransparentMesh: 0
 --- !u!1 &130968849
 GameObject:
@@ -2590,7 +2947,7 @@ Transform:
   - {fileID: 1539788323}
   - {fileID: 127030508}
   m_Father: {fileID: 2110880043}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &186706907
 SpriteRenderer:
@@ -2977,8 +3334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 175}
-  m_SizeDelta: {x: 225.5, y: 98.8}
+  m_AnchoredPosition: {x: 163.4, y: 211.7}
+  m_SizeDelta: {x: 518.4, y: 41.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &206608903
 GameObject:
@@ -3012,7 +3369,7 @@ RectTransform:
   - {fileID: 339222769}
   - {fileID: 507670715}
   m_Father: {fileID: 2110880043}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5656,6 +6013,83 @@ RectTransform:
   m_AnchoredPosition: {x: 207, y: -486}
   m_SizeDelta: {x: 267.8, y: 67.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &401300684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401300685}
+  - component: {fileID: 401300687}
+  - component: {fileID: 401300686}
+  m_Layer: 5
+  m_Name: Gewinn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &401300685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401300684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 517391285}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 102.8, y: -171.5}
+  m_SizeDelta: {x: 639.6, y: 39.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &401300686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401300684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &401300687
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401300684}
+  m_CullTransparentMesh: 0
 --- !u!1 &401624514
 GameObject:
   m_ObjectHideFlags: 0
@@ -5890,6 +6324,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413195016}
   m_CullTransparentMesh: 0
+--- !u!1 &417494772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417494775}
+  - component: {fileID: 417494774}
+  - component: {fileID: 417494773}
+  m_Layer: 0
+  m_Name: AchievementsTablet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &417494773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417494772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &417494774
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417494772}
+  m_CullTransparentMesh: 0
+--- !u!224 &417494775
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417494772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 780544366}
+  - {fileID: 1248660638}
+  - {fileID: 1268925026}
+  m_Father: {fileID: 2110880043}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 621, y: -69}
+  m_SizeDelta: {x: 1472.6, y: 897.3}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &429179014
 GameObject:
   m_ObjectHideFlags: 0
@@ -12338,7 +12848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &517391285
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12357,6 +12867,8 @@ RectTransform:
   - {fileID: 205846712}
   - {fileID: 1489756810}
   - {fileID: 801206304}
+  - {fileID: 720818706}
+  - {fileID: 401300685}
   - {fileID: 1814809976}
   - {fileID: 799062518}
   m_Father: {fileID: 596922596}
@@ -12385,7 +12897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d843f64050794f94f8cb6386d9835cf9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10b2157e8ffe5ed4ca8c543f4b21c3fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13134,6 +13646,8 @@ MonoBehaviour:
   Kunde: {fileID: 205846710}
   Laufzeit: {fileID: 801206302}
   Volumen: {fileID: 1489756808}
+  Zinsentxt: {fileID: 0}
+  Gewinntxt: {fileID: 0}
   App: {fileID: 517391284}
   Success: {fileID: 1814809973}
   Management: {fileID: 596922595}
@@ -13147,6 +13661,8 @@ MonoBehaviour:
   Value: 0
   Duration: 0
   volumen: 0
+  Zinsen: 0
+  Gewinn: 0
 --- !u!114 &580688727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13410,6 +13926,8 @@ MonoBehaviour:
   Kunde: {fileID: 205846710}
   Laufzeit: {fileID: 801206302}
   Volumen: {fileID: 1489756808}
+  Zinsentxt: {fileID: 720818707}
+  Gewinntxt: {fileID: 401300686}
   App: {fileID: 517391284}
   Success: {fileID: 1814809973}
   Management: {fileID: 596922595}
@@ -13423,6 +13941,8 @@ MonoBehaviour:
   Value: 0
   Duration: 0
   volumen: 0
+  Zinsen: 0
+  Gewinn: 0
 --- !u!114 &596922598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14766,6 +15286,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666802971}
   m_CullTransparentMesh: 0
+--- !u!1 &669874537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669874538}
+  - component: {fileID: 669874540}
+  - component: {fileID: 669874539}
+  m_Layer: 5
+  m_Name: ProzentZeichen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &669874538
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669874537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 720818706}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 37.9, y: 1.75}
+  m_SizeDelta: {x: 34.6, y: 33.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &669874539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669874537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '%'
+--- !u!222 &669874540
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669874537}
+  m_CullTransparentMesh: 0
 --- !u!1 &677572386
 GameObject:
   m_ObjectHideFlags: 0
@@ -14960,7 +15557,7 @@ RectTransform:
   m_Children:
   - {fileID: 440720409}
   m_Father: {fileID: 2110880043}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15047,7 +15644,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707125654}
   m_CullTransparentMesh: 0
---- !u!1 &714206452
+--- !u!1 &720818705
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15055,126 +15652,76 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 714206453}
-  - component: {fileID: 714206455}
-  - component: {fileID: 714206454}
-  - component: {fileID: 714206456}
+  - component: {fileID: 720818706}
+  - component: {fileID: 720818708}
+  - component: {fileID: 720818707}
   m_Layer: 5
-  m_Name: Werbeauto
+  m_Name: Zinsen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &714206453
+--- !u!224 &720818706
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714206452}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 720818705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000116, y: 1.0000116, z: 1.0000116}
-  m_Children: []
-  m_Father: {fileID: 1169816381}
-  m_RootOrder: 6
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 669874538}
+  m_Father: {fileID: 517391285}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -220, y: 163}
-  m_SizeDelta: {x: 75, y: 75}
+  m_AnchoredPosition: {x: -199.6, y: 18.5}
+  m_SizeDelta: {x: 58.5, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &714206454
+--- !u!114 &720818707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714206452}
+  m_GameObject: {fileID: 720818705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4e56ee743934c5b4b80ae3407ab0d7d0, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &714206455
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &720818708
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714206452}
+  m_GameObject: {fileID: 720818705}
   m_CullTransparentMesh: 0
---- !u!114 &714206456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714206452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 714206454}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1169816389}
-        m_MethodName: ClickAutoIcon
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &721461088
 GameObject:
   m_ObjectHideFlags: 0
@@ -15850,6 +16397,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778301142}
   m_CullTransparentMesh: 0
+--- !u!1 &780544365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 780544366}
+  - component: {fileID: 780544368}
+  - component: {fileID: 780544367}
+  m_Layer: 0
+  m_Name: PanelTablet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &780544366
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780544365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 417494775}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -12.900024, y: -36.399994}
+  m_SizeDelta: {x: 264.1, y: 38}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &780544367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780544365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: af2e82104e0685746aff8dc445afe311, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &780544368
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780544365}
+  m_CullTransparentMesh: 0
 --- !u!1 &786869328
 GameObject:
   m_ObjectHideFlags: 0
@@ -16300,7 +16920,7 @@ RectTransform:
   m_Children:
   - {fileID: 1312424636}
   m_Father: {fileID: 517391285}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16494,8 +17114,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73, y: -174}
-  m_SizeDelta: {x: 196.93, y: 45.31}
+  m_AnchoredPosition: {x: 138, y: -75}
+  m_SizeDelta: {x: 363.2, y: 33.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &829813091
 GameObject:
@@ -18331,6 +18951,129 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!1 &941512402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941512403}
+  - component: {fileID: 941512406}
+  - component: {fileID: 941512405}
+  - component: {fileID: 941512404}
+  m_Layer: 0
+  m_Name: Scrollbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &941512403
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941512402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1909989715}
+  m_Father: {fileID: 1163318922}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 561, y: 20.8}
+  m_SizeDelta: {x: 20, y: 582.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &941512404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941512402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.5
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1698917994}
+  m_HandleRect: {fileID: 1698917993}
+  m_Direction: 2
+  m_Value: 1
+  m_Size: 0.4254993
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &941512405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941512402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &941512406
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941512402}
+  m_CullTransparentMesh: 0
 --- !u!1 &970351090
 GameObject:
   m_ObjectHideFlags: 0
@@ -20297,6 +21040,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156569700}
   m_CullTransparentMesh: 0
+--- !u!1 &1163318921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163318922}
+  - component: {fileID: 1163318923}
+  m_Layer: 0
+  m_Name: TextContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1163318922
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163318921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 941512403}
+  - {fileID: 108808555}
+  m_Father: {fileID: 1268925026}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0025177, y: -16.825}
+  m_SizeDelta: {x: 1155.7, y: 624.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1163318923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163318921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 108808555}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 0}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 941512404}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1164266214
 GameObject:
   m_ObjectHideFlags: 0
@@ -21473,6 +22284,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230763937}
   m_CullTransparentMesh: 0
+--- !u!1 &1248660637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248660638}
+  - component: {fileID: 1248660640}
+  - component: {fileID: 1248660639}
+  m_Layer: 0
+  m_Name: AchievementsHeading
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1248660638
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248660637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 417494775}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -12.4, y: 265}
+  m_SizeDelta: {x: 1155.7, y: 53.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1248660639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248660637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Achievements
+--- !u!222 &1248660640
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248660637}
+  m_CullTransparentMesh: 0
 --- !u!1 &1251940617
 GameObject:
   m_ObjectHideFlags: 0
@@ -21786,6 +22674,94 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266426704}
+  m_CullTransparentMesh: 0
+--- !u!1 &1268925025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268925026}
+  - component: {fileID: 1268925029}
+  - component: {fileID: 1268925028}
+  - component: {fileID: 1268925027}
+  m_Layer: 0
+  m_Name: ScrollArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1268925026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268925025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1163318922}
+  m_Father: {fileID: 417494775}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -12.4, y: -65.3}
+  m_SizeDelta: {x: -316.9, y: -306.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1268925027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268925025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &1268925028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268925025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1268925029
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268925025}
   m_CullTransparentMesh: 0
 --- !u!1 &1274722052
 GameObject:
@@ -25979,8 +26955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.29, y: -9}
-  m_SizeDelta: {x: 216.78, y: 88.26}
+  m_AnchoredPosition: {x: 167.50003, y: 112}
+  m_SizeDelta: {x: 510.2, y: 40.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1528572786
 GameObject:
@@ -27981,6 +28957,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688701728}
   m_CullTransparentMesh: 0
+--- !u!1 &1698917992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1698917993}
+  - component: {fileID: 1698917995}
+  - component: {fileID: 1698917994}
+  m_Layer: 0
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1698917993
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698917992}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1909989715}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5745007}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1698917994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698917992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1698917995
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698917992}
+  m_CullTransparentMesh: 0
 --- !u!1 &1699744190
 GameObject:
   m_ObjectHideFlags: 0
@@ -28218,7 +29267,7 @@ RectTransform:
   m_Children:
   - {fileID: 1987091190}
   m_Father: {fileID: 2110880043}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -29098,7 +30147,7 @@ RectTransform:
   m_Children:
   - {fileID: 1656111102}
   m_Father: {fileID: 517391285}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -30222,6 +31271,42 @@ RectTransform:
   m_AnchoredPosition: {x: 55.25, y: -30.893}
   m_SizeDelta: {x: 110.5, y: 61.784}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1909989714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909989715}
+  m_Layer: 0
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1909989715
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909989714}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1698917993}
+  m_Father: {fileID: 941512403}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1910389954
 GameObject:
   m_ObjectHideFlags: 0
@@ -30465,6 +31550,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1919902256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919902257}
+  - component: {fileID: 1919902258}
+  m_Layer: 0
+  m_Name: Achievements
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1919902257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919902256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 129878148}
+  m_Father: {fileID: 2110880043}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1919902258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919902256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d92a65f2d47d984b92c212282b79233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AchievementsTablet: {fileID: 417494772}
 --- !u!1 &1922215882
 GameObject:
   m_ObjectHideFlags: 0
@@ -39367,11 +40497,13 @@ Transform:
   - {fileID: 26520647}
   - {fileID: 596922596}
   - {fileID: 249393535}
+  - {fileID: 417494775}
   - {fileID: 206608904}
   - {fileID: 1702863071}
   - {fileID: 186706906}
   - {fileID: 685760976}
   - {fileID: 70139857}
+  - {fileID: 1919902257}
   m_Father: {fileID: 2024011881}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
