@@ -25,7 +25,8 @@ public class KreditStatistiken : MonoBehaviour
         creditcount.AddField("username", GlobalVariables.username);
 
         // WWW creditabfrage = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AnzahlKredite.php", creditcount);
-        WWW creditabfrage = new WWW("https://dominikw.de/AzubiProjekt/AnzahlKredite.php", creditcount);
+        // WWW creditabfrage = new WWW("https://dominikw.de/AzubiProjekt/AnzahlKredite.php", creditcount);
+        WWW creditabfrage = new WWW("https://dominikw.de/AzubiProjekt/AnzahlKrediteDEV.php", creditcount);
         yield return creditabfrage;
         Debug.Log(creditabfrage.text);
         KreditAnzahl.text = creditabfrage.text;
@@ -39,7 +40,8 @@ public class KreditStatistiken : MonoBehaviour
         creditvolume.AddField("user", GlobalVariables.username);
 
       //  WWW volumeabfrage = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/KreditGesamtVolumen.php", creditvolume);
-        WWW volumeabfrage = new WWW("https://dominikw.de/AzubiProjekt/KreditGesamtVolumen.php", creditvolume);
+     //   WWW volumeabfrage = new WWW("https://dominikw.de/AzubiProjekt/KreditGesamtVolumen.php", creditvolume);
+        WWW volumeabfrage = new WWW("https://dominikw.de/AzubiProjekt/KreditGesamtVolumenDEV.php", creditvolume);
         yield return volumeabfrage;
         string[] volume = volumeabfrage.text.Split('-');
         int[] a = new int[volume.Length];

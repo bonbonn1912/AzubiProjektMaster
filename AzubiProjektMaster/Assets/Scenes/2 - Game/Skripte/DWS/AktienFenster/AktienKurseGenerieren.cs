@@ -379,7 +379,9 @@ public class AktienKurseGenerieren : MonoBehaviour
         InsertValue.AddField("sharevalue", Aktienkurs);
 
         // WWW Insert = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AktienKurseSetzen.php", InsertValue);
-        WWW Insert = new WWW("https://dominikw.de/AzubiProjekt/AktienKurseSetzen.php", InsertValue);
+        //  WWW Insert = new WWW("https://dominikw.de/AzubiProjekt/AktienKurseSetzen.php", InsertValue);
+         WWW Insert = new WWW("https://dominikw.de/AzubiProjekt/AktienKurseSetzenDEV.php", InsertValue);
+
         yield return Insert;
       // yield return new  WaitForSeconds(0.5f);
         if(AktienLesenNummer == 1)
