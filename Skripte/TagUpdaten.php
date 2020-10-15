@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('178.254.41.75', 'dominik', 'Xeng72*5','dominik','3306');
+$con = mysqli_connect('rdbms.strato.de', 'U4311041', 'Datenbank123!','DB4311041','3306');
 
 if (mysqli_connect_errno())
 	   {

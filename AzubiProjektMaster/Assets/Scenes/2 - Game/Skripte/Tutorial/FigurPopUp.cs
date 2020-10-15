@@ -229,6 +229,7 @@ public class FigurPopUp : MonoBehaviour
             bool isActive = FigurSpielstart.activeSelf;
             FigurSpielstart.SetActive(!isActive);
             GlobalVariables.Tutorialcheck = true;
+           
             CameraZoom.ZoomActiveT4 = false;
             GameTimeGlob = 15;
         }
@@ -250,6 +251,8 @@ public class FigurPopUp : MonoBehaviour
             StartCoroutine(SpeechbubblGenerate(Huerdentext, InhaltHuerden));
         }
     }
+
+  
 
 
 }
