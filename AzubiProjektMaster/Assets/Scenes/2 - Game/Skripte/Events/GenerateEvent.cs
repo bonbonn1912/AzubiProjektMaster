@@ -261,7 +261,8 @@ public class GenerateEvent : MonoBehaviour
                     BalanceUpdate.AddField(Convert.ToString(GlobalVariables.balance), "Balance");
 
 
-                    WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", BalanceUpdate);
+                   // WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", BalanceUpdate);
+                    WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", BalanceUpdate);
                     yield return www;
                     Debug.Log(www.text);
                     Debug.Log("Event Kapital updated");
@@ -277,7 +278,8 @@ public class GenerateEvent : MonoBehaviour
                     BalanceUpdate.AddField("Balance", Convert.ToString(GlobalVariables.balance));
 
 
-                    WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", BalanceUpdate);
+                    // WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", BalanceUpdate);
+                    WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", BalanceUpdate);
                     yield return www;
                     Debug.Log(www.text);
                     Debug.Log("Event Kapital updated");

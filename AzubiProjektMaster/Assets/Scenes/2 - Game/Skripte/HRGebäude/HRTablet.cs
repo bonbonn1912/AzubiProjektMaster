@@ -125,7 +125,9 @@ public class HRTablet : MonoBehaviour
         form.AddField("Balance", GlobalVariables.balance);
         form.AddField("Employees", GlobalVariables.mitarbeiter);
         // WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/BalanceUpdateMA.php", form);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/BalanceUpdateMA.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/BalanceUpdateMA.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/BalanceUpdateMADEV.php", form);
+
         // Debug.Log("Neues Kapital:" + GlobalVariables.balance);
         yield return www;
     }
