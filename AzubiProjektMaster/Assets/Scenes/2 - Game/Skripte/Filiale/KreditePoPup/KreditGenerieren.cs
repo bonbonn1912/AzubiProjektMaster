@@ -61,9 +61,9 @@ public class KreditGenerieren : MonoBehaviour
         form.AddField("Laufzeit", Laufzeit.text);
         form.AddField("Volume", Volumen.text);
          Debug.Log("Folgende Werte werden inserted Name: " + name + " Runtime: " + laufzeit + " Volume: " + volume);
-        // WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/InsertCredits.php", form);
+         WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/InsertCreditsDEV.php", form);
        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/InsertCredits.php", form);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/InsertCreditsDEV.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/InsertCreditsDEV.php", form);
 
         yield return www;
         Debug.Log(www.text);
@@ -71,9 +71,9 @@ public class KreditGenerieren : MonoBehaviour
         WWWForm form1 = new WWWForm();
         form1.AddField("Username", GlobalVariables.username);
         form1.AddField("Balance", GlobalVariables.balance);
-        // WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", form1);
+         WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalanceDEV.php", form1);
        // WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", form1);
-        WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", form1);
+        // WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", form1);
 
         yield return www1;
 

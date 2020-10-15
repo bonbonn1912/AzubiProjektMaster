@@ -25,9 +25,9 @@ public class AktienAnzahlAbfragen : MonoBehaviour
         
         FetchShares.AddField("user", GlobalVariables.username);
 
-        //  WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchShares.php", FetchShares);
+         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchSharesDEV.php", FetchShares);
         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/FetchShares.php", FetchShares);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/FetchSharesDEV.php", FetchShares);
+     //   WWW www = new WWW("https://dominikw.de/AzubiProjekt/FetchSharesDEV.php", FetchShares);
         yield return www;
 
         string [] stringAmounts = www.text.Split('/');

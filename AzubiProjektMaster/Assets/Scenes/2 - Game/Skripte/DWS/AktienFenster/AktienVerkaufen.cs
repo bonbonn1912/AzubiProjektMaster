@@ -105,9 +105,9 @@ public class AktienVerkaufen : MonoBehaviour
         AktienVerkaufen.AddField("shareName", ShareName);
         AktienVerkaufen.AddField("amount", Amount);
 
-        // WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/SellShares.php", AktienVerkaufen);
+         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/SellSharesDEV.php", AktienVerkaufen);
         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/SellShares.php", AktienVerkaufen);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/SellSharesDEV.php", AktienVerkaufen);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/SellSharesDEV.php", AktienVerkaufen);
         yield return www;
     }
 
