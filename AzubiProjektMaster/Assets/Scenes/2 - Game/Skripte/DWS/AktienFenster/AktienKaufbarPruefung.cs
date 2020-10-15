@@ -42,7 +42,7 @@ public class AktienKaufbarPruefung : MonoBehaviour
 
     public void Update()
     {
-
+        
         if (InputFieldAktie1.GetComponent<InputField>().text == "") 
         {
             if(1*GlobalVariables.Aktie1KursGlob> GlobalVariables.balance)
