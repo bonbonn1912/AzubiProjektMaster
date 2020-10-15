@@ -44,9 +44,10 @@ public class GenerateKreditData : MonoBehaviour
         WWWForm fetchform = new WWWForm();
         fetchform.AddField("user", GlobalVariables.username);
 
-      //  WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchData.php", fetchform);
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataDEV.php", fetchform);
 
-        WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditData.php", fetchform);
+     //   WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditData.php", fetchform);
+       // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataDEV.php", fetchform);
         yield return fetch;
         string[] s = fetch.text.Split('/');
         string line = fetch.text;
@@ -80,8 +81,9 @@ public class GenerateKreditData : MonoBehaviour
         fetchform.AddField("user", GlobalVariables.username);
         fetchform.AddField("Runtime", "Runtime");
         fetchform.AddField("Order", "DESC");
-        //  WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
-        WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+          WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataSortDEV.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+       // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSortDEV.php", fetchform);
         yield return fetch;
         string line = fetch.text;
         line = line.Replace("@", "" + System.Environment.NewLine);
@@ -96,8 +98,9 @@ public class GenerateKreditData : MonoBehaviour
         fetchform.AddField("user", GlobalVariables.username);
         fetchform.AddField("Runtime", "Runtime");
         fetchform.AddField("Order", "ASC");
-        //  WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
-        WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataSortDEV.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSortDEV.php", fetchform);
         yield return fetch;
         string line = fetch.text;
         line = line.Replace("@", "" + System.Environment.NewLine);
@@ -112,8 +115,9 @@ public class GenerateKreditData : MonoBehaviour
         fetchform.AddField("user", GlobalVariables.username);
         fetchform.AddField("Runtime", "Volume");
         fetchform.AddField("Order", "ASC");
-        //  WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
-        WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataSortDEV.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSortDEV.php", fetchform);
         yield return fetch;
         string line = fetch.text;
         line = line.Replace("@", "" + System.Environment.NewLine);
@@ -125,8 +129,9 @@ public class GenerateKreditData : MonoBehaviour
         fetchform.AddField("user", GlobalVariables.username);
         fetchform.AddField("Runtime", "Volume");
         fetchform.AddField("Order", "DESC");
-        //  WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
-        WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataSortDEV.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        //  WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSortDEV.php", fetchform);
         yield return fetch;
         string line = fetch.text;
         line = line.Replace("@", "" + System.Environment.NewLine);
@@ -139,8 +144,9 @@ public class GenerateKreditData : MonoBehaviour
         fetchform.AddField("user", GlobalVariables.username);
         fetchform.AddField("Runtime", "Name");
         fetchform.AddField("Order", "ASC");
-        //  WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
-        WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataSortDEV.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSortDEV.php", fetchform);
         yield return fetch;
         string line = fetch.text;
         line = line.Replace("@", "" + System.Environment.NewLine);
@@ -153,8 +159,9 @@ public class GenerateKreditData : MonoBehaviour
         fetchform.AddField("user", GlobalVariables.username);
         fetchform.AddField("Runtime", "Name");
         fetchform.AddField("Order", "DESC");
-        //  WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataAb.php", fetchform);
-        WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        WWW fetch = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/FetchDataSortDEV.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSort.php", fetchform);
+        // WWW fetch = new WWW("https://dominikw.de/AzubiProjekt/FetchCreditDataSortDEV.php", fetchform);
         yield return fetch;
         string line = fetch.text;
         line = line.Replace("@", "" + System.Environment.NewLine);

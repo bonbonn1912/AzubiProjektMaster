@@ -113,8 +113,9 @@ public class AktienKaufen : MonoBehaviour
         Debug.Log("Username: " + GlobalVariables.username);
         Debug.Log("Sharename: " + ShareName);
         Debug.Log("amount: " + Amount);
-        //  WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/BuyShares.php", AktieKaufen);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/BuyShares.php", AktieKaufen);
+         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/BuySharesDEV.php", AktieKaufen);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/BuyShares.php", AktieKaufen);
+       // WWW www = new WWW("https://dominikw.de/AzubiProjekt/BuySharesDEV.php", AktieKaufen);
         yield return www;
         Debug.Log(www.text);
     }
@@ -156,8 +157,9 @@ public class AktienKaufen : MonoBehaviour
         WWWForm KapitalUpdate = new WWWForm();
         KapitalUpdate.AddField("Username", GlobalVariables.username);
         KapitalUpdate.AddField("Balance", GlobalVariables.balance);
-      //  WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", KapitalUpdate);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", KapitalUpdate);
+       WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalanceDEV.php", KapitalUpdate);
+       // WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", KapitalUpdate);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", KapitalUpdate);
         yield return www;
         }
 }

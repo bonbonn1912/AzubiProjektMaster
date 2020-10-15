@@ -95,7 +95,9 @@ public class GameTime : MonoBehaviour
         Debug.Log("3 seconds over");
         WWWForm Tutorial = new WWWForm();
         Tutorial.AddField("username", GlobalVariables.username);
-        WWW update = new WWW("https://dominikw.de/AzubiProjekt/UpdateTutorial.php", Tutorial);
+        // WWW update = new WWW("https://dominikw.de/AzubiProjekt/UpdateTutorial.php", Tutorial);
+       // WWW update = new WWW("https://dominikw.de/AzubiProjekt/UpdateTutorialDEV.php", Tutorial);
+        WWW update = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateTutorialDEV.php", Tutorial);
         yield return update;
         Debug.Log("tutorial true");
     }

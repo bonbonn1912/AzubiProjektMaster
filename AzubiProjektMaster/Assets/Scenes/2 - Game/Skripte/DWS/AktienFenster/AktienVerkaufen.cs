@@ -105,8 +105,9 @@ public class AktienVerkaufen : MonoBehaviour
         AktienVerkaufen.AddField("shareName", ShareName);
         AktienVerkaufen.AddField("amount", Amount);
 
-        // WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/SellShares.php", AktienVerkaufen);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/SellShares.php", AktienVerkaufen);
+         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/SellSharesDEV.php", AktienVerkaufen);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/SellShares.php", AktienVerkaufen);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/SellSharesDEV.php", AktienVerkaufen);
         yield return www;
     }
 
@@ -144,7 +145,8 @@ public class AktienVerkaufen : MonoBehaviour
         WWWForm KapitalUpdate = new WWWForm();
         KapitalUpdate.AddField("Username", GlobalVariables.username);
         KapitalUpdate.AddField("Balance", GlobalVariables.balance);
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", KapitalUpdate);
+       // WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", KapitalUpdate);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateKreditBalanceDEV.php",KapitalUpdate);
         yield return www;
     }
 
