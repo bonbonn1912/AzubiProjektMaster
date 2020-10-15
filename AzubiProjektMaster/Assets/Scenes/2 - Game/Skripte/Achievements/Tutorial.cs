@@ -10,7 +10,7 @@ public class Tutorial : MonoBehaviour
     int tutorial;
     int achievement;
 
-    public void HrErrungenschaften()
+    public void TutorialErrungenschaften()
     {
         StartCoroutine(Execute());
     }

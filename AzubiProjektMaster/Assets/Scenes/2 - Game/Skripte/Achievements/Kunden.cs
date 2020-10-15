@@ -34,8 +34,18 @@ public class Kunden : MonoBehaviour
         yield return www;
 
         string resultAngestellte = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
 
         kunden = Convert.ToInt32(resultAngestellte);
+        a = Convert.ToInt32(aDb);
+        b = Convert.ToInt32(bDb);
+        c = Convert.ToInt32(cDb);
+        d = Convert.ToInt32(dDb);
+        e = Convert.ToInt32(eDb);
 
     }
 
@@ -56,36 +66,34 @@ public class Kunden : MonoBehaviour
 
     public void Errungenschaften()
     {
-
-        if (kunden > kundenAlt)
-        {
-
-            if (kunden >= 10 & a == 0)
+            if (kunden >= 100 & a == 0)
             {
                 achievement = achievement + 1;
+                a = 1;
             }
 
-            if (kunden >= 20 & b == 0)
+            if (kunden >= 1000 & b == 0)
             {
                 achievement = achievement + 1;
+                b = 1;
             }
 
-            if (kunden >= 30 & c == 0)
+            if (kunden >= 5000 & c == 0)
             {
                 achievement = achievement + 1;
+                c = 1;
             }
 
-            if (kunden >= 40 & d == 0)
+            if (kunden >= 10000 & d == 0)
             {
                 achievement = achievement + 1;
+                d = 1;
             }
 
-            if (kunden >= 50 & e == 0)
+            if (kunden >= 50000 & e == 0)
             {
                 achievement = achievement + 1;
+                e = 1;
             }
         }
-
-        kundenAlt = kunden;
-    }
 }

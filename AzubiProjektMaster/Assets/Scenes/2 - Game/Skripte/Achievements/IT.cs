@@ -34,8 +34,18 @@ public class IT : MonoBehaviour
         yield return www;
 
         string resultAngestellte = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
 
         itStufe = Convert.ToInt32(resultAngestellte);
+        a = Convert.ToInt32(aDb);
+        b = Convert.ToInt32(bDb);
+        c = Convert.ToInt32(cDb);
+        d = Convert.ToInt32(dDb);
+        e = Convert.ToInt32(eDb);
 
     }
 
@@ -57,35 +67,34 @@ public class IT : MonoBehaviour
     public void Errungenschaften()
     {
 
-        if (itStufe > itStufeAlt)
-        {
-
             if (itStufe >= 2 & a == 0)
             {
                 achievement = achievement + 1;
+                a = 1;
             }
 
             if (itStufe >= 3 & b == 0)
             {
                 achievement = achievement + 1;
+                b = 1;
             }
 
             if (itStufe >= 4 & c == 0)
             {
                 achievement = achievement + 1;
+                c = 1;
             }
 
             if (itStufe >= 6 & d == 0)
             {
                 achievement = achievement + 1;
+                d = 1;
             }
 
             if (itStufe >= 7 & e == 0)
             {
                 achievement = achievement + 1;
+                e = 1;
             }
         }
-
-        itStufeAlt = itStufe;
-    }
 }

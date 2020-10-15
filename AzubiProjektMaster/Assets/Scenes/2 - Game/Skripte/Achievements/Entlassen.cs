@@ -34,8 +34,18 @@ public class Entlassen : MonoBehaviour
         yield return www;
 
         string resultTage = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
 
         tage = Convert.ToInt32(resultTage);
+        a = Convert.ToInt32(aDb);
+        b = Convert.ToInt32(bDb);
+        c = Convert.ToInt32(cDb);
+        d = Convert.ToInt32(dDb);
+        e = Convert.ToInt32(eDb);
 
     }
 
@@ -56,36 +66,34 @@ public class Entlassen : MonoBehaviour
 
     public void Errungenschaften()
     {
-
-        if (tage > tageAlt)
-        {
-
             if (tage >= 10 & a == 0)
             {
                 achievement = achievement + 1;
+                a = 1;
             }
 
-            if (tage >= 20 & b == 0)
+            if (tage >= 50 & b == 0)
             {
                 achievement = achievement + 1;
+                b = 1;
             }
 
-            if (tage >= 30 & c == 0)
+            if (tage >= 100 & c == 0)
             {
                 achievement = achievement + 1;
+                c = 1;
             }
 
-            if (tage >= 40 & d == 0)
+            if (tage >= 150 & d == 0)
             {
                 achievement = achievement + 1;
+                e = 1;
             }
 
-            if (tage >= 50 & e == 0)
+            if (tage >= 200 & e == 0)
             {
                 achievement = achievement + 1;
+                e = 1;
             }
         }
-
-        tageAlt = tage;
-    }
 }

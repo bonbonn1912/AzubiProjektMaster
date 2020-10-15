@@ -34,8 +34,18 @@ public class Kapital : MonoBehaviour
         yield return www;
 
         string resultAngestellte = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
 
         kapital = Convert.ToInt32(resultAngestellte);
+        a = Convert.ToInt32(aDb);
+        b = Convert.ToInt32(bDb);
+        c = Convert.ToInt32(cDb);
+        d = Convert.ToInt32(dDb);
+        e = Convert.ToInt32(eDb);
 
     }
 
@@ -57,35 +67,34 @@ public class Kapital : MonoBehaviour
     public void Errungenschaften()
     {
 
-        if (kapital > kapitalAlt & a == 0)
-        {
-
             if (kapital >= 200000)
             {
                 achievement = achievement + 1;
+                a = 1;
             }
 
             if (kapital >= 600000 & b == 0)
             {
                 achievement = achievement + 1;
+                b = 1;
             }
 
             if (kapital >= 1000000 & c == 0)
             {
                 achievement = achievement + 1;
+                c = 1;
             }
 
             if (kapital >= 1500000 & d == 0)
             {
                 achievement = achievement + 1;
+                d = 1;
             }
 
             if (kapital >= 2000000 & e == 0)
             {
                 achievement = achievement + 1;
+                e = 1;
             }
         }
-
-        kapitalAlt = kapital;
-    }
 }

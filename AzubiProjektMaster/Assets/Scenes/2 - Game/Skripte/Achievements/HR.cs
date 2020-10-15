@@ -33,9 +33,20 @@ public class HR : MonoBehaviour
         WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
         yield return www;
 
+
         string resultAngestellte = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
 
         angestellte = Convert.ToInt32(resultAngestellte);
+        a = Convert.ToInt32(aDb);
+        b = Convert.ToInt32(bDb);
+        c = Convert.ToInt32(cDb);
+        d = Convert.ToInt32(dDb);
+        e = Convert.ToInt32(eDb);
 
     }
 
@@ -56,36 +67,34 @@ public class HR : MonoBehaviour
 
     public void Errungenschaften()
     {
-
-        if (angestellte > angestellteAlt)
-        {
-
             if (angestellte >= 10 & a == 0)
             {
                 achievement = achievement + 1;
+                a = 1;
             }
 
-            if (angestellte >= 20 & b == 0)
+            if (angestellte >= 50 & b == 0)
             {
                 achievement = achievement + 1;
+                b = 1;
             }
 
-            if (angestellte >= 30 & c == 0)
+            if (angestellte >= 100 & c == 0)
             {
                 achievement = achievement + 1;
+                c = 1;
             }
 
-            if (angestellte >= 40 & d == 0)
+            if (angestellte >= 500 & d == 0)
             {
                 achievement = achievement + 1;
+                d = 1;
             }
 
-            if (angestellte >= 50 & e == 0)
+            if (angestellte >= 1000 & e == 0)
             {
                 achievement = achievement + 1;
+                e = 1;
             }
-        }
-
-        angestellteAlt = angestellte;
     }
 }

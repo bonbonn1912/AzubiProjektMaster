@@ -34,8 +34,18 @@ public class Kredite : MonoBehaviour
         yield return www;
 
         string resultAngestellte = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
 
         kredite = Convert.ToInt32(resultAngestellte);
+        a = Convert.ToInt32(aDb);
+        b = Convert.ToInt32(bDb);
+        c = Convert.ToInt32(cDb);
+        d = Convert.ToInt32(dDb);
+        e = Convert.ToInt32(eDb);
 
     }
 
@@ -63,29 +73,31 @@ public class Kredite : MonoBehaviour
             if (kredite >= 100 & a == 0)
             {
                 achievement = achievement + 1;
+                a = 1;
             }
 
             if (kredite >= 200 & b == 0)
             {
                 achievement = achievement + 1;
+                b = 1;
             }
 
             if (kredite >= 300 & c == 0)
             {
                 achievement = achievement + 1;
+                c = 1;
             }
 
             if (kredite >= 400 & d == 0)
             {
                 achievement = achievement + 1;
+                d = 1;
             }
 
             if (kredite >= 500 & e == 0)
             {
                 achievement = achievement + 1;
+                e = 1;
             }
         }
-
-        krediteAlt = kredite;
-    }
 }
