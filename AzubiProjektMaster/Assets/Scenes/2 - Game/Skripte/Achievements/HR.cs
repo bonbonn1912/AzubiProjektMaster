@@ -8,7 +8,6 @@ using System;
 public class HR : MonoBehaviour
 {
     int angestellte;
-    int angestellteAlt;
     int achievement;
     int a, b, c, d, e;
 

@@ -8,7 +8,6 @@ using System;
 public class Kredite : MonoBehaviour
 {
     int kredite;
-    int krediteAlt;
     int achievement;
     int a, b, c, d, e;
 
@@ -77,9 +76,6 @@ public class Kredite : MonoBehaviour
     public void Errungenschaften()
     {
 
-        if (kredite > krediteAlt)
-        {
-
             if (kredite >= 100 & a == 0)
             {
                 achievement = achievement + 1;
@@ -109,5 +105,4 @@ public class Kredite : MonoBehaviour
                 achievement = achievement + 1;
                 e = 1;
             }
-        }
 }

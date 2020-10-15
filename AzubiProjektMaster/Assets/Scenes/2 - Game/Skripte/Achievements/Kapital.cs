@@ -8,7 +8,6 @@ using System;
 public class Kapital : MonoBehaviour
 {
     int kapital;
-    int kapitalAlt;
     int achievement;
     int a, b, c, d, e;
 

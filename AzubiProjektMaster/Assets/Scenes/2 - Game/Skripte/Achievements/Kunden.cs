@@ -8,7 +8,6 @@ using System;
 public class Kunden : MonoBehaviour
 {
     int kunden;
-    int kundenAlt;
     int achievement;
     int a, b, c, d, e;
 

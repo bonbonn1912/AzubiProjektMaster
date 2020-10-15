@@ -8,7 +8,6 @@ using System;
 public class Entlassen : MonoBehaviour
 {
     int tage;
-    int tageAlt;
     int achievement;
     int a, b, c, d, e;
 

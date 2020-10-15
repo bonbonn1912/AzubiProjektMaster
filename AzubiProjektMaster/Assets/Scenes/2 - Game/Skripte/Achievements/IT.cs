@@ -8,7 +8,6 @@ using System;
 public class IT : MonoBehaviour
 {
     int itStufe;
-    int itStufeAlt;
     int achievement;
     int a, b, c, d, e;
 

@@ -8,7 +8,6 @@ using System;
 public class Aktien : MonoBehaviour
 {
     int aktien;
-    int aktienAlt;
     int achievement;
     int a, b, c, d, e;
 
