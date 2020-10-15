@@ -71,14 +71,14 @@ public class DailyUpdate : MonoBehaviour
         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/statusbarupdate.php", form);
        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/statusbarupdateDEV.php", form);
         yield return www;
-        Debug.Log("Daily statusbarupdate "+www.text);
+        //Debug.Log("Daily statusbarupdate "+www.text);
         string[] results = www.text.Split('-');
 
 
         GlobalVariables.PID = Convert.ToInt32(results[0]);
         GlobalVariables.balance = Convert.ToInt32(results[1]);
         GlobalVariables.day = Convert.ToInt32(results[2]);
-        Debug.Log("Kapital aus global nach abfrage" + GlobalVariables.balance);
+        //Debug.Log("Kapital aus global nach abfrage" + GlobalVariables.balance);
      //   Debug.Log("globale variable nach zuweisung " + GlobalVariables.day);
         GlobalVariables.mitarbeiter = Convert.ToInt32(results[3]);
        // Debug.Log(GlobalVariables.PID);
@@ -99,7 +99,7 @@ public class DailyUpdate : MonoBehaviour
         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/statusbarupdate.php", form);
        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/statusbarupdateDEV.php", form);
         yield return www;
-        Debug.Log("Init datenbank "+www.text);
+       // Debug.Log("Init datenbank "+www.text);
         string[] results = www.text.Split('-');
 
 
@@ -135,7 +135,7 @@ public class DailyUpdate : MonoBehaviour
          WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusLesenDEV.php", form);
         yield return www;
         string[] results = www.text.Split('-'); //0=BID,1=IT,2=HR,3=DWS,4=InlandFil,5=AuslandFil
-        Debug.Log("Buildings result: " + www.text);
+        //Debug.Log("Buildings result: " + www.text);
         GlobalVariables.itStatus = Convert.ToInt32(results[1]);
         GlobalVariables.hrStatus = Convert.ToInt32(results[2]);
         GlobalVariables.dwsStatus = Convert.ToInt32(results[3]);

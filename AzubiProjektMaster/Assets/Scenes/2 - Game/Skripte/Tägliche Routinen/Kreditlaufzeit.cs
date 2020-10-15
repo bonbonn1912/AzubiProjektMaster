@@ -29,7 +29,7 @@ public class Kreditlaufzeit : MonoBehaviour
       //  WWW www = new WWW("https://dominikw.de/AzubiProjekt/KrediteAbfragenDEV.php", form);
         // Debug.Log("Neues Kapital:" + GlobalVariables.balance);
         yield return www;
-        Debug.Log(www.text);
+        //Debug.Log(www.text);
          string[] IDs = www.text.Split('-');
         
         for (int i = 0; i<IDs.Length-1; i++)
@@ -76,7 +76,7 @@ public class Kreditlaufzeit : MonoBehaviour
 
     IEnumerator UpdateRuntime()
     {
-        Debug.Log("tag -1");
+        //Debug.Log("tag -1");
         WWWForm form = new WWWForm();
         form.AddField("User", GlobalVariables.username);
         WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateRuntimeDEV.php", form);

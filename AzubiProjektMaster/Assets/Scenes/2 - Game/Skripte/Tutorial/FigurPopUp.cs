@@ -68,7 +68,7 @@ public class FigurPopUp : MonoBehaviour
     //Aktiviert das erste Männchen mit Sprechblase
     public void openPanel()
     {
-        Debug.Log(DailyUpdate.check);
+        //Debug.Log(DailyUpdate.check);
         if (GlobalVariables.Tutorialcheck != true)
         {
             if (FigurUL != null)

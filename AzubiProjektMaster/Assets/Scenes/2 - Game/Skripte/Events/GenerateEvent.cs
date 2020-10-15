@@ -247,7 +247,7 @@ public class GenerateEvent : MonoBehaviour
 
     IEnumerator Execute(int value, int vorzeichen)
     {
-        Debug.Log("in coroutine");
+        //Debug.Log("in coroutine");
          yield return new WaitForSeconds(1.5f);
         switch (vorzeichen)
         {
@@ -271,9 +271,9 @@ public class GenerateEvent : MonoBehaviour
                 }
             case 1:
                 {
-                    Debug.Log("Alte Balance" + GlobalVariables.balance);
+                   // Debug.Log("Alte Balance" + GlobalVariables.balance);
                     GlobalVariables.balance = GlobalVariables.balance + value;
-                    Debug.Log("Neue Balance" + GlobalVariables.balance);
+                    //Debug.Log("Neue Balance" + GlobalVariables.balance);
                     WWWForm BalanceUpdate = new WWWForm();
                     BalanceUpdate.AddField( "Username", GlobalVariables.username);
                     BalanceUpdate.AddField("Balance", Convert.ToString(GlobalVariables.balance));
@@ -283,8 +283,8 @@ public class GenerateEvent : MonoBehaviour
                     // WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", BalanceUpdate);
                     WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateBalanceDEV.php", BalanceUpdate);
                     yield return www;
-                    Debug.Log(www.text);
-                    Debug.Log("Event Kapital updated");
+                   // Debug.Log(www.text);
+                   // Debug.Log("Event Kapital updated");
                     break;
                 }
         }

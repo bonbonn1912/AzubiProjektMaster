@@ -117,7 +117,7 @@ public class GameTime : MonoBehaviour
             if (GlobalVariables.day % 10 == 0)
             {
                Event.TriggerCo();
-                Debug.Log("Monate zu Ende");
+               // Debug.Log("Monate zu Ende");
             }
            
         }
