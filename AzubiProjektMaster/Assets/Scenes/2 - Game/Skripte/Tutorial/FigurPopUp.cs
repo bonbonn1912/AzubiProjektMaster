@@ -87,7 +87,7 @@ public class FigurPopUp : MonoBehaviour
         for (int i = 0; i < Inhalt.Length; i++)
         {
            Inputext.text = string.Concat(Inputext.text, Inhalt[i]);
-            //Wait a certain amount of time, then continue with the for loop
+            //Warte eine bestimmte Zeit und starte den Loop erneut
             yield return new WaitForSeconds(timeLapse);
         }
     }
