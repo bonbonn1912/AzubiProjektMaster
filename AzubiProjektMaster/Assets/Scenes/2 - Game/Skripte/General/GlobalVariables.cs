@@ -47,4 +47,7 @@ public class GlobalVariables : MonoBehaviour
     public static int inStatus;
     public static int ausStatus;
 
+    public static int werbungsswitch;
+    public static int kundenanzahl;
+
 }
