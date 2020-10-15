@@ -18,7 +18,6 @@ public class Eröffnungsfeier : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
 
     public void ClickEröffnungIcon()
@@ -34,7 +33,6 @@ public class Eröffnungsfeier : MonoBehaviour
         OnlinewerbungButton.SetActive(false);
         ZusatzkonditionenButton.SetActive(false);
         ZeitungswerbungButton.SetActive(false);
-        BoniButton.SetActive(false);
 
         EröffnungsfeierButton.SetActive(true);
     }

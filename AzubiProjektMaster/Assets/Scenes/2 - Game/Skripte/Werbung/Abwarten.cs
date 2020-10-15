@@ -17,7 +17,6 @@ public class Abwarten : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
     
     public void ClickAbwartenIcon()
@@ -33,17 +32,10 @@ public class Abwarten : MonoBehaviour
         ZusatzkonditionenButton.SetActive(false);
         ZeitungswerbungButton.SetActive(false);
         EröffnungsfeierButton.SetActive(false);
-        BoniButton.SetActive(false);
         
         AbwartenButton.SetActive(true);
     }
 
-    public void AbwartenAusgabe()
-    {
-        StartCoroutine(Execute());
-        AbwartenButton.SetActive(false);
-        AusgabeText.text = "abgewartet";
-    }
 
     IEnumerator Execute()
     {

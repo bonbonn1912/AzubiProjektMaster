@@ -19,7 +19,6 @@ public class Onlinewerbung : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
     
     public void ClickOnlineIcon()
@@ -35,7 +34,6 @@ public class Onlinewerbung : MonoBehaviour
         ZusatzkonditionenButton.SetActive(false);
         ZeitungswerbungButton.SetActive(false);
         EröffnungsfeierButton.SetActive(false);
-        BoniButton.SetActive(false);
 
         OnlinewerbungButton.SetActive(true);
     }
@@ -85,9 +83,7 @@ public class Onlinewerbung : MonoBehaviour
 
     public void WerbungOnline()
     {
-        //Einlesen und Wertübergabe
         kundenAnzahl = kundenAnzahl + 180;
-        //Thread.Sleep(120000);   //Dauer bis Rückgabe an Datenbank 
     }
 
     public void OnlineWerbungKosten()

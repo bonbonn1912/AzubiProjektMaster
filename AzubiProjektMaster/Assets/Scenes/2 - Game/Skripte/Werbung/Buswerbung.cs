@@ -7,7 +7,7 @@ using TMPro;
 public class Buswerbung : MonoBehaviour
 {
     int kundenAnzahl;
-    double Geld;
+    double Geld; 
     public GameObject WerbungInfo;
     public GameObject AbwartenButton;
     public GameObject BuswerbungButton;
@@ -18,7 +18,6 @@ public class Buswerbung : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
 
     public void ClickBuswerbungIcon()
@@ -34,7 +33,6 @@ public class Buswerbung : MonoBehaviour
         ZusatzkonditionenButton.SetActive(false);
         ZeitungswerbungButton.SetActive(false);
         EröffnungsfeierButton.SetActive(false);
-        BoniButton.SetActive(false);
 
         BuswerbungButton.SetActive(true);
     }

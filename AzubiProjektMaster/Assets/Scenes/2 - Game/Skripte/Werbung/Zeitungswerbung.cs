@@ -18,7 +18,6 @@ public class Zeitungswerbung : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
 
     public void ClickZeitungIcon()
@@ -34,7 +33,6 @@ public class Zeitungswerbung : MonoBehaviour
         OnlinewerbungButton.SetActive(false);
         ZusatzkonditionenButton.SetActive(false);
         EröffnungsfeierButton.SetActive(false);
-        BoniButton.SetActive(false);
 
         ZeitungswerbungButton.SetActive(true);
     }

@@ -18,7 +18,6 @@ public class Plakate : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
 
     public void ClickPlakateIcon()
@@ -26,7 +25,7 @@ public class Plakate : MonoBehaviour
         WerbungInfo.SetActive(true);
         AusgabeText.text = "plakate aushängen";
 
-        AbwartenButton.SetActive(true);
+        AbwartenButton.SetActive(false);
         BuswerbungButton.SetActive(false);
         TVWerbungButton.SetActive(false);
         WerbeautoButton.SetActive(false);
@@ -34,7 +33,6 @@ public class Plakate : MonoBehaviour
         ZusatzkonditionenButton.SetActive(false);
         ZeitungswerbungButton.SetActive(false);
         EröffnungsfeierButton.SetActive(false);
-        BoniButton.SetActive(false);
         
         PlakateButton.SetActive(true);
 

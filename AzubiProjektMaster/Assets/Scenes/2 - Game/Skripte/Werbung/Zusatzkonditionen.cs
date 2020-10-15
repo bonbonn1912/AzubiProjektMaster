@@ -18,7 +18,6 @@ public class Zusatzkonditionen : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
 
     public void ClickZusatzIcon()
@@ -34,7 +33,6 @@ public class Zusatzkonditionen : MonoBehaviour
         OnlinewerbungButton.SetActive(false);
         ZeitungswerbungButton.SetActive(false);
         EröffnungsfeierButton.SetActive(false);
-        BoniButton.SetActive(false);
 
         ZusatzkonditionenButton.SetActive(true);
     }

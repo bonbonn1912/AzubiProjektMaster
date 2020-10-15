@@ -18,7 +18,6 @@ public class Werbeauto : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
     public TextMeshProUGUI AusgabeText;
 
     public void ClickAutoIcon()
@@ -34,7 +33,6 @@ public class Werbeauto : MonoBehaviour
         ZusatzkonditionenButton.SetActive(false);
         ZeitungswerbungButton.SetActive(false);
         EröffnungsfeierButton.SetActive(false);
-        BoniButton.SetActive(false);
 
         WerbeautoButton.SetActive(true);
     }

@@ -15,7 +15,6 @@ public class WerbungBestätigen : MonoBehaviour
     public GameObject ZusatzkonditionenButton;
     public GameObject ZeitungswerbungButton;
     public GameObject EröffnungsfeierButton;
-    public GameObject BoniButton;
 
     private void Start()
     {
@@ -29,7 +28,6 @@ public class WerbungBestätigen : MonoBehaviour
         ZusatzkonditionenButton.SetActive(false);
         ZeitungswerbungButton.SetActive(false);
         EröffnungsfeierButton.SetActive(false);
-        BoniButton.SetActive(false);
     }
 
     // public void WerbungCanvasSetActive()
