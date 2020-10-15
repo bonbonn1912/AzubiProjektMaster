@@ -88,7 +88,6 @@ public class HRTablet : MonoBehaviour
                 KostenAE.text = "";
                 PersonalCost.text = GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost + " €";
                 AnzahlMA.text = Convert.ToString(GlobalVariables.mitarbeiter);
-                // SceneManager.LoadScene(3);
             }
         }
         //Entlassen
@@ -109,7 +108,6 @@ public class HRTablet : MonoBehaviour
                 KostenAE.text = "";
                 AnzahlMA.text = Convert.ToString(GlobalVariables.mitarbeiter);
                 PersonalCost.text = GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost + " €";
-                // SceneManager.LoadScene(3);
             }
         }
 
