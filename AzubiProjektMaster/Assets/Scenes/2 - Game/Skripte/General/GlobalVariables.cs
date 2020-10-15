@@ -21,7 +21,7 @@ public class GlobalVariables : MonoBehaviour
         username = null;
     }
 
-    public static bool Tutorialcheck = true;
+    public static bool Tutorialcheck;
     public static int startkapital = 50000;
     public static int mitarbeiterStart = 20;
     public static int PersonalCost = 4000;
@@ -46,9 +46,5 @@ public class GlobalVariables : MonoBehaviour
     public static int dwsStatus;
     public static int inStatus;
     public static int ausStatus;
-
-    public static int werbungsswitch;
-    public static int kundenanzahl;
-
 
 }
