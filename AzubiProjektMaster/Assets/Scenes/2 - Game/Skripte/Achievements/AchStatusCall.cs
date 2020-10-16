@@ -81,7 +81,7 @@ public class AchStatusCall : MonoBehaviour
         }
     }
 
-    void AchUpdate3()
+    /*void AchUpdate3()
     {
 
     }
@@ -109,6 +109,5 @@ public class AchStatusCall : MonoBehaviour
     void AchUpdate8()
     {
 
-    }
-
+    }*/
 }
