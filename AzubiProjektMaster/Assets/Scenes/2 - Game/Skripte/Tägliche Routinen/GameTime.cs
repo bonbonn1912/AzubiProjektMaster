@@ -37,10 +37,10 @@ public class GameTime : MonoBehaviour
     int gametimelocal;
     public void Start()
     {
-        /*if (GlobalVariables.username == null)
+            if(GlobalVariables.username == null)
         {
-            GlobalVariables.username = "SebastianTest1";
-        }*/
+            GlobalVariables.username = "SebastianTestTag";
+        }
 
         ausfuhren.Init();
     }
@@ -90,16 +90,16 @@ public class GameTime : MonoBehaviour
 
     IEnumerator SetTutorialIETrue()
     {
-        Debug.Log("wait 3 seconds");
+        //Debug.Log("wait 3 seconds");
         yield return new WaitForSeconds(3);
-        Debug.Log("3 seconds over");
+        //Debug.Log("3 seconds over");
         WWWForm Tutorial = new WWWForm();
         Tutorial.AddField("username", GlobalVariables.username);
         // WWW update = new WWW("https://dominikw.de/AzubiProjekt/UpdateTutorial.php", Tutorial);
        // WWW update = new WWW("https://dominikw.de/AzubiProjekt/UpdateTutorialDEV.php", Tutorial);
         WWW update = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateTutorialDEV.php", Tutorial);
         yield return update;
-        Debug.Log("tutorial true");
+        //Debug.Log("tutorial true");
     }
     private void Update() 
     {

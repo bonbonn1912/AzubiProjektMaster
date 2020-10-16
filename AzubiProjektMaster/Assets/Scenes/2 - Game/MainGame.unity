@@ -563,6 +563,7 @@ MonoBehaviour:
   Submitbuttonwerbung: {fileID: 1248956610}
   Werbungstextbutton: {fileID: 1211233038}
   DayTemp: 0
+  i: 0
 --- !u!1 &16118651
 GameObject:
   m_ObjectHideFlags: 0
