@@ -56,36 +56,29 @@ public class Filialen : MonoBehaviour
 
     public void Errungenschaften()
     {
-
-        if (filialen > filialenAlt)
-        {
-
-            if (filialen >= 5 & a == 0)
+            if (filialen >= 10 & a == 0)
             {
                 achievement = achievement + 1;
             }
 
-            if (filialen >= 10 & b == 0)
+            if (filialen >= 15 & b == 0)
             {
                 achievement = achievement + 1;
             }
 
-            if (filialen >= 15 & c == 0)
+            if (filialen >= 30 & c == 0)
             {
                 achievement = achievement + 1;
             }
 
-            if (filialen >= 20 & d == 0)
+            if (filialen >= 50 & d == 0)
             {
                 achievement = achievement + 1;
             }
 
-            if (filialen >= 25 & e == 0)
+            if (filialen >= 75 & e == 0)
             {
                 achievement = achievement + 1;
             }
         }
-
-        filialenAlt = filialen;
-    }
 }

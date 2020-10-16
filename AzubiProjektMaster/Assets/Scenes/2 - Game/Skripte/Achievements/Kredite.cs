@@ -76,33 +76,34 @@ public class Kredite : MonoBehaviour
     public void Errungenschaften()
     {
 
-            if (kredite >= 100 & a == 0)
-            {
-                achievement = achievement + 1;
-                a = 1;
-            }
+        if (kredite >= 100 & a == 0)
+        {
+            achievement = achievement + 1;
+            a = 1;
+        }
 
-            if (kredite >= 200 & b == 0)
-            {
-                achievement = achievement + 1;
-                b = 1;
-            }
+        if (kredite >= 200 & b == 0)
+        {
+            achievement = achievement + 1;
+            b = 1;
+        }
 
-            if (kredite >= 300 & c == 0)
-            {
-                achievement = achievement + 1;
-                c = 1;
-            }
+        if (kredite >= 300 & c == 0)
+        {
+            achievement = achievement + 1;
+            c = 1;
+        }
 
-            if (kredite >= 400 & d == 0)
-            {
-                achievement = achievement + 1;
-                d = 1;
-            }
+        if (kredite >= 400 & d == 0)
+        {
+            achievement = achievement + 1;
+            d = 1;
+        }
 
-            if (kredite >= 500 & e == 0)
-            {
-                achievement = achievement + 1;
-                e = 1;
-            }
+        if (kredite >= 500 & e == 0)
+        {
+            achievement = achievement + 1;
+            e = 1;
+        }
+    }
 }
