@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+// Datenbank: 0 = 0 Achievements der Kategorie, 1 = 1 Achievement der Kategorie usw.
 public class AchStatusCall : MonoBehaviour
 {
     public TextMeshProUGUI Ach1;
@@ -28,18 +29,87 @@ public class AchStatusCall : MonoBehaviour
         Ach6.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach7.text = "<sprite=1>";
         Ach8.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
-        InvokeRepeating("AchUpdate", 10.0f, 5.0f); //Dadurch wird Methode AchUpdate alle 5 Sekunden ausgeführt
+        //InvokeRepeating("AchUpdate1", 5.0f, 5.0f); //Dadurch wird Methode AchUpdate1 alle 5 Sekunden ausgeführt
+        InvokeRepeating("AchUpdate2", 5.0f, 5.0f);
+        //InvokeRepeating("AchUpdate3", 5.0f, 5.0f);
+        //InvokeRepeating("AchUpdate4", 5.0f, 5.0f);
+        //InvokeRepeating("AchUpdate5", 5.0f, 5.0f);
+        //InvokeRepeating("AchUpdate6", 5.0f, 5.0f);
+        //InvokeRepeating("AchUpdate7", 5.0f, 5.0f);
+        //InvokeRepeating("AchUpdate8", 5.0f, 5.0f);
     }
 
-    void AchUpdate()
+    /*void AchUpdate1()
     {
-        Debug.Log("test");  
+
+        //TBD: Datenbankabfrage der Achievements
+        if( WERT DATENBANK = 0)
+        {
+            Ach1.text = "<sprite=1>";
+        }
+        else
+        {
+            Ach1.text = "<sprite=0>";
+        }
+    }*/
+
+    void AchUpdate2()
+    {
+        int test = 4;
+        if (test == 0)
+        {
+            Ach2.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1>";
+        }
+        else if(test == 1)
+        {
+            Ach2.text = "<sprite=0> <sprite=1> <sprite=1> <sprite=1> <sprite=1>";
+        } 
+        else if (test == 2)
+        {
+            Ach2.text = "<sprite=0> <sprite=0> <sprite=1> <sprite=1> <sprite=1>";
+        } 
+        else if (test == 3)
+        {
+            Ach2.text = "<sprite=0> <sprite=0> <sprite=0> <sprite=1> <sprite=1>";
+        }
+        else if (test == 4)
+        {
+            Ach2.text = "<sprite=0> <sprite=0> <sprite=0> <sprite=0> <sprite=1>";
+        }
+        else if (test == 5)
+        {
+            Ach2.text = "<sprite=0> <sprite=0> <sprite=0> <sprite=0> <sprite=0>";
+        }
     }
 
-    //TBD: Datenbankabfrage der Achievements
-    //TBD: Jeweilige Anzahl an Coins golden machen
+    void AchUpdate3()
+    {
+
+    }
+
+    void AchUpdate4()
+    {
+
+    }
+
+    void AchUpdate5()
+    {
+
+    }
+
+    void AchUpdate6()
+    {
+
+    }
+
+    void AchUpdate7()
+    {
+
+    }
+
+    void AchUpdate8()
+    {
+
+    }
 
 }
-
-
-// Datenbank: 0 = 0 Achievements der Kategorie, 1 = 1 Achievement der Kategorie usw.
