@@ -46,9 +46,9 @@ public class Kreditlaufzeit : MonoBehaviour
             WWWForm form1 = new WWWForm();
             form1.AddField("LID", IDs[i]);
             Debug.Log("LID: "+IDs[i]);
-             WWW www1 = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KreditWertDEV.php", form1);
+           //  WWW www1 = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/KreditWertDEV.php", form1);
           // WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/KreditWert.php", form1);
-          //  WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/KreditWertDEV.php", form1);
+           WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/KreditWertDEV.php", form1);
             yield return www1;
             Debug.Log("Kreditwert" + www1.text);
             int creditvalue = Convert.ToInt32(www1.text);
