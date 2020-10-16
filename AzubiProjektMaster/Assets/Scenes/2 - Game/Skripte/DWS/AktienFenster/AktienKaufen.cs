@@ -36,6 +36,10 @@ public class AktienKaufen : MonoBehaviour
         int numberAktie1 = 1;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie1, numberAktie1);
         KaufErfolgreichAktie1.GetComponent<Text>().text = "Der Kauf von Aktie1 war erfolgreich";
+        KaufErfolgreichAktie2.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie3.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie4.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie5.GetComponent<Text>().text = "";
     }
 
     public void buyAktie2()
@@ -46,6 +50,10 @@ public class AktienKaufen : MonoBehaviour
         int numberAktie2 = 2;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie2, numberAktie2);
         KaufErfolgreichAktie2.GetComponent<Text>().text = "Der Kauf von Aktie2 war erfolgreich";
+        KaufErfolgreichAktie1.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie3.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie4.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie5.GetComponent<Text>().text = "";
     }
 
     public void buyAktie3()
@@ -56,6 +64,10 @@ public class AktienKaufen : MonoBehaviour
         int numberAktie3 = 3;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie3, numberAktie3);
         KaufErfolgreichAktie3.GetComponent<Text>().text = "Der Kauf von Aktie3 war erfolgreich";
+        KaufErfolgreichAktie1.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie2.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie4.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie5.GetComponent<Text>().text = "";
     }
 
     public void buyAktie4()
@@ -66,6 +78,10 @@ public class AktienKaufen : MonoBehaviour
         int numberAktie4 = 4;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie4, numberAktie4);
         KaufErfolgreichAktie4.GetComponent<Text>().text = "Der Kauf von Aktie4 war erfolgreich";
+        KaufErfolgreichAktie3.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie1.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie2.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie5.GetComponent<Text>().text = "";
     }
 
     public void buyAktie5()
@@ -76,6 +92,10 @@ public class AktienKaufen : MonoBehaviour
         int numberAktie5 = 5;
         buyAktie(Aktie, AktienKaufbarPruefung.AmountAktie5, numberAktie5);
         KaufErfolgreichAktie5.GetComponent<Text>().text = "Der Kauf von Aktie5 war erfolgreich";
+        KaufErfolgreichAktie3.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie1.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie2.GetComponent<Text>().text = "";
+        KaufErfolgreichAktie4.GetComponent<Text>().text = "";
     }
 
 
