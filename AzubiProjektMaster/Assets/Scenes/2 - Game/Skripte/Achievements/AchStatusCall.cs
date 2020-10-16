@@ -32,6 +32,10 @@ public class AchStatusCall : MonoBehaviour
 
     void Update()
     {
-
+        //TBD: Datenbankabfrage der Achievements
+        //TBD: Jeweilige Anzahl an Coins golden machen
     }
 }
+
+
+// Datenbank: 0 = 0 Achievements der Kategorie, 1 = 1 Achievement der Kategorie usw.
