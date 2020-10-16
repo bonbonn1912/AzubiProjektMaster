@@ -24,11 +24,11 @@ public class KreditStatistiken : MonoBehaviour
         WWWForm creditcount = new WWWForm();
         creditcount.AddField("username", GlobalVariables.username);
 
-         WWW creditabfrage = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AnzahlKrediteDEV.php", creditcount);
+        // WWW creditabfrage = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AnzahlKrediteDEV.php", creditcount);
         // WWW creditabfrage = new WWW("https://dominikw.de/AzubiProjekt/AnzahlKredite.php", creditcount);
-      //  WWW creditabfrage = new WWW("https://dominikw.de/AzubiProjekt/AnzahlKrediteDEV.php", creditcount);
+        WWW creditabfrage = new WWW("https://dominikw.de/AzubiProjekt/AnzahlKrediteDEV.php", creditcount);
         yield return creditabfrage;
-        Debug.Log(creditabfrage.text);
+        Debug.Log("Anzahl Kredite" +creditabfrage.text);
         KreditAnzahl.text = creditabfrage.text;
         KrediteAnTagX.text = Convert.ToString(GlobalVariables.day);
 }
@@ -39,9 +39,9 @@ public class KreditStatistiken : MonoBehaviour
         WWWForm creditvolume = new WWWForm();
         creditvolume.AddField("user", GlobalVariables.username);
 
-        WWW volumeabfrage = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/KreditGesamtVolumenDEV.php", creditvolume);
+      //  WWW volumeabfrage = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/KreditGesamtVolumenDEV.php", creditvolume);
      //   WWW volumeabfrage = new WWW("https://dominikw.de/AzubiProjekt/KreditGesamtVolumen.php", creditvolume);
-       // WWW volumeabfrage = new WWW("https://dominikw.de/AzubiProjekt/KreditGesamtVolumenDEV.php", creditvolume);
+        WWW volumeabfrage = new WWW("https://dominikw.de/AzubiProjekt/KreditGesamtVolumenDEV.php", creditvolume);
         yield return volumeabfrage;
         string[] volume = volumeabfrage.text.Split('-');
         int[] a = new int[volume.Length];
