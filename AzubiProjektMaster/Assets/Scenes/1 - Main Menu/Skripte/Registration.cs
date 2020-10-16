@@ -9,11 +9,57 @@ public class Registration : MonoBehaviour
     public InputField NameInputField;
     public InputField PWInputField;
 
+    public Text FeedbackUsername;
+
+    public GameObject PwFeedbackPanel;
+    public Text PwFeedbackText;
+
+  // public Image pwpanel;
+
+    public Color Low;
+    public Color Medium;
+    public Color High;
+
     public Button submitButton;
     public Text dbReply;
-
+    private void Start()
+    {
+        Low.a = 0f;
+        PwFeedbackPanel.GetComponent<Image>().color = Low;
+        PwFeedbackText.text = "";
+    }
     public void Update()
     {
+        if(NameInputField.GetComponent<InputField>().text.Length < 8)
+        {
+            FeedbackUsername.text = "Der Benutzername muss mindestens 8 Zeichen lang sein";
+        }
+        if(NameInputField.GetComponent<InputField>().text.Length > 7 )
+        {
+            FeedbackUsername.text = "";
+        }
+
+        if(PWInputField.GetComponent<InputField>().text.Length > 0 && PWInputField.GetComponent<InputField>().text.Length < 8)
+        {
+            Low.a = 0.1f;
+            PwFeedbackPanel.GetComponent<Image>().color = Low;
+            PwFeedbackText.text = "Schwach";
+        }
+
+        if (PWInputField.GetComponent<InputField>().text.Length > 7 && PWInputField.GetComponent<InputField>().text.Length < 10)
+        {
+            Medium.a = 0.1f;
+            PwFeedbackPanel.GetComponent<Image>().color = Medium;
+            PwFeedbackText.text = "Stark";
+        }
+
+        if (PWInputField.GetComponent<InputField>().text.Length  < 1)
+        {
+            Low.a = 0f;
+            PwFeedbackPanel.GetComponent<Image>().color = Low;
+            PwFeedbackText.text = "";
+        }
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (NameInputField.GetComponent<InputField>().isFocused)
