@@ -28,13 +28,17 @@ public class AchStatusCall : MonoBehaviour
         Ach6.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach7.text = "<sprite=1>";
         Ach8.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
+        InvokeRepeating("AchUpdate", 10.0f, 5.0f); //Dadurch wird Methode AchUpdate alle 5 Sekunden ausgeführt
     }
 
-    void Update()
+    void AchUpdate()
     {
-        //TBD: Datenbankabfrage der Achievements
-        //TBD: Jeweilige Anzahl an Coins golden machen
+        Debug.Log("test");  
     }
+
+    //TBD: Datenbankabfrage der Achievements
+    //TBD: Jeweilige Anzahl an Coins golden machen
+
 }
 
 
