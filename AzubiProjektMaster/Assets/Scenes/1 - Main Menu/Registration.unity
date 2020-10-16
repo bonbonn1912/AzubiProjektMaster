@@ -1746,9 +1746,8 @@ MonoBehaviour:
   NameInputField: {fileID: 62100326}
   PWInputField: {fileID: 1790344674}
   FeedbackUsername: {fileID: 365125931}
-  PwFeedbackPanel: {fileID: 0}
-  PwFeedbackText: {fileID: 0}
-  pwpanel: {fileID: 0}
+  PwFeedbackPanel: {fileID: 1890723603}
+  PwFeedbackText: {fileID: 1374167393}
   Low: {r: 0, g: 0, b: 0, a: 0}
   Medium: {r: 0, g: 0, b: 0, a: 0}
   High: {r: 0, g: 0, b: 0, a: 0}
