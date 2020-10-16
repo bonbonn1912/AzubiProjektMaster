@@ -15,11 +15,11 @@ public class Submitbutton : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         DayTemp = GlobalVariables.day;
         
-        while (i < 100000)
+        /*while (i < 100000) //Logfiles zum überprüfen der Variablen.
         {
             Debug.Log(DayTemp + "<<<<<>>>>>" + GlobalVariables.day);
             yield return new WaitForSeconds(5);
-        }
+        }*/
     }
 
    
