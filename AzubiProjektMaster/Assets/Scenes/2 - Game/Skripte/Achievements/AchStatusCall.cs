@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 // Datenbank: 0 = 0 Achievements der Kategorie, 1 = 1 Achievement der Kategorie usw.
 public class AchStatusCall : MonoBehaviour
