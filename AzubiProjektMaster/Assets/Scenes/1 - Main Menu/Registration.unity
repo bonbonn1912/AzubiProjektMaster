@@ -1748,8 +1748,8 @@ MonoBehaviour:
   FeedbackUsername: {fileID: 365125931}
   PwFeedbackPanel: {fileID: 1890723603}
   PwFeedbackText: {fileID: 1374167393}
-  Low: {r: 0, g: 0, b: 0, a: 0}
-  Medium: {r: 0, g: 0, b: 0, a: 0}
+  Low: {r: 1, g: 0, b: 0, a: 1}
+  Medium: {r: 0.15044188, g: 1, b: 0, a: 1}
   High: {r: 0, g: 0, b: 0, a: 0}
   submitButton: {fileID: 342395854}
   dbReply: {fileID: 1876850121}
