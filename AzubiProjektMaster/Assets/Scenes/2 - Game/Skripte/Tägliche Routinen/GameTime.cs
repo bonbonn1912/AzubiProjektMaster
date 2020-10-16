@@ -37,12 +37,22 @@ public class GameTime : MonoBehaviour
     int gametimelocal;
     public void Start()
     {
+            if(GlobalVariables.username == null)
+        {
+            GlobalVariables.username = "SebastianTestTag";
+        }
+
         ausfuhren.Init();
     }
     public void Awake()
     {
+        /*if (GlobalVariables.username == null)
+        {
+            GlobalVariables.username = "SebastianTest1";
+        }*/
         Abfragen.getAktienAnzahl();
-        GenerateValues();
+        //  GenerateValues();
+        SetTutorialTrigger();
 
     }
 
@@ -51,10 +61,15 @@ public class GameTime : MonoBehaviour
         StartCoroutine(GenerateAktienKurse());
     }
 
+    public void SetTutorialTrigger()
+    {
+        StartCoroutine(SetTutorialIETrue());
+    }
+
     IEnumerator GenerateAktienKurse()
     {
         yield return new WaitForSeconds(0.5f);
-        if(DailyUpdate.check == 0)
+        if (DailyUpdate.check == 0)
         {
             for (int i = 0; i < 100; i++)
             {
@@ -63,21 +78,28 @@ public class GameTime : MonoBehaviour
                 Aktie3.KursAktie3();
                 Aktie4.KursAktie4();
                 Aktie5.KursAktie5();
+              
             }
         }
         
         yield return new WaitForSeconds(0.5f);
-        StartCoroutine(SetTutorialTrue());
+     // StartCoroutine(SetTutorialTrue());
     }
 
 
 
-    IEnumerator SetTutorialTrue()
+    IEnumerator SetTutorialIETrue()
     {
+        //Debug.Log("wait 3 seconds");
+        yield return new WaitForSeconds(3);
+        //Debug.Log("3 seconds over");
         WWWForm Tutorial = new WWWForm();
-        Tutorial.AddField("Username", GlobalVariables.username);
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/TutorialTrue.php", Tutorial);
-        return www;
+        Tutorial.AddField("username", GlobalVariables.username);
+        // WWW update = new WWW("https://dominikw.de/AzubiProjekt/UpdateTutorial.php", Tutorial);
+       // WWW update = new WWW("https://dominikw.de/AzubiProjekt/UpdateTutorialDEV.php", Tutorial);
+        WWW update = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateTutorialDEV.php", Tutorial);
+        yield return update;
+        //Debug.Log("tutorial true");
     }
     private void Update() 
     {
@@ -95,7 +117,7 @@ public class GameTime : MonoBehaviour
             if (GlobalVariables.day % 10 == 0)
             {
                Event.TriggerCo();
-                Debug.Log("Monate zu Ende");
+               // Debug.Log("Monate zu Ende");
             }
            
         }
@@ -111,10 +133,13 @@ public class GameTime : MonoBehaviour
     }
     public void DailyMethoden()
     {
-       // Debug.Log("Global day" + GlobalVariables.day);
-        ausfuhren.execute();
+        //  public DailyUpdate ausfuhren;
+     // public TagUpdaten erhoehen;
+     //   public Kreditlaufzeit pruefen;
+    // Debug.Log("Global day" + GlobalVariables.day);
+    ausfuhren.execute();
         ausfuhren.GetBuildingStats();
-        erhoehen.TagErhoehen();
+       // erhoehen.TagErhoehen();
         Aktie1.KursAktie1();
         Aktie2.KursAktie2();
         Aktie3.KursAktie3();

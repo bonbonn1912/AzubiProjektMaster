@@ -50,8 +50,8 @@ public class Login : MonoBehaviour
         form.AddField("password", PWInputField.text);
 
         // WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/login.php", form);
-        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/login.php", form);
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/login.php", form);
+         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/loginDEV.php", form);
+         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/loginDEV.php", form);
         yield return www;
         if (www.text == "0")
         {

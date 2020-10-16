@@ -25,7 +25,9 @@ public class TagUpdaten : MonoBehaviour
         string username = GlobalVariables.username;
         WWWForm form = new WWWForm();
         form.AddField("username", username);
-        WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/TagUpdaten.php", form);
+         WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/TagUpdatenDEV.php", form);
+        //  WWW www = new WWW("https://dominikw.de/AzubiProjekt/TagUpdaten.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/TagUpdatenDEV.php", form);
         yield return www;
         
       //  Debug.Log("Tag geändert");

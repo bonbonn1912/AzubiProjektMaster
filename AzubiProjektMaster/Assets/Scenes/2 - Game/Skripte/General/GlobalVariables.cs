@@ -7,9 +7,11 @@ public class GlobalVariables : MonoBehaviour
 {
     
     public static string username;
+    
     public static int day;
     public static int PID;
     public static string registrationResult = null;
+    public static string Bankname = "DB Abfrage";
 
 
     public static bool LoggedIn { get { return username != null; } }
@@ -37,12 +39,15 @@ public class GlobalVariables : MonoBehaviour
     public static int Aktie4KursGlob;
     public static int Aktie5KursGlob;
 
-    public static int AktienIndex = 250;
+    public static int AktienIndex = 100;
 
     public static int itStatus;
     public static int hrStatus;
     public static int dwsStatus;
     public static int inStatus;
     public static int ausStatus;
+
+    public static int werbungsswitch;
+    public static int kundenanzahl;
 
 }

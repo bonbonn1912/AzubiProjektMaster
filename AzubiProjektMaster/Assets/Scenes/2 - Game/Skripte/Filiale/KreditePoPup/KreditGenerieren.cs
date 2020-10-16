@@ -9,6 +9,8 @@ public class KreditGenerieren : MonoBehaviour
     public Text Kunde;
     public Text Laufzeit;
     public Text Volumen;
+    public Text Zinsentxt;
+    public Text Gewinntxt;
     public GameObject App;
     public GameObject Success;
     public GameObject Management;
@@ -16,12 +18,16 @@ public class KreditGenerieren : MonoBehaviour
     public Button Accept;
     public Button Deny;
     public Button Back;
-   
+
+    public KreditStatistiken UpdateKredit;
+
     public int ValueMin;
     public int ValueMax;
-    public int Value;
+    public float Value;
     public int Duration;
     public int volumen;
+    public float Zinsen;
+    public float Gewinn;
     
     public void GenerateKredit()
     {
@@ -58,18 +64,24 @@ public class KreditGenerieren : MonoBehaviour
         form.AddField("Name", Kunde.text);
         form.AddField("Laufzeit", Laufzeit.text);
         form.AddField("Volume", Volumen.text);
-        // Debug.Log("Folgende Werte werden inserted Name: " + name + " Runtime: " + laufzeit + " Volume: " + volume);
-        WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/InsertCredits.php", form);
-        
-        yield return www;
+         Debug.Log("Folgende Werte werden inserted Name: " + name + " Runtime: " + laufzeit + " Volume: " + volume);
+        // WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/InsertCreditsDEV.php", form);
+       // WWW www = new WWW("https://dominikw.de/AzubiProjekt/InsertCredits.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/InsertCreditsDEV.php", form);
 
+        yield return www;
+        Debug.Log(www.text);
         GlobalVariables.balance = GlobalVariables.balance - Convert.ToInt32(Volumen.text);
         WWWForm form1 = new WWWForm();
         form1.AddField("Username", GlobalVariables.username);
         form1.AddField("Balance", GlobalVariables.balance);
-        WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", form1);
+       //  WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalanceDEV.php", form1);
+       // WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", form1);
+         WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", form1);
 
         yield return www1;
+
+        UpdateKredit.statistike();
         //Debug.Log(www.text);
     }
 
@@ -85,12 +97,17 @@ public class KreditGenerieren : MonoBehaviour
 
     }
 
-    int GenerateCreditValue()
+    float GenerateCreditValue()
     {
         ValueMin = GlobalVariables.balance / 100;
         ValueMax = GlobalVariables.balance / 10;
         Value = Random.Range(ValueMin, ValueMax);
         Volumen.text = Convert.ToString(Value);
+        Zinsen = Random.Range(0.001f, 0.02f);
+        Zinsentxt.text = Convert.ToString(Zinsen * 100);
+        Gewinn = Value * Zinsen;
+        Gewinntxt.text = Convert.ToString(Gewinn);
+        Value = Gewinn + Value;
         return Value;
     }
 

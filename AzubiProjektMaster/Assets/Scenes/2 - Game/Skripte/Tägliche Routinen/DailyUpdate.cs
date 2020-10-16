@@ -43,30 +43,42 @@ public class DailyUpdate : MonoBehaviour
         {
             GlobalVariables.balance = GlobalVariables.balance - GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost;
             GlobalVariables.balance = GlobalVariables.balance + GlobalVariables.mitarbeiter * GlobalVariables.Mitarbeitergewinn;
-            Debug.Log("PersonalKosten: " + GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost);
-            Debug.Log("PersonalGewinn: " + GlobalVariables.mitarbeiter * GlobalVariables.Mitarbeitergewinn);
+            //Debug.Log("PersonalKosten: " + GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost);
+            //Debug.Log("PersonalGewinn: " + GlobalVariables.mitarbeiter * GlobalVariables.Mitarbeitergewinn);
             WWWForm form1 = new WWWForm();
             form1.AddField("Username", GlobalVariables.username);
             form1.AddField("Balance", GlobalVariables.balance);
-            WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalance.php", form1);
+            // WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalanceDEV.php", form1);
+            //  WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", form1);
+            WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", form1);
             Debug.Log("Kosten abgezogen");
             yield return www1;
             yield return new WaitForSeconds(0.2f);
             Debug.Log("Kapital nach Gehalt" + GlobalVariables.balance);
         }
 
-      //  Debug.Log("Routine getriggert");
+        string username = GlobalVariables.username;
+        WWWForm formday = new WWWForm();
+        formday.AddField("username", username);
+       //  WWW wwwday = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/TagUpdatenDEV.php", formday);
+       // WWW wwwday = new WWW("https://dominikw.de/AzubiProjekt/TagUpdaten.php", formday);
+        WWW wwwday = new WWW("https://dominikw.de/AzubiProjekt/TagUpdatenDEV.php", formday);
+        yield return wwwday;
+        //  Debug.Log("Routine getriggert");
         WWWForm form = new WWWForm();
         form.AddField("username", GlobalVariables.username);
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdate.php", form);
+         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdateDEV.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/statusbarupdate.php", form);
+       // WWW www = new WWW("https://dominikw.de/AzubiProjekt/statusbarupdateDEV.php", form);
         yield return www;
-        Debug.Log("Daily statusbarupdate "+www.text);
+        //Debug.Log("Daily statusbarupdate "+www.text);
         string[] results = www.text.Split('-');
 
 
         GlobalVariables.PID = Convert.ToInt32(results[0]);
         GlobalVariables.balance = Convert.ToInt32(results[1]);
         GlobalVariables.day = Convert.ToInt32(results[2]);
+        //Debug.Log("Kapital aus global nach abfrage" + GlobalVariables.balance);
      //   Debug.Log("globale variable nach zuweisung " + GlobalVariables.day);
         GlobalVariables.mitarbeiter = Convert.ToInt32(results[3]);
        // Debug.Log(GlobalVariables.PID);
@@ -83,9 +95,11 @@ public class DailyUpdate : MonoBehaviour
        // Debug.Log("in init");
         WWWForm form = new WWWForm();
         form.AddField("username", GlobalVariables.username);
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdate.php", form);
+         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdateDEV.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/statusbarupdate.php", form);
+       // WWW www = new WWW("https://dominikw.de/AzubiProjekt/statusbarupdateDEV.php", form);
         yield return www;
-        Debug.Log("Init datenbank "+www.text);
+       // Debug.Log("Init datenbank "+www.text);
         string[] results = www.text.Split('-');
 
 
@@ -116,16 +130,25 @@ public class DailyUpdate : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("username", GlobalVariables.username);
-
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusLesen.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/buildingStatusLesen.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/buildingStatusLesenDEV.php", form);
+        // WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusLesenDEV.php", form);
         yield return www;
         string[] results = www.text.Split('-'); //0=BID,1=IT,2=HR,3=DWS,4=InlandFil,5=AuslandFil
         Debug.Log("Buildings result: " + www.text);
-        GlobalVariables.itStatus = Convert.ToInt32(results[1]);
-        GlobalVariables.hrStatus = Convert.ToInt32(results[2]);
-        GlobalVariables.dwsStatus = Convert.ToInt32(results[3]);
-        GlobalVariables.inStatus = Convert.ToInt32(results[4]);
-        GlobalVariables.ausStatus = Convert.ToInt32(results[5]);
+        if(www.text == "Connection failed")
+        {
+            Debug.Log("connection failed wating one more try");
+        }
+        else
+        {
+            GlobalVariables.itStatus = Convert.ToInt32(results[1]);
+            GlobalVariables.hrStatus = Convert.ToInt32(results[2]);
+            GlobalVariables.dwsStatus = Convert.ToInt32(results[3]);
+            GlobalVariables.inStatus = Convert.ToInt32(results[4]);
+            GlobalVariables.ausStatus = Convert.ToInt32(results[5]);
+        }
+    
     }
     IEnumerator SetBuildingsCo()
     {
@@ -138,7 +161,9 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("ausland", GlobalVariables.ausStatus);
         form.AddField("balance", GlobalVariables.balance);
 
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusSchreibenDEV.php", form);
+       // WWW www = new WWW("https://dominikw.de/AzubiProjekt/buildingStatusSchreiben.php", form);
+        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/buildingStatusSchreibenDEV.php", form);
         yield return www;
         if (www.text == "0")
         {
