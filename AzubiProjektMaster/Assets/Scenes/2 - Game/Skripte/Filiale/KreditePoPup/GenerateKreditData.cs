@@ -64,7 +64,7 @@ public class GenerateKreditData : MonoBehaviour
         yield return StartCoroutine(FetchDataDurationAbsteigend());
         watch.Stop();
         float ms = watch.ElapsedMilliseconds;
-        Debug.Log("Ladezeit aller Kredit: " + ms + " ms");
+        //Debug.Log("Ladezeit aller Kredit: " + ms + " ms");
 
 
         /* for(int i = 0; i < s.Length - 1; i++)
