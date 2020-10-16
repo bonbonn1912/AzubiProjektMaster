@@ -253,9 +253,9 @@ public class GenerateEvent : MonoBehaviour
         {
             case 0:
                 {
-                    Debug.Log("Alte Balance" + GlobalVariables.balance);
+                    //Debug.Log("Alte Balance" + GlobalVariables.balance);
                     GlobalVariables.balance = GlobalVariables.balance - value;
-                    Debug.Log("Neue Balance" + GlobalVariables.balance);
+                   // Debug.Log("Neue Balance" + GlobalVariables.balance);
                     WWWForm BalanceUpdate = new WWWForm();
                     BalanceUpdate.AddField(GlobalVariables.username, "Username");
                     BalanceUpdate.AddField(Convert.ToString(GlobalVariables.balance), "Balance");
@@ -265,8 +265,8 @@ public class GenerateEvent : MonoBehaviour
                   //  WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", BalanceUpdate);
                     WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateBalanceDEV.php", BalanceUpdate);
                     yield return www;
-                    Debug.Log(www.text);
-                    Debug.Log("Event Kapital updated");
+                    //Debug.Log(www.text);
+                    //Debug.Log("Event Kapital updated");
                     break;
                 }
             case 1:

@@ -12,19 +12,8 @@ public class Submitbutton : MonoBehaviour
 
     IEnumerator Start()
     {
-
-        int i = 0;
         yield return new WaitForSeconds(0.7f);
         DayTemp = GlobalVariables.day;
-        Debug.Log("DayTemp: " + DayTemp + "Global Day: " + GlobalVariables.day);
-        
-        while (i < 10000000)
-        {
-            Debug.Log(DayTemp + " <<<<>>>> " + GlobalVariables.day + "<<<<>>>>" + "If Anweisung: " + (DayTemp + 10) + " >= " + GlobalVariables.day);
-            i++;
-            yield return new WaitForSeconds(3);
-        }
-    
     }
 
       
@@ -32,7 +21,7 @@ public class Submitbutton : MonoBehaviour
     public void WerbungSubmit()
     {
         
-        if(DayTemp + 10 <= GlobalVariables.day)
+        if((DayTemp + 10) <= GlobalVariables.day)
         {
 
             DayTemp = GlobalVariables.day;
@@ -45,7 +34,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.kundenanzahl += 10;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 1 geschaltet";
-                    Debug.Log("case 1");
+                    //Debug.Log("case 1");
                     break;
 
                 //buswerbung
@@ -54,7 +43,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.balance -= 20000;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 2 geschaltet";
-                    Debug.Log("case 2");
+                    //Debug.Log("case 2");
                     break;
 
                 //feier
@@ -63,7 +52,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.balance -= 2000;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 3 geschaltet";
-                    Debug.Log("case 3");
+                    //Debug.Log("case 3");
                     break;
 
                 //online
@@ -72,7 +61,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.balance -= 45000;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 4 geschaltet";
-                    Debug.Log("case 4");
+                    //Debug.Log("case 4");
                     break;
 
                 //plakate
@@ -80,7 +69,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.balance -= 500;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 5 geschaltet";
-                    Debug.Log("case 5");
+                    //Debug.Log("case 5");
                     break;
 
                 //tvwerbung
@@ -89,7 +78,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.balance -= 30000;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 6 geschaltet";
-                    Debug.Log("case 6");
+                    //Debug.Log("case 6");
                     break;
 
                 //auto
@@ -98,7 +87,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.balance -= 500;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 7 geschaltet";
-                    Debug.Log("case 7");
+                    //Debug.Log("case 7");
                     break;
 
                 //zeitung
@@ -107,7 +96,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.balance -= 500;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 8 geschaltet";
-                    Debug.Log("case 8");
+                    //Debug.Log("case 8");
                     break;
 
                 //zusatz
@@ -116,7 +105,7 @@ public class Submitbutton : MonoBehaviour
                     //GlobalVariables.balance -= 500;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 9 geschaltet";
-                    Debug.Log("case 9");
+                   // Debug.Log("case 9");
                     break;
             }
         }
