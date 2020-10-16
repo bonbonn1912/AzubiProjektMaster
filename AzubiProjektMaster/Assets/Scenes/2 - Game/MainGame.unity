@@ -2413,15 +2413,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_characterSpacing: 0
+  m_characterSpacing: 110
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2451,7 +2451,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: -50, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 127634821}
     characterCount: 0
@@ -17789,15 +17789,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_characterSpacing: 0
+  m_characterSpacing: 110
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -17827,7 +17827,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: -50, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 817777009}
     characterCount: 0
@@ -18465,15 +18465,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_characterSpacing: 0
+  m_characterSpacing: 110
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -18503,7 +18503,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: -50, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 864275270}
     characterCount: 0
@@ -23484,15 +23484,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_characterSpacing: 0
+  m_characterSpacing: 110
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -23522,7 +23522,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: -50, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1223392639}
     characterCount: 0
@@ -26798,15 +26798,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_characterSpacing: 0
+  m_characterSpacing: 110
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -26836,7 +26836,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: -50, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1396824431}
     characterCount: 0
@@ -29808,15 +29808,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_characterSpacing: 0
+  m_characterSpacing: 110
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -29846,7 +29846,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: -50, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1611940638}
     characterCount: 0
@@ -30655,15 +30655,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_characterSpacing: 0
+  m_characterSpacing: 110
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -30693,7 +30693,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: -50, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1674030812}
     characterCount: 0
@@ -33176,15 +33176,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 257
-  m_characterSpacing: 0
+  m_characterSpacing: 110
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -33214,7 +33214,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: -50, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1820832570}
     characterCount: 0
