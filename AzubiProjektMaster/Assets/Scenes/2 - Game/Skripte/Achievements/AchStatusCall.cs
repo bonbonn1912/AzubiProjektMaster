@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿// Author: Justin Edelmann
+// Co-Author: Colin Schmoll
+// Script um die Achievements aus der Datenbank zu lesen und gemäß Datenbankabfrage die Anzahl der erreichten
+// Achievements auf der GUI für den jeweiligen User freizuschalten
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -28,7 +33,7 @@ public class AchStatusCall : MonoBehaviour
         Ach6.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach7.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach8.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
-        //InvokeRepeating("AchUpdate1", 5.0f, 5.0f); //Dadurch wird Methode AchUpdate1 alle 5 Sekunden ausgeführt
+        //InvokeRepeating("AchUpdate1", 5.0f, 5.0f); //Dadurch wird Methode alle 5 Sekunden ausgeführt
         InvokeRepeating("AchUpdate2", 5.0f, 5.0f);
         //InvokeRepeating("AchUpdate3", 5.0f, 5.0f);
         //InvokeRepeating("AchUpdate4", 5.0f, 5.0f);
