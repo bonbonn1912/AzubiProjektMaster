@@ -8,8 +8,7 @@ using System;
 public class HROnClicks : MonoBehaviour
 {
     public GameObject kaufenApp;
-    public GameObject personalPopUpPanel;
-    public GameObject personalPopUp;
+    public GameObject hrPopUpPanel;
     public GameObject hoverText;
     public GameObject hrTablet;
     
@@ -17,14 +16,13 @@ public class HROnClicks : MonoBehaviour
     public Text MitarbeiterCount;
     public Text PersonalCost;
 
-    public void OnBuildingClick()
+    public void OnBuildingClick(GameObject gebaeude)
     {
         if (GlobalVariables.hrStatus == 0)
         {
-            kaufenApp.SetActive(!kaufenApp.activeSelf);
-            MainScene.TabletHandlerActivate();
+            GebaeudeKaufenUpgrade.OpenKaufenApp(gebaeude);
         }
-        else if (GlobalVariables.hrStatus == 1)
+        else if (GlobalVariables.hrStatus >= 1)
         {
             OpenPopUp();
         }
@@ -32,10 +30,9 @@ public class HROnClicks : MonoBehaviour
 
     private void OpenPopUp()
     {
-        if(personalPopUpPanel != null && personalPopUp != null )
+        if(hrPopUpPanel != null)
         {
-            personalPopUpPanel.SetActive(!personalPopUpPanel.activeSelf);
-            personalPopUp.SetActive(!personalPopUp.activeSelf);
+            hrPopUpPanel.SetActive(!hrPopUpPanel.activeSelf);
         }
     }
 

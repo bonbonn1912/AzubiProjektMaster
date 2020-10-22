@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class DWSOnClicks : MonoBehaviour
 {
     public GameObject kaufenApp;
-    public GameObject dwsAktienPopUp;
-    public GameObject bloombergPopUp;
+    public GameObject dwsPopUpPanel;
     public GameObject graphTablet;
     public GameObject aktienTablet;
     public GameObject AktienHandelPopupText;
@@ -19,22 +18,22 @@ public class DWSOnClicks : MonoBehaviour
 
     public DailyUpdate dailyUp;
 
-    int Filialen = 3;
-    
-
-    public void DWSOnClick()
+    public void DWSOnClick(GameObject gebaeude)
     {
         if (GlobalVariables.dwsStatus == 0)
         {
-            kaufenApp.SetActive(!kaufenApp.activeSelf);
+            GebaeudeKaufenUpgrade.OpenKaufenApp(gebaeude);
         }
-        else if (GlobalVariables.dwsStatus == 1)
+        else if (GlobalVariables.dwsStatus >= 1)
         {
-            if (dwsAktienPopUp != null && bloombergPopUp != null)
-            {
-                bloombergPopUp.SetActive(!bloombergPopUp.activeSelf);
-                dwsAktienPopUp.SetActive(!dwsAktienPopUp.activeSelf);
-            } 
+            OpenPupup();
+        }
+    }
+    private void OpenPupup()
+    {
+        if (dwsPopUpPanel != null)
+        {
+            dwsPopUpPanel.SetActive(!dwsPopUpPanel.activeSelf);
         }
     }
     public void OpenGraphTablet()
@@ -65,39 +64,5 @@ public class DWSOnClicks : MonoBehaviour
         {
             graphPopUpText.SetActive(!graphPopUpText.activeSelf);
         }
-    }
-
-    public void Kaufen()
-    {
-        // Abfrage ob Bedingungen erfüllt sind
-        if (Filialen >= 3)
-        {
-            if (GlobalVariables.balance > 1000)
-            {
-                GlobalVariables.balance = GlobalVariables.balance - 1000;
-                GlobalVariables.dwsStatus = 1;
-                //Coroutine Update DWS level + Geld
-                dailyUp.SetBuildingStats();
-                kaufenApp.SetActive(false);
-            }
-            else
-            {
-                FehlerGeld();
-            }
-        }
-        else
-        {
-            FehlerBedingung();
-        }
-    }
-
-    //Fehlermeldungen müssen evtl noch angepasst werden bzgl Ausgabe im Spiel selber
-    public void FehlerGeld()
-    {
-        Debug.Log("Du hast nicht genug Geld");
-    }
-    public void FehlerBedingung()
-    {
-        Debug.Log("Du hast nicht genug Filialen");
     }
 }

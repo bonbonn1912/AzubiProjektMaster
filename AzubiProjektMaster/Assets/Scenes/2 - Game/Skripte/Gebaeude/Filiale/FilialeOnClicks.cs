@@ -11,20 +11,26 @@ public class FilialeOnClicks : MonoBehaviour
     //public GameObject statsTablet;
 
 
-    public void FilialeOnClick()
+    public void FilialeOnClick(GameObject gebaeude)
     {
         if (GlobalVariables.inStatus == 0)
         {
-            kaufenApp.SetActive(!kaufenApp.activeSelf);
-            MainScene.TabletHandlerActivate();
+            GebaeudeKaufenUpgrade.OpenKaufenApp(gebaeude);
         }
         else if (GlobalVariables.inStatus == 1)
         {
             if (inFilPopUpPanel != null)
             {
-                inFilPopUpPanel.SetActive(!inFilPopUpPanel.activeSelf);
+                OpenPopUp();
             }
 
+        }
+    }
+    private void OpenPopUp()
+    {
+        if (inFilPopUpPanel != null)
+        {
+            inFilPopUpPanel.SetActive(!inFilPopUpPanel.activeSelf);
         }
     }
 
@@ -39,5 +45,4 @@ public class FilialeOnClicks : MonoBehaviour
         alleKreditTablet.SetActive(!alleKreditTablet.activeSelf);
         MainScene.TabletHandlerActivate();
     }
-
 }
