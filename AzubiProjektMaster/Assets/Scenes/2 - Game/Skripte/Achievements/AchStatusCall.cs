@@ -1,7 +1,7 @@
 ﻿// Author: Justin Edelmann
 // Co-Author: Colin Schmoll & Thorge Siemens
-// Script um die Achievements aus der Datenbank zu lesen und gemäß Datenbankabfrage die Anzahl der erreichten
-// Achievements auf der GUI für den jeweiligen User freizuschalten
+/* Script um die Achievements aus der Datenbank zu lesen und gemäß Datenbankabfrage die Anzahl der erreichten
+   Achievements auf der GUI für den jeweiligen User freizuschalten*/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -21,11 +21,11 @@ public class AchStatusCall : MonoBehaviour
     public TextMeshProUGUI Ach8;
     public TextMeshProUGUI Ach9;
 
-    // <sprite=1> => Grauer Coin
-    // <sprite=0> => Goldener Coin
     private void Start()
     {
         // Auffüllen aller Achievements mit grauen Coins
+        // <sprite=1> => Grauer Coin
+        // <sprite=0> => Goldener Coin
         Ach1.text = "<sprite=1>";
         Ach2.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach3.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
@@ -47,7 +47,9 @@ public class AchStatusCall : MonoBehaviour
         InvokeRepeating("Ach8Exe", 0.5f, 5.0f);
         InvokeRepeating("Ach9Exe", 0.5f, 5.0f);
     }
-    /* Ach1 = absolviere das Tutorial
+
+    /* Legende:
+     * Ach1 = absolviere das Tutorial
      * Ach2 = Erreiche ein maximal Kapital von
      * Ach3 = Stelle x Mitarbeiter ein
      * Ach4 = Anzahl x Kunden
@@ -91,7 +93,6 @@ public class AchStatusCall : MonoBehaviour
     }
     //Achievement "absolviere das Tutorial":  Ende
     //-------------------------------------
-
 
     //Achievement "Erreiche ein maximal Kapital von": Anfang
     int achievement2;
@@ -193,7 +194,6 @@ public class AchStatusCall : MonoBehaviour
     //Achievement "Stelle x Mitarbeiter ein":  Ende
     //-------------------------------------
 
-
     //Achievement "Anzahl x Kunden": Anfang
     int achievement4;
     public void Ach4Exe()
@@ -243,7 +243,6 @@ public class AchStatusCall : MonoBehaviour
     }
     //Achievement "Anzahl x Kunden":  Ende
     //-------------------------------------
-
 
     //Achievement "Kaufe x Filialen": Anfang
     int achievement5;
@@ -295,7 +294,6 @@ public class AchStatusCall : MonoBehaviour
     //Achievement "Kaufe x Filialen":  Ende
     //-------------------------------------
 
-
     //Achievement "Vergebe x Kredite": Anfang
     int achievement6;
     public void Ach6Exe()
@@ -345,7 +343,6 @@ public class AchStatusCall : MonoBehaviour
     }
     //Achievement "Vergebe x Kredite":  Ende
     //-------------------------------------
-
 
     //Achievement "Entlasse keine Mitarbeiter für x Tage": Anfang
     int achievement7;
@@ -397,7 +394,6 @@ public class AchStatusCall : MonoBehaviour
     //Achievement "Entlasse keine Mitarbeiter für x Tage":  Ende
     //-------------------------------------
 
-
     //Achievement "Verdiene x mit Aktienhandel": Anfang
     int achievement8;
     public void Ach8Exe()
@@ -447,7 +443,6 @@ public class AchStatusCall : MonoBehaviour
     }
     //Achievement "Verdiene x mit Aktienhandel":  Ende
     //-------------------------------------
-
 
     //Achievement "Upragade das IT Gebäude 5 mal":  Anfang
     int achievement9;
