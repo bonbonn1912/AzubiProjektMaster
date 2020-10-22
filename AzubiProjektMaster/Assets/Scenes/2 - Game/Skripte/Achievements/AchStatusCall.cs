@@ -75,7 +75,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsTutorialAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsTutorialAbfrage.php", form);
         yield return www;
         string achievement1Db = www.text.Split()[0];
         achievement1 = Convert.ToInt32(achievement1Db);
@@ -109,7 +109,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsMaxKapitalAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsMaxKapitalAbfrage.php", form);
         yield return www;
         string achievement2Db = www.text.Split()[0];
         achievement2 = Convert.ToInt32(achievement2Db);
@@ -159,7 +159,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsStelleXMitarbeiterAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsStelleXMitarbeiterAbfrage.php", form);
         yield return www;
         string achievement3Db = www.text.Split()[0];
         achievement3 = Convert.ToInt32(achievement3Db);
@@ -209,7 +209,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsAnzahlXKundenAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsAnzahlXKundenAbfrage.php", form);
         yield return www;
         string achievement4Db = www.text.Split()[0];
         achievement4 = Convert.ToInt32(achievement4Db);
@@ -259,7 +259,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsKaufeXFilialenAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsKaufeXFilialenAbfrage.php", form);
         yield return www;
         string achievement5Db = www.text.Split()[0];
         achievement5 = Convert.ToInt32(achievement5Db);
@@ -309,7 +309,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsVergebeXKrediteAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsVergebeXKrediteAbfrage.php", form);
         yield return www;
         string achievement6Db = www.text.Split()[0];
         achievement6 = Convert.ToInt32(achievement6Db);
@@ -359,7 +359,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsEntlasseKeineMitarbeiterAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsEntlasseKeineMitarbeiterAbfrage.php", form);
         yield return www;
         string achievement7Db = www.text.Split()[0];
         achievement7 = Convert.ToInt32(achievement7Db);
@@ -409,7 +409,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsVerdieneXAktienhandelAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsVerdieneXAktienhandelAbfrage.php", form);
         yield return www;
         string achievement8Db = www.text.Split()[0];
         achievement8 = Convert.ToInt32(achievement8Db);
@@ -459,7 +459,7 @@ public class AchStatusCall : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
-        WWW www = new WWW("http://localhost/Test/AchievementsITGebäudeAbfrage.php", form);
+        WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsITGebäudeAbfrage.php", form);
         yield return www;
         string achievement9Db = www.text.Split()[0];
         achievement1 = Convert.ToInt32(achievement9Db);   
