@@ -97,6 +97,7 @@ public class AktienKurseLesen : MonoBehaviour
            
             valueList.Add(intResult[i]);
         }
+     //  Debug.Log(String.Join(",", valueList));
         valueList.Reverse();
         
      //   Debug.Log("Liste generiert");

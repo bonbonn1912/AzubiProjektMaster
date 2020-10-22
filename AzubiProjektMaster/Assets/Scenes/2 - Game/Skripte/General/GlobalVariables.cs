@@ -50,4 +50,6 @@ public class GlobalVariables : MonoBehaviour
     public static int werbungsswitch;
     public static int kundenanzahl;
 
+    public static int cooldownday;
+
 }

@@ -15,6 +15,7 @@ public class TriggerEvents : MonoBehaviour
   
     public void TriggerCo()
     {
+        Debug.Log("trigger Events");
         Generate.TriggerDecision();
         StartCoroutine(EventTimer());
     }
@@ -22,7 +23,7 @@ public class TriggerEvents : MonoBehaviour
     IEnumerator EventTimer()
     {
         Newspaper.SetActive(true);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         Newspaper.SetActive(false);
     }
 }

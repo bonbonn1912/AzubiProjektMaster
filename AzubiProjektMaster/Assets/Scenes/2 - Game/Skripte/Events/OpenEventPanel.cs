@@ -6,6 +6,7 @@ public class OpenEventPanel : MonoBehaviour
 {
     public GameObject EventPanel;
     public GameObject Newspaper;
+    public GameObject AuswirkungsPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,19 @@ public class OpenEventPanel : MonoBehaviour
     {
         EventPanel.SetActive(true);
         Newspaper.SetActive(false);
+        AuswirkungsPanel.SetActive(false);
+        
+
+        MainScene.TabletHandlerActivate();
+
     }
+
+    public void ZurKenntnis()
+    {
+        EventPanel.SetActive(false);
+        Newspaper.SetActive(false);
+        AuswirkungsPanel.SetActive(false);
+    }
+
+    
 }
