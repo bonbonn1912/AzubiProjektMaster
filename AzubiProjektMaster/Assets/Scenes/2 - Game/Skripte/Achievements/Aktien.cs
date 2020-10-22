@@ -7,7 +7,7 @@ using System;
 
 public class Aktien : MonoBehaviour
 {
-    int aktien;
+    double aktien;
     int achievement;
     int a, b, c, d, e;
 
@@ -29,22 +29,24 @@ public class Aktien : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        WWW www = new WWW("http://localhost/Test/AchievementAktienLesen.php", form); //PHP-Skript unvollständig, da nicht klar ist, wo Gewinn aus Aktien liegt
         yield return www;
+
+        string aktienDb = www.text.Split('-')[0];
         string aDb = www.text.Split('-')[1];
         string bDb = www.text.Split('-')[2];
         string cDb = www.text.Split('-')[3];
         string dDb = www.text.Split('-')[4];
         string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
 
-        string resultAngestellte = www.text.Split('-')[0];
-
-        aktien = Convert.ToInt32(resultAngestellte);
+        aktien = Convert.ToInt32(aktienDb);
         a = Convert.ToInt32(aDb);
         b = Convert.ToInt32(bDb);
         c = Convert.ToInt32(cDb);
         d = Convert.ToInt32(dDb);
         e = Convert.ToInt32(eDb);
+        achievement = Convert.ToInt32(achievementDb);
 
     }
 
@@ -60,7 +62,7 @@ public class Aktien : MonoBehaviour
 
 
         WWWForm form = new WWWForm();
-        form.AddField("AchievementHR", x);
+        form.AddField("AchievementShares", x);
         form.AddField("user", GlobalVariables.username);
         form.AddField("Wert1", aDb);
         form.AddField("Wert2", bDb);
@@ -68,7 +70,7 @@ public class Aktien : MonoBehaviour
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
 
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        WWW www = new WWW("http://localhost/Test/AchievementAktienSchreiben.php", form); //PHP-Skript unvollständig, da nicht klar ist, wo Gewinn aus Aktien liegt
         yield return www;
 
     }

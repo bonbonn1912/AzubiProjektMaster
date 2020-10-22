@@ -32,19 +32,21 @@ public class Kunden : MonoBehaviour
         WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
         yield return www;
 
-        string resultAngestellte = www.text.Split('-')[0];
+        string kundenDb = www.text.Split('-')[0];
         string aDb = www.text.Split('-')[1];
         string bDb = www.text.Split('-')[2];
         string cDb = www.text.Split('-')[3];
         string dDb = www.text.Split('-')[4];
         string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
 
-        kunden = Convert.ToInt32(resultAngestellte);
+        kunden = Convert.ToInt32(kundenDb);
         a = Convert.ToInt32(aDb);
         b = Convert.ToInt32(bDb);
         c = Convert.ToInt32(cDb);
         d = Convert.ToInt32(dDb);
         e = Convert.ToInt32(eDb);
+        achievement = Convert.ToInt32(achievementDb);
 
     }
 

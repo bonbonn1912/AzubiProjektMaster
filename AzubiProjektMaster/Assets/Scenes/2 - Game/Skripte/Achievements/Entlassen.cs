@@ -32,19 +32,21 @@ public class Entlassen : MonoBehaviour
         WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
         yield return www;
 
-        string resultTage = www.text.Split('-')[0];
+        string tageDb = www.text.Split('-')[0];
         string aDb = www.text.Split('-')[1];
         string bDb = www.text.Split('-')[2];
         string cDb = www.text.Split('-')[3];
         string dDb = www.text.Split('-')[4];
         string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
 
-        tage = Convert.ToInt32(resultTage);
+        tage = Convert.ToInt32(tageDb);
         a = Convert.ToInt32(aDb);
         b = Convert.ToInt32(bDb);
         c = Convert.ToInt32(cDb);
         d = Convert.ToInt32(dDb);
         e = Convert.ToInt32(eDb);
+        achievement = Convert.ToInt32(achievementDb);
 
     }
 
@@ -60,7 +62,7 @@ public class Entlassen : MonoBehaviour
 
 
         WWWForm form = new WWWForm();
-        form.AddField("AchievementHR", x);
+        form.AddField("AchievementEntlassung", x);
         form.AddField("user", GlobalVariables.username);
         form.AddField("Wert1", aDb);
         form.AddField("Wert2", bDb);

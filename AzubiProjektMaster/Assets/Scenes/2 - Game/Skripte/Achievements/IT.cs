@@ -29,23 +29,24 @@ public class IT : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        WWW www = new WWW("http://localhost/Test/AchievementItLesen.php", form);
         yield return www;
 
-        string resultAngestellte = www.text.Split('-')[0];
+        string itDb = www.text.Split('-')[0];
         string aDb = www.text.Split('-')[1];
         string bDb = www.text.Split('-')[2];
         string cDb = www.text.Split('-')[3];
         string dDb = www.text.Split('-')[4];
         string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
 
-        itStufe = Convert.ToInt32(resultAngestellte);
+        itStufe = Convert.ToInt32(itDb);
         a = Convert.ToInt32(aDb);
         b = Convert.ToInt32(bDb);
         c = Convert.ToInt32(cDb);
         d = Convert.ToInt32(dDb);
         e = Convert.ToInt32(eDb);
-
+        achievement = Convert.ToInt32(achievementDb);
     }
 
     IEnumerator DatenSchreiben()
@@ -60,7 +61,7 @@ public class IT : MonoBehaviour
 
 
         WWWForm form = new WWWForm();
-        form.AddField("AchievementHR", x);
+        form.AddField("AchievementIT", x);
         form.AddField("user", GlobalVariables.username);
         form.AddField("Wert1", aDb);
         form.AddField("Wert2", bDb);
@@ -68,7 +69,7 @@ public class IT : MonoBehaviour
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
 
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        WWW www = new WWW("http://localhost/Test/AchievementItSchreiben.php", form);
         yield return www;
 
     }
