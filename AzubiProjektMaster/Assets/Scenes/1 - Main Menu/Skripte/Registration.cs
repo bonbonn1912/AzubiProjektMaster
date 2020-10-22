@@ -86,8 +86,8 @@ public class Registration : MonoBehaviour
 
         // WWW www = new WWW("http://localhost/sqlconnection/sqlconnect/register.php", form);
         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/register.php", form);
-        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/registerDEV.php", form);
-         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/registerDEV.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/registerDEV.php", form);
+        // WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/registerDEV.php", form);
         // WWW www = new WWW("https://dominik.grandpa-kitchen.com/httpdocs/PHP-Skripte/registerDEV.php", form);
       
         yield return www;
@@ -110,10 +110,10 @@ public class Registration : MonoBehaviour
         form.AddField("employees", GlobalVariables.mitarbeiterStart);
         form.AddField("buildings", GlobalVariables.buildingsStart);
 
-       //  WWW www = new WWW("https://dominikw.de/AzubiProjekt/anlegenDEV.php", form);
-        // WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/anlegen.php", form);
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/anlegenDEV.php", form);
-       // WWW www = new WWW("https://dominik.grandpa-kitchen.com/httpdocs/PHP-Skripte/anlegenDEV.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/anlegenDEV.php", form);
+        //WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/anlegen.php", form);
+        //WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/anlegenDEV.php", form);
+        //WWW www = new WWW("https://dominik.grandpa-kitchen.com/httpdocs/PHP-Skripte/anlegenDEV.php", form);
         yield return www;
         if (www.text == "0")
         {

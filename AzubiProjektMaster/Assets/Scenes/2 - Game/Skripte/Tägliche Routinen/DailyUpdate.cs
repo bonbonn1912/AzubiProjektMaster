@@ -161,9 +161,9 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("ausland", GlobalVariables.ausStatus);
         form.AddField("balance", GlobalVariables.balance);
 
-        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusSchreibenDEV.php", form);
+        //WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/buildingStatusSchreibenDEV.php", form);
        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/buildingStatusSchreiben.php", form);
-        // WWW www = new WWW("https://dominikw.de/AzubiProjekt/buildingStatusSchreibenDEV.php", form);
+         WWW www = new WWW("https://dominikw.de/AzubiProjekt/buildingStatusSchreibenDEV.php", form);
         yield return www;
         if (www.text == "0")
         {
