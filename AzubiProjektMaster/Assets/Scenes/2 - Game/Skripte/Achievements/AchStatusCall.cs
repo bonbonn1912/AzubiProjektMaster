@@ -33,6 +33,7 @@ public class AchStatusCall : MonoBehaviour
         Ach6.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach7.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach8.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
+        Ach9.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         //InvokeRepeating("AchUpdate1", 5.0f, 5.0f); //Dadurch wird Methode alle 5 Sekunden ausgeführt
         InvokeRepeating("AchUpdate2", 5.0f, 5.0f);
         //InvokeRepeating("AchUpdate3", 5.0f, 5.0f);
@@ -117,6 +118,11 @@ public class AchStatusCall : MonoBehaviour
     }
 
     void AchUpdate8()
+    {
+
+    }
+
+    void AchUpdate9()
     {
 
     }*/
