@@ -41,6 +41,10 @@ public class MainScene : MonoBehaviour
         {
             GameObject.Find("GebäudeKaufenAPP").SetActive(false);
         }
+        if (GameObject.Find("EventGanz") != null)
+        {
+            GameObject.Find("EventGanz").SetActive(false);
+        }
         GameObject.Find("TabletHandlerBtn").SetActive(false);
     }
     //On Click() Game/GameHandler/UI/Statusleiste/logOut
