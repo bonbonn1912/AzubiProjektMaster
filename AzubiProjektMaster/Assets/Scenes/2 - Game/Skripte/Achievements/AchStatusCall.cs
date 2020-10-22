@@ -26,7 +26,7 @@ public class AchStatusCall : MonoBehaviour
         Ach4.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach5.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach6.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
-        Ach7.text = "<sprite=1>";
+        Ach7.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         Ach8.text = "<sprite=1> <sprite=1> <sprite=1> <sprite=1> <sprite=1> ";
         //InvokeRepeating("AchUpdate1", 5.0f, 5.0f); //Dadurch wird Methode AchUpdate1 alle 5 Sekunden ausgeführt
         InvokeRepeating("AchUpdate2", 5.0f, 5.0f);
@@ -36,6 +36,10 @@ public class AchStatusCall : MonoBehaviour
         //InvokeRepeating("AchUpdate6", 5.0f, 5.0f);
         //InvokeRepeating("AchUpdate7", 5.0f, 5.0f);
         //InvokeRepeating("AchUpdate8", 5.0f, 5.0f);
+    }
+
+    void Datenbankabfrage(){
+        
     }
 
     /*void AchUpdate1()
