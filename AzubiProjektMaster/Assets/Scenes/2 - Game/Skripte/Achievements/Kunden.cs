@@ -62,7 +62,7 @@ public class Kunden : MonoBehaviour
 
 
         WWWForm form = new WWWForm();
-        form.AddField("AchievementHR", x);
+        form.AddField("AchievementCustomers", x);
         form.AddField("user", GlobalVariables.username);
         form.AddField("Wert1", aDb);
         form.AddField("Wert2", bDb);
