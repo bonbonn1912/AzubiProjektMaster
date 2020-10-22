@@ -65,38 +65,4 @@ public class DWSOnClicks : MonoBehaviour
             graphPopUpText.SetActive(!graphPopUpText.activeSelf);
         }
     }
-
-    public void Kaufen()
-    {
-        // Abfrage ob Bedingungen erfüllt sind
-        if (GlobalVariables.inStatus >= 3)
-        {
-            if (GlobalVariables.balance > 1000)
-            {
-                GlobalVariables.balance = GlobalVariables.balance - 1000;
-                GlobalVariables.dwsStatus = 1;
-                //Coroutine Update DWS level + Geld
-                dailyUp.SetBuildingStats();
-                kaufenApp.SetActive(false);
-            }
-            else
-            {
-                FehlerGeld();
-            }
-        }
-        else
-        {
-            FehlerBedingung();
-        }
-    }
-
-    //Fehlermeldungen müssen evtl noch angepasst werden bzgl Ausgabe im Spiel selber
-    public void FehlerGeld()
-    {
-        Debug.Log("Du hast nicht genug Geld");
-    }
-    public void FehlerBedingung()
-    {
-        Debug.Log("Du hast nicht genug Filialen");
-    }
 }

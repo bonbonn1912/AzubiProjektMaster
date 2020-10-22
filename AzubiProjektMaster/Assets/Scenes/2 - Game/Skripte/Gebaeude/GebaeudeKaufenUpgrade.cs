@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GebaeudeKaufenUpgrade : MonoBehaviour
 {
@@ -11,13 +12,15 @@ public class GebaeudeKaufenUpgrade : MonoBehaviour
     public GameObject dwsGebaeude;
     public GameObject filialeGebaeude;
     public GameObject hrGebaeude;
-    public static GameObject kaufenApp;
+    private static GameObject kaufenApp;
+    private static Text gebaeudeKosten;
 
     private static GameObject gebaeude;
 
     public static void OpenKaufenApp(GameObject gebaeudeArg)
     {
         kaufenApp = GameObject.Find("Game/GameHandler/UI/GebäudeKaufenAPP");
+        GameObject.Find("Game/GameHandler/UI/GebäudeKaufenAPP/Kosten/KostenDisplay").GetComponent<Text>().text = GebaeudeRequirements.KaufKosten(gebaeudeArg).ToString();
         gebaeude = gebaeudeArg;
         kaufenApp.SetActive(!kaufenApp.activeSelf);
         MainScene.TabletHandlerActivate();

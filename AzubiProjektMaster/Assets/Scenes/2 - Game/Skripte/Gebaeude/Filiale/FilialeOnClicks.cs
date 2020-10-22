@@ -45,5 +45,4 @@ public class FilialeOnClicks : MonoBehaviour
         alleKreditTablet.SetActive(!alleKreditTablet.activeSelf);
         MainScene.TabletHandlerActivate();
     }
-
 }
