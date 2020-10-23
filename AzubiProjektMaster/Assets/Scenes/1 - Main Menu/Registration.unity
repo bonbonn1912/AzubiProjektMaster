@@ -1643,6 +1643,7 @@ GameObject:
   - component: {fileID: 941457353}
   - component: {fileID: 941457352}
   - component: {fileID: 941457356}
+  - component: {fileID: 941457357}
   m_Layer: 5
   m_Name: RegisterHandler
   m_TagString: Untagged
@@ -1753,6 +1754,23 @@ MonoBehaviour:
   High: {r: 0, g: 0, b: 0, a: 0}
   submitButton: {fileID: 342395854}
   dbReply: {fileID: 1876850121}
+  mainMenu: {fileID: 941457357}
+--- !u!114 &941457357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941457351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e394db1fb31191c4eaa6fddc2c141925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  registrationButton: {fileID: 0}
+  loginButton: {fileID: 0}
+  playButton: {fileID: 0}
+  playerDisplay: {fileID: 0}
 --- !u!1 &1374167391
 GameObject:
   m_ObjectHideFlags: 0

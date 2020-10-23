@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Registration : MonoBehaviour
@@ -22,23 +22,19 @@ public class Registration : MonoBehaviour
 
     public Button submitButton;
     public Text dbReply;
+
+    public MainMenu mainMenu;
+
+    private int tabSelect;
     private void Start()
     {
         Low.a = 0f;
         PwFeedbackPanel.GetComponent<Image>().color = Low;
         PwFeedbackText.text = "";
+        NameInputField.GetComponent<InputField>().Select();
     }
     public void Update()
     {
-        if(NameInputField.GetComponent<InputField>().text.Length < 8)
-        {
-            FeedbackUsername.text = "Der Benutzername muss mindestens 8 Zeichen lang sein";
-        }
-        if(NameInputField.GetComponent<InputField>().text.Length > 7 )
-        {
-            FeedbackUsername.text = "";
-        }
-
         if(PWInputField.GetComponent<InputField>().text.Length > 0 && PWInputField.GetComponent<InputField>().text.Length < 8)
         {
             Low.a = 0.1f;
@@ -62,13 +58,42 @@ public class Registration : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (NameInputField.GetComponent<InputField>().isFocused)
+            if (tabSelect == 2)
             {
-                PWInputField.GetComponent<InputField>().Select();
+                tabSelect = 0;
             }
-            if (PWInputField.GetComponent<InputField>().isFocused)
+            else
             {
-                NameInputField.GetComponent<Button>().Select();
+                tabSelect += 1;
+            }
+            switch (tabSelect)
+            {
+                case 0:
+                    mainMenu.FadeToColor(submitButton, submitButton.colors.normalColor);
+                    NameInputField.GetComponent<InputField>().Select();
+                    break;
+                case 1:
+                    PWInputField.GetComponent<InputField>().Select();
+                    break;
+                case 2:
+                    EventSystem.current.SetSelectedGameObject(null);
+                    mainMenu.FadeToColor(submitButton, submitButton.colors.pressedColor);
+                    break;
+                default:
+                    Debug.Log("Hard to count from 0, huh?");
+                    break;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if (submitButton.IsInteractable())
+            {
+                submitButton.onClick.Invoke();
+                submitButton.GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                submitButton.GetComponent<AudioSource>().Play();
             }
         }
     }

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class Login : MonoBehaviour
 {
@@ -12,7 +11,10 @@ public class Login : MonoBehaviour
     public Text dbReply;
     public Button LoginButton;
     public Button backToMenu;
-  
+
+    public MainMenu mainMenu;
+
+    private int tabSelect;
     public void Start()
     {
         LoginButton.interactable = false;
@@ -20,19 +22,49 @@ public class Login : MonoBehaviour
         {
             dbReply.text = GlobalVariables.registrationResult;
         }
+        NameInputField.GetComponent<InputField>().Select();
     }
 
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (NameInputField.GetComponent<InputField>().isFocused)
+            if (tabSelect == 2)
             {
-                PWInputField.GetComponent<InputField>().Select();
+                tabSelect = 0;
             }
-            if (PWInputField.GetComponent<InputField>().isFocused)
+            else
             {
-                NameInputField.GetComponent<Button>().Select();
+                tabSelect += 1;
+            }
+            switch (tabSelect)
+            {
+                case 0:
+                    mainMenu.FadeToColor(LoginButton, LoginButton.colors.normalColor);
+                    NameInputField.GetComponent<InputField>().Select();
+                    break;
+                case 1:
+                    PWInputField.GetComponent<InputField>().Select();
+                    break;
+                case 2:
+                    EventSystem.current.SetSelectedGameObject(null);
+                    mainMenu.FadeToColor(LoginButton, LoginButton.colors.pressedColor);
+                    break;
+                default:
+                    Debug.Log("Hard to count from 0, huh?");
+                    break;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if (LoginButton.IsInteractable())
+            {
+                LoginButton.onClick.Invoke();
+                LoginButton.GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                LoginButton.GetComponent<AudioSource>().Play();
             }
         }
     }

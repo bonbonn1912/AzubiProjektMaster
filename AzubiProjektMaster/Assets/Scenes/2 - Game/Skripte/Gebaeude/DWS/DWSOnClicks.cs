@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class DWSOnClicks : MonoBehaviour
@@ -35,6 +33,11 @@ public class DWSOnClicks : MonoBehaviour
         {
             dwsPopUpPanel.SetActive(!dwsPopUpPanel.activeSelf);
         }
+    }
+    public void PopupClickUpgrade(GameObject gebaeude)
+    {
+        GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
+        GebaeudeUpgraden.OpenUpgradeApp(gebaeude);
     }
     public void OpenGraphTablet()
     {

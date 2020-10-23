@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_HighlightedColor: {r: 0.43137258, g: 0.77647066, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.4627451, g: 0.4627451, b: 0.4627451, a: 1}
     m_SelectedColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_DisabledColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_ColorMultiplier: 1
@@ -1922,6 +1922,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e394db1fb31191c4eaa6fddc2c141925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  registrationButton: {fileID: 1045334681}
+  loginButton: {fileID: 1309952577}
+  playButton: {fileID: 342395854}
   playerDisplay: {fileID: 1876850121}
 --- !u!1 &990645701
 GameObject:
@@ -2008,6 +2011,7 @@ GameObject:
   - component: {fileID: 1045334680}
   - component: {fileID: 1045334679}
   - component: {fileID: 1045334678}
+  - component: {fileID: 1045334684}
   m_Layer: 5
   m_Name: registrationButton
   m_TagString: Untagged
@@ -2195,7 +2199,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_HighlightedColor: {r: 0.43137258, g: 0.77647066, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.4627451, g: 0.4627451, b: 0.4627451, a: 1}
     m_SelectedColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_DisabledColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_ColorMultiplier: 1
@@ -2263,6 +2267,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045334676}
   m_CullTransparentMesh: 0
+--- !u!223 &1045334684
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045334676}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1167418644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,7 +2692,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_HighlightedColor: {r: 0.43137258, g: 0.77647066, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
     m_SelectedColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_DisabledColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_ColorMultiplier: 1
