@@ -13,7 +13,7 @@ public class ITOnClicks : MonoBehaviour
     {
         if (GlobalVariables.itStatus == 0)
         {
-            GebaeudeKaufenUpgrade.OpenKaufenApp(gebaeude);
+            GebaeudeKaufen.OpenKaufenApp(gebaeude);
         }
         else if (GlobalVariables.itStatus >= 1)
         {

@@ -22,7 +22,7 @@ public class DWSOnClicks : MonoBehaviour
     {
         if (GlobalVariables.dwsStatus == 0)
         {
-            GebaeudeKaufenUpgrade.OpenKaufenApp(gebaeude);
+            GebaeudeKaufen.OpenKaufenApp(gebaeude);
         }
         else if (GlobalVariables.dwsStatus >= 1)
         {

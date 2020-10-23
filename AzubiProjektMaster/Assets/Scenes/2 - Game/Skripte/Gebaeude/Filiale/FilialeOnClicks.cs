@@ -15,7 +15,7 @@ public class FilialeOnClicks : MonoBehaviour
     {
         if (GlobalVariables.inStatus == 0)
         {
-            GebaeudeKaufenUpgrade.OpenKaufenApp(gebaeude);
+            GebaeudeKaufen.OpenKaufenApp(gebaeude);
         }
         else if (GlobalVariables.inStatus == 1)
         {
