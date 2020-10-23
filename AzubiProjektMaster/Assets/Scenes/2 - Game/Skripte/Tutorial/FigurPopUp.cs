@@ -31,14 +31,14 @@ public class FigurPopUp : MonoBehaviour
     
 
 
-    private string InhaltWill = "Herzlich Willkommen! Sie haben Ihre eigene Bank eröffnet! Sie sind der neue CEO " + GlobalVariables.username + " der " + GlobalVariables.Bankname + ". Ein bisschen Trivia: 1870 war die Gründung von der Deutschen Bank.";
-    private string InhaltEin = "Vergewissern Sie sich dass Sie ihre Bank voranbringen wollen und sie nicht in den Bankrott treiben. Sie werden im Spielverlauf einige neue Gebäude, Finanzmittel und die Story kennen lernen. Sie entscheiden, was Sie wollen!";
-    private string InhaltZiele = "Mal schauen ob Sie das Zeug dazuhaben alle Achievements zu finden und ihre Hauptzentrale auf Stufe 5 zu bekommen.";
-    private string InhaltHuerden = "Am Anfang befinden Sie sich in der Finanzierungsphase, wie wollen Sie Ihr Geld verdienen.Sie müssen einiges beachten, es gibt wie überall Risiken, Krisen, Sicherheitslücken, uvm. Finden Sie ihr eigenes Gleichgewicht";
-    private string InhaltFiliale = "Für den Anfang besitzen Sie ihre Zentrale mit 4 Mitarbeitern, wo Ihre Einnahmen und Ausgaben im Überblick haben und ihre Kredite sehen können.";
-    private string InhaltIT = "Das IT Gebäude können Sie nach 2 Filialen kaufen und dies erhöht Ihre Erträge der Mitarbeiter.";
-    private string InhaltHR = "Das HR Gebäude können Sie nach 4 Filialen freischalten und hier stellen Sie Mitarbeiter ein und entlassen sie, was jeweils Geld kostet.";
-    private string InhaltDWS = "Die DWS können Sie nach erwerb von 3 Filialen freischalten. Hier können Sie Ihre Aktien kaufen, verkaufen und verwalten. Sie haben eine echtzeit Ansicht der Kurse, wählen Sie mit bedacht einen Zeitpunkt zum Kaufen und Verkaufen.";
+    private string InhaltWill = "Herzlich Willkommen! Sie haben Ihre eigene Bank eröffnet! Sie sind der neue CEO " + GlobalVariables.username + " der " + GlobalVariables.Bankname + ". Ein bisschen Trivia: Im Jahre 1870 wurde die Deutsche Bank gegründet.";
+    private string InhaltEin = "Ihr Ziel ist es, die Bank voranzubringen und zu expandieren. Im Spielverlauf werden Sie einige neue Gebäude, Finanzmittel und die Story kennenlernen. Treffen Sie ihre Entscheidungen mit Bedacht.";
+    private string InhaltZiele = "Mal schauen ob Sie das Zeug dazuhaben, alle Achievements zu erreichen und ihre Zentrale auf Stufe 5 hochzustufen.";
+    private string InhaltHuerden = "Am Anfang befinden Sie sich in der Finanzierungsphase: Wie wollen Sie Ihr Geld verdienen? Sie müssen einiges beachten, es gibt Risiken, Krisen, Sicherheitslücken und vieles mehr. Finden Sie ihr eigenes Gleichgewicht.";
+    private string InhaltFiliale = "Für den Anfang besitzen Sie ihre Zentrale mit 4 Mitarbeitern, in welcher Sie ihre Einnahmen und Ausgaben im Überblick behalten und ihre vergebene Kredite beobachten können.";
+    private string InhaltIT = "Das IT Gebäude können Sie erwerben, wenn Sie 2 Filialen besitzen. Dies erhöht die Erträge der Mitarbeiter.";
+    private string InhaltHR = "Das HR Gebäude können Sie erwerben, wenn sie 4 Filialen besitzen. Durch das Einstellen und Entlassen der Mitarbeiter fallen jeweils Kosten an.";
+    private string InhaltDWS = "Die DWS können Sie nach erwerb von 3 Filialen freischalten. Hier können Sie Aktien kaufen, verkaufen und sie verwalten. Sie haben eine Echtzeitansicht der Aktienkurse.";
     private string InhaltStart = "Legen wir los! Ihre ersten Kredite sind nicht weit entfernt. Viel Erfolg und viel Spaß!";
 
     public float timeLapse = 0.03f;
