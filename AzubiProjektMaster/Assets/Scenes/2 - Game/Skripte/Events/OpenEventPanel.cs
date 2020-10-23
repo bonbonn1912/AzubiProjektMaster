@@ -21,20 +21,22 @@ public class OpenEventPanel : MonoBehaviour
 
     public void OpenEventPanel_()
     {
+        Debug.Log("Button Clicked");
         EventPanel.SetActive(true);
-        Newspaper.SetActive(false);
-        AuswirkungsPanel.SetActive(false);
         
+        AuswirkungsPanel.SetActive(false);
+        Newspaper.SetActive(false);
 
-        MainScene.TabletHandlerActivate();
+
+        //  MainScene.TabletHandlerActivate();
 
     }
 
     public void ZurKenntnis()
     {
         EventPanel.SetActive(false);
-        Newspaper.SetActive(false);
-        AuswirkungsPanel.SetActive(false);
+       Newspaper.SetActive(false);
+       AuswirkungsPanel.SetActive(false);
     }
 
     
