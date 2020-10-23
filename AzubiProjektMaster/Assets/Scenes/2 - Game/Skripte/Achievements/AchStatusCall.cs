@@ -211,6 +211,7 @@ public class AchStatusCall : MonoBehaviour
         form.AddField("user", GlobalVariables.username);
         WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsAnzahlXKundenAbfrage.php", form);
         yield return www;
+        Debug.Log(www.text);
         string achievement4Db = www.text.Split()[0];
         achievement4 = Convert.ToInt32(achievement4Db);
     }
@@ -462,7 +463,7 @@ public class AchStatusCall : MonoBehaviour
         WWW www = new WWW("https://justin.grandpa-kitchen.com/AchievementsITGebäudeAbfrage.php", form);
         yield return www;
         string achievement9Db = www.text.Split()[0];
-        achievement1 = Convert.ToInt32(achievement9Db);   
+        achievement9 = Convert.ToInt32(achievement9Db);   
     }
     public void AusgabeAch9()
     {
