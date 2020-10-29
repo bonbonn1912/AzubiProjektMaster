@@ -6,24 +6,20 @@ using UnityEngine.UI;
 public class Registration : MonoBehaviour
 
 {
+    public static bool completet;
+    public static string user;
+    
+    public Text dbReply;
     public InputField NameInputField;
     public InputField PWInputField;
+    public Button submitButton;
 
-    public Text FeedbackUsername;
-
+    // public Image pwpanel;
     public GameObject PwFeedbackPanel;
     public Text PwFeedbackText;
-
-  // public Image pwpanel;
-
     public Color Low;
     public Color Medium;
     public Color High;
-
-    public Button submitButton;
-    public Text dbReply;
-
-    public MainMenu mainMenu;
 
     private int tabSelect;
     private void Start()
@@ -126,7 +122,12 @@ public class Registration : MonoBehaviour
         if (www.text == "0")
         {   
             yield return StartCoroutine(AccountAnlegen());
-            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            if (GlobalVariables.registrationResult == "Registration erfolgreich!\nBitte einloggen.")
+            {
+                completet = true;
+                user = NameInputField.text;
+                UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            }
         }
         else
         {
