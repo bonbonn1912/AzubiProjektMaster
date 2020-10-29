@@ -18168,7 +18168,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &740622395
@@ -25092,6 +25092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172511087}
   - component: {fileID: 1172511088}
+  - component: {fileID: 1172511090}
   - component: {fileID: 1172511089}
   m_Layer: 5
   m_Name: "Geb\xE4ude"
@@ -25133,7 +25134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1172511086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1abd001ce61f4934c87af0e50560ca01, type: 3}
+  m_Script: {fileID: 11500000, guid: 96bf119c223f5cf4c992463862b12f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dailyUpdate: {fileID: 1172511089}
@@ -25153,6 +25154,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29951e1cd03bccd41a677b126ab40777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1172511090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172511086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68554afe8116e87409c11c86dee87f76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dailyUpdate: {fileID: 1172511089}
+  itGebaeude: {fileID: 740622392}
+  dwsGebaeude: {fileID: 651806766}
+  filialeGebaeude: {fileID: 580688719}
+  hrGebaeude: {fileID: 1352982547}
 --- !u!1 &1175271259
 GameObject:
   m_ObjectHideFlags: 0
