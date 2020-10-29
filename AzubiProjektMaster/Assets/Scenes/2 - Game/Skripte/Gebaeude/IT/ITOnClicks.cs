@@ -13,7 +13,7 @@ public class ITOnClicks : MonoBehaviour
     {
         if (GlobalVariables.itStatus == 0)
         {
-            GebaeudeKaufenUpgrade.OpenKaufenApp(gebaeude);
+            GebaeudeKaufen.OpenKaufenApp(gebaeude);
         }
         else if (GlobalVariables.itStatus >= 1)
         {
@@ -27,36 +27,9 @@ public class ITOnClicks : MonoBehaviour
             itPupUpPanel.SetActive(!itPupUpPanel.activeSelf);
         }
     }
-    public void Kaufen()
+    public void PopupClickUpgrade(GameObject gebaeude)
     {
-        // Abfrage ob Bedingungen erfüllt sind
-        if (GlobalVariables.inStatus >= 2)
-        {
-            if (GlobalVariables.balance > 1000)
-            {
-                GlobalVariables.balance = GlobalVariables.balance - 1000;
-                GlobalVariables.itStatus = 1;
-                dailyUp.SetBuildingStats();
-                kaufenApp.SetActive(false);
-            }
-            else
-            {
-                FehlerGeld();
-            }
-        }
-        else
-        {
-            FehlerBedingung();
-        }
-    }
-
-    //Fehlermeldungen müssen evtl noch angepasst werden bzgl Ausgabe im Spiel selber
-    public void FehlerGeld()
-    {
-        Debug.Log("Du hast nicht genug Geld");
-    }
-    public void FehlerBedingung()
-    {
-        Debug.Log("Du hast nicht genug Filialen");
+        GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
+        GebaeudeUpgraden.OpenUpgradeApp(gebaeude);
     }
 }

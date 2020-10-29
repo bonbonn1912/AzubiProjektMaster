@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Rendering;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
 
@@ -20,7 +17,7 @@ public class HROnClicks : MonoBehaviour
     {
         if (GlobalVariables.hrStatus == 0)
         {
-            GebaeudeKaufenUpgrade.OpenKaufenApp(gebaeude);
+            GebaeudeKaufen.OpenKaufenApp(gebaeude);
         }
         else if (GlobalVariables.hrStatus >= 1)
         {
@@ -34,6 +31,11 @@ public class HROnClicks : MonoBehaviour
         {
             hrPopUpPanel.SetActive(!hrPopUpPanel.activeSelf);
         }
+    }
+    public void PopupClickUpgrade(GameObject gebaeude)
+    {
+        GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
+        GebaeudeUpgraden.OpenUpgradeApp(gebaeude);
     }
 
     public void OpenHRTablet()

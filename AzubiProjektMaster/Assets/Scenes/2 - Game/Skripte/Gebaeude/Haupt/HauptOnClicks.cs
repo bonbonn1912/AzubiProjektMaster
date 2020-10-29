@@ -12,6 +12,7 @@ public class HauptOnClicks : MonoBehaviour
         if (GlobalVariables.ausStatus == 0)
         {
             Debug.Log("Error: Foreign_Branch (benutzt für Hauptfiliale) muss immer 1 sein!");
+            OpenPopUp();
         }
         else if (GlobalVariables.ausStatus >= 1)
         {

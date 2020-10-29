@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class GebaeudeKaufenUpgrade : MonoBehaviour
+public class GebaeudeKaufen : MonoBehaviour
 {
     public DailyUpdate dailyUpdate;
 
@@ -12,11 +9,13 @@ public class GebaeudeKaufenUpgrade : MonoBehaviour
     public GameObject dwsGebaeude;
     public GameObject filialeGebaeude;
     public GameObject hrGebaeude;
-    private static GameObject kaufenApp;
-    private static Text gebaeudeKosten;
 
+    private static GameObject kaufenApp;
     private static GameObject gebaeude;
 
+    /*Liegt auf der Hitbox des Gebaeudes.
+      Das jeweilige Gebaeude GameObject muss als Argument draufgezogen werden (parent der Hitbox)
+    */
     public static void OpenKaufenApp(GameObject gebaeudeArg)
     {
         kaufenApp = GameObject.Find("Game/GameHandler/UI/GebäudeKaufenAPP");
@@ -25,13 +24,11 @@ public class GebaeudeKaufenUpgrade : MonoBehaviour
         kaufenApp.SetActive(!kaufenApp.activeSelf);
         MainScene.TabletHandlerActivate();
     }
-    /*Liegt auf der Hitbox des Gebaeudes.
-      Das jeweilige Gebaeude GameObject muss als Argument draufgezogen werden (parent der Hitbox)
-    */
+    //Liegt auf der GebaeudeKaufenAPP
     public void Kaufen()
     {
         // Abfrage ob Bedingungen erfüllt sind
-        if (gebaeude != null) 
+        if (gebaeude != null)
         {
             if (GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude) >= GebaeudeRequirements.FilialLevel(gebaeude))
             {
@@ -65,7 +62,7 @@ public class GebaeudeKaufenUpgrade : MonoBehaviour
             case "ITNeu":
                 GlobalVariables.itStatus = 1;
                 break;
-            case "DWSNeu":
+            case "DWSneu":
                 GlobalVariables.dwsStatus = 1;
                 break;
             case "FilialeNeu":
@@ -76,7 +73,7 @@ public class GebaeudeKaufenUpgrade : MonoBehaviour
                 break;
             default:
                 Debug.Log("Objekt nicht gefunden. " +
-                    "Wurden die gebäude Namen geändert? Skript: ./Gebaeuge/GebaeudeKaufenUpgrade");
+                    "Wurden die gebäude Namen geändert? Skript: ./Gebaeuge/GebaeudeKaufen");
                 break;
         }
     }
@@ -89,7 +86,7 @@ public class GebaeudeKaufenUpgrade : MonoBehaviour
     {
         Debug.Log("Du hast nicht genug Filialen!" +
             GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude) + ">=" + GebaeudeRequirements.FilialLevel(gebaeude));
-    }  
+    }
     private void FehlerGebaeude()
     {
         Debug.Log("Bitte Gebaeude GameObject auf die Hitbox verlinken! " +

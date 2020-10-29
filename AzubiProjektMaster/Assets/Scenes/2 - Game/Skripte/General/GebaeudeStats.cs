@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GebaeudeStats : MonoBehaviour
@@ -34,7 +33,7 @@ public class GebaeudeStats : MonoBehaviour
         {
             itGebaeude.GetComponent<SpriteRenderer>().sprite = baustelle;
         }
-        else if (GlobalVariables.itStatus == 1)
+        else if (GlobalVariables.itStatus >= 1)
         {
             itGebaeude.GetComponent<SpriteRenderer>().sprite = itSprite;
         }
@@ -42,7 +41,7 @@ public class GebaeudeStats : MonoBehaviour
         {
             hrGebaeude.GetComponent<SpriteRenderer>().sprite = baustelle;
         }
-        else if (GlobalVariables.hrStatus == 1)
+        else if (GlobalVariables.hrStatus >= 1)
         {
             hrGebaeude.GetComponent<SpriteRenderer>().sprite = hrSprite;
         }
@@ -50,7 +49,7 @@ public class GebaeudeStats : MonoBehaviour
         {
             dwsGebaeude.GetComponent<SpriteRenderer>().sprite = baustelle;
         }
-        else if (GlobalVariables.dwsStatus == 1)
+        else if (GlobalVariables.dwsStatus >= 1)
         {
             dwsGebaeude.GetComponent<SpriteRenderer>().sprite = dwsSprite;
         }
@@ -58,7 +57,7 @@ public class GebaeudeStats : MonoBehaviour
         {
             inFilGebaeude.GetComponent<SpriteRenderer>().sprite = baustelle;
         }
-        else if (GlobalVariables.inStatus == 1)
+        else if (GlobalVariables.inStatus >= 1)
         {
             inFilGebaeude.GetComponent<SpriteRenderer>().sprite = inSprite;
         }
