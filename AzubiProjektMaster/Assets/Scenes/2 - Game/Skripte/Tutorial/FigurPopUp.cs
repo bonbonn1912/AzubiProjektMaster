@@ -180,6 +180,7 @@ public class FigurPopUp : MonoBehaviour
         if (FigurFiliale != null)
         {
             CameraZoom.ZoomActiveT1 = false;
+            CameraZoom.Zoom = 110;
             bool isActive = FigurFiliale.activeSelf;
             FigurFiliale.SetActive(!isActive);
         }
@@ -199,6 +200,7 @@ public class FigurPopUp : MonoBehaviour
         if (FigurIT != null)
         {
             CameraZoom.ZoomActiveT1 = false;
+            CameraZoom.Zoom = 80;
             bool isActive = FigurIT.activeSelf;
             FigurIT.SetActive(!isActive);
             
@@ -219,6 +221,7 @@ public class FigurPopUp : MonoBehaviour
         if (FigurHR != null)
         {
             CameraZoom.ZoomActiveT3 = false;
+            CameraZoom.Zoom = 120;
             bool isActive = FigurHR.activeSelf;
             FigurHR.SetActive(!isActive);
 
@@ -269,12 +272,6 @@ public class FigurPopUp : MonoBehaviour
         }
         
     }
-
-    
-
-  
-
-
 }
 
 
