@@ -51,6 +51,10 @@ public class MainScene : MonoBehaviour
         {
             GameObject.Find("EventGanz").SetActive(false);
         }
+        if (GameObject.Find("AchievementsTablet") != null)
+        {
+            GameObject.Find("AchievementsTablet").SetActive(false);
+        }
         GameObject.Find("TabletHandlerBtn").SetActive(false);
     }
     private void PanelHandler()
