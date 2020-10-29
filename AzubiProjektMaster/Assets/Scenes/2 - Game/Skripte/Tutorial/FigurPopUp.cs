@@ -259,12 +259,6 @@ public class FigurPopUp : MonoBehaviour
         }
         
     }
-
-    
-
-  
-
-
 }
 
 
