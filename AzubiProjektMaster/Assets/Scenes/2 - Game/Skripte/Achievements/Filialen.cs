@@ -7,102 +7,36 @@ using System;
 
 public class Filialen : MonoBehaviour
 {
-    int filialen;
-    int achievement;
-    int a, b, c, d, e;
-     
-    public void FilialenErrungenschaften()
+    public static void Errungenschaften()
     {
-        StartCoroutine(Execute());
-    }
-
-    IEnumerator Execute()
-    {
-        yield return StartCoroutine(DatenLesen());
-        Errungenschaften();
-        StartCoroutine(DatenSchreiben());
-    }
-
-    IEnumerator DatenLesen()
-    {
-        //Auslesen und Konvertieren der Daten
-        WWWForm form = new WWWForm();
-        form.AddField("user", GlobalVariables.username);
-
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
-        yield return www;
-
-        string filialenDb = www.text.Split('-')[0];
-        string aDb = www.text.Split('-')[1];
-        string bDb = www.text.Split('-')[2];
-        string cDb = www.text.Split('-')[3];
-        string dDb = www.text.Split('-')[4];
-        string eDb = www.text.Split('-')[5];
-        string achievementDb = www.text.Split('-')[6];
-
-        filialen = Convert.ToInt32(filialenDb);
-        a = Convert.ToInt32(aDb);
-        b = Convert.ToInt32(bDb);
-        c = Convert.ToInt32(cDb);
-        d = Convert.ToInt32(dDb);
-        e = Convert.ToInt32(eDb);
-        achievement = Convert.ToInt32(achievementDb);
-    }
-
-    IEnumerator DatenSchreiben()
-    {
-        //Konvertieren und an PHP-Skript übergeben
-        string x = Convert.ToString(achievement);
-        string aDb = Convert.ToString(a);
-        string bDb = Convert.ToString(b);
-        string cDb = Convert.ToString(c);
-        string dDb = Convert.ToString(d);
-        string eDb = Convert.ToString(e);
-
-        WWWForm form = new WWWForm();
-        form.AddField("AchievementHR", x);
-        form.AddField("user", GlobalVariables.username);
-        form.AddField("Wert1", aDb);
-        form.AddField("Wert2", bDb);
-        form.AddField("Wert3", cDb);
-        form.AddField("Wert4", dDb);
-        form.AddField("Wert5", eDb);
-
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
-        yield return www;
-
-    }
-
-    public void Errungenschaften()
-    {
-            if (filialen >= 10 & a == 0)
+            if (GlobalVariables.inStatus >= 10 & GlobalVariables.aFilialen == 0)
             {
-                achievement = achievement + 1;
-                a = 1;
+                GlobalVariables.achievementFilialen = GlobalVariables.achievementFilialen + 1;
+                GlobalVariables.aFilialen = 1;
             }
 
-            if (filialen >= 15 & b == 0)
+            if (GlobalVariables.inStatus >= 15 & GlobalVariables.bFilialen == 0)
             {
-                achievement = achievement + 1;
-                b = 1;
+                GlobalVariables.achievementFilialen = GlobalVariables.achievementFilialen + 1;
+                GlobalVariables.bFilialen = 1;
             }
 
-            if (filialen >= 30 & c == 0)
+            if (GlobalVariables.inStatus >= 30 & GlobalVariables.cFilialen == 0)
             {
-                achievement = achievement + 1;
-                c = 1;
+                GlobalVariables.achievementFilialen = GlobalVariables.achievementFilialen + 1;
+                GlobalVariables.cFilialen = 1;
             }
 
-            if (filialen >= 50 & d == 0)
+            if (GlobalVariables.inStatus >= 50 & GlobalVariables.dFilialen == 0)
             {
-                achievement = achievement + 1;
-                d = 1;
+                GlobalVariables.achievementFilialen = GlobalVariables.achievementFilialen + 1;
+                GlobalVariables.dFilialen = 1;
             }
 
-            if (filialen >= 75 & e == 0)
+            if (GlobalVariables.inStatus >= 75 & GlobalVariables.eFilialen == 0)
             {
-                achievement = achievement + 1;
-                e = 1;
+                GlobalVariables.achievementFilialen = GlobalVariables.achievementFilialen + 1;
+                GlobalVariables.eFilialen = 1;
             }
         }
 }

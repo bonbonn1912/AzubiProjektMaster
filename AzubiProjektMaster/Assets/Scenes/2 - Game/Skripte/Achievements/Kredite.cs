@@ -7,105 +7,37 @@ using System;
 //Anzahl der vergebenen Kredite
 public class Kredite : MonoBehaviour
 {
-    int kredite;
-    int achievement;
-    int a, b, c, d, e;
-
-    public void KrediteErrungenschaften()
-    {
-        StartCoroutine(Execute());
-    }
-
-    IEnumerator Execute()
-    {
-        yield return StartCoroutine(DatenLesen());
-        Errungenschaften();
-        StartCoroutine(DatenSchreiben());
-    }
-
-    IEnumerator DatenLesen()
-    {
-        //Auslesen und Konvertieren der Daten
-        WWWForm form = new WWWForm();
-        form.AddField("user", GlobalVariables.username);
-
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
-        yield return www;
-
-        string krediteDb = www.text.Split('-')[0];
-        string aDb = www.text.Split('-')[1];
-        string bDb = www.text.Split('-')[2];
-        string cDb = www.text.Split('-')[3];
-        string dDb = www.text.Split('-')[4];
-        string eDb = www.text.Split('-')[5];
-        string achievementDb = www.text.Split('-')[6];
-
-        kredite = Convert.ToInt32(krediteDb);
-        a = Convert.ToInt32(aDb);
-        b = Convert.ToInt32(bDb);
-        c = Convert.ToInt32(cDb);
-        d = Convert.ToInt32(dDb);
-        e = Convert.ToInt32(eDb);
-        achievement = Convert.ToInt32(achievementDb);
-
-    }
-
-    IEnumerator DatenSchreiben()
-    {
-        //Konvertieren und an PHP-Skript übergeben
-        string x = Convert.ToString(achievement);
-        string aDb = Convert.ToString(a);
-        string bDb = Convert.ToString(b);
-        string cDb = Convert.ToString(c);
-        string dDb = Convert.ToString(d);
-        string eDb = Convert.ToString(e);
-
-
-        WWWForm form = new WWWForm();
-        form.AddField("AchievementCredit", x);
-        form.AddField("user", GlobalVariables.username);
-        form.AddField("Wert1", aDb);
-        form.AddField("Wert2", bDb);
-        form.AddField("Wert3", cDb);
-        form.AddField("Wert4", dDb);
-        form.AddField("Wert5", eDb);
-
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
-        yield return www;
-
-    }
-
-    public void Errungenschaften()
+    public static void Errungenschaften()
     {
 
-        if (kredite >= 100 & a == 0)
+        if (GlobalVariables.anzahlKredite >= 100 & GlobalVariables.aKredite == 0)
         {
-            achievement = achievement + 1;
-            a = 1;
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.aKredite = 1;
         }
 
-        if (kredite >= 200 & b == 0)
+        if (GlobalVariables.anzahlKredite >= 200 & GlobalVariables.bKredite == 0)
         {
-            achievement = achievement + 1;
-            b = 1;
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.bKredite = 1;
         }
 
-        if (kredite >= 300 & c == 0)
+        if (GlobalVariables.anzahlKredite >= 300 & GlobalVariables.cKredite == 0)
         {
-            achievement = achievement + 1;
-            c = 1;
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.cKredite = 1;
         }
 
-        if (kredite >= 400 & d == 0)
+        if (GlobalVariables.anzahlKredite >= 400 & GlobalVariables.dKredite == 0)
         {
-            achievement = achievement + 1;
-            d = 1;
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.dKredite = 1;
         }
 
-        if (kredite >= 500 & e == 0)
+        if (GlobalVariables.anzahlKredite >= 500 & GlobalVariables.eKredite == 0)
         {
-            achievement = achievement + 1;
-            e = 1;
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.eKredite = 1;
         }
     }
 }

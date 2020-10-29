@@ -29,6 +29,43 @@ public class DailyUpdate : MonoBehaviour
 
         StartCoroutine(Initco());
         StartCoroutine(GetBuildingsCo());
+
+        //Achievements
+        GetAchievementAktien();
+        Aktien.Errungenschaften();
+        SetAchievementsAktien();
+
+        GetAchievementEntlassen();
+        Entlassen.Errungenschaften();
+        SetAchievementsEntlassen();
+
+        GetAchievementFilialen();
+        Filialen.Errungenschaften();
+        SetAchievementsFilialen();
+
+        GetAchievementHR();
+        HR.Errungenschaften();
+        SetAchievementsHR();
+
+        GetAchievementIT();
+        IT.Errungenschaften();
+        SetAchievementsIT();
+
+        GetAchievementKapital();
+        Kapital.Errungenschaften();
+        SetAchievementsKapital();
+
+        GetAchievementKredite();
+        Kredite.Errungenschaften();
+        SetAchievementsKredite();
+
+        GetAchievementKunden();
+        Kunden.Errungenschaften();
+        SetAchievementsKunden();
+
+        GetAchievementTutorial();
+        Tutorial.Errungenschaften();
+        SetAchievementsTutorial();
     }
     public void GetBuildingStats()
     {
@@ -150,4 +187,423 @@ public class DailyUpdate : MonoBehaviour
             Debug.Log("building Update: " + www.text);
         }
     }
+
+    IEnumerator GetAchievementAktien()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/AchievementAktienLesen.php", form); //PHP-Skript unvollständig, da nicht klar ist, wo Gewinn aus Aktien liegt
+        yield return www;
+
+        string aktienDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables.Aktien = Convert.ToInt32(aktienDb);
+        GlobalVariables.aAktien = Convert.ToInt32(aDb);
+        GlobalVariables.bAktien = Convert.ToInt32(bDb);
+        GlobalVariables.cAktien = Convert.ToInt32(cDb);
+        GlobalVariables.dAktien = Convert.ToInt32(dDb);
+        GlobalVariables.eAktien = Convert.ToInt32(eDb);
+        GlobalVariables.achievementAktien = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsAktien()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementAktien);
+        string aDb = Convert.ToString(GlobalVariables.aAktien);
+        string bDb = Convert.ToString(GlobalVariables.bAktien);
+        string cDb = Convert.ToString(GlobalVariables.cAktien);
+        string dDb = Convert.ToString(GlobalVariables.dAktien);
+        string eDb = Convert.ToString(GlobalVariables.eAktien);
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementShares", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
+
+        WWW www = new WWW("http://localhost/Test/AchievementAktienSchreiben.php", form); //PHP-Skript unvollständig, da nicht klar ist, wo Gewinn aus Aktien liegt
+        yield return www;
+    }
+
+    IEnumerator GetAchievementEntlassen()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        yield return www;
+
+        string tageDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables.Tage = Convert.ToInt32(tageDb);
+        GlobalVariables.aEntlassen = Convert.ToInt32(aDb);
+        GlobalVariables.bEntlassen = Convert.ToInt32(bDb);
+        GlobalVariables.cEntlassen = Convert.ToInt32(cDb);
+        GlobalVariables.dEntlassen = Convert.ToInt32(dDb);
+        GlobalVariables.eEntlassen = Convert.ToInt32(eDb);
+        GlobalVariables.achievementEntlassen = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsEntlassen()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementEntlassen);
+        string aDb = Convert.ToString(GlobalVariables.aEntlassen);
+        string bDb = Convert.ToString(GlobalVariables.bEntlassen);
+        string cDb = Convert.ToString(GlobalVariables.cEntlassen);
+        string dDb = Convert.ToString(GlobalVariables.dEntlassen);
+        string eDb = Convert.ToString(GlobalVariables.eEntlassen);
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementEntlassung", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
+
+        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        yield return www;
+    }
+
+    IEnumerator GetAchievementFilialen()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        yield return www;
+
+        string filialenDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables.inStatus = Convert.ToInt32(filialenDb);
+        GlobalVariables.aFilialen = Convert.ToInt32(aDb);
+        GlobalVariables.bFilialen = Convert.ToInt32(bDb);
+        GlobalVariables.cFilialen = Convert.ToInt32(cDb);
+        GlobalVariables.dFilialen = Convert.ToInt32(dDb);
+        GlobalVariables.eFilialen = Convert.ToInt32(eDb);
+        GlobalVariables.achievementFilialen = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsFilialen()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementFilialen);
+        string aDb = Convert.ToString(GlobalVariables.aFilialen);
+        string bDb = Convert.ToString(GlobalVariables.bFilialen);
+        string cDb = Convert.ToString(GlobalVariables.cFilialen);
+        string dDb = Convert.ToString(GlobalVariables.dFilialen);
+        string eDb = Convert.ToString(GlobalVariables.eFilialen);
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementHR", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
+
+        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        yield return www;
+
+    }
+
+    IEnumerator GetAchievementHR()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/AchievementHrLesen.php", form);
+        yield return www;
+
+
+        string angestellteDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables.mitarbeiter = Convert.ToInt32(angestellteDb);
+        GlobalVariables.aHr = Convert.ToInt32(aDb);
+        GlobalVariables.bHr = Convert.ToInt32(bDb);
+        GlobalVariables.cHr = Convert.ToInt32(cDb);
+        GlobalVariables.dHr = Convert.ToInt32(dDb);
+        GlobalVariables.eHr = Convert.ToInt32(eDb);
+        GlobalVariables.achievementHr = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsHR()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementHr);
+        string aDb = Convert.ToString(GlobalVariables.aHr);
+        string bDb = Convert.ToString(GlobalVariables.bHr);
+        string cDb = Convert.ToString(GlobalVariables.cHr);
+        string dDb = Convert.ToString(GlobalVariables.dHr);
+        string eDb = Convert.ToString(GlobalVariables.eHr);
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementHR", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
+
+        WWW www = new WWW("http://localhost/Test/AchievementHrSchreiben.php", form);
+        yield return www;
+    }
+
+    IEnumerator GetAchievementIT()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/AchievementItLesen.php", form);
+        yield return www;
+
+        string itDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables.itStatus = Convert.ToInt32(itDb);
+        GlobalVariables.aIt = Convert.ToInt32(aDb);
+        GlobalVariables.bIt = Convert.ToInt32(bDb);
+        GlobalVariables.cIt = Convert.ToInt32(cDb);
+        GlobalVariables.dIt = Convert.ToInt32(dDb);
+        GlobalVariables.eIt = Convert.ToInt32(eDb);
+        GlobalVariables.achievementIt = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsIT()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementIt);
+        string aDb = Convert.ToString(GlobalVariables.aIt);
+        string bDb = Convert.ToString(GlobalVariables.bIt);
+        string cDb = Convert.ToString(GlobalVariables.cIt);
+        string dDb = Convert.ToString(GlobalVariables.dIt);
+        string eDb = Convert.ToString(GlobalVariables.eIt);
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementIT", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
+
+        WWW www = new WWW("http://localhost/Test/AchievementItSchreiben.php", form);
+        yield return www;
+    }
+
+    IEnumerator GetAchievementKapital()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        yield return www;
+
+        string kapitalDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables.balance = Convert.ToInt32(kapitalDb);
+        GlobalVariables.aKapital = Convert.ToInt32(aDb);
+        GlobalVariables.bKapital = Convert.ToInt32(bDb);
+        GlobalVariables.cKapital = Convert.ToInt32(cDb);
+        GlobalVariables.dKapital = Convert.ToInt32(dDb);
+        GlobalVariables.eKapital = Convert.ToInt32(eDb);
+        GlobalVariables.achievementKapital = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsKapital()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementKapital);
+        string aDb = Convert.ToString(GlobalVariables.aKapital);
+        string bDb = Convert.ToString(GlobalVariables.bKapital);
+        string cDb = Convert.ToString(GlobalVariables.cKapital);
+        string dDb = Convert.ToString(GlobalVariables.dKapital);
+        string eDb = Convert.ToString(GlobalVariables.eKapital);
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementMoney", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
+
+        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        yield return www;
+    }
+
+    IEnumerator GetAchievementKredite()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        yield return www;
+
+        string krediteDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables .anzahlKredite = Convert.ToInt32(krediteDb);
+        GlobalVariables.aKredite = Convert.ToInt32(aDb);
+        GlobalVariables.bKredite = Convert.ToInt32(bDb);
+        GlobalVariables.cKredite = Convert.ToInt32(cDb);
+        GlobalVariables.dKredite = Convert.ToInt32(dDb);
+        GlobalVariables.eKredite = Convert.ToInt32(eDb);
+        GlobalVariables.achievementKredite = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsKredite()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementKredite);
+        string aDb = Convert.ToString(GlobalVariables.aKredite);
+        string bDb = Convert.ToString(GlobalVariables.bKredite);
+        string cDb = Convert.ToString(GlobalVariables.cKredite);
+        string dDb = Convert.ToString(GlobalVariables.dKredite);
+        string eDb = Convert.ToString(GlobalVariables.eKredite);
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementCredit", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
+
+        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        yield return www;
+    }
+
+    IEnumerator GetAchievementKunden()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        yield return www;
+
+        string kundenDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string bDb = www.text.Split('-')[2];
+        string cDb = www.text.Split('-')[3];
+        string dDb = www.text.Split('-')[4];
+        string eDb = www.text.Split('-')[5];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables.anzahlKunden = Convert.ToInt32(kundenDb);
+        GlobalVariables.aKunden = Convert.ToInt32(aDb);
+        GlobalVariables.bKunden = Convert.ToInt32(bDb);
+        GlobalVariables.cKunden = Convert.ToInt32(cDb);
+        GlobalVariables.dKunden = Convert.ToInt32(dDb);
+        GlobalVariables.eKunden = Convert.ToInt32(eDb);
+        GlobalVariables.achievementKunden = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsKunden()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementKunden);
+        string aDb = Convert.ToString(GlobalVariables.aKunden);
+        string bDb = Convert.ToString(GlobalVariables.bKunden);
+        string cDb = Convert.ToString(GlobalVariables.cKunden);
+        string dDb = Convert.ToString(GlobalVariables.dKunden);
+        string eDb = Convert.ToString(GlobalVariables.eKunden);
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementCustomers", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+        form.AddField("Wert2", bDb);
+        form.AddField("Wert3", cDb);
+        form.AddField("Wert4", dDb);
+        form.AddField("Wert5", eDb);
+
+        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        yield return www;
+    }
+
+    IEnumerator GetAchievementTutorial()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", GlobalVariables.username);
+
+        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        yield return www;
+
+        string tutorialDb = www.text.Split('-')[0];
+        string aDb = www.text.Split('-')[1];
+        string achievementDb = www.text.Split('-')[6];
+
+        GlobalVariables.Tutorialcheck = Convert.ToBoolean(tutorialDb);
+        GlobalVariables.aTutorial = Convert.ToInt32(aDb);
+        GlobalVariables.achievementTutorial = Convert.ToInt32(achievementDb);
+    }
+
+    IEnumerator SetAchievementsTutorial()
+    {
+        string x = Convert.ToString(GlobalVariables.achievementTutorial);
+        string aDb = Convert.ToString(GlobalVariables.aTutorial);
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("AchievementTutorial", x);
+        form.AddField("user", GlobalVariables.username);
+        form.AddField("Wert1", aDb);
+
+        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        yield return www;
+    }
+
+
 }

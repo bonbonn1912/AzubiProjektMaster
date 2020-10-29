@@ -45,4 +45,70 @@ public class GlobalVariables : MonoBehaviour
     public static int inStatus;
     public static int ausStatus;
 
+
+    //Achievements
+    public static int Aktien;
+    public static int Tage;
+    public static int anzahlKredite;
+    public static int anzahlKunden;
+
+    public static int achievementAktien;
+    public static int achievementEntlassen;
+    public static int achievementFilialen;
+    public static int achievementHr;
+    public static int achievementIt;
+    public static int achievementKapital;
+    public static int achievementKredite;
+    public static int achievementKunden;
+    public static int achievementTutorial;
+
+    public static int aAktien;
+    public static int bAktien;
+    public static int cAktien;
+    public static int dAktien;
+    public static int eAktien;
+
+    public static int aEntlassen;
+    public static int bEntlassen;
+    public static int cEntlassen;
+    public static int dEntlassen;
+    public static int eEntlassen;
+
+    public static int aFilialen;
+    public static int bFilialen;
+    public static int cFilialen;
+    public static int dFilialen;
+    public static int eFilialen;
+
+    public static int aHr;
+    public static int bHr;
+    public static int cHr;
+    public static int dHr;
+    public static int eHr;
+
+    public static int aIt;
+    public static int bIt;
+    public static int cIt;
+    public static int dIt;
+    public static int eIt;
+
+    public static int aKapital;
+    public static int bKapital;
+    public static int cKapital;
+    public static int dKapital;
+    public static int eKapital;
+
+    public static int aKredite;
+    public static int bKredite;
+    public static int cKredite;
+    public static int dKredite;
+    public static int eKredite;
+
+    public static int aKunden;
+    public static int bKunden;
+    public static int cKunden;
+    public static int dKunden;
+    public static int eKunden;
+
+    public static int aTutorial;
 }
