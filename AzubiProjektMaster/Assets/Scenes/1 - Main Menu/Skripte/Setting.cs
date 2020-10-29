@@ -25,7 +25,7 @@ public class Setting : MonoBehaviour {
 	void Update () {
 
         // Setting volume option of Audio Source to be equal to musicVolume
-        audioSrc.volume = musicVolume;
+        //audioSrc.volume = musicVolume;
 	}
 
     // Method that is called by slider game object

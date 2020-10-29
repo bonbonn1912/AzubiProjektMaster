@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FilialeOnClicks : MonoBehaviour
 {
@@ -11,21 +9,32 @@ public class FilialeOnClicks : MonoBehaviour
     //public GameObject statsTablet;
 
 
-    public void FilialeOnClick()
+    public void FilialeOnClick(GameObject gebaeude)
     {
         if (GlobalVariables.inStatus == 0)
         {
-            kaufenApp.SetActive(!kaufenApp.activeSelf);
-            MainScene.TabletHandlerActivate();
+            GebaeudeKaufen.OpenKaufenApp(gebaeude);
         }
-        else if (GlobalVariables.inStatus == 1)
+        else if (GlobalVariables.inStatus >= 1)
         {
             if (inFilPopUpPanel != null)
             {
-                inFilPopUpPanel.SetActive(!inFilPopUpPanel.activeSelf);
+                OpenPopUp();
             }
 
         }
+    }
+    private void OpenPopUp()
+    {
+        if (inFilPopUpPanel != null)
+        {
+            inFilPopUpPanel.SetActive(!inFilPopUpPanel.activeSelf);
+        }
+    }
+    public void PopupClickUpgrade(GameObject gebaeude)
+    {
+        GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
+        GebaeudeUpgraden.OpenUpgradeApp(gebaeude);
     }
 
     public void OpenKrediteTablet()
@@ -39,5 +48,4 @@ public class FilialeOnClicks : MonoBehaviour
         alleKreditTablet.SetActive(!alleKreditTablet.activeSelf);
         MainScene.TabletHandlerActivate();
     }
-
 }

@@ -1,0 +1,35 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ITOnClicks : MonoBehaviour
+{
+    public GameObject kaufenApp;
+    public GameObject itPupUpPanel;
+
+    public DailyUpdate dailyUp;
+
+    public void ITOnClick(GameObject gebaeude)
+    {
+        if (GlobalVariables.itStatus == 0)
+        {
+            GebaeudeKaufen.OpenKaufenApp(gebaeude);
+        }
+        else if (GlobalVariables.itStatus >= 1)
+        {
+            OpenPopUp();
+        }
+    }
+    private void OpenPopUp()
+    {
+        if (itPupUpPanel != null)
+        {
+            itPupUpPanel.SetActive(!itPupUpPanel.activeSelf);
+        }
+    }
+    public void PopupClickUpgrade(GameObject gebaeude)
+    {
+        GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
+        GebaeudeUpgraden.OpenUpgradeApp(gebaeude);
+    }
+}
