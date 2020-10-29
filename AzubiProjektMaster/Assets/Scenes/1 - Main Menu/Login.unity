@@ -1051,8 +1051,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_HighlightedColor: {r: 0.43137258, g: 0.77647066, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
+    m_PressedColor: {r: 0.039215688, g: 0.19607843, b: 0.32156864, a: 1}
+    m_SelectedColor: {r: 0.08235294, g: 0.37254903, b: 0.6039216, a: 1}
     m_DisabledColor: {r: 0.12941177, g: 0.5882353, b: 0.95294124, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1478,7 +1478,6 @@ GameObject:
   - component: {fileID: 941457352}
   - component: {fileID: 941457356}
   - component: {fileID: 941457357}
-  - component: {fileID: 941457358}
   m_Layer: 5
   m_Name: LoginHandler
   m_TagString: Untagged
@@ -1586,7 +1585,7 @@ MonoBehaviour:
   dbReply: {fileID: 1876850121}
   LoginButton: {fileID: 342395854}
   backToMenu: {fileID: 322841926}
-  mainMenu: {fileID: 941457358}
+  mainMenu: {fileID: 0}
 --- !u!114 &941457357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,22 +1598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29951e1cd03bccd41a677b126ab40777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &941457358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941457351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e394db1fb31191c4eaa6fddc2c141925, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  registrationButton: {fileID: 0}
-  loginButton: {fileID: 0}
-  playButton: {fileID: 0}
-  playerDisplay: {fileID: 0}
 --- !u!1 &1417372217
 GameObject:
   m_ObjectHideFlags: 0

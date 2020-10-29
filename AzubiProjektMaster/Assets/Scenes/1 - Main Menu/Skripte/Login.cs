@@ -40,7 +40,7 @@ public class Login : MonoBehaviour
             switch (tabSelect)
             {
                 case 0:
-                    mainMenu.FadeToColor(LoginButton, LoginButton.colors.normalColor);
+                    FadeToColor(LoginButton, LoginButton.colors.normalColor);
                     NameInputField.GetComponent<InputField>().Select();
                     break;
                 case 1:
@@ -48,7 +48,7 @@ public class Login : MonoBehaviour
                     break;
                 case 2:
                     EventSystem.current.SetSelectedGameObject(null);
-                    mainMenu.FadeToColor(LoginButton, LoginButton.colors.pressedColor);
+                    FadeToColor(LoginButton, LoginButton.colors.pressedColor);
                     break;
                 default:
                     Debug.Log("Hard to count from 0, huh?");
@@ -67,6 +67,11 @@ public class Login : MonoBehaviour
                 LoginButton.GetComponent<AudioSource>().Play();
             }
         }
+    }
+    public void FadeToColor(Button button, Color color)
+    {
+        Graphic graphic = button.GetComponent<Graphic>();
+        graphic.CrossFadeColor(color, button.colors.fadeDuration, true, true);
     }
 
     public void CallLogin()

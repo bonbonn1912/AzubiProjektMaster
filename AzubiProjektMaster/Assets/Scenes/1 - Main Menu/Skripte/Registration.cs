@@ -69,7 +69,7 @@ public class Registration : MonoBehaviour
             switch (tabSelect)
             {
                 case 0:
-                    mainMenu.FadeToColor(submitButton, submitButton.colors.normalColor);
+                    FadeToColor(submitButton, submitButton.colors.normalColor);
                     NameInputField.GetComponent<InputField>().Select();
                     break;
                 case 1:
@@ -77,7 +77,7 @@ public class Registration : MonoBehaviour
                     break;
                 case 2:
                     EventSystem.current.SetSelectedGameObject(null);
-                    mainMenu.FadeToColor(submitButton, submitButton.colors.pressedColor);
+                    FadeToColor(submitButton, submitButton.colors.pressedColor);
                     break;
                 default:
                     Debug.Log("Hard to count from 0, huh?");
@@ -96,6 +96,11 @@ public class Registration : MonoBehaviour
                 submitButton.GetComponent<AudioSource>().Play();
             }
         }
+    }
+    public void FadeToColor(Button button, Color color)
+    {
+        Graphic graphic = button.GetComponent<Graphic>();
+        graphic.CrossFadeColor(color, button.colors.fadeDuration, true, true);
     }
 
     public void CallRegister()

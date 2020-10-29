@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
         if (registrationButton != null)
         {
             button = registrationButton;
-            FadeToColor(button, button.colors.pressedColor);
+            FadeToColor(button, button.colors.highlightedColor);
         }
     }
     public void Update()
@@ -53,7 +53,7 @@ public class MainMenu : MonoBehaviour
                     break;
             }
             FadeToColor(prevButton, prevButton.colors.normalColor);
-            FadeToColor(button, button.colors.pressedColor);
+            FadeToColor(button, button.colors.highlightedColor);
         }
         else if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
