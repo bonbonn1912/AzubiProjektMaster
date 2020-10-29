@@ -47,10 +47,10 @@ public class MainScene : MonoBehaviour
         {
             GameObject.Find("GebäudeUpgradeAPP").SetActive(false);
         }
-        if (GameObject.Find("EventGanz") != null)
-        {
-            GameObject.Find("EventGanz").SetActive(false);
-        }
+       // if (GameObject.Find("EventGanz") != null)
+       // {
+       //     GameObject.Find("EventGanz").SetActive(false);
+       // }
         if (GameObject.Find("AchievementsTablet") != null)
         {
             GameObject.Find("AchievementsTablet").SetActive(false);
