@@ -37,6 +37,7 @@ public class DailyUpdate : MonoBehaviour
 
         GetAchievementEntlassen();
         Entlassen.Errungenschaften();
+        Entlassen.Zaehler();
         SetAchievementsEntlassen();
 
         GetAchievementFilialen();
@@ -244,15 +245,13 @@ public class DailyUpdate : MonoBehaviour
         WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
         yield return www;
 
-        string tageDb = www.text.Split('-')[0];
-        string aDb = www.text.Split('-')[1];
-        string bDb = www.text.Split('-')[2];
-        string cDb = www.text.Split('-')[3];
-        string dDb = www.text.Split('-')[4];
-        string eDb = www.text.Split('-')[5];
-        string achievementDb = www.text.Split('-')[6];
+        string aDb = www.text.Split('-')[0];
+        string bDb = www.text.Split('-')[1];
+        string cDb = www.text.Split('-')[2];
+        string dDb = www.text.Split('-')[3];
+        string eDb = www.text.Split('-')[4];
+        string achievementDb = www.text.Split('-')[5];
 
-        GlobalVariables.Tage = Convert.ToInt32(tageDb);
         GlobalVariables.aEntlassen = Convert.ToInt32(aDb);
         GlobalVariables.bEntlassen = Convert.ToInt32(bDb);
         GlobalVariables.cEntlassen = Convert.ToInt32(cDb);

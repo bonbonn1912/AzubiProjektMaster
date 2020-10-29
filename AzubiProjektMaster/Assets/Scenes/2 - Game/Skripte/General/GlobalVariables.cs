@@ -48,9 +48,11 @@ public class GlobalVariables : MonoBehaviour
 
     //Achievements
     public static int Aktien;
-    public static int Tage;
     public static int anzahlKredite;
     public static int anzahlKunden;
+
+    public static int mitarbeiterAlt;
+    public static int entlassungZaehler;
 
     public static int achievementAktien;
     public static int achievementEntlassen;
