@@ -135,6 +135,10 @@ public class FigurPopUp : MonoBehaviour
             WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBuildingsDEV.php", form);
             yield return www;
             Debug.Log("Gebäude wurden geupdatet : " + www.text);
+
+            GlobalVariables.itStatus = 0;
+            GlobalVariables.hrStatus = 0;
+            GlobalVariables.dwsStatus = 0;
         }
         for (int i = 0; i < Inhalt.Length; i++)
         {
