@@ -55,10 +55,6 @@ public class MainScene : MonoBehaviour
         {
             GameObject.Find("AchievementsTablet").SetActive(false);
         }
-        if (GameObject.Find("Werbung") != null)
-        {
-            GameObject.Find("Werbung").SetActive(false);
-        }
         GameObject.Find("TabletHandlerBtn").SetActive(false);
     }
     private void PanelHandler()

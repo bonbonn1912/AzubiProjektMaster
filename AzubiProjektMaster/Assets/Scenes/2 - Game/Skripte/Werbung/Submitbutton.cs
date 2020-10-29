@@ -10,10 +10,6 @@ public class Submitbutton : MonoBehaviour
     public int DayTemp = 0;
     public int i = 0;
 
-    public Text Kosten;
-    public Text Cooldown;
-    public Text Wasbringtes;
-
     IEnumerator Start()
     {
         yield return new WaitForSeconds(0.7f);
@@ -32,14 +28,13 @@ public class Submitbutton : MonoBehaviour
 
         string username = GlobalVariables.username;
         WWWForm form = new WWWForm();
-        form.AddField("Username", username);
+        form.AddField("username", username);
         form.AddField("Balance", GlobalVariables.balance);
         form.AddField("kunde", GlobalVariables.kundenanzahl);
         // WWW www = new WWW("http://dominik.grandpa-kitchen.com/PHP-Skripte/Kunden&BalanceUpdate.php", form);
         // WWW www = new WWW("https://dominikw.de/AzubiProjekt/Kunden&BalanceUpdate.php", form);
-        WWW www = new WWW("https://dominikw.de/AzubiProjekt/BalanceKundeUpdate.php", form);
+        WWW www = new WWW("https://dominikw.de/AzubiProjekt/KundenBalanceUpdate.php", form);
         yield return www;
-        Debug.Log("KundenundBalancegeupdatet");
 
     }
 
@@ -59,11 +54,8 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 1;
                     GlobalVariables.werbungsswitch = 0;
                     Werbungstextbutton.text = "Werbung 1 geschaltet";
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 1");
+                    KundenUndBalanceUpdate();
+                    //Debug.Log("case 1");
                     break;
 
                 //buswerbung
@@ -71,12 +63,9 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 10;
                     GlobalVariables.balance -= 20000;
                     GlobalVariables.werbungsswitch = 0;
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
                     Werbungstextbutton.text = "Werbung 2 geschaltet";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 2");
+                    KundenUndBalanceUpdate();
+                    //Debug.Log("case 2");
                     break;
 
                 //feier
@@ -84,12 +73,9 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 30;
                     GlobalVariables.balance -= 50000;
                     GlobalVariables.werbungsswitch = 0;
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
                     Werbungstextbutton.text = "Werbung 3 geschaltet";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 3");
+                    KundenUndBalanceUpdate();
+                    //Debug.Log("case 3");
                     break;
 
                 //online
@@ -97,12 +83,9 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 180;
                     GlobalVariables.balance -= 450000;
                     GlobalVariables.werbungsswitch = 0;
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
                     Werbungstextbutton.text = "Werbung 4 geschaltet";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 4");
+                    KundenUndBalanceUpdate();
+                    //Debug.Log("case 4");
                     break;
 
                 //plakate
@@ -110,12 +93,9 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 5;
                     GlobalVariables.balance -= 10000;
                     GlobalVariables.werbungsswitch = 0;
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
                     Werbungstextbutton.text = "Werbung 5 geschaltet";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 5");
+                    KundenUndBalanceUpdate();
+                    //Debug.Log("case 5");
                     break;
 
                 //tvwerbung
@@ -123,12 +103,9 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 120;
                     GlobalVariables.balance -= 300000;
                     GlobalVariables.werbungsswitch = 0;
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
                     Werbungstextbutton.text = "Werbung 6 geschaltet";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 6");
+                    KundenUndBalanceUpdate();
+                    //Debug.Log("case 6");
                     break;
 
                 //auto
@@ -136,12 +113,9 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 15;
                     GlobalVariables.balance -= 15000;
                     GlobalVariables.werbungsswitch = 0;
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
                     Werbungstextbutton.text = "Werbung 7 geschaltet";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 7");
+                    KundenUndBalanceUpdate();
+                    //Debug.Log("case 7");
                     break;
 
                 //zeitung
@@ -149,12 +123,9 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 5;
                     GlobalVariables.balance -= 5000;
                     GlobalVariables.werbungsswitch = 0;
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
                     Werbungstextbutton.text = "Werbung 8 geschaltet";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 8");
+                    KundenUndBalanceUpdate();
+                    //Debug.Log("case 8");
                     break;
 
                 //zusatz
@@ -162,12 +133,9 @@ public class Submitbutton : MonoBehaviour
                     GlobalVariables.kundenanzahl += 5;
                     GlobalVariables.balance -= 5000;
                     GlobalVariables.werbungsswitch = 0;
-                    Kosten.text = "";
-                    Cooldown.text = "";
-                    Wasbringtes.text = "";
                     Werbungstextbutton.text = "Werbung 9 geschaltet";
-                    StartCoroutine(KundenUndBalanceUpdate());
-                    Debug.Log("case 9");
+                    KundenUndBalanceUpdate();
+                    // Debug.Log("case 9");
                     break;
             }
         }
