@@ -16,7 +16,22 @@ public class Werbungen : MonoBehaviour
     public Text Kosten;
     public Text Cooldown;
     public Text Wasbringtes;
+    public static int KostenInClass;
+    public Button Submit;
 
+   
+
+    public void Update()
+    {
+        if(KostenInClass > GlobalVariables.balance)
+        {
+            Submit.interactable = false;
+        }
+        else
+        {
+            Submit.interactable = true;
+        }
+    }
 
     public void Abwarten_1()
     {
@@ -30,6 +45,7 @@ public class Werbungen : MonoBehaviour
         GlobalVariables.werbungsswitch = 2;
         werbungstext.text = "Buswerbung";
         Kosten.text = "Diese Werbung kostet dich 20000€";
+        KostenInClass = 20000;
         Cooldown.text = "Du kannst diese Werbung alle 10 Tage schalten";
         Wasbringtes.text = "Du wirst ca. 10 Kunden dadurch gewinnen können";
     }
@@ -37,6 +53,7 @@ public class Werbungen : MonoBehaviour
     {
         GlobalVariables.werbungsswitch = 3;
         werbungstext.text = "Feierlichkeiten";
+        KostenInClass = 50000;
         Kosten.text = "Diese Werbung kostet dich 50000€";
         Cooldown.text = "Du kannst diese Werbung alle 10 Tage schalten";
         Wasbringtes.text = "Du wirst ca. 30 Kunden dadurch gewinnen können";
@@ -46,6 +63,7 @@ public class Werbungen : MonoBehaviour
     {
         GlobalVariables.werbungsswitch = 4;
         werbungstext.text =  "Onlinewerbung";
+        KostenInClass = 450000;
         Kosten.text = "Diese Werbung kostet dich 450000€";
         Cooldown.text = "Du kannst diese Werbung alle 10 Tage schalten";
         Wasbringtes.text = "Du wirst ca. 180 Kunden dadurch gewinnen können";
@@ -53,6 +71,7 @@ public class Werbungen : MonoBehaviour
     public void Plakate_5()
     {
         GlobalVariables.werbungsswitch = 5;
+        KostenInClass = 10000;
         werbungstext.text = "Plakatwerbung";
         Kosten.text = "Diese Werbung kostet dich 10000€";
         Cooldown.text = "Du kannst diese Werbung alle 10 Tage schalten";
@@ -62,6 +81,7 @@ public class Werbungen : MonoBehaviour
     {
         GlobalVariables.werbungsswitch = 6;
         werbungstext.text = "TV-Werbung";
+        KostenInClass = 300000;
         Kosten.text = "Diese Werbung kostet dich 300000€";
         Cooldown.text = "Du kannst diese Werbung alle 10 Tage schalten";
         Wasbringtes.text = "Du wirst ca. 120 Kunden dadurch gewinnen können";
@@ -70,6 +90,7 @@ public class Werbungen : MonoBehaviour
     {
         GlobalVariables.werbungsswitch = 7;
         werbungstext.text = "Autowerbung";
+        KostenInClass = 15000;
         Kosten.text = "Diese Werbung kostet dich 15000€";
         Cooldown.text = "Du kannst diese Werbung alle 10 Tage schalten";
         Wasbringtes.text = "Du wirst ca. 15 Kunden dadurch gewinnen können";
@@ -79,6 +100,7 @@ public class Werbungen : MonoBehaviour
         GlobalVariables.werbungsswitch = 8;
         werbungstext.text = "Zeitung";
         Kosten.text = "Diese Werbung kostet dich 5000€";
+        KostenInClass = 5000;
         Cooldown.text = "Du kannst diese Werbung alle 10 Tage schalten";
         Wasbringtes.text = "Du wirst ca. 5 Kunden dadurch gewinnen können";
     }
