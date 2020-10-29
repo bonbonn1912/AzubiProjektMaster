@@ -76,14 +76,24 @@ public class FigurPopUp : MonoBehaviour
 
                 bool isActive = FigurUL.activeSelf;
                 FigurUL.SetActive(!isActive);
-                StartCoroutine(SpeechbubblGenerate(Willkommenstext, InhaltWill));
+                StartCoroutine(SpeechbubblGenerate(Willkommenstext, InhaltWill,0));
             }
         }
     }
 
     //Verzögert das erscheinen jedes Buchstaben in der Sprechblase für die vorgefertigten Strings
-    IEnumerator SpeechbubblGenerate(Text Inputext, String Inhalt)
+    IEnumerator SpeechbubblGenerate(Text Inputext, String Inhalt, int Ende)
     {
+        if(Ende == 1)
+        {
+            WWWForm form = new WWWForm();
+            form.AddField("username", GlobalVariables.username);
+            WWW www = new WWW("https://dominikw.de/AzubiProjekt/UpdateBuildingsDEV.php", form);
+            yield return www;
+            Debug.Log("Gebäude wurden geupdatet : "+www.text);
+           
+        }
+
         for (int i = 0; i < Inhalt.Length; i++)
         {
            Inputext.text = string.Concat(Inputext.text, Inhalt[i]);
@@ -106,7 +116,7 @@ public class FigurPopUp : MonoBehaviour
         {
             bool isActive = FigurUR.activeSelf;
             FigurUR.SetActive(!isActive);
-            StartCoroutine(SpeechbubblGenerate(Einführungstext, InhaltEin));
+            StartCoroutine(SpeechbubblGenerate(Einführungstext, InhaltEin,0));
         }
     }
 
@@ -124,7 +134,7 @@ public class FigurPopUp : MonoBehaviour
         {
             bool isActive = FigurMid.activeSelf;
             FigurMid.SetActive(!isActive);
-            StartCoroutine(SpeechbubblGenerate(Zieletext, InhaltZiele));
+            StartCoroutine(SpeechbubblGenerate(Zieletext, InhaltZiele,0));
         }
     }
     
@@ -141,7 +151,7 @@ public class FigurPopUp : MonoBehaviour
         {
             bool isActive = SprechblaseHürden.activeSelf;
             SprechblaseHürden.SetActive(!isActive);
-            StartCoroutine(SpeechbubblGenerate(Huerdentext, InhaltHuerden));
+            StartCoroutine(SpeechbubblGenerate(Huerdentext, InhaltHuerden,0));
         }
     }
 
@@ -160,7 +170,7 @@ public class FigurPopUp : MonoBehaviour
             bool isActive = FigurFiliale.activeSelf;
             FigurFiliale.SetActive(!isActive);
             CameraZoom.ZoomActiveT1 = true;
-            StartCoroutine(SpeechbubblGenerate(Filialetext, InhaltFiliale));
+            StartCoroutine(SpeechbubblGenerate(Filialetext, InhaltFiliale,0));
         }
     }
 
@@ -179,7 +189,7 @@ public class FigurPopUp : MonoBehaviour
             bool isActive = FigurIT.activeSelf;
             FigurIT.SetActive(!isActive);
             CameraZoom.ZoomActiveT2 = true;
-            StartCoroutine(SpeechbubblGenerate(ITtext, InhaltIT));
+            StartCoroutine(SpeechbubblGenerate(ITtext, InhaltIT,0));
         }
     }
 
@@ -199,7 +209,7 @@ public class FigurPopUp : MonoBehaviour
             bool isActive = FigurHR.activeSelf;
             FigurHR.SetActive(!isActive);
             CameraZoom.ZoomActiveT3 = true;
-            StartCoroutine(SpeechbubblGenerate(HRtext, InhaltHR));
+            StartCoroutine(SpeechbubblGenerate(HRtext, InhaltHR,0));
         }
     }
 
@@ -219,7 +229,7 @@ public class FigurPopUp : MonoBehaviour
             bool isActive = FigurDWS.activeSelf;
             FigurDWS.SetActive(!isActive);
             CameraZoom.ZoomActiveT4 = true;
-            StartCoroutine(SpeechbubblGenerate(DWStext, InhaltDWS));
+            StartCoroutine(SpeechbubblGenerate(DWStext, InhaltDWS,0));
         }
     }
 
@@ -240,7 +250,7 @@ public class FigurPopUp : MonoBehaviour
         {
             bool isActive = FigurSpielstart.activeSelf;
             FigurSpielstart.SetActive(!isActive);
-            StartCoroutine(SpeechbubblGenerate(Starttext, InhaltStart));
+            StartCoroutine(SpeechbubblGenerate(Starttext, InhaltStart,1));
         }
     }
 
