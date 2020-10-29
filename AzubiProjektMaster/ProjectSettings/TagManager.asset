@@ -43,6 +43,21 @@ TagManager:
   - name: Background
     uniqueID: 343956773
     locked: 0
+  - name: Park
+    uniqueID: 2086898877
+    locked: 0
+  - name: "Stra\xDFen"
+    uniqueID: 1054153031
+    locked: 0
+  - name: "Geb\xE4ude"
+    uniqueID: 1179926739
+    locked: 0
+  - name: Assets
+    uniqueID: 2478590931
+    locked: 0
+  - name: UI
+    uniqueID: 4206830539
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
