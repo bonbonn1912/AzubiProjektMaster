@@ -10,7 +10,7 @@ public class Tutorial : MonoBehaviour
 
     public static void Errungenschaften()
     {
-        if (GlobalVariables.Tutorialcheck == true & GlobalVariables.aTutorial == 0)
+        if (GlobalVariables.Tutorial == 1 & GlobalVariables.aTutorial == 0)
         {
             GlobalVariables.achievementTutorial = GlobalVariables.achievementTutorial + 1;
             GlobalVariables.aTutorial = 1;

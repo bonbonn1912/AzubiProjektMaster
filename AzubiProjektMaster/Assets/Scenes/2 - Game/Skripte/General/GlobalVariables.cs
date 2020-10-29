@@ -51,6 +51,7 @@ public class GlobalVariables : MonoBehaviour
     public static int anzahlKredite;
     public static int anzahlKunden;
 
+    public static int Tutorial;
     public static int mitarbeiterAlt;
     public static int entlassungZaehler;
 

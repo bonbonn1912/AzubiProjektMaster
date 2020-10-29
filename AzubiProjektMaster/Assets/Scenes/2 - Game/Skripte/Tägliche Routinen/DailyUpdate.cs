@@ -189,12 +189,14 @@ public class DailyUpdate : MonoBehaviour
         }
     }
 
+
+    //Aktien werden über Aktienfenster aktualisiert und nicht täglich. Code ist in AktienAnzahlAbfragen.cs mit speichern in GlobalVariables.Aktien
     IEnumerator GetAchievementAktien()
     {
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/AchievementAktienLesen.php", form); //PHP-Skript unvollständig, da nicht klar ist, wo Gewinn aus Aktien liegt
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AchievementAktienLesen.php", form); //PHP-Skript unvollständig, da nicht klar ist, wo Gewinn aus Aktien liegt
         yield return www;
 
         string aktienDb = www.text.Split('-')[0];
@@ -222,7 +224,7 @@ public class DailyUpdate : MonoBehaviour
         string cDb = Convert.ToString(GlobalVariables.cAktien);
         string dDb = Convert.ToString(GlobalVariables.dAktien);
         string eDb = Convert.ToString(GlobalVariables.eAktien);
-
+        string aktienDb = Convert.ToString(GlobalVariables.Aktien);
 
         WWWForm form = new WWWForm();
         form.AddField("AchievementShares", x);
@@ -232,8 +234,10 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert3", cDb);
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
+        form.AddField("Anzahl", aktienDb);
 
-        WWW www = new WWW("http://localhost/Test/AchievementAktienSchreiben.php", form); //PHP-Skript unvollständig, da nicht klar ist, wo Gewinn aus Aktien liegt
+
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AchievementAktienSchreiben.php", form); //PHP-Skript unvollständig, da nicht klar ist, wo Gewinn aus Aktien liegt
         yield return www;
     }
 
@@ -242,7 +246,7 @@ public class DailyUpdate : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte//DwsKaufen.php", form);
         yield return www;
 
         string aDb = www.text.Split('-')[0];
@@ -251,6 +255,7 @@ public class DailyUpdate : MonoBehaviour
         string dDb = www.text.Split('-')[3];
         string eDb = www.text.Split('-')[4];
         string achievementDb = www.text.Split('-')[5];
+        string entZaehlerDB = www.text.Split('-')[6];
 
         GlobalVariables.aEntlassen = Convert.ToInt32(aDb);
         GlobalVariables.bEntlassen = Convert.ToInt32(bDb);
@@ -258,6 +263,7 @@ public class DailyUpdate : MonoBehaviour
         GlobalVariables.dEntlassen = Convert.ToInt32(dDb);
         GlobalVariables.eEntlassen = Convert.ToInt32(eDb);
         GlobalVariables.achievementEntlassen = Convert.ToInt32(achievementDb);
+        GlobalVariables.entlassungZaehler = Convert.ToInt32(entZaehlerDB);
     }
 
     IEnumerator SetAchievementsEntlassen()
@@ -268,6 +274,7 @@ public class DailyUpdate : MonoBehaviour
         string cDb = Convert.ToString(GlobalVariables.cEntlassen);
         string dDb = Convert.ToString(GlobalVariables.dEntlassen);
         string eDb = Convert.ToString(GlobalVariables.eEntlassen);
+        string entZaehlerDb = Convert.ToString(GlobalVariables.entlassungZaehler);
 
 
         WWWForm form = new WWWForm();
@@ -278,8 +285,9 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert3", cDb);
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
+        form.AddField("Zaehler", entZaehlerDb);
 
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsSchreiben.php", form);
         yield return www;
     }
 
@@ -288,7 +296,7 @@ public class DailyUpdate : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsKaufen.php", form);
         yield return www;
 
         string filialenDb = www.text.Split('-')[0];
@@ -326,7 +334,7 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
 
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsSchreiben.php", form);
         yield return www;
 
     }
@@ -336,7 +344,7 @@ public class DailyUpdate : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/AchievementHrLesen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AchievementHrLesen.php", form);
         yield return www;
 
 
@@ -376,7 +384,7 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
 
-        WWW www = new WWW("http://localhost/Test/AchievementHrSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AchievementHrSchreiben.php", form);
         yield return www;
     }
 
@@ -385,7 +393,7 @@ public class DailyUpdate : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/AchievementItLesen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AchievementItLesen.php", form);
         yield return www;
 
         string itDb = www.text.Split('-')[0];
@@ -424,7 +432,7 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
 
-        WWW www = new WWW("http://localhost/Test/AchievementItSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AchievementItSchreiben.php", form);
         yield return www;
     }
 
@@ -433,7 +441,7 @@ public class DailyUpdate : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/Test/DwsKaufen.php", form);
         yield return www;
 
         string kapitalDb = www.text.Split('-')[0];
@@ -472,7 +480,7 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
 
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsSchreiben.php", form);
         yield return www;
     }
 
@@ -481,7 +489,7 @@ public class DailyUpdate : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsKaufen.php", form);
         yield return www;
 
         string krediteDb = www.text.Split('-')[0];
@@ -509,6 +517,7 @@ public class DailyUpdate : MonoBehaviour
         string cDb = Convert.ToString(GlobalVariables.cKredite);
         string dDb = Convert.ToString(GlobalVariables.dKredite);
         string eDb = Convert.ToString(GlobalVariables.eKredite);
+        string krediteDb = Convert.ToString(GlobalVariables.anzahlKredite);
 
 
         WWWForm form = new WWWForm();
@@ -519,8 +528,9 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert3", cDb);
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
+        form.AddField("Anzahl", krediteDb);
 
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsSchreiben.php", form);
         yield return www;
     }
 
@@ -529,7 +539,7 @@ public class DailyUpdate : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsKaufen.php", form);
         yield return www;
 
         string kundenDb = www.text.Split('-')[0];
@@ -568,7 +578,7 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
 
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsSchreiben.php", form);
         yield return www;
     }
 
@@ -577,14 +587,14 @@ public class DailyUpdate : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("user", GlobalVariables.username);
 
-        WWW www = new WWW("http://localhost/Test/DwsKaufen.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsKaufen.php", form);
         yield return www;
 
         string tutorialDb = www.text.Split('-')[0];
         string aDb = www.text.Split('-')[1];
         string achievementDb = www.text.Split('-')[6];
 
-        GlobalVariables.Tutorialcheck = Convert.ToBoolean(tutorialDb);
+        GlobalVariables.Tutorial = Convert.ToInt32(tutorialDb);
         GlobalVariables.aTutorial = Convert.ToInt32(aDb);
         GlobalVariables.achievementTutorial = Convert.ToInt32(achievementDb);
     }
@@ -600,7 +610,7 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("user", GlobalVariables.username);
         form.AddField("Wert1", aDb);
 
-        WWW www = new WWW("http://localhost/Test/DwsSchreiben.php", form);
+        WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/DwsSchreiben.php", form);
         yield return www;
     }
 

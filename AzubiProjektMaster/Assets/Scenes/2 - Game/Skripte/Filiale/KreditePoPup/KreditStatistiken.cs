@@ -28,6 +28,7 @@ public class KreditStatistiken : MonoBehaviour
         yield return creditabfrage;
         KreditAnzahl.text = creditabfrage.text;
         KrediteAnTagX.text = Convert.ToString(GlobalVariables.day);
+        GlobalVariables.anzahlKredite = Convert.ToInt32(creditabfrage);
 }
 
     IEnumerator CreditVolume()
