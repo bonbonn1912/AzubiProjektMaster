@@ -307,7 +307,7 @@ public class DailyUpdate : MonoBehaviour
         string eDb = Convert.ToString(GlobalVariables.eEntlassen);
         string entZaehlerDb = Convert.ToString(GlobalVariables.entlassungZaehler);
 
-
+        Debug.Log("Achievement3 entlassen: " + GlobalVariables.achievementEntlassen);
         WWWForm form = new WWWForm();
         form.AddField("AchievementEntlassung", x);
         form.AddField("user", GlobalVariables.username);
@@ -317,7 +317,7 @@ public class DailyUpdate : MonoBehaviour
         form.AddField("Wert4", dDb);
         form.AddField("Wert5", eDb);
         form.AddField("Zaehler", entZaehlerDb);
-
+        Debug.Log("Achievement4 entlassen: " + x);
         WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/AchievementEntlassenSchreiben.php", form);
         yield return www;
     }

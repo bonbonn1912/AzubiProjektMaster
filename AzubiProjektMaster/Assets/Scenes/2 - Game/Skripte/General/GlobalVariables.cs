@@ -78,11 +78,11 @@ public class GlobalVariables : MonoBehaviour
     public static int dAktien;
     public static int eAktien;
 
-    public static int aEntlassen;
-    public static int bEntlassen;
-    public static int cEntlassen;
-    public static int dEntlassen;
-    public static int eEntlassen;
+    public static int aEntlassen = 0;
+    public static int bEntlassen = 0;
+    public static int cEntlassen = 0;
+    public static int dEntlassen = 0;
+    public static int eEntlassen = 0;
 
     public static int aFilialen;
     public static int bFilialen;
