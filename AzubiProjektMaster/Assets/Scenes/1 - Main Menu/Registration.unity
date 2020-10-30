@@ -1590,7 +1590,6 @@ MonoBehaviour:
   dbReply: {fileID: 1876850121}
   NameInputField: {fileID: 62100326}
   PWInputField: {fileID: 1790344674}
-  FeedbackUsername: {fileID: 0}
   submitButton: {fileID: 342395854}
   PwFeedbackPanel: {fileID: 1890723603}
   PwFeedbackText: {fileID: 1374167393}
@@ -2298,7 +2297,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Username:'
+  m_Text: 'Benutzername:'
 --- !u!222 &1832531383
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1507,7 +1507,6 @@ MonoBehaviour:
   dbReply: {fileID: 1876850121}
   LoginButton: {fileID: 342395854}
   backToMenu: {fileID: 322841926}
-  mainMenu: {fileID: 0}
 --- !u!114 &941457357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2141,7 +2140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Username:'
+  m_Text: 'Benutzername:'
 --- !u!222 &1832531383
 CanvasRenderer:
   m_ObjectHideFlags: 0
