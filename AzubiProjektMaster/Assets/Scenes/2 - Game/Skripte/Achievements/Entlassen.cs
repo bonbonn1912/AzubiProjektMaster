@@ -36,4 +36,18 @@ public class Entlassen : MonoBehaviour
             GlobalVariables.eEntlassen = 1;
         }
     }
+
+    public static void Zaehler()
+    {
+
+        if (GlobalVariables.mitarbeiter >= GlobalVariables.mitarbeiterAlt)
+        {
+            GlobalVariables.entlassungZaehler = +1;
+            GlobalVariables.mitarbeiterAlt = GlobalVariables.mitarbeiter;
+        }
+        else
+        {
+            GlobalVariables.mitarbeiterAlt = GlobalVariables.mitarbeiter;
+        }
+    }
 }

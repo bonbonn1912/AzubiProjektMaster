@@ -90,11 +90,11 @@ public class GlobalVariables : MonoBehaviour
     public static int dFilialen;
     public static int eFilialen;
 
-    public static int aHr;
-    public static int bHr;
-    public static int cHr;
-    public static int dHr;
-    public static int eHr;
+    public static string aHr;
+    public static string bHr;
+    public static string cHr;
+    public static string dHr;
+    public static string eHr;
 
     public static int aIt;
     public static int bIt;
