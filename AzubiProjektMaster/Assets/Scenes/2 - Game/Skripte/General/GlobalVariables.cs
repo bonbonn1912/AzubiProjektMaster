@@ -4,15 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GlobalVariables : MonoBehaviour
-{
-    
+{    
     public static string username;
     
     public static int day;
     public static int PID;
     public static string registrationResult = null;
     public static string Bankname = "DB Abfrage";
-
 
     public static bool LoggedIn { get { return username != null; } }
 
@@ -31,7 +29,8 @@ public class GlobalVariables : MonoBehaviour
     public static int balance;
     public static int minDuration = 20;
     public static int maxDuration = 100;
-    public static int Mitarbeitergewinn = 5000;
+    public static int Mitarbeitergewinn = 500;
+    public static int Kundengewinn = 50;
 
     public static int Aktie1KursGlob;
     public static int Aktie2KursGlob;
@@ -51,5 +50,4 @@ public class GlobalVariables : MonoBehaviour
     public static int kundenanzahl;
 
     public static int cooldownday;
-
 }
