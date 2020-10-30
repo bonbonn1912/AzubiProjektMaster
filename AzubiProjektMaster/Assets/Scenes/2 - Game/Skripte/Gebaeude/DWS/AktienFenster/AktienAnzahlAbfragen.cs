@@ -38,7 +38,7 @@ public class AktienAnzahlAbfragen : MonoBehaviour
         AmountAktie4.text = stringAmounts[3];
         AmountAktie5.text = stringAmounts[4];
 
-
+        GlobalVariables.Aktien = Convert.ToInt32(stringAmounts[0]) + Convert.ToInt32(stringAmounts[1]) + Convert.ToInt32(stringAmounts[2]) + Convert.ToInt32(stringAmounts[3]) + Convert.ToInt32(stringAmounts[4]);
 
     }
 }
