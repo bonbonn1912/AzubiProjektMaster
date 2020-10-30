@@ -9,7 +9,7 @@ public class DWSOnClicks : MonoBehaviour
     public GameObject aktienTablet;
     public GameObject AktienHandelPopupText;
     public GameObject graphPopUpText;
-
+    public GameObject UpgradeText;
     public GameObject orderVolumenDynamischDefault;
     public Color DepotInhaberTextboxColor;
     public Text DepotInhaberTextbox;
@@ -66,6 +66,14 @@ public class DWSOnClicks : MonoBehaviour
         if (graphPopUpText != null)
         {
             graphPopUpText.SetActive(!graphPopUpText.activeSelf);
+        }
+    }
+
+    public void OpenPopUpUpgrade()
+    {
+        if (UpgradeText != null)
+        {
+            UpgradeText.SetActive(!UpgradeText.activeSelf);
         }
     }
 }

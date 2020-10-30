@@ -7,7 +7,7 @@ public class FilialeOnClicks : MonoBehaviour
     public GameObject kreditTablet;
     public GameObject alleKreditTablet;
     //public GameObject statsTablet;
-
+    public GameObject UpgradeText;
 
     public void FilialeOnClick(GameObject gebaeude)
     {
@@ -47,5 +47,12 @@ public class FilialeOnClicks : MonoBehaviour
         kreditTablet.SetActive(false);
         alleKreditTablet.SetActive(!alleKreditTablet.activeSelf);
         MainScene.TabletHandlerActivate();
+    }
+    public void OpenPopUpUpgrade()
+    {
+        if (UpgradeText != null)
+        {
+            UpgradeText.SetActive(!UpgradeText.activeSelf);
+        }
     }
 }

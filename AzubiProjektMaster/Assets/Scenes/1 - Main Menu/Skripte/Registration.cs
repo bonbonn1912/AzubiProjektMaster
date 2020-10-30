@@ -157,6 +157,7 @@ public class Registration : MonoBehaviour
         if (www.text == "0")
         {
             GlobalVariables.registrationResult = "Registration erfolgreich!\nBitte einloggen.";
+            GlobalVariables.Tutorialcheck = false;
         }
         else
         {
