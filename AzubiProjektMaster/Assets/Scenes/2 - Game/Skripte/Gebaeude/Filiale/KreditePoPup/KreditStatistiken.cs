@@ -31,7 +31,8 @@ public class KreditStatistiken : MonoBehaviour
         Debug.Log("Anzahl Kredite" +creditabfrage.text);
         KreditAnzahl.text = creditabfrage.text;
         KrediteAnTagX.text = Convert.ToString(GlobalVariables.day);
-}
+        GlobalVariables.anzahlKredite = Convert.ToInt32(creditabfrage);
+    }
 
     IEnumerator CreditVolume()
     {

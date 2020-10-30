@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class Kredite : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void Errungenschaften()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (GlobalVariables.anzahlKredite >= 100 & GlobalVariables.aKredite == 0)
+        {
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.aKredite = 1;
+        }
+
+        if (GlobalVariables.anzahlKredite >= 200 & GlobalVariables.bKredite == 0)
+        {
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.bKredite = 1;
+        }
+
+        if (GlobalVariables.anzahlKredite >= 300 & GlobalVariables.cKredite == 0)
+        {
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.cKredite = 1;
+        }
+
+        if (GlobalVariables.anzahlKredite >= 400 & GlobalVariables.dKredite == 0)
+        {
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.dKredite = 1;
+        }
+
+        if (GlobalVariables.anzahlKredite >= 500 & GlobalVariables.eKredite == 0)
+        {
+            GlobalVariables.achievementKredite = GlobalVariables.achievementKredite + 1;
+            GlobalVariables.eKredite = 1;
+        }
     }
 }

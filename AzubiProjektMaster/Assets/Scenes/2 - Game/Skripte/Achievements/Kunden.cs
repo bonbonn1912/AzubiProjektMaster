@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class Kunden : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void Errungenschaften()
     {
-        
-    }
+        if (GlobalVariables.anzahlKunden >= 100 & GlobalVariables.aKunden == 0)
+        {
+            GlobalVariables.achievementKunden = GlobalVariables.achievementKunden + 1;
+            GlobalVariables.aKunden = 1;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (GlobalVariables.anzahlKunden >= 1000 & GlobalVariables.bKunden == 0)
+        {
+            GlobalVariables.achievementKunden = GlobalVariables.achievementKunden + 1;
+            GlobalVariables.bKunden = 1;
+        }
+
+        if (GlobalVariables.anzahlKunden >= 5000 & GlobalVariables.cKunden == 0)
+        {
+            GlobalVariables.achievementKunden = GlobalVariables.achievementKunden + 1;
+            GlobalVariables.cKunden = 1;
+        }
+
+        if (GlobalVariables.anzahlKunden >= 10000 & GlobalVariables.dKunden == 0)
+        {
+            GlobalVariables.achievementKunden = GlobalVariables.achievementKunden + 1;
+            GlobalVariables.dKunden = 1;
+        }
+
+        if (GlobalVariables.anzahlKunden >= 50000 & GlobalVariables.eKunden == 0)
+        {
+            GlobalVariables.achievementKunden = GlobalVariables.achievementKunden + 1;
+            GlobalVariables.eKunden = 1;
+        }
     }
 }

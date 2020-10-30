@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void Errungenschaften()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (GlobalVariables.Tutorial == 1 & GlobalVariables.aTutorial == 0)
+        {
+            GlobalVariables.achievementTutorial = GlobalVariables.achievementTutorial + 1;
+            GlobalVariables.aTutorial = 1;
+        }
     }
 }

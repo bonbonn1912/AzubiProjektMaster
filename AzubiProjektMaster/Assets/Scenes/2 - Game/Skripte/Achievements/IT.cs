@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class IT : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void Errungenschaften()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (GlobalVariables.itStatus >= 2 & GlobalVariables.aIt == 0)
+        {
+            GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
+            GlobalVariables.aIt = 1;
+        }
+
+        if (GlobalVariables.itStatus >= 3 & GlobalVariables.bIt == 0)
+        {
+            GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
+            GlobalVariables.bIt = 1;
+        }
+
+        if (GlobalVariables.itStatus >= 4 & GlobalVariables.cIt == 0)
+        {
+            GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
+            GlobalVariables.cIt = 1;
+        }
+
+        if (GlobalVariables.itStatus >= 6 & GlobalVariables.dIt == 0)
+        {
+            GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
+            GlobalVariables.dIt = 1;
+        }
+
+        if (GlobalVariables.itStatus >= 7 & GlobalVariables.eIt == 0)
+        {
+            GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
+            GlobalVariables.eIt = 1;
+        }
     }
 }

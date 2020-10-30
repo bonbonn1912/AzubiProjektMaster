@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class Entlassen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void Errungenschaften()
     {
-        
-    }
+        if (GlobalVariables.entlassungZaehler >= 10 & GlobalVariables.aEntlassen == 0)
+        {
+            GlobalVariables.achievementEntlassen = GlobalVariables.achievementEntlassen + 1;
+            GlobalVariables.aEntlassen = 1;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (GlobalVariables.entlassungZaehler >= 50 & GlobalVariables.bEntlassen == 0)
+        {
+            GlobalVariables.achievementEntlassen = GlobalVariables.achievementEntlassen + 1;
+            GlobalVariables.bEntlassen = 1;
+        }
+
+        if (GlobalVariables.entlassungZaehler >= 100 & GlobalVariables.cEntlassen == 0)
+        {
+            GlobalVariables.achievementEntlassen = GlobalVariables.achievementEntlassen + 1;
+            GlobalVariables.cEntlassen = 1;
+        }
+
+        if (GlobalVariables.entlassungZaehler >= 150 & GlobalVariables.dEntlassen == 0)
+        {
+            GlobalVariables.achievementEntlassen = GlobalVariables.achievementEntlassen + 1;
+            GlobalVariables.dEntlassen = 1;
+        }
+
+        if (GlobalVariables.entlassungZaehler >= 200 & GlobalVariables.eEntlassen == 0)
+        {
+            GlobalVariables.achievementEntlassen = GlobalVariables.achievementEntlassen + 1;
+            GlobalVariables.eEntlassen = 1;
+        }
     }
 }
