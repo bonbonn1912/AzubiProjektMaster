@@ -37,10 +37,10 @@ public class GameTime : MonoBehaviour
     int gametimelocal;
     public void Start()
     {
-            if(GlobalVariables.username == null)
+           /* if(GlobalVariables.username == null)
         {
-            GlobalVariables.username = "SebastianTestTag";
-        }
+            GlobalVariables.username = "SebastianNeu2";
+        }*/
 
         ausfuhren.Init();
     }
@@ -108,7 +108,7 @@ public class GameTime : MonoBehaviour
         timeCounter = Time.time - timePassed;
 
         //die Zahl in if-Bedingung ist Tageslänge in Sekunden
-          if (timeCounter > gametimelocal) 
+          if (timeCounter > 5) 
           {
               timePassed += timeCounter;
             GlobalVariables.day = GlobalVariables.day + 1;

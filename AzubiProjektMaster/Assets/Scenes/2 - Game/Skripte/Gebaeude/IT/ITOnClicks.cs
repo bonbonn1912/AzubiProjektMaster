@@ -6,6 +6,7 @@ public class ITOnClicks : MonoBehaviour
 {
     public GameObject kaufenApp;
     public GameObject itPupUpPanel;
+    public GameObject UpgradeText;
 
     public DailyUpdate dailyUp;
 
@@ -13,7 +14,7 @@ public class ITOnClicks : MonoBehaviour
     {
         if (GlobalVariables.itStatus == 0)
         {
-            GebaeudeKaufen.OpenKaufenApp(gebaeude);
+            KaufenApp(gebaeude);
         }
         else if (GlobalVariables.itStatus >= 1)
         {
@@ -31,5 +32,18 @@ public class ITOnClicks : MonoBehaviour
     {
         GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
         GebaeudeUpgraden.OpenUpgradeApp(gebaeude);
+    }
+
+    public void OpenPopUpUpgrade()
+    {
+        if (UpgradeText != null)
+        {
+            UpgradeText.SetActive(!UpgradeText.activeSelf);
+        }
+    }
+    private void KaufenApp(GameObject gebaeude)
+    {
+        GebaeudeKaufen GebaeudeKaufen = new GebaeudeKaufen();
+        GebaeudeKaufen.OpenKaufenApp(gebaeude);
     }
 }

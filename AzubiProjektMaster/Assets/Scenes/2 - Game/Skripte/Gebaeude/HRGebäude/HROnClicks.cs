@@ -8,8 +8,8 @@ public class HROnClicks : MonoBehaviour
     public GameObject hrPopUpPanel;
     public GameObject hoverText;
     public GameObject hrTablet;
-    
 
+    public GameObject UpgradeText;
     public Text MitarbeiterCount;
     public Text PersonalCost;
 
@@ -17,7 +17,7 @@ public class HROnClicks : MonoBehaviour
     {
         if (GlobalVariables.hrStatus == 0)
         {
-            GebaeudeKaufen.OpenKaufenApp(gebaeude);
+            KaufenApp(gebaeude);
         }
         else if (GlobalVariables.hrStatus >= 1)
         {
@@ -37,6 +37,11 @@ public class HROnClicks : MonoBehaviour
         GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
         GebaeudeUpgraden.OpenUpgradeApp(gebaeude);
     }
+    private void KaufenApp(GameObject gebaeude)
+    {
+        GebaeudeKaufen GebaeudeKaufen = new GebaeudeKaufen();
+        GebaeudeKaufen.OpenKaufenApp(gebaeude);
+    }
 
     public void OpenHRTablet()
     {
@@ -53,6 +58,13 @@ public class HROnClicks : MonoBehaviour
         if (hoverText != null)
         {
             hoverText.SetActive(!hoverText.activeSelf);
+        }
+    }
+    public void OpenPopUpUpgrade()
+    {
+        if (UpgradeText != null)
+        {
+            UpgradeText.SetActive(!UpgradeText.activeSelf);
         }
     }
 }

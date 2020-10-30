@@ -12,8 +12,6 @@ public class Login : MonoBehaviour
     public Button LoginButton;
     public Button backToMenu;
 
-    public MainMenu mainMenu;
-
     private int tabSelect;
     public void Start()
     {
@@ -22,7 +20,16 @@ public class Login : MonoBehaviour
         {
             dbReply.text = GlobalVariables.registrationResult;
         }
-        NameInputField.GetComponent<InputField>().Select();
+        if (Registration.completet && Registration.user != null)
+        {
+            NameInputField.GetComponent<InputField>().text = Registration.user;
+            PWInputField.GetComponent<InputField>().Select();
+            Registration.user = null;
+        }
+        else
+        {
+            NameInputField.GetComponent<InputField>().Select();
+        }
     }
 
     public void Update()
@@ -76,7 +83,14 @@ public class Login : MonoBehaviour
 
     public void CallLogin()
     {
-        StartCoroutine(StartLogin());
+        if (NameInputField.text.Length >= 8 && PWInputField.text.Length >= 8)
+        {
+            StartCoroutine(StartLogin());
+        }
+        else
+        {
+            dbReply.text = "Nutzername & Passwort müssen min. 8 Zeichen haben!";
+        }
     }
     IEnumerator StartLogin()
     {
@@ -110,9 +124,18 @@ public class Login : MonoBehaviour
     public void VerifyInputs()
     {
         LoginButton.interactable = (NameInputField.text.Length >= 1 && PWInputField.text.Length >= 1);
+        if (NameInputField.text.Length >= 8 && PWInputField.text.Length >= 8)
+        {
+            FadeToColor(LoginButton, LoginButton.colors.normalColor);
+        }
+        else
+        {
+            FadeToColor(LoginButton, LoginButton.colors.disabledColor);
+        }
     }
     public void BackToMenu() 
     {
+        NameInputField.GetComponent<InputField>().text = null;
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }

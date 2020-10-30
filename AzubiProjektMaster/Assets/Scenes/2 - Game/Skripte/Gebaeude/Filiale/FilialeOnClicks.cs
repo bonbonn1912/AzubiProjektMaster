@@ -7,13 +7,13 @@ public class FilialeOnClicks : MonoBehaviour
     public GameObject kreditTablet;
     public GameObject alleKreditTablet;
     //public GameObject statsTablet;
-
+    public GameObject UpgradeText;
 
     public void FilialeOnClick(GameObject gebaeude)
     {
         if (GlobalVariables.inStatus == 0)
         {
-            GebaeudeKaufen.OpenKaufenApp(gebaeude);
+            KaufenApp(gebaeude);
         }
         else if (GlobalVariables.inStatus >= 1)
         {
@@ -31,6 +31,11 @@ public class FilialeOnClicks : MonoBehaviour
             inFilPopUpPanel.SetActive(!inFilPopUpPanel.activeSelf);
         }
     }
+    private void KaufenApp(GameObject gebaeude)
+    {
+        GebaeudeKaufen GebaeudeKaufen = new GebaeudeKaufen();
+        GebaeudeKaufen.OpenKaufenApp(gebaeude);
+    }
     public void PopupClickUpgrade(GameObject gebaeude)
     {
         GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
@@ -47,5 +52,12 @@ public class FilialeOnClicks : MonoBehaviour
         kreditTablet.SetActive(false);
         alleKreditTablet.SetActive(!alleKreditTablet.activeSelf);
         MainScene.TabletHandlerActivate();
+    }
+    public void OpenPopUpUpgrade()
+    {
+        if (UpgradeText != null)
+        {
+            UpgradeText.SetActive(!UpgradeText.activeSelf);
+        }
     }
 }

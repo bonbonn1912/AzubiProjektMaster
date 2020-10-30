@@ -117,22 +117,18 @@ public class DailyUpdate : MonoBehaviour
         GlobalVariables.PID = Convert.ToInt32(results[0]);
         GlobalVariables.balance = Convert.ToInt32(results[1]);
         GlobalVariables.day = Convert.ToInt32(results[2]);
-        //Debug.Log("Kapital aus global nach abfrage" + GlobalVariables.balance);
-     //   Debug.Log("globale variable nach zuweisung " + GlobalVariables.day);
+        
         GlobalVariables.mitarbeiter = Convert.ToInt32(results[3]);
         GlobalVariables.kundenanzahl = Convert.ToInt32(results[5]);
-        // Debug.Log(GlobalVariables.PID);
-        Debug.Log("Kundenanzahl" + GlobalVariables.kundenanzahl);
-        //  Debug.Log("Balance: " + GlobalVariables.balance);
-        //  Debug.Log("Spieltage: " + GlobalVariables.day);
-        //   Debug.Log("Mitarbeiter aus DatenBank: " + GlobalVariables.mitarbeiter);
+    
+       
 
 
     }
 
     IEnumerator Initco()
     {
-       // Debug.Log("in init");
+      
         WWWForm form = new WWWForm();
         form.AddField("username", GlobalVariables.username);
        //  WWW www = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/statusbarupdateDEV.php", form);
@@ -147,18 +143,19 @@ public class DailyUpdate : MonoBehaviour
         GlobalVariables.balance = Convert.ToInt32(results[1]);
         GlobalVariables.day = Convert.ToInt32(results[2]);
         GlobalVariables.mitarbeiter = Convert.ToInt32(results[3]);
+        check = Convert.ToInt32(results[4]);
         GlobalVariables.kundenanzahl = Convert.ToInt32(results[5]);
-        Debug.Log("Init Kundenanzahl:" + GlobalVariables.kundenanzahl);
+       
          check = Convert.ToInt32(results[4]);
         Debug.Log("tutorial state"+check);
         if (check == 1)
         {
-            GlobalVariables.Tutorialcheck = true;
+         //   GlobalVariables.Tutorialcheck = true;
             FigurPopUp.GameTimeGlob = 3;
         } 
         else if(check == 0)
         {
-           GlobalVariables.Tutorialcheck = false;
+        //   GlobalVariables.Tutorialcheck = false;
             FigurPopUp.GameTimeGlob = 1000;
 
         }

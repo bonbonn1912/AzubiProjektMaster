@@ -9,7 +9,7 @@ public class DWSOnClicks : MonoBehaviour
     public GameObject aktienTablet;
     public GameObject AktienHandelPopupText;
     public GameObject graphPopUpText;
-
+    public GameObject UpgradeText;
     public GameObject orderVolumenDynamischDefault;
     public Color DepotInhaberTextboxColor;
     public Text DepotInhaberTextbox;
@@ -20,7 +20,7 @@ public class DWSOnClicks : MonoBehaviour
     {
         if (GlobalVariables.dwsStatus == 0)
         {
-            GebaeudeKaufen.OpenKaufenApp(gebaeude);
+            KaufenApp(gebaeude);
         }
         else if (GlobalVariables.dwsStatus >= 1)
         {
@@ -33,6 +33,11 @@ public class DWSOnClicks : MonoBehaviour
         {
             dwsPopUpPanel.SetActive(!dwsPopUpPanel.activeSelf);
         }
+    }
+    private void KaufenApp(GameObject gebaeude)
+    {
+        GebaeudeKaufen GebaeudeKaufen = new GebaeudeKaufen();
+        GebaeudeKaufen.OpenKaufenApp(gebaeude);
     }
     public void PopupClickUpgrade(GameObject gebaeude)
     {
@@ -66,6 +71,14 @@ public class DWSOnClicks : MonoBehaviour
         if (graphPopUpText != null)
         {
             graphPopUpText.SetActive(!graphPopUpText.activeSelf);
+        }
+    }
+
+    public void OpenPopUpUpgrade()
+    {
+        if (UpgradeText != null)
+        {
+            UpgradeText.SetActive(!UpgradeText.activeSelf);
         }
     }
 }
