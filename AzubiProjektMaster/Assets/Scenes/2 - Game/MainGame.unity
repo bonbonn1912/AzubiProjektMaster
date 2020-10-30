@@ -14017,7 +14017,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dominik1923
+  m_Text: 
 --- !u!222 &531432632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15006,6 +15006,7 @@ MonoBehaviour:
   Accept: {fileID: 2108269932}
   Deny: {fileID: 397369368}
   Back: {fileID: 1827924247}
+  Beratername: {fileID: 0}
   UpdateKredit: {fileID: 0}
   ValueMin: 0
   ValueMax: 0
@@ -15286,6 +15287,7 @@ MonoBehaviour:
   Accept: {fileID: 2108269932}
   Deny: {fileID: 397369368}
   Back: {fileID: 1827924247}
+  Beratername: {fileID: 531432631}
   UpdateKredit: {fileID: 596922600}
   ValueMin: 0
   ValueMax: 0
