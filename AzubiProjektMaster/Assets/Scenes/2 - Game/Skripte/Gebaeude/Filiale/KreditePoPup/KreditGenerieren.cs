@@ -18,6 +18,7 @@ public class KreditGenerieren : MonoBehaviour
     public Button Accept;
     public Button Deny;
     public Button Back;
+    public Text Beratername;
 
     public KreditStatistiken UpdateKredit;
 
@@ -91,8 +92,9 @@ public class KreditGenerieren : MonoBehaviour
         int Postiion;
         Postiion = Random.Range(0, s.Length);
         Kunde.text = s[Postiion];
+        Beratername.text = GlobalVariables.username;
         return s[Postiion];
-        
+       
 
 
     }
