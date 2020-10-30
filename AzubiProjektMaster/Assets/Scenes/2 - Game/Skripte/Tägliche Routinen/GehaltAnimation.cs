@@ -11,13 +11,13 @@ public class GehaltAnimation : MonoBehaviour
     public ParticleSystem balanceMinusAnimation;
     public AudioSource moneySound;
     float time = 1.0f;
-    // Start is called before the first frame update
+
+    
     void Start()
     {
         oldBalance = GlobalVariables.balance;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (time >= 0)

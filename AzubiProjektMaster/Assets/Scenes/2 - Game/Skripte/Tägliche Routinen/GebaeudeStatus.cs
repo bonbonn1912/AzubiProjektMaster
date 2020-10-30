@@ -8,6 +8,7 @@ public class GebaeudeStatus : MonoBehaviour
     {
         StartCoroutine(buildingsCo());
     }
+    
     IEnumerator buildingsCo()
     {
         WWWForm form = new WWWForm();
