@@ -220,7 +220,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
 --- !u!1 &67316801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,8 +3394,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1200077850}
-        m_MethodName: saveVolume
+      - m_Target: {fileID: 1200077845}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3870,7 +3870,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1423013618}
-        m_MethodName: MusikVolume
+        m_MethodName: CheckVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3879,7 +3879,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
       - m_Target: {fileID: 1423013618}
         m_MethodName: CheckVolume
         m_Mode: 1
@@ -3941,7 +3941,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MVolume: {fileID: 26230335}
   CashSound: {fileID: 876508403}
-  ClickSound: {fileID: 0}
 --- !u!1 &1485584793
 GameObject:
   m_ObjectHideFlags: 0

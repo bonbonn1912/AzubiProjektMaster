@@ -19,5 +19,10 @@ public class SaveVolume : MonoBehaviour
         PlayerPrefs.SetFloat("musikVolume", MVolume.value);
         PlayerPrefs.SetFloat("cashSound", CashSound.value);
     }
+    public void CheckVolume(){
+        MVolume.value = PlayerPrefs.GetFloat("musikVolume");
+        CashSound.value = PlayerPrefs.GetFloat("cashSound");
+    }
+
 
 }
