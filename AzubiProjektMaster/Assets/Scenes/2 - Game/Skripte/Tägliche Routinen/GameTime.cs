@@ -37,9 +37,9 @@ public class GameTime : MonoBehaviour
     int gametimelocal;
     public void Start()
     {
-            /*if(GlobalVariables.username == null)
+           /* if(GlobalVariables.username == null)
         {
-            GlobalVariables.username = "SebastianNeu1";
+            GlobalVariables.username = "SebastianNeu2";
         }*/
 
         ausfuhren.Init();
