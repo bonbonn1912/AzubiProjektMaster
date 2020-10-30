@@ -29,8 +29,8 @@ public class DailyUpdate : MonoBehaviour
         StartCoroutine(SetAchievementsAktien());
 
         StartCoroutine(GetAchievementEntlassen());
-        Entlassen.Errungenschaften();
         Entlassen.Zaehler();
+        Entlassen.Errungenschaften();
         StartCoroutine(SetAchievementsEntlassen());
 
         StartCoroutine(GetAchievementFilialen());
@@ -669,27 +669,7 @@ public class DailyUpdate : MonoBehaviour
 
     public  void HrErrungenschaften()
     {
-        /*
-        if(GlobalVariables.mitarbeiter >= 10 && GlobalVariables.aHr == "1")
-        {
-            GlobalVariables.bHr = "0";
-            GlobalVariables.cHr = "0";
-            GlobalVariables.dHr = "0";
-            GlobalVariables.eHr = "0";
-        }else if (GlobalVariables.mitarbeiter >= 50 && GlobalVariables.bHr == "1")
-        {
-            GlobalVariables.cHr = "0";
-            GlobalVariables.dHr = "0";
-            GlobalVariables.eHr = "0";
-        }else if (GlobalVariables.mitarbeiter >= 100 && GlobalVariables.cHr == "1")
-        {
-            GlobalVariables.dHr = "0";
-            GlobalVariables.eHr = "0";
-        }else if (GlobalVariables.mitarbeiter >= 500 && GlobalVariables.dHr == "1")
-        {
-            GlobalVariables.eHr = "0";
-        }
-        */
+        
         Debug.Log("HR-Errungenschaften");
         if (GlobalVariables.mitarbeiter >= 10 && GlobalVariables.aHr == "0")
         {
