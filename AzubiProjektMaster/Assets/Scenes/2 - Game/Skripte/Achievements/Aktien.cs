@@ -13,28 +13,32 @@ public class Aktien : MonoBehaviour
             GlobalVariables.aAktien = 1;
         }
 
-        if (GlobalVariables.Aktien >= 50000 & GlobalVariables.bAktien == 0)
+        if (GlobalVariables.Aktien >= 50000 & GlobalVariables.aAktien == 1)
         {
             GlobalVariables.achievementAktien = GlobalVariables.achievementAktien + 1;
-            GlobalVariables.bAktien = 1;
+            //GlobalVariables.bAktien = 1;
+            GlobalVariables.aAktien = 2;
         }
 
-        if (GlobalVariables.Aktien >= 70000 & GlobalVariables.cAktien == 0)
+        if (GlobalVariables.Aktien >= 70000 & GlobalVariables.aAktien == 2)
         {
             GlobalVariables.achievementAktien = GlobalVariables.achievementAktien + 1;
-            GlobalVariables.cAktien = 1;
+            //GlobalVariables.cAktien = 1;
+            GlobalVariables.aAktien = 3;
         }
 
-        if (GlobalVariables.Aktien >= 90000 & GlobalVariables.dAktien == 0)
+        if (GlobalVariables.Aktien >= 90000 & GlobalVariables.aAktien == 3)
         {
             GlobalVariables.achievementAktien = GlobalVariables.achievementAktien + 1;
-            GlobalVariables.dAktien = 1;
+            //GlobalVariables.dAktien = 1;
+            GlobalVariables.aAktien = 4;
         }
 
-        if (GlobalVariables.Aktien >= 150000 & GlobalVariables.eAktien == 0)
+        if (GlobalVariables.Aktien >= 150000 & GlobalVariables.aAktien == 4)
         {
             GlobalVariables.achievementAktien = GlobalVariables.achievementAktien + 1;
-            GlobalVariables.eAktien = 1;
+            //GlobalVariables.eAktien = 1;
+            GlobalVariables.aAktien = 5;
         }
     }
 }

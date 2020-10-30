@@ -13,28 +13,32 @@ public class IT : MonoBehaviour
             GlobalVariables.aIt = 1;
         }
 
-        if (GlobalVariables.itStatus >= 3 & GlobalVariables.bIt == 0)
+        if (GlobalVariables.itStatus >= 3 & GlobalVariables.aIt == 1)
         {
             GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
-            GlobalVariables.bIt = 1;
+            //GlobalVariables.bIt = 1;
+            GlobalVariables.aIt = 1;
         }
 
-        if (GlobalVariables.itStatus >= 4 & GlobalVariables.cIt == 0)
+        if (GlobalVariables.itStatus >= 4 & GlobalVariables.aIt == 1)
         {
             GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
-            GlobalVariables.cIt = 1;
+            //GlobalVariables.cIt = 1;
+            GlobalVariables.aIt = 1;
         }
 
-        if (GlobalVariables.itStatus >= 6 & GlobalVariables.dIt == 0)
+        if (GlobalVariables.itStatus >= 6 & GlobalVariables.aIt == 3)
         {
             GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
-            GlobalVariables.dIt = 1;
+            //GlobalVariables.dIt = 1;
+            GlobalVariables.aIt = 1;
         }
 
-        if (GlobalVariables.itStatus >= 7 & GlobalVariables.eIt == 0)
+        if (GlobalVariables.itStatus >= 7 & GlobalVariables.aIt == 4)
         {
             GlobalVariables.achievementIt = GlobalVariables.achievementIt + 1;
-            GlobalVariables.eIt = 1;
+            //GlobalVariables.eIt = 1;
+            GlobalVariables.aIt = 1;
         }
     }
 }

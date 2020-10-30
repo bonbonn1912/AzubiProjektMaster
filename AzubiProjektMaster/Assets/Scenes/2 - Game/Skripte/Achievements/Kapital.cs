@@ -13,28 +13,32 @@ public class Kapital : MonoBehaviour
             GlobalVariables.aKapital = 1;
         }
 
-        if (GlobalVariables.balance >= 600000 & GlobalVariables.bKapital == 0)
+        if (GlobalVariables.balance >= 600000 & GlobalVariables.aKapital == 1)
         {
             GlobalVariables.achievementKapital = GlobalVariables.achievementKapital + 1;
-            GlobalVariables.bKapital = 1;
+            //GlobalVariables.bKapital = 1;
+            GlobalVariables.aKapital = 2;
         }
 
-        if (GlobalVariables.balance >= 1000000 & GlobalVariables.cKapital == 0)
+        if (GlobalVariables.balance >= 1000000 & GlobalVariables.aKapital == 2)
         {
             GlobalVariables.achievementKapital = GlobalVariables.achievementKapital + 1;
-            GlobalVariables.cKapital = 1;
+            //GlobalVariables.cKapital = 1;
+            GlobalVariables.aKapital = 3;
         }
 
-        if (GlobalVariables.balance >= 1500000 & GlobalVariables.dKapital == 0)
+        if (GlobalVariables.balance >= 1500000 & GlobalVariables.aKapital == 3)
         {
             GlobalVariables.achievementKapital = GlobalVariables.achievementKapital + 1;
-            GlobalVariables.dKapital = 1;
+            //GlobalVariables.dKapital = 1;
+            GlobalVariables.aKapital = 4;
         }
 
-        if (GlobalVariables.balance >= 2000000 & GlobalVariables.eKapital == 0)
+        if (GlobalVariables.balance >= 2000000 & GlobalVariables.aKapital == 4)
         {
             GlobalVariables.achievementKapital = GlobalVariables.achievementKapital + 1;
-            GlobalVariables.eKapital = 1;
+            //GlobalVariables.eKapital = 1;
+            GlobalVariables.aKapital = 5;
         }
     }
 }

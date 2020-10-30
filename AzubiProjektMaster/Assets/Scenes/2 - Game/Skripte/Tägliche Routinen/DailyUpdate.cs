@@ -669,7 +669,7 @@ public class DailyUpdate : MonoBehaviour
 
     public  void HrErrungenschaften()
     {
-
+        /*
         if(GlobalVariables.mitarbeiter >= 10 && GlobalVariables.aHr == "1")
         {
             GlobalVariables.bHr = "0";
@@ -689,42 +689,47 @@ public class DailyUpdate : MonoBehaviour
         {
             GlobalVariables.eHr = "0";
         }
-        /*
+        */
         Debug.Log("HR-Errungenschaften");
-        if (GlobalVariables.mitarbeiter >= 10 && GlobalVariables.aHr == 0)
+        if (GlobalVariables.mitarbeiter >= 10 && GlobalVariables.aHr == "0")
         {
             Debug.Log("Abfrage 1 HR");
             GlobalVariables.achievementHr = 1;
-            GlobalVariables.aHr = 1;
+            GlobalVariables.aHr = "1";
+            //GlobalVariables.aHr = 1;
         }
 
-        if (GlobalVariables.mitarbeiter >= 50 && GlobalVariables.bHr == 0)
+        if (GlobalVariables.mitarbeiter >= 50 && GlobalVariables.aHr == "1")
         {
             Debug.Log("Abfrage 2 HR");
             GlobalVariables.achievementHr = 2;
-            GlobalVariables.bHr = 1;
+            GlobalVariables.aHr = "2";
+           // GlobalVariables.bHr = 1;
         }
 
-        if (GlobalVariables.mitarbeiter >= 100 && GlobalVariables.cHr == 0)
+        if (GlobalVariables.mitarbeiter >= 100 && GlobalVariables.aHr == "2")
         {
             Debug.Log("Abfrage 3 HR");
             GlobalVariables.achievementHr = 3;
-            GlobalVariables.cHr = 1;
+            GlobalVariables.aHr = "3";
+            //GlobalVariables.cHr = 1;
         }
 
-        if (GlobalVariables.mitarbeiter >= 500 && GlobalVariables.dHr == 0)
+        if (GlobalVariables.mitarbeiter >= 500 && GlobalVariables.dHr == "3")
         {
             Debug.Log("Abfrage 4 HR");
             GlobalVariables.achievementHr = 4;
-            GlobalVariables.dHr = 1;
+            GlobalVariables.aHr = "4";
+            //GlobalVariables.dHr = 1;
         }
 
-        if (GlobalVariables.mitarbeiter >= 1000 && GlobalVariables.eHr == 0)
+        if (GlobalVariables.mitarbeiter >= 1000 && GlobalVariables.eHr == "4")
         {
             Debug.Log("Abfrage 5 HR");
             GlobalVariables.achievementHr = 5;
-            GlobalVariables.eHr = 1;
+            //GlobalVariables.eHr = 1;
+            GlobalVariables.aHr = "5";
         }
-        */
+        
     }
 }
