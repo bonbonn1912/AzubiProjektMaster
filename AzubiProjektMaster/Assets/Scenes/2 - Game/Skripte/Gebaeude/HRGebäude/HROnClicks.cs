@@ -8,8 +8,8 @@ public class HROnClicks : MonoBehaviour
     public GameObject hrPopUpPanel;
     public GameObject hoverText;
     public GameObject hrTablet;
-    
 
+    public GameObject UpgradeText;
     public Text MitarbeiterCount;
     public Text PersonalCost;
 
@@ -53,6 +53,13 @@ public class HROnClicks : MonoBehaviour
         if (hoverText != null)
         {
             hoverText.SetActive(!hoverText.activeSelf);
+        }
+    }
+    public void OpenPopUpUpgrade()
+    {
+        if (UpgradeText != null)
+        {
+            UpgradeText.SetActive(!UpgradeText.activeSelf);
         }
     }
 }
