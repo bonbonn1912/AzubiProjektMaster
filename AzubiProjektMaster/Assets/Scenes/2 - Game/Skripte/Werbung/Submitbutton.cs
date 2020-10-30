@@ -173,7 +173,7 @@ public class Submitbutton : MonoBehaviour
         }
         else
         {
-            Werbungstextbutton.text = "Werbung noch am Laufen, bitte versuche es zu einem späteren Zeitpunkt erneut. In der Regel laufen Werbungen x Tage";
+            Werbungstextbutton.text = "Werbung noch am Laufen, bitte versuche es zu einem späteren Zeitpunkt erneut. In der Regel laufen Werbungen 10 Tage";
             //Debug.Log("Else Statement");
         }
     }
