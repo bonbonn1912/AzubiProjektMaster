@@ -13,7 +13,7 @@ public class FilialeOnClicks : MonoBehaviour
     {
         if (GlobalVariables.inStatus == 0)
         {
-            GebaeudeKaufen.OpenKaufenApp(gebaeude);
+            KaufenApp(gebaeude);
         }
         else if (GlobalVariables.inStatus >= 1)
         {
@@ -30,6 +30,11 @@ public class FilialeOnClicks : MonoBehaviour
         {
             inFilPopUpPanel.SetActive(!inFilPopUpPanel.activeSelf);
         }
+    }
+    private void KaufenApp(GameObject gebaeude)
+    {
+        GebaeudeKaufen GebaeudeKaufen = new GebaeudeKaufen();
+        GebaeudeKaufen.OpenKaufenApp(gebaeude);
     }
     public void PopupClickUpgrade(GameObject gebaeude)
     {

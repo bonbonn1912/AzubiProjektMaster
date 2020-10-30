@@ -3,7 +3,6 @@ using UnityEngine.UI;
 public class GebaeudeUpgraden : MonoBehaviour
 {
     public DailyUpdate dailyUpdate;
-
     public GameObject itGebaeude;
     public GameObject dwsGebaeude;
     public GameObject filialeGebaeude;
@@ -12,14 +11,17 @@ public class GebaeudeUpgraden : MonoBehaviour
     private static GameObject upgradeApp;
     private static GameObject gebaeude;
 
+    private string appPath = "Game/GameHandler/UI/GebäudeUpgradeAPP/";
+
     /*Liegt dem Upgrade Pupup des Gebaeudes.
       Das jeweilige Gebaeude GameObject muss als Argument draufgezogen werden (parent der Hitbox)
     */
     public void OpenUpgradeApp(GameObject gebaeudeArg)
     {
-        upgradeApp = GameObject.Find("Game/GameHandler/UI/GebäudeUpgradeAPP");
-        GameObject.Find("Game/GameHandler/UI/GebäudeUpgradeAPP/Kosten/KostenDisplay").GetComponent<Text>().text = GebaeudeRequirements.UpgradeKosten(gebaeudeArg).ToString();
+        upgradeApp = GameObject.Find(appPath);
         gebaeude = gebaeudeArg;
+
+        UpdateTexts();
         upgradeApp.SetActive(!upgradeApp.activeSelf);
         MainScene.TabletHandlerActivate();
     }
@@ -32,13 +34,12 @@ public class GebaeudeUpgraden : MonoBehaviour
         {
             if (GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude) >= GebaeudeRequirements.FilialLevelUpgrade(gebaeude))
             {
-                Debug.Log("if Status: " + GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude) + " >= " + "Requirement :" + GebaeudeRequirements.FilialLevelUpgrade(gebaeude));
                 if (GlobalVariables.balance > GebaeudeRequirements.UpgradeKosten(gebaeude))
                 {
                     GlobalVariables.balance -= GebaeudeRequirements.UpgradeKosten(gebaeude);
-                    SetStatus(gebaeude);//GlobalVariables
+                    SetStatus();//GlobalVariables
                     dailyUpdate.SetBuildingStats();//Datenbank
-                    GameObject.Find("Game/GameHandler/UI/GebäudeUpgradeAPP/Kosten/KostenDisplay").GetComponent<Text>().text = GebaeudeRequirements.UpgradeKosten(gebaeude).ToString();
+                    UpdateTexts();
                 }
                 else
                 {
@@ -55,7 +56,7 @@ public class GebaeudeUpgraden : MonoBehaviour
             FehlerGebaeude();
         }
     }
-    private void SetStatus(GameObject gebaeude)
+    private void SetStatus()
     {
         string gebaeudeName = gebaeude.name;
         switch (gebaeudeName)
@@ -86,15 +87,25 @@ public class GebaeudeUpgraden : MonoBehaviour
                 break;
         }
     }
+    private void UpdateTexts()
+    {
+        int level = GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude);
+        GameObject.Find(appPath + "Fehler").GetComponent<Text>().text = "";
+        GameObject.Find(appPath + "FilialenRequirement/FilialenDisplay").GetComponent<Text>().text = GebaeudeRequirements.FilialLevelUpgrade(gebaeude).ToString();
+        GameObject.Find(appPath + "GebäudeLevel").GetComponent<Text>().text = level.ToString();
+        GameObject.Find(appPath + "GebäudeLevel/UpgradeSprite/UpgradeLevel").GetComponent<Text>().text = (level + 1).ToString();
+        GameObject.Find(appPath + "Kosten/KostenDisplay").GetComponent<Text>().text = GebaeudeRequirements.UpgradeKosten(gebaeude).ToString();
+    }
     //Fehlermeldungen müssen evtl noch angepasst werden bzgl Ausgabe im Spiel selber
     private void FehlerGeld()
     {
-        Debug.Log("Du hast nicht genug Geld");
+        GameObject.Find(appPath + "Fehler").GetComponent<Text>().text = "Du hast nicht genug Geld!\n" +
+            GlobalVariables.balance + "/" + GebaeudeRequirements.UpgradeKosten(gebaeude);
     }
     private void FehlerBedingung()
     {
-        Debug.Log("Du hast nicht genug Filialen!" +
-            GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude) + ">=" + GebaeudeRequirements.FilialLevelUpgrade(gebaeude));
+        GameObject.Find(appPath + "Fehler").GetComponent<Text>().text = "Du brauchst mehr Filialen!\n" +
+        GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude) + "/" + GebaeudeRequirements.FilialLevelUpgrade(gebaeude);
     }
     private void FehlerGebaeude()
     {

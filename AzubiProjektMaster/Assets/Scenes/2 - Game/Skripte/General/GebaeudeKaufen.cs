@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class GebaeudeKaufen : MonoBehaviour
 {
     public DailyUpdate dailyUpdate;
-
     public GameObject itGebaeude;
     public GameObject dwsGebaeude;
     public GameObject filialeGebaeude;
@@ -13,14 +12,18 @@ public class GebaeudeKaufen : MonoBehaviour
     private static GameObject kaufenApp;
     private static GameObject gebaeude;
 
+    private string appPath = "Game/GameHandler/UI/GebäudeKaufenAPP/";
+
+
     /*Liegt auf der Hitbox des Gebaeudes.
       Das jeweilige Gebaeude GameObject muss als Argument draufgezogen werden (parent der Hitbox)
     */
-    public static void OpenKaufenApp(GameObject gebaeudeArg)
+    public void OpenKaufenApp(GameObject gebaeudeArg)
     {
-        kaufenApp = GameObject.Find("Game/GameHandler/UI/GebäudeKaufenAPP");
-        GameObject.Find("Game/GameHandler/UI/GebäudeKaufenAPP/Kosten/KostenDisplay").GetComponent<Text>().text = GebaeudeRequirements.KaufKosten(gebaeudeArg).ToString();
+        kaufenApp = GameObject.Find(appPath);
         gebaeude = gebaeudeArg;
+        
+        UpdateTexts();
         kaufenApp.SetActive(!kaufenApp.activeSelf);
         MainScene.TabletHandlerActivate();
     }
@@ -77,15 +80,23 @@ public class GebaeudeKaufen : MonoBehaviour
                 break;
         }
     }
+    private void UpdateTexts()
+    {
+        int level = GebaeudeRequirements.FilialLevel(gebaeude);
+        GameObject.Find(appPath + "Fehler").GetComponent<Text>().text = "";
+        GameObject.Find(appPath + "FilialenRequirement/FilialenDisplay").GetComponent<Text>().text = level.ToString();
+        GameObject.Find(appPath + "Kosten/KostenDisplay").GetComponent<Text>().text = GebaeudeRequirements.KaufKosten(gebaeude).ToString();
+    }
     //Fehlermeldungen müssen evtl noch angepasst werden bzgl Ausgabe im Spiel selber
     private void FehlerGeld()
     {
-        Debug.Log("Du hast nicht genug Geld");
+        GameObject.Find(appPath + "Fehler").GetComponent<Text>().text = "Du hast nicht genug Geld!\n" +
+            GlobalVariables.balance + "/" + GebaeudeRequirements.KaufKosten(gebaeude);
     }
     private void FehlerBedingung()
     {
-        Debug.Log("Du hast nicht genug Filialen!" +
-            GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude) + ">=" + GebaeudeRequirements.FilialLevel(gebaeude));
+        GameObject.Find(appPath + "Fehler").GetComponent<Text>().text = "Du brauchst mehr Filialen!\n" +
+            GebaeudeRequirements.GetGlobalVariablesStatus(gebaeude) + "/" + GebaeudeRequirements.FilialLevel(gebaeude);
     }
     private void FehlerGebaeude()
     {
