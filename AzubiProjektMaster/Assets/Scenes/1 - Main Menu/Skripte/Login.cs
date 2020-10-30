@@ -12,8 +12,6 @@ public class Login : MonoBehaviour
     public Button LoginButton;
     public Button backToMenu;
 
-    public MainMenu mainMenu;
-
     private int tabSelect;
     public void Start()
     {
@@ -22,7 +20,16 @@ public class Login : MonoBehaviour
         {
             dbReply.text = GlobalVariables.registrationResult;
         }
-        NameInputField.GetComponent<InputField>().Select();
+        if (Registration.completet && Registration.user != null)
+        {
+            NameInputField.GetComponent<InputField>().text = Registration.user;
+            PWInputField.GetComponent<InputField>().Select();
+            Registration.user = null;
+        }
+        else
+        {
+            NameInputField.GetComponent<InputField>().Select();
+        }
     }
 
     public void Update()
@@ -113,6 +120,7 @@ public class Login : MonoBehaviour
     }
     public void BackToMenu() 
     {
+        NameInputField.GetComponent<InputField>().text = null;
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }

@@ -108,7 +108,7 @@ public class GameTime : MonoBehaviour
         timeCounter = Time.time - timePassed;
 
         //die Zahl in if-Bedingung ist Tageslänge in Sekunden
-          if (timeCounter > gametimelocal) 
+          if (timeCounter > 15) 
           {
               timePassed += timeCounter;
             GlobalVariables.day = GlobalVariables.day + 1;

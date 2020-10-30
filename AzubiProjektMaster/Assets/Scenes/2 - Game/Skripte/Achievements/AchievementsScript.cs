@@ -14,6 +14,7 @@ public class AchievementsScript : MonoBehaviour
             //Debug.Log("Tablet triggered");
             bool isActive = AchievementsTablet.activeSelf;
             AchievementsTablet.SetActive(!isActive);
+            MainScene.TabletHandlerActivate();
         }
     }
 
