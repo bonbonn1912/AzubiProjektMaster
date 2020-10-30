@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Rendering;
 
 public class HROnClicks : MonoBehaviour
 {
     public GameObject kaufenApp;
     public GameObject hrPopUpPanel;
     public GameObject hoverText;
+    public GameObject hoverText1;
     public GameObject hrTablet;
     
 
@@ -55,4 +57,12 @@ public class HROnClicks : MonoBehaviour
             hoverText.SetActive(!hoverText.activeSelf);
         }
     }
+    public void PopUpHoverUpgrade()
+    {
+        if (hoverText1 != null)
+        {
+            hoverText1.SetActive(!hoverText1.activeSelf);
+        }
+    }
+
 }

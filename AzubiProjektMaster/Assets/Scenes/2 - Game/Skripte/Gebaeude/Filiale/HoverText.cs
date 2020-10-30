@@ -7,6 +7,7 @@ public class HoverText : MonoBehaviour
 {
     public GameObject Kredite;
     public GameObject Statistiken;
+    public GameObject hoverText;
     // Start is called before the first frame update
 
     public void Sichtbar()
@@ -24,6 +25,14 @@ public class HoverText : MonoBehaviour
         {
             bool isActive = Statistiken.activeSelf;
             Statistiken.SetActive(!isActive);
+        }
+    }
+
+    public void PopUpHoverText()
+    {
+        if (hoverText != null)
+        {
+            hoverText.SetActive(!hoverText.activeSelf);
         }
     }
 }

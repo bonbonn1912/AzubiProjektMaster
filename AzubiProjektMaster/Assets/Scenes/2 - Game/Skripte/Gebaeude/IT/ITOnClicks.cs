@@ -6,6 +6,7 @@ public class ITOnClicks : MonoBehaviour
 {
     public GameObject kaufenApp;
     public GameObject itPupUpPanel;
+    public GameObject hoverText;
 
     public DailyUpdate dailyUp;
 
@@ -31,5 +32,13 @@ public class ITOnClicks : MonoBehaviour
     {
         GebaeudeUpgraden GebaeudeUpgraden = new GebaeudeUpgraden();
         GebaeudeUpgraden.OpenUpgradeApp(gebaeude);
+    }
+
+    public void PopUpHoverText()
+    {
+        if (hoverText != null)
+        {
+            hoverText.SetActive(!hoverText.activeSelf);
+        }
     }
 }

@@ -13,6 +13,7 @@ public class DWSOnClicks : MonoBehaviour
     public GameObject orderVolumenDynamischDefault;
     public Color DepotInhaberTextboxColor;
     public Text DepotInhaberTextbox;
+    public GameObject hoverText;
 
     public DailyUpdate dailyUp;
 
@@ -66,6 +67,13 @@ public class DWSOnClicks : MonoBehaviour
         if (graphPopUpText != null)
         {
             graphPopUpText.SetActive(!graphPopUpText.activeSelf);
+        }
+    }
+    public void PopUpHoverText()
+    {
+        if (hoverText != null)
+        {
+            hoverText.SetActive(!hoverText.activeSelf);
         }
     }
 }

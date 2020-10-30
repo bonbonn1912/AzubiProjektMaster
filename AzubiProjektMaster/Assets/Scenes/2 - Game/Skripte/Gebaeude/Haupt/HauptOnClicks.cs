@@ -5,7 +5,8 @@ using UnityEngine;
 public class HauptOnClicks : MonoBehaviour
 {
     public GameObject hauptPopUpPanel;
-
+    public GameObject hoverText;
+    public GameObject hoverText1;
 
     public void OnBuildingClick(GameObject gebaeude)
     {
@@ -43,4 +44,20 @@ public class HauptOnClicks : MonoBehaviour
             hoverText.SetActive(!hoverText.activeSelf);
         }
     }*/
+
+    public void AchievementsHover()
+    {
+        if (hoverText != null)
+        {
+            hoverText.SetActive(!hoverText.activeSelf);
+        }
+    }
+
+    public void WerbungHover() {
+
+        if (hoverText1 != null)
+        {
+            hoverText1.SetActive(!hoverText1.activeSelf);
+        }
+    }
 }
