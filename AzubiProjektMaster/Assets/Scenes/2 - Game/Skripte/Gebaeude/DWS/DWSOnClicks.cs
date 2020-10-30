@@ -20,7 +20,7 @@ public class DWSOnClicks : MonoBehaviour
     {
         if (GlobalVariables.dwsStatus == 0)
         {
-            GebaeudeKaufen.OpenKaufenApp(gebaeude);
+            KaufenApp(gebaeude);
         }
         else if (GlobalVariables.dwsStatus >= 1)
         {
@@ -33,6 +33,11 @@ public class DWSOnClicks : MonoBehaviour
         {
             dwsPopUpPanel.SetActive(!dwsPopUpPanel.activeSelf);
         }
+    }
+    private void KaufenApp(GameObject gebaeude)
+    {
+        GebaeudeKaufen GebaeudeKaufen = new GebaeudeKaufen();
+        GebaeudeKaufen.OpenKaufenApp(gebaeude);
     }
     public void PopupClickUpgrade(GameObject gebaeude)
     {
