@@ -299,7 +299,7 @@ public class FigurPopUp : MonoBehaviour
         {
             CameraZoom.ZoomActiveT4 = false;
             CameraZoom.ZoomActiveT0 = true;
-            CameraZoom.Zoom = 198;
+            CameraZoom.Zoom = 190;
             bool isActive = FigurDWS.activeSelf;
             FigurDWS.SetActive(!isActive);
         }
