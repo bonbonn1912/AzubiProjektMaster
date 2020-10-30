@@ -139,6 +139,7 @@ public class FigurPopUp : MonoBehaviour
             GlobalVariables.itStatus = 0;
             GlobalVariables.hrStatus = 0;
             GlobalVariables.dwsStatus = 0;
+            GlobalVariables.Tutorialcheck = true;
         }
         for (int i = 0; i < Inhalt.Length; i++)
         {

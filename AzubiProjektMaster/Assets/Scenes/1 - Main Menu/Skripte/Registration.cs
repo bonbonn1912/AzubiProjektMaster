@@ -101,7 +101,14 @@ public class Registration : MonoBehaviour
 
     public void CallRegister()
     {
-        StartCoroutine(Register());
+        if (NameInputField.text.Length >= 8 && PWInputField.text.Length >= 8)
+        {
+            StartCoroutine(Register());
+        }
+        else
+        {
+            dbReply.text = "Nutzername & Passwort müssen min. 8 Zeichen haben!";
+        }
     }
 
     IEnumerator Register()
@@ -150,6 +157,7 @@ public class Registration : MonoBehaviour
         if (www.text == "0")
         {
             GlobalVariables.registrationResult = "Registration erfolgreich!\nBitte einloggen.";
+            GlobalVariables.Tutorialcheck = false;
         }
         else
         {
@@ -158,7 +166,14 @@ public class Registration : MonoBehaviour
     }
     public void VerifyInputs()
     {
-        submitButton.interactable = (NameInputField.text.Length >= 8 && PWInputField.text.Length >= 8);
+        if (NameInputField.text.Length >= 8 && PWInputField.text.Length >= 8)
+        {
+            FadeToColor(submitButton, submitButton.colors.normalColor);
+        }
+        else
+        {
+            FadeToColor(submitButton, submitButton.colors.disabledColor);
+        }
     }
     public void BackToMenu()
     {

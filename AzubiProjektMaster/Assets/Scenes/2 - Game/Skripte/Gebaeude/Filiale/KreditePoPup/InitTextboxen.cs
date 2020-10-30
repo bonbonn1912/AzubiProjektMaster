@@ -12,6 +12,6 @@ public class InitTextboxen : MonoBehaviour
     {
         //Debug.Log("Random Name " + GlobalVariables.username + " Random Nummer " + 2);
         Berater.text = GlobalVariables.username;
-        Kredite.text = "2";
+        Kredite.text = "";
     }
 }

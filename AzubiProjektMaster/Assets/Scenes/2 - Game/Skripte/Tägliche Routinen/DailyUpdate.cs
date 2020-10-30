@@ -111,12 +111,12 @@ public class DailyUpdate : MonoBehaviour
         Debug.Log("tutorial state"+check);
         if (check == 1)
         {
-            GlobalVariables.Tutorialcheck = true;
+         //   GlobalVariables.Tutorialcheck = true;
             FigurPopUp.GameTimeGlob = 3;
         } 
         else if(check == 0)
         {
-           GlobalVariables.Tutorialcheck = false;
+        //   GlobalVariables.Tutorialcheck = false;
             FigurPopUp.GameTimeGlob = 1000;
 
         }

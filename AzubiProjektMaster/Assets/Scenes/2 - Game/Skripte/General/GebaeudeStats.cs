@@ -14,17 +14,17 @@ public class GebaeudeStats : MonoBehaviour
     public Sprite dwsSprite;
     public Sprite inSprite;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         StartCoroutine(setBuildings());
     }
 
-    // Update is called once per frame
     void Update()
     {
         StartCoroutine(setBuildings());
     }
+    
     IEnumerator setBuildings()
     {
         yield return new WaitForSeconds(0.1f);
