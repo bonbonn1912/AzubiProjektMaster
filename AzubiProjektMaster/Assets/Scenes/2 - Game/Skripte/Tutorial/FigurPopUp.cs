@@ -253,9 +253,10 @@ public class FigurPopUp : MonoBehaviour
         if (FigurIT != null)
         {
             CameraZoom.ZoomActiveT1 = false;
-            CameraZoom.Zoom = 80;
+            CameraZoom.Zoom = 90;
             bool isActive = FigurIT.activeSelf;
             FigurIT.SetActive(!isActive);
+            GameObject.Find("Game/GameHandler/UI/Statusleiste/DayText/DayTextInput").SetActive(false);
         }
 
         if (FigurHR != null)
@@ -277,6 +278,7 @@ public class FigurPopUp : MonoBehaviour
             CameraZoom.Zoom = 120;
             bool isActive = FigurHR.activeSelf;
             FigurHR.SetActive(!isActive);
+            GameObject.Find("Game/GameHandler/UI/Statusleiste/DayText/DayTextInput").SetActive(true);
         }
 
         if (FigurDWS != null)
