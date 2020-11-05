@@ -36,7 +36,7 @@ public class CameraZoom : MonoBehaviour
     {
         Cam = Camera.main;
 
-        target.Add(new Vector3(159, -62, -1)); //middle of screen
+        target.Add(new Vector3(22, -103, -1)); //middle of screen
         figurList = new List<GameObject>() { filialFigur, itFigur, hrFigur, dwsFigur, zentraleFigur };
         foreach (GameObject obj in figurList)
         {
