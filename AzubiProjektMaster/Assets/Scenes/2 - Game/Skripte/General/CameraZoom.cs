@@ -14,12 +14,14 @@ public class CameraZoom : MonoBehaviour
     public static bool ZoomActiveT2 = false;
     public static bool ZoomActiveT3 = false;
     public static bool ZoomActiveT4 = false;
-
+    public static bool ZoomActiveT5 = false;
+    
     public GameObject filialFigur;
     public GameObject itFigur;
     public GameObject hrFigur;
     public GameObject dwsFigur;
-
+    public GameObject zentraleFigur;
+    
     private List<GameObject> figurList;
 
     public List<Vector3> target;
@@ -35,7 +37,7 @@ public class CameraZoom : MonoBehaviour
         Cam = Camera.main;
 
         target.Add(new Vector3(159, -62, -1)); //middle of screen
-        figurList = new List<GameObject>() { filialFigur, itFigur, hrFigur, dwsFigur };
+        figurList = new List<GameObject>() { filialFigur, itFigur, hrFigur, dwsFigur, zentraleFigur };
         foreach (GameObject obj in figurList)
         {
             Vector3 v = new Vector3(obj.GetComponent<Transform>().position.x, obj.GetComponent<Transform>().position.y + 15, -1);
@@ -95,6 +97,12 @@ public class CameraZoom : MonoBehaviour
         {
             Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, Zoom, Speed);
             Cam.transform.position = Vector3.Lerp(Cam.transform.position, target[4], Speed);
+        }
+
+        if (ZoomActiveT5 == true)
+        {
+            Cam.orthographicSize = Mathf.Lerp(Cam.orthographicSize, Zoom, Speed);
+            Cam.transform.position = Vector3.Lerp(Cam.transform.position, target[5], Speed);
         }
     }
 }

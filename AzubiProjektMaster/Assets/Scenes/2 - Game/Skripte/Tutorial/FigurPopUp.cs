@@ -9,6 +9,7 @@ public class FigurPopUp : MonoBehaviour
     public GameObject FigurMid;
     public GameObject FigurUR;
     public GameObject FigurHR;
+    public GameObject FigurZentrale;
     public GameObject FigurFiliale;
     public GameObject FigurIT;
     public GameObject FigurDWS;
@@ -20,6 +21,7 @@ public class FigurPopUp : MonoBehaviour
     public Text Einführungstext;
     public Text Zieletext;
     public Text Huerdentext;
+    public Text Zentraletext;
     public Text Filialetext;
     public Text ITtext;
     public Text HRtext;
@@ -30,7 +32,7 @@ public class FigurPopUp : MonoBehaviour
     private bool skip;
     private int active;
 
-    private string InhaltWill = "Herzlich Willkommen! Sie haben Ihre eigene Bank eröffnet! Sie sind der neue CEO " + GlobalVariables.username + " der " + GlobalVariables.Bankname + ". Ein bisschen Trivia: Im Jahre 1870 wurde die Deutsche Bank gegründet.";
+    private string InhaltWill = "Herzlich Willkommen! Sie haben Ihre eigene Bank eröffnet! Sie sind der neue CEO " + GlobalVariables.username +". Ein bisschen Trivia: Im Jahre 1870 wurde die Deutsche Bank gegründet.";
     private string InhaltEin = "Ihr Ziel ist es, die Bank voranzubringen und zu expandieren. Im Spielverlauf werden Sie einige neue Gebäude, Finanzmittel und die Story kennenlernen. Treffen Sie ihre Entscheidungen mit Bedacht.";
     private string InhaltZiele = "Mal schauen ob Sie das Zeug dazuhaben, alle Achievements zu erreichen und ihre Zentrale auf Stufe 5 hochzustufen.";
     private string InhaltHuerden = "Am Anfang befinden Sie sich in der Finanzierungsphase: Wie wollen Sie Ihr Geld verdienen? Sie müssen einiges beachten, es gibt Risiken, Krisen, Sicherheitslücken und vieles mehr. Finden Sie ihr eigenes Gleichgewicht.";
@@ -39,6 +41,7 @@ public class FigurPopUp : MonoBehaviour
     private string InhaltHR = "Das HR Gebäude können Sie erwerben, wenn sie 4 Filialen besitzen. Durch das Einstellen und Entlassen der Mitarbeiter fallen jeweils Kosten an.";
     private string InhaltDWS = "Die DWS können Sie nach erwerb von 3 Filialen freischalten. Hier können Sie Aktien kaufen, verkaufen und sie verwalten. Sie haben eine Echtzeitansicht der Aktienkurse.";
     private string InhaltStart = "Legen wir los! Ihre ersten Kredite sind nicht weit entfernt. Viel Erfolg und viel Spaß!";
+    private string InhaltZentrale = "Test";
 
     public float timeLapse = 0.03f;
     public static int GameTimeGlob = 15;
@@ -79,6 +82,9 @@ public class FigurPopUp : MonoBehaviour
                     break;
                 case 8:
                     TutorialCheckTrueSetzen();
+                    break;
+                case 9:
+                    FigurZentraleSetzen();
                     break;
                 default:
                     break;
@@ -200,10 +206,31 @@ public class FigurPopUp : MonoBehaviour
 
         if (SprechblaseHürden != null)
         {
-            active = 3;
+            active = 9;
             bool isActive = SprechblaseHürden.activeSelf;
             SprechblaseHürden.SetActive(!isActive);
             StartCoroutine(SpeechbubblGenerate(Huerdentext, InhaltHuerden, 0));
+        }
+    }
+
+    //aktiviert Fir an der Zentrale
+    public void FigurZentraleSetzen()
+    {
+        if (FigurMid != null)
+        {
+            bool isActive = FigurMid.activeSelf;
+            FigurMid.SetActive(!isActive);
+        }
+
+        if (FigurZentrale != null)
+        {
+            active = 3;
+            CameraZoom.ZoomActiveT5 = true;
+            CameraZoom.Zoom = 130;
+            bool isActive = FigurZentrale.activeSelf;
+            FigurZentrale.SetActive(!isActive);
+            CameraZoom.ZoomActiveT5 = true;
+            StartCoroutine(SpeechbubblGenerate(Zentraletext, InhaltZentrale, 0));
         }
     }
 
@@ -211,15 +238,17 @@ public class FigurPopUp : MonoBehaviour
     public void FigurFilialeErscheinen()
     {
 
-        if (FigurMid != null)
+        if (FigurZentrale != null)
         {
-            bool isActive = FigurMid.activeSelf;
-            FigurMid.SetActive(!isActive);
+            bool isActive = FigurZentrale.activeSelf;
+            FigurZentrale.SetActive(!isActive);
         }
 
         if (FigurFiliale != null)
         {
             active = 4;
+            CameraZoom.ZoomActiveT1 = true;
+            CameraZoom.Zoom = 90;
             bool isActive = FigurFiliale.activeSelf;
             FigurFiliale.SetActive(!isActive);
             CameraZoom.ZoomActiveT1 = true;
@@ -254,7 +283,7 @@ public class FigurPopUp : MonoBehaviour
         if (FigurIT != null)
         {
             CameraZoom.ZoomActiveT1 = false;
-            CameraZoom.Zoom = 90;
+            CameraZoom.Zoom = 100;
             bool isActive = FigurIT.activeSelf;
             FigurIT.SetActive(!isActive);
             GameObject.Find("Game/GameHandler/UI/Statusleiste/DayText/DayTextInput").SetActive(false);
@@ -312,6 +341,8 @@ public class FigurPopUp : MonoBehaviour
             StartCoroutine(SpeechbubblGenerate(Starttext, InhaltStart, 1));
         }
     }
+
+ 
 
     //Setzt die Bool in der Datenbank auf True, damit das Tutorial nicht erneut ausgefüht wird. 
     public void TutorialCheckTrueSetzen()
