@@ -14,17 +14,7 @@ public class Submitbutton : MonoBehaviour
     public Text Cooldown;
     public Text Wasbringtes;
 
-    IEnumerator Start()
-    {
-        yield return new WaitForSeconds(0.7f);
-        
-        
-        /*while (i < 100000) //Logfiles zum überprüfen der Variablen.
-        {
-            Debug.Log(DayTemp + "<<<<<>>>>>" + GlobalVariables.day);
-            yield return new WaitForSeconds(5);
-        }*/
-    }
+    
 
    
     IEnumerator KundenUndBalanceUpdate()
