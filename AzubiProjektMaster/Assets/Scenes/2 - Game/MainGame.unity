@@ -15124,7 +15124,7 @@ MonoBehaviour:
   Deny: {fileID: 397369368}
   Back: {fileID: 1827924247}
   Beratername: {fileID: 0}
-  Vergeben: {fileID: 0}
+  Vergeben: {fileID: 1346470321}
   UpdateKredit: {fileID: 0}
   ValueMin: 0
   ValueMax: 0
@@ -49867,15 +49867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 7934855295753604504, guid: 1f84f69fca1595241a1de7c559c463c5,
+    - target: {fileID: 3312869383143229649, guid: 1f84f69fca1595241a1de7c559c463c5,
         type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: a03b1f0d45a4fea4aa130945f1bcc349, type: 3}
-    - target: {fileID: 7934855295753604504, guid: 1f84f69fca1595241a1de7c559c463c5,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.25
+      propertyPath: orthographic size
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 3312869383143229648, guid: 1f84f69fca1595241a1de7c559c463c5,
         type: 3}
@@ -49932,10 +49927,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3312869383143229649, guid: 1f84f69fca1595241a1de7c559c463c5,
+    - target: {fileID: 7934855295753604504, guid: 1f84f69fca1595241a1de7c559c463c5,
         type: 3}
-      propertyPath: orthographic size
-      value: 190
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a03b1f0d45a4fea4aa130945f1bcc349, type: 3}
+    - target: {fileID: 7934855295753604504, guid: 1f84f69fca1595241a1de7c559c463c5,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f84f69fca1595241a1de7c559c463c5, type: 3}
@@ -50906,7 +50906,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.4, y: 6.4}
+  m_Size: {x: 64, y: 64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
