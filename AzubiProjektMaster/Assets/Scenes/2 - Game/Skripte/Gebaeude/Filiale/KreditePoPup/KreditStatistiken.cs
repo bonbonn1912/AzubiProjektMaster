@@ -11,13 +11,27 @@ public class KreditStatistiken : MonoBehaviour
     public Text GesamtVolumen;
     public Text KrediteAnTagX;
     int Gesamtvolumen;
+    public UnityEngine.UI.Button Vergeben;
+
+    public void Start()
+    {
+        if(GlobalVariables.balance < 0)
+        {
+            Vergeben.interactable = false;
+        }
+        if(GlobalVariables.balance > 1000)
+        {
+            Vergeben.interactable = true;
+        }
+    }
+
     public void statistike()
     {
         StartCoroutine(CreditCount());
         StartCoroutine(CreditVolume());
     }
 
-
+    
 
     IEnumerator CreditCount()
     {
