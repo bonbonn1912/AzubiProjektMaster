@@ -215,7 +215,7 @@ public class GenerateEvent : MonoBehaviour
                     Debug.Log("Event 2 - Übungen");
                     AuswirkungsPanel.SetActive(true);
                     RealAuswirkungText.text = "Es werden Übungen durchgeführt. Deine Mitarbeiter fühlen sich sicherer. Dies spiegelt sich in einem kleinem finanziellen Bonus wieder";
-                    Evalue = generatePositiveAuswirkung() / 10;
+                    Evalue = GlobalVariables.balance / 15;
                     Debug.Log("Event Value" + Evalue);
                     vorzeichen = 1;
                     TriggerEvent(Evalue, vorzeichen);
@@ -226,8 +226,9 @@ public class GenerateEvent : MonoBehaviour
                 {
                     Debug.Log("Event 3 - Es brennt!");
                     AuswirkungsPanel.SetActive(true);
-                    RealAuswirkungText.text = "Das Gebäude wird geräumt und die Feuerwehr gerufen. Es entsteht ein Schaden von 20000€. Zum Glück wurde keiner verletzt";
-                    Evalue = 20000;
+                    Evalue = GlobalVariables.balance / 20;
+                    RealAuswirkungText.text = "Das Gebäude wird geräumt und die Feuerwehr gerufen. Es entsteht ein Schaden von "+Evalue+"€. Zum Glück wurde keiner verletzt";
+                   
                     Debug.Log("Event Value" + Evalue);
                     vorzeichen = 0;
                     TriggerEvent(Evalue, vorzeichen);
@@ -255,8 +256,9 @@ public class GenerateEvent : MonoBehaviour
                 {
                     Debug.Log("Event 6 - Sicherheitslücken");
                     AuswirkungsPanel.SetActive(true);
-                    RealAuswirkungText.text = "Ein Spezialist wird hinzugezogen und das Problem wird behoben. Die Kosten belaufen sich auf 4000€";
-                    Evalue = 4000;
+                    Evalue = GlobalVariables.balance / 25;
+                    RealAuswirkungText.text = "Ein Spezialist wird hinzugezogen und das Problem wird behoben. Die Kosten belaufen sich auf "+Evalue+"€";
+                    
                     vorzeichen = 0;
                     TriggerEvent(Evalue, vorzeichen);
                     break;
@@ -281,8 +283,9 @@ public class GenerateEvent : MonoBehaviour
                 {
                     Debug.Log("Event 9 - Goldbarren");
                     AuswirkungsPanel.SetActive(true);
-                    RealAuswirkungText.text = "Durch die Spende erhöht sich dein Ruf. Dies führt zu einem finanziellen Bonus";
                     Evalue = 10000;
+                    RealAuswirkungText.text = "Durch die Spende erhöht sich dein Ruf. Dies führt zu einem finanziellen Bonus";
+                    
                     vorzeichen = 1;
                     TriggerEvent(Evalue, vorzeichen);
 
@@ -327,10 +330,11 @@ public class GenerateEvent : MonoBehaviour
                 {
                     Debug.Log("Deny aktuelles Event");
                     int b = generateNegativeAuswirkung() / 10;
+                    Evalue = GlobalVariables.balance / 10;
                     AuswirkungsPanel.SetActive(true);
                     RealAuswirkungText.text = "Die Polizei wird nicht gerufen. Der Täter entkommt mit einer großen Summe. Außerdem wird die Handtasche einer Großmutter geklaut die daraufhin ihr Konto bei der Bank kündigt";
                     int Kunde = 1;
-                    Evalue = b;
+                   
                     vorzeichen = 0;
                     KundenVorzeichen = 0;
                     TriggerEvent(Evalue, vorzeichen);
@@ -349,8 +353,9 @@ public class GenerateEvent : MonoBehaviour
                 {
                     Debug.Log("Deny aktuelles Event");
                     AuswirkungsPanel.SetActive(true);
-                    RealAuswirkungText.text = "Das Gebäude wird nicht geräumt. Es kommt zu einem Schaden von 20000€. Außerdem werden 3 Kunden verletzt weswegen du 6000€ Schmerzensgeld zahlen musst.";
-                    Evalue = 26000;
+                    Evalue = GlobalVariables.balance / 11;
+                    RealAuswirkungText.text = "Das Gebäude wird nicht geräumt. Es kommt zu einem Schaden von "+Evalue+"€. Außerdem werden 3 Kunden verletzt weswegen du 6000€ Schmerzensgeld zahlen musst.";
+                    
                     vorzeichen = 0;
                     TriggerEvent(Evalue, vorzeichen);
                     break;
@@ -375,8 +380,9 @@ public class GenerateEvent : MonoBehaviour
                 {
                     Debug.Log("Deny aktuelles Event");
                     AuswirkungsPanel.SetActive(true);
+                    Evalue = GlobalVariables.balance / 15;
                     RealAuswirkungText.text = "Es findet ein Hackerangriff statt. Die Angreifer konnten einige Daten stehen. Du musst deinen Kunden eine Entschädigung zahlen";
-                    Evalue = generateNegativeAuswirkung() / 2;
+                   
                     vorzeichen = 0;
                     TriggerEvent(Evalue, vorzeichen);
                     break;

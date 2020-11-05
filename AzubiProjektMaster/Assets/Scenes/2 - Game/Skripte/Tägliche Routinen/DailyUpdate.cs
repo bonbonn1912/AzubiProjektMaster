@@ -81,9 +81,55 @@ public class DailyUpdate : MonoBehaviour
         if(GlobalVariables.day % 30 == 0)
         {
             GlobalVariables.balance = GlobalVariables.balance - GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost;
-            GlobalVariables.balance = GlobalVariables.balance + GlobalVariables.mitarbeiter * GlobalVariables.Mitarbeitergewinn;
-            //Debug.Log("PersonalKosten: " + GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost);
-            //Debug.Log("PersonalGewinn: " + GlobalVariables.mitarbeiter * GlobalVariables.Mitarbeitergewinn);
+            Debug.Log("PersonalKosten: " + GlobalVariables.mitarbeiter * GlobalVariables.PersonalCost);
+            WWWForm form1 = new WWWForm();
+            form1.AddField("Username", GlobalVariables.username);
+            form1.AddField("Balance", GlobalVariables.balance);
+            // WWW www1 = new WWW("https://dominik.grandpa-kitchen.com/PHP-Skripte/UpdateKreditBalanceDEV.php", form1);
+            //  WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalance.php", form1);
+            WWW www1 = new WWW("https://dominikw.de/AzubiProjekt/UpdateBalanceDEV.php", form1);
+            Debug.Log("Kosten abgezogen");
+            yield return www1;
+            yield return new WaitForSeconds(0.2f);
+            Debug.Log("Kapital nach Gehalt" + GlobalVariables.balance);
+        }
+
+        if (GlobalVariables.day % 10 == 0)
+        {
+            switch (GlobalVariables.itStatus)
+            {
+                case 0:
+                    GlobalVariables.Mitarbeitergewinn = 600;
+                    GlobalVariables.Kundengewinn = 200;
+                    break;
+                case 1:
+                    GlobalVariables.Mitarbeitergewinn = 850;
+                break;
+
+                case 2:
+                    GlobalVariables.Mitarbeitergewinn = 1100;
+                break;
+                case 3:
+                    GlobalVariables.Mitarbeitergewinn = 1500;
+                    break;
+                case 4:
+                    GlobalVariables.Mitarbeitergewinn = 1500;
+                    GlobalVariables.Kundengewinn = 300;
+                    break;
+                case 5:
+                    GlobalVariables.Mitarbeitergewinn = 1600;
+                    GlobalVariables.Kundengewinn = 350;
+                    break;
+                default:
+                    GlobalVariables.Mitarbeitergewinn = 1750;
+                    GlobalVariables.Kundengewinn = 500;
+                    break;
+
+            }
+                GlobalVariables.balance = GlobalVariables.balance + (GlobalVariables.Mitarbeitergewinn * GlobalVariables.mitarbeiter + GlobalVariables.kundenanzahl * GlobalVariables.Kundengewinn);
+            Debug.Log("PersonalGewinn: " + (GlobalVariables.Mitarbeitergewinn * GlobalVariables.mitarbeiter + GlobalVariables.kundenanzahl * GlobalVariables.Kundengewinn));
+            
+            
             WWWForm form1 = new WWWForm();
             form1.AddField("Username", GlobalVariables.username);
             form1.AddField("Balance", GlobalVariables.balance);
@@ -232,8 +278,8 @@ public class DailyUpdate : MonoBehaviour
         string eDb = www.text.Split('-')[5];
         string achievementDb = www.text.Split('-')[6];
 
-        Debug.Log("Aktien " + aktienDb);
-        Debug.Log("Achievement Aktien " + achievementDb);
+     //   Debug.Log("Aktien " + aktienDb);
+      //  Debug.Log("Achievement Aktien " + achievementDb);
 
         GlobalVariables.Aktien = Convert.ToInt32(aktienDb);
         GlobalVariables.aAktien = Convert.ToInt32(aDb);
@@ -384,13 +430,13 @@ public class DailyUpdate : MonoBehaviour
         string eDb = www.text.Split('-')[5];
         string achievementDb = www.text.Split('-')[6];
 
-        Debug.Log("HR " + angestellteDb);
-        Debug.Log("Achievement HR " + achievementDb);
-        Debug.Log("Auslesen A " + aDb);
-        Debug.Log("Auslesen B " + bDb);
-        Debug.Log("Auslesen C " + cDb);
-        Debug.Log("Auslesen D " + dDb);
-        Debug.Log("Auslesen E " + eDb);
+      //  Debug.Log("HR " + angestellteDb);
+     //   Debug.Log("Achievement HR " + achievementDb);
+     //  Debug.Log("Auslesen A " + aDb);
+     //   Debug.Log("Auslesen B " + bDb);
+     //   Debug.Log("Auslesen C " + cDb);
+      //  Debug.Log("Auslesen D " + dDb);
+     //   Debug.Log("Auslesen E " + eDb);
 
         GlobalVariables.mitarbeiter = Convert.ToInt32(angestellteDb);
         GlobalVariables.aHr = aDb;
@@ -411,12 +457,12 @@ public class DailyUpdate : MonoBehaviour
         string dDb = GlobalVariables.dHr;
         string eDb = GlobalVariables.eHr;
 
-        Debug.Log("Schreiben in DB");
-        Debug.Log("A " + aDb);
-        Debug.Log("B " + bDb);
-        Debug.Log("C " + cDb);
-        Debug.Log("D " + dDb);
-        Debug.Log("E " + eDb);
+      //  Debug.Log("Schreiben in DB");
+      //  Debug.Log("A " + aDb);
+     //   Debug.Log("B " + bDb);
+      //  Debug.Log("C " + cDb);
+    //    Debug.Log("D " + dDb);
+     //   Debug.Log("E " + eDb);
 
         WWWForm form = new WWWForm();
         form.AddField("AchievementHr", x);
@@ -496,8 +542,8 @@ public class DailyUpdate : MonoBehaviour
         string eDb = www.text.Split('-')[5];
         string achievementDb = www.text.Split('-')[6];
 
-        Debug.Log("Kapital " + kapitalDb);
-        Debug.Log("Achievement Kapital " + achievementDb);
+     //   Debug.Log("Kapital " + kapitalDb);
+     //   Debug.Log("Achievement Kapital " + achievementDb);
 
         GlobalVariables.balance = Convert.ToInt32(kapitalDb);
         GlobalVariables.aKapital = Convert.ToInt32(aDb);
