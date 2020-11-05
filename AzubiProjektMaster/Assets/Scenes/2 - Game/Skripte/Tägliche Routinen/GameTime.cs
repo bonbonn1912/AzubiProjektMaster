@@ -37,10 +37,17 @@ public class GameTime : MonoBehaviour
     int gametimelocal;
     public void Start()
     {
+<<<<<<< Updated upstream
             /*if(GlobalVariables.username == null)
         {
             GlobalVariables.username = "SebastianNeu1";
         }*/
+=======
+            if(GlobalVariables.username == null)
+        {
+            GlobalVariables.username = "SebastianNeu2";
+        }
+>>>>>>> Stashed changes
 
         ausfuhren.Init();
     }

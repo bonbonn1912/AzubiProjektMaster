@@ -320,7 +320,12 @@ public class FigurPopUp : MonoBehaviour
             bool isActive = FigurSpielstart.activeSelf;
             FigurSpielstart.SetActive(!isActive);
             GlobalVariables.Tutorialcheck = true;
+            CameraZoom.ZoomActiveT0 = true;
+            CameraZoom.ZoomActiveT1 = false;
+            CameraZoom.ZoomActiveT2 = false;
+            CameraZoom.ZoomActiveT3 = false;
             CameraZoom.ZoomActiveT4 = false;
+            CameraZoom.ZoomActiveT5 = false;
             GameTimeGlob = 15;
             if (figurHandler != null)
             {
