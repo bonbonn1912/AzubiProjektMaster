@@ -7,7 +7,7 @@ public class Submitbutton : MonoBehaviour
 {
     public GameObject Submitbuttonwerbung;
     public Text Werbungstextbutton;
-    public int DayTemp = 0;
+   
     public int i = 0;
 
     public Text Kosten;
@@ -17,7 +17,7 @@ public class Submitbutton : MonoBehaviour
     IEnumerator Start()
     {
         yield return new WaitForSeconds(0.7f);
-        DayTemp = GlobalVariables.day;
+        
         
         /*while (i < 100000) //Logfiles zum überprüfen der Variablen.
         {
@@ -46,10 +46,10 @@ public class Submitbutton : MonoBehaviour
     public void WerbungSubmit()
     {
         
-        if((DayTemp + 10) <= GlobalVariables.day)
+        if((GameTime.DayTemp + 10) <= GlobalVariables.day)
         {
 
-            DayTemp = GlobalVariables.day;
+            GameTime.DayTemp = GlobalVariables.day;
             switch (GlobalVariables.werbungsswitch)
             {
 

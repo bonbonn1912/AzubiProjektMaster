@@ -19,7 +19,7 @@ public class KreditGenerieren : MonoBehaviour
     public Button Deny;
     public Button Back;
     public Text Beratername;
-
+    public Button Vergeben;
     public KreditStatistiken UpdateKredit;
 
     public int ValueMin;
@@ -50,8 +50,18 @@ public class KreditGenerieren : MonoBehaviour
         // Debug.Log("Kredit wird in Datenbank geschrieben:");
         StartCoroutine(PushintoDB());
     }
+    public void Update()
+    {
+        if(GlobalVariables.balance < 0)
+        {
+            Vergeben.interactable = false;
+        }
+        if(GlobalVariables.balance > 0)
+        {
+            Vergeben.interactable = true;
+        }
+    }
 
-    
 
     IEnumerator PushintoDB()
     {

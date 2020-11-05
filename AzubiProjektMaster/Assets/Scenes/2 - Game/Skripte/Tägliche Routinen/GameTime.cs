@@ -11,7 +11,7 @@ public class GameTime : MonoBehaviour
     public DailyUpdate ausfuhren;
     public TagUpdaten erhoehen;
     public Kreditlaufzeit pruefen;
-    
+    public static int DayTemp = 0;
 
 
     public AktienKurseGenerieren Aktie1;
@@ -53,6 +53,7 @@ public class GameTime : MonoBehaviour
         Abfragen.getAktienAnzahl();
         //  GenerateValues();
         SetTutorialTrigger();
+        DayTemp = GlobalVariables.day;
 
     }
 
