@@ -36,12 +36,12 @@ public class FigurPopUp : MonoBehaviour
     private string InhaltEin = "Ihr Ziel ist es, die Bank voranzubringen und zu expandieren. Im Spielverlauf werden Sie einige neue Gebäude, Finanzmittel und die Story kennenlernen. Treffen Sie ihre Entscheidungen mit Bedacht.";
     private string InhaltZiele = "Mal schauen ob Sie das Zeug dazuhaben, alle Achievements zu erreichen und ihre Zentrale auf Stufe 5 hochzustufen.";
     private string InhaltHuerden = "Am Anfang befinden Sie sich in der Finanzierungsphase: Wie wollen Sie Ihr Geld verdienen? Sie müssen einiges beachten, es gibt Risiken, Krisen, Sicherheitslücken und vieles mehr. Finden Sie ihr eigenes Gleichgewicht.";
-    private string InhaltFiliale = "Für den Anfang besitzen Sie ihre Zentrale mit 4 Mitarbeitern, in welcher Sie ihre Einnahmen und Ausgaben im Überblick behalten und ihre vergebene Kredite beobachten können.";
+    private string InhaltFiliale = "Für den Anfang besitzen Sie eine Zentrale, in welcher Sie Kredite vergeben und laufende Kredite beobachten können.";
     private string InhaltIT = "Das IT Gebäude können Sie erwerben, wenn Sie 2 Filialen besitzen. Dies erhöht die Erträge der Mitarbeiter.";
-    private string InhaltHR = "Das HR Gebäude können Sie erwerben, wenn sie 4 Filialen besitzen. Durch das Einstellen und Entlassen der Mitarbeiter fallen jeweils Kosten an.";
+    private string InhaltHR = "Das HR Gebäude können Sie erwerben, wenn sie 4 Filialen besitzen. Durch das Einstellen und Entlassen der Mitarbeiter fallen jeweils Kosten an. Zudem können Sie die Mitarbeiterkosten und Anzahl einsehen.";
     private string InhaltDWS = "Die DWS können Sie nach erwerb von 3 Filialen freischalten. Hier können Sie Aktien kaufen, verkaufen und sie verwalten. Sie haben eine Echtzeitansicht der Aktienkurse.";
     private string InhaltStart = "Legen wir los! Ihre ersten Kredite sind nicht weit entfernt. Viel Erfolg und viel Spaß!";
-    private string InhaltZentrale = "Test";
+    private string InhaltZentrale = "Das ist die Zentrale. Hier können die Achievements verfolgt und Werbung geschaltet werden. Die Werbung hilft es Kunden zu gewinnen.";
 
     public float timeLapse = 0.03f;
     public static int GameTimeGlob = 15;
