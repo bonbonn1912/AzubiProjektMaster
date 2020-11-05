@@ -7,10 +7,10 @@ public class GebaeudeRequirements : MonoBehaviour
     private static int filialeFilialenRequirement = 0;
     private static int hrFilialenRequirement = 4;
 
-    private static int itKaufKosten = 300000;
+    private static int itKaufKosten = 150000;
     private static int dwsKaufKosten = 350000;
     private static int filialeKaufKosten = 40000;
-    private static int hrKaufKosten = 350000;
+    private static int hrKaufKosten = 100000;
 
     private static int itFilialenRequirementUpgrade;
     private static int dwsFilialenRequirementUpgrade;

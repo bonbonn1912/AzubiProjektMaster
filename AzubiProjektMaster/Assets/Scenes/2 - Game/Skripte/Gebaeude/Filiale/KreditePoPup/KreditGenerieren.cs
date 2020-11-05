@@ -50,13 +50,13 @@ public class KreditGenerieren : MonoBehaviour
         // Debug.Log("Kredit wird in Datenbank geschrieben:");
         StartCoroutine(PushintoDB());
     }
-    public void Update()
+   public void Update()
     {
-        if(GlobalVariables.balance < 0)
+        if(GlobalVariables.balance < 1000)
         {
             Vergeben.interactable = false;
         }
-        if(GlobalVariables.balance > 0)
+        if(GlobalVariables.balance > 1000)
         {
             Vergeben.interactable = true;
         }
