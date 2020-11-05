@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1326248645}
-  m_IndirectSpecularColor: {r: 0.4514271, g: 0.50065446, b: 0.5709059, a: 1}
+  m_IndirectSpecularColor: {r: 0.45142764, g: 0.500655, b: 0.5709071, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -538,7 +538,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Submitbuttonwerbung: {fileID: 1248956610}
   Werbungstextbutton: {fileID: 1211233038}
-  DayTemp: 0
   i: 0
   Kosten: {fileID: 1703751098}
   Cooldown: {fileID: 1649744184}
@@ -5509,6 +5508,7 @@ MonoBehaviour:
   KreditAnzahl: {fileID: 1809349141}
   GesamtVolumen: {fileID: 1580209618}
   KrediteAnTagX: {fileID: 1565123930}
+  Vergeben: {fileID: 0}
 --- !u!114 &280356537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15406,7 +15406,7 @@ MonoBehaviour:
   Deny: {fileID: 397369368}
   Back: {fileID: 1827924247}
   Beratername: {fileID: 531432631}
-  Vergeben: {fileID: 0}
+  Vergeben: {fileID: 1346470321}
   UpdateKredit: {fileID: 596922600}
   ValueMin: 0
   ValueMax: 0
@@ -15466,6 +15466,7 @@ MonoBehaviour:
   KreditAnzahl: {fileID: 1809349141}
   GesamtVolumen: {fileID: 1580209618}
   KrediteAnTagX: {fileID: 1565123930}
+  Vergeben: {fileID: 1346470321}
 --- !u!212 &596922601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15570,6 +15571,7 @@ MonoBehaviour:
   KreditAnzahl: {fileID: 1809349141}
   GesamtVolumen: {fileID: 1580209618}
   KrediteAnTagX: {fileID: 1565123930}
+  Vergeben: {fileID: 0}
 --- !u!114 &605044960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19961,6 +19963,7 @@ MonoBehaviour:
   KreditAnzahl: {fileID: 1809349141}
   GesamtVolumen: {fileID: 1580209618}
   KrediteAnTagX: {fileID: 1565123930}
+  Vergeben: {fileID: 0}
 --- !u!114 &819917844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22590,6 +22593,7 @@ MonoBehaviour:
   KreditAnzahl: {fileID: 1809349141}
   GesamtVolumen: {fileID: 1580209618}
   KrediteAnTagX: {fileID: 1565123930}
+  Vergeben: {fileID: 0}
 --- !u!114 &1031665933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31834,6 +31838,7 @@ MonoBehaviour:
   KreditAnzahl: {fileID: 1809349141}
   GesamtVolumen: {fileID: 1580209618}
   KrediteAnTagX: {fileID: 1565123930}
+  Vergeben: {fileID: 0}
 --- !u!114 &1513288678
 MonoBehaviour:
   m_ObjectHideFlags: 0
